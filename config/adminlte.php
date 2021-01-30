@@ -229,11 +229,11 @@ return [
             'search' => true,
             'topnav' => true,
         ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
+        // [
+        //     'text' => 'blog',
+        //     'url'  => 'admin/blog',
+        //     'can'  => 'manage-blog',
+        // ],
         // [
         //     'text'        => 'pages',
         //     'url'         => 'admin/pages',
@@ -245,14 +245,17 @@ return [
         [
             'text' => 'Building List',
             'icon' => 'fas fa-fw fa-calendar-alt',
+            'can'  => ['building-create'],
             'submenu' => [
                 [
                     'text' => 'Add Building',
                     'url'  => '/add_building',
+                    'can'  => ['building-create']
                 ],
                 [
                     'text' => 'Table Building List',
                     'url'  => '/table_building',
+                    'can'  => ['building-read']
                 ],
             ]
         ],
@@ -260,38 +263,39 @@ return [
         [
             'text' => 'Constarution',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-            'can'  => 'manage-user',
-            'role' => 'User',
             'icon' => 'fas fa-fw fa-poll',
+            'can'  => ['constarution-create','constarution-read']
         ],
         [
             'text' => 'Building Payment',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-calendar-check',
+            'can'  => ['payments-create','payments-read']
         ],
         [
             'text' => 'Status Opertor',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-poll-h',
+            'can'  => ['status-operator-create','status-operator-read']
         ],
         [
             'text' => 'Technician Opertor',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-poll-h',
+            'can'  => ['technician-operator-create','technician-operator-read']
         ],
         ['header' => 'USER'],
         [
             'text' => 'User Information',
-            'url'  => '/user',
+            'url'  => 'form/editprofile',
             'icon' => 'fas fa-fw fa-user',
-            'can'  => 'profile-update',
+            'can'  => ['profile-update','profile-read'],
         ],
         [
             'text' => 'change_password',
-            'url'  => 'admin/settings',
+            'url'  => 'form/editprofile',
             'icon' => 'fas fa-fw fa-lock',
-            'can'  => 'password-update',
+            'can'  => ['password-update'],
         ],
         [
             'text' => 'Logout',
@@ -391,7 +395,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -411,7 +415,7 @@ return [
             ],
         ],
         'Select2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -426,7 +430,7 @@ return [
             ],
         ],
         'Chartjs' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -436,7 +440,7 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',

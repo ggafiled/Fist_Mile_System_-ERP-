@@ -10,7 +10,7 @@
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card ">
-            <div class="card-header text-white bg-secondary"><h3 >{{ __('ADD BUILDING') }}</h3></div>
+            <div class="card-header text-white bg-secondary"><h6>{{ __('ADD BUILDING') }}</h6></div>
                 <div class="card-body">
                     <div class="form-group">
                         <div class="container-fluid mx-auto mt-2 mb-2">

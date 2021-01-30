@@ -17,11 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('locale/{locale}', function ($locale){
+    Session::put('locale', $locale);
+    return redirect()->back();
+});
+
+Auth::routes(['register' => false]);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/user', [App\Http\Controllers\UserInforController::class, 'index']);
-    Route::get('/add_building', [App\Http\Controllers\addBuildingController::class, 'index']);
-    Route::get('/table_building', [App\Http\Controllers\tableBuildingController::class, 'index']);
+    Route::get('/add_building', [App\Http\Controllers\BuildingController::class, 'addBuilding']);
+    Route::get('/table_building', [App\Http\Controllers\BuildingController::class, 'tableBuilding']);
+
+    Route::get('form/editprofile',[App\Http\Controllers\UserController::class, 'showChangePasswordForm'])->middleware('password.confirm');
+    Route::post('changePassword',[App\Http\Controllers\UserController::class, 'changePassword'])->name('changePassword');
 });

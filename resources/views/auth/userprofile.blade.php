@@ -1,52 +1,53 @@
 @extends('adminlte::page')
 
 @section('content')
+<div class="container">
     <div class="row">
         <div class="col-sm-4 col-lg-3">
             <div class="widget">
                 <div class="user-photo">
                     <a href="#">
-                        <img src="" alt="User Photo">
-                        <span id="user-photo-action" class="user-photo-action">Bower Your Photo.</span>
+                        <img src="{{ $user->image ? $user->image : asset('/image/noimage.jpg') }}" alt="User Photo">
+                        <span id="user-photo-action" class="user-photo-action">กดที่นี่เพื่อเปลี่ยนรูปภาพ</span>
                     </a>
-                </div><!-- /.user-photo -->
-            </div><!-- /.widget -->
+                </div>
+            </div>
 
 
             <div class="widget">
                 <ul class="nav nav-pills d-flex flex-column menu-advanced">
                     <li id="btnProfile" class="nav-items rounded active"><a class="nav-link" data-toggle="pill"
-                            href="#profile"><i class="fa fa-user pr-1"></i> Edit Information</a></li>
+                            href="#profile"><i class="fa fa-user pr-1"></i>แก้ไขข้อมูลส่วนตัว</a></li>
                     <li class="nav-items rounded"><a class="nav-link" data-toggle="pill" href="#password"><i
                                 class="fa fa-key pr-1"></i>
-                            Password</a></li>
+                            รหัสผ่าน</a></li>
                     <li id="btnLogout" class="nav-items bg-danger rounded"><a class="nav-link" href="#"><i
                                 class="fas fa-sign-out-alt pr-1"></i>
-                            Logout </a></li>
+                            ออกจากระบบ </a></li>
                 </ul>
             </div>
         </div><!-- /.col-* -->
 
-        <div class="col-sm-8 col-lg-7">
+        <div class="col-sm-8 col-lg-9">
             <div class="tab-content">
                 <div id="profile" class="tab-pane fade in active">
                     <div class="content">
                         <div class="page-title">
-                            <h2> Edit Information </h2>
+                            <h2> แก้ไขข้อมูลส่วนตัว </h2>
                         </div><!-- /.page-title -->
 
                         <div class="bg-white rounded pl-5 pt-3 pr-5 pb-5 ml-5 mr-5 mb-5">
                             <h3 class="page-title mt-0 pt-0">
-                                General information
+                                ข้อมูลทั่วไป
 
-                                <a href="#" class="btn btn-primary btn-xs pull-right">save</a>
+                                <a href="#" class="btn btn-primary btn-xs pull-right">บันทึก</a>
                             </h3>
                             <form id="profileform">
                                 @csrf
                                 <div class="row">
                                     <div class="form-group col-sm-6">
                                         <label>ชื่อ-นามสกุล</label>
-                                        <input type="text" class="form-control" id="userName" value=""
+                                        <input type="text" class="form-control" id="userName" value="{{ $user->name }}"
                                             required>
                                         <div class="invalid-feedback">
                                             ชื่อบัญชีไม่ถูกต้อง
@@ -56,7 +57,7 @@
                                     <div class="form-group col-sm-6">
                                         <label>อีเมล์</label>
                                         <input type="email" class="form-control" id="userEmail"
-                                            value="" required>
+                                            value="{{ $user->email }}" required>
                                         <div class="invalid-feedback">
                                             กรอกอีเมล์ใหม่
                                         </div>
