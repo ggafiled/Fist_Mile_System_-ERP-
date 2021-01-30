@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Terra Expertise ERP System v{{ config('app.version') }}</title>
+        <title>Fist Mile ERP System v{{ config('app.version') }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -103,7 +103,7 @@
                     </div>
 
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Terra Expertise ERP System v{{ config('app.version') }}
+                        Fist Mile ERP System v{{ config('app.version') }}
                     </div>
                 </div>
             </div>

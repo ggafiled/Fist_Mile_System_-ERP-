@@ -30,6 +30,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/add_building', [App\Http\Controllers\BuildingController::class, 'addBuilding']);
     Route::get('/table_building', [App\Http\Controllers\BuildingController::class, 'tableBuilding']);
 
+    Route::post('setUserImage',[App\Http\Controllers\UserController::class, 'setUserImage']);
     Route::get('form/editprofile',[App\Http\Controllers\UserController::class, 'showChangePasswordForm'])->middleware('password.confirm');
     Route::post('changePassword',[App\Http\Controllers\UserController::class, 'changePassword'])->name('changePassword');
 });

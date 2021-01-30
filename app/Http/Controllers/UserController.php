@@ -4,9 +4,50 @@ namespace App\Http\Controllers;
 
 use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('permission:profile-update,profile-read,password-update,password-delete');
+    }
+
+    public function setUserImage(Request $request)
+    {
+        $validator = Validator::make($request->all(),[
+            'image' => ['required','regex:/^(https?:\/\/.*\.(?:png|jpg|jpeg))/']
+        ]);
+
+        if ($validator->fails()) {
+            return $validator;
+        }
+        
+        $user = Auth::user();
+        $user->image = $request->get('image');
+        $user->save();
+        return "Success";
+    }
+
+    public function setUserNameAndEmail(Request $request)
+    {
+        $validator = Validator::make($request->all(),[
+            'userName' => ['required','regex:/^(https?:\/\/.*\.(?:png|jpg|jpeg))/'],
+            'userEmail' => ['reqired', 'email:rfc,dns','unique:App\User,email']
+        ]);
+
+        if ($validator->fails()) {
+            return $validator;
+        }
+        
+        $user = Auth::user();
+        $user->name = $request->get('userName');
+        $user->email = $request->get('userEmail');
+        $user->save();
+        return "Success";
+    }
+
     public function showChangePasswordForm()
     {
         $user = auth()->user();

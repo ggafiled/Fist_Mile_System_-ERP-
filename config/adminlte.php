@@ -1,5 +1,4 @@
 <?php
-
 return [
 
     /*
@@ -289,14 +288,14 @@ return [
             'text' => 'User Information',
             'url'  => 'form/editprofile',
             'icon' => 'fas fa-fw fa-user',
-            'can'  => ['profile-update','profile-read'],
+            'can'  => ['profile-update','profile-read','password-update'],
         ],
-        [
-            'text' => 'change_password',
-            'url'  => 'form/editprofile',
-            'icon' => 'fas fa-fw fa-lock',
-            'can'  => ['password-update'],
-        ],
+        // [
+        //     'text' => 'change_password',
+        //     'url'  => 'form/editprofile',
+        //     'icon' => 'fas fa-fw fa-lock',
+        //     'can'  => ['password-update'],
+        // ],
         [
             'text' => 'Logout',
             'url'  => '/',

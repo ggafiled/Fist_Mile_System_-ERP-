@@ -46,10 +46,10 @@ class User extends Authenticatable
     ];
 
     public function adminlte_profile_url(){
-        return Avatar::create(preg_match('/^[A-Za-z]/',Auth::user()->name) ? Auth::user()->name: "Guest")->toBase64();
+        return Auth::user()->image ? Auth::user()->image: Avatar::create(preg_match('/^[A-Za-z]/',Auth::user()->name) ? Auth::user()->name: "Guest")->toBase64();
     }
 
     public function adminlte_image(){
-        return Avatar::create(preg_match('/^[A-Za-z]/',Auth::user()->name) ? Auth::user()->name: "Guest")->toBase64();
+        return Auth::user()->image ? Auth::user()->image: Avatar::create(preg_match('/^[A-Za-z]/',Auth::user()->name) ? Auth::user()->name: "Guest")->toBase64();
     }
 }
