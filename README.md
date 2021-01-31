@@ -28,8 +28,8 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
 ## หน้าจอการใช้งาน
-[admin](https://github.com/ggafiled/Fist_Mile_System_-ERP-/blob/master/public/image/monitor.PNG)
-[user](https://github.com/ggafiled/Fist_Mile_System_-ERP-/blob/master/public/image/monitor-user.PNG)
+![admin](https://github.com/ggafiled/Fist_Mile_System_-ERP-/blob/master/public/image/monitor.PNG)
+![user](https://github.com/ggafiled/Fist_Mile_System_-ERP-/blob/master/public/image/monitor-user.PNG)
 
 ### Premium Partners
 
