@@ -46,7 +46,7 @@ class User extends Authenticatable
     ];
 
     public function adminlte_profile_url(){
-        return Auth::user()->image ? Auth::user()->image: Avatar::create(preg_match('/^[A-Za-z]/',Auth::user()->name) ? Auth::user()->name: "Guest")->toBase64();
+        return "form/editprofile";
     }
 
     public function adminlte_image(){

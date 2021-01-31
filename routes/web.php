@@ -29,6 +29,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/user', [App\Http\Controllers\UserInforController::class, 'index']);
     Route::get('/add_building', [App\Http\Controllers\BuildingController::class, 'addBuilding']);
     Route::get('/table_building', [App\Http\Controllers\BuildingController::class, 'tableBuilding']);
+    Route::get('/logout',[App\Http\Controllers\UserController::class, 'logOut']);
 
     Route::post('setUserImage',[App\Http\Controllers\UserController::class, 'setUserImage']);
     Route::get('form/editprofile',[App\Http\Controllers\UserController::class, 'showChangePasswordForm'])->middleware('password.confirm');

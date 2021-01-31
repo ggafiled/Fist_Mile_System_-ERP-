@@ -27,7 +27,7 @@ return [
             'users' => 'c,r,u,d',
             'manage-users' => 'c,r',
             'profile' => 'r,u',
-            'payments' => 'c,r,u',
+            'payments' => 'c,r,u', 
             'password' => 'c,r,u',
             'building' => 'c,r,u',
             'constarution' => 'c,r,u,d',

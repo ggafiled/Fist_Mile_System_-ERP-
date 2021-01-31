@@ -64,7 +64,7 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => true,
     'usermenu_desc' => false,
@@ -143,7 +143,7 @@ return [
     |
     */
 
-    'sidebar_mini' => true,
+    'sidebar_mini' => false,
     'sidebar_collapse' => false,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
@@ -298,7 +298,7 @@ return [
         // ],
         [
             'text' => 'Logout',
-            'url'  => '/',
+            'url'  => 'logout',
             'icon' => 'fas fa-fw fa-share-square',
         ],
         // [

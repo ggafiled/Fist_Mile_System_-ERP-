@@ -11,7 +11,13 @@ class UserController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('permission:profile-update,profile-read,password-update,password-delete');
+        $this->middleware(['permission:password-update,require_all,guard:web'])->only(['changePassword','showChangePasswordForm']);
+        $this->middleware(['permission:profile-read|profile-update,require_all,guard:web'])->only(['setUserImage','setUserNameAndEmail']);
+    }
+
+    public function logOut(){
+        Auth::logout();
+        return redirect('login');
     }
 
     public function setUserImage(Request $request)

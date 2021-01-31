@@ -7,6 +7,7 @@
 
             <div class="container-fluid">
                 <div class="row">
+                    @permission('building-read|building-create|building-update')
                     <div class="col-lg-3 col-6">
                         <div class="small-box bg-info">
                             <div class="inner">
@@ -17,9 +18,12 @@
                             <div class="icon">
                                 <i class="fas fa-fw fa-calendar-alt"></i>
                             </div>
-                            <a href="/add_building" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="/add_building" class="small-box-footer">Click <i
+                                    class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
+                    @endpermission
+                    @permission('constarution-read|constarution-create|constarution-update')
                     <div class="col-lg-3 col-6">
                         <div class="small-box bg-success">
                             <div class="inner">
@@ -33,6 +37,8 @@
                             <a href="#" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
+                    @endpermission
+                    @permission('payments-read|payments-create|payments-update')
                     <div class="col-lg-3 col-6">
                         <div class="small-box bg-warning">
                             <div class="inner">
@@ -46,6 +52,8 @@
                             <a href="#" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
+                    @endpermission
+                    @permission('status-operator-read|status-operator-create|status-operator-update')
                     <div class="col-lg-3 col-6">
                         <div class="small-box bg-danger">
                             <div class="inner">
@@ -59,6 +67,7 @@
                             <a href="#" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
+                    @endpermission
                 </div>
             </div>
 
@@ -69,8 +78,9 @@
 
 @section('css')
 <style lang="scss">
-.small-box:hover {
-    cursor: pointer;
-}
+    .small-box:hover {
+        cursor: pointer;
+    }
+
 </style>
 @stop
