@@ -31,11 +31,13 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 ![admin](https://github.com/ggafiled/Fist_Mile_System_-ERP-/blob/master/public/image/monitor.PNG)
 ![user](https://github.com/ggafiled/Fist_Mile_System_-ERP-/blob/master/public/image/monitor-user.PNG)
 
-### Role & Permission  (![laratrust](https://laratrust.santigarcor.me/logo.svg) Laratrust)
+### Role & Permission  (<img src="https://laratrust.santigarcor.me/logo.svg" height="48px" width="48px"> Laratrust)
 ในขั้นต้นของระบบ ได้แยกสิทธิ์การใช้งานออกเป็น 4 ระดับตามนี้
 - Superadministrator 
 สามารถเข้าถึงเมนูต่างๆได้ตามสิทธิ์การใช้งานดังนี้
+
 ชื่อสิทธิ์|สามารถเข้าถึงได้แบบไหน
+------|-------
 users | c,r,u,d
 manage-users | c,r,u,d
 payments | c,r,u,d
@@ -48,7 +50,9 @@ technician-opertor | c,r,u,d
 
 - Administrator
 สามารถเข้าถึงเมนูต่างๆได้ตามสิทธิ์การใช้งานดังนี้
+
 ชื่อสิทธิ์|สามารถเข้าถึงได้แบบไหน
+------|-------
 users | c,r,u,d
 manage-users | c,r
 payments | c,r,u
@@ -61,7 +65,9 @@ technician-opertor | c,r,u,d
 
 - User
 สามารถเข้าถึงเมนูต่างๆได้ตามสิทธิ์การใช้งานดังนี้
+
 ชื่อสิทธิ์|สามารถเข้าถึงได้แบบไหน
+------|-------
 users | r,u
 profile | r,u
 password | u
@@ -72,7 +78,9 @@ technician-opertor | c,r,u
 
 - Guest
 สามารถเข้าถึงเมนูต่างๆได้ตามสิทธิ์การใช้งานดังนี้
+
 ชื่อสิทธิ์|สามารถเข้าถึงได้แบบไหน
+------|-------
 users | r,u
 profile | r,u
 password | u
