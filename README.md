@@ -19,43 +19,65 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## เตรียมการก่อนใช้งาน
+1. git clone this project.
+2. composer install
+3. npm install
+4. npm run dev
+5. php artisan migrate
+6. php artisan migrate --seed
 
 ## หน้าจอการใช้งาน
 ![admin](https://github.com/ggafiled/Fist_Mile_System_-ERP-/blob/master/public/image/monitor.PNG)
 ![user](https://github.com/ggafiled/Fist_Mile_System_-ERP-/blob/master/public/image/monitor-user.PNG)
 
-### Premium Partners
+### Role & Permission  (![laratrust](https://laratrust.santigarcor.me/logo.svg) Laratrust)
+ในขั้นต้นของระบบ ได้แยกสิทธิ์การใช้งานออกเป็น 4 ระดับตามนี้
+- Superadministrator 
+สามารถเข้าถึงเมนูต่างๆได้ตามสิทธิ์การใช้งานดังนี้
+ชื่อสิทธิ์|สามารถเข้าถึงได้แบบไหน
+users | c,r,u,d
+manage-users | c,r,u,d
+payments | c,r,u,d
+profile | r,u
+password | c,r,u
+building | c,r,u,d
+constarution | c,r,u,d
+status-operator | c,r,u,d
+technician-opertor | c,r,u,d
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+- Administrator
+สามารถเข้าถึงเมนูต่างๆได้ตามสิทธิ์การใช้งานดังนี้
+ชื่อสิทธิ์|สามารถเข้าถึงได้แบบไหน
+users | c,r,u,d
+manage-users | c,r
+payments | c,r,u
+profile | r,u
+password | c,r,u
+building | c,r,u
+constarution | c,r,u,d
+status-operator | c,r,u,d
+technician-opertor | c,r,u,d
 
-## Contributing
+- User
+สามารถเข้าถึงเมนูต่างๆได้ตามสิทธิ์การใช้งานดังนี้
+ชื่อสิทธิ์|สามารถเข้าถึงได้แบบไหน
+users | r,u
+profile | r,u
+password | u
+building | c,r,u
+constarution | c,r,u
+status-operator | c,r,u
+technician-opertor | c,r,u
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Guest
+สามารถเข้าถึงเมนูต่างๆได้ตามสิทธิ์การใช้งานดังนี้
+ชื่อสิทธิ์|สามารถเข้าถึงได้แบบไหน
+users | r,u
+profile | r,u
+password | u
+building | r
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
