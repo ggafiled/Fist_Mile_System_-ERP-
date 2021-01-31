@@ -7,7 +7,23 @@
 
             <div class="container-fluid">
                 <div class="row">
-                    @permission('building-read|building-create|building-update')
+                    @permission('building-read')
+                    <div class="col-lg-3 col-6">
+                        <div class="small-box bg-secondary">
+                            <div class="inner">
+                                <h3></h3>
+
+                                <p>Table Building List</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-fw fa-table"></i>
+                            </div>
+                            <a href="/table_building" class="small-box-footer">Click <i
+                                    class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    @endpermission
+                    @permission('building-create|building-update')
                     <div class="col-lg-3 col-6">
                         <div class="small-box bg-info">
                             <div class="inner">

@@ -244,7 +244,7 @@ return [
         [
             'text' => 'Building List',
             'icon' => 'fas fa-fw fa-calendar-alt',
-            'can'  => ['building-create'],
+            'can'  => ['building-create|building-read|building-update'],
             'submenu' => [
                 [
                     'text' => 'Add Building',

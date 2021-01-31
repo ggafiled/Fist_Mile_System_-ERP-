@@ -12,6 +12,12 @@ class BuildingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct(){
+         $this->middleware('auth');
+         $this->middleware(['permission:building-read|building-create|building-update,guard:web'])->only(['addBuilding']);
+     }
+
     public function addBuilding()
     {
         return view('building.addBuilding');
