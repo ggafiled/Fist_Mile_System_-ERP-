@@ -7,10 +7,24 @@
         font-weight: bold;
       }
 </style>
+<ul>
+    @if ($errors->all())
+    <ul class="alert alert-danger">
+      @foreach ($errors->all() as $error)
+        <li>
+           {{$error}}
+        </li>
+      @endforeach
+    </ul>
+    @endif
+</ul>
+{!! Form::open(['Action' => 'BuildingController@store','method'=>'POST']) !!}
+    
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card ">
-            <div class="card-header text-white bg-secondary"><h6>{{ __('ADD BUILDING') }}</h6></div>
+           
+            <div class="card-header text-white bg-secondary"><h3 >{{ __('ADD BUILDING') }}</h3></div>
                 <div class="card-body">
                     <div class="form-group">
                         <div class="container-fluid mx-auto mt-2 mb-2">
@@ -19,20 +33,14 @@
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Building Name :</label>
-                                            <input  type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter building name."
-                                                value="" required
-                                                autocomplete="true" autofocus >
+                                            {!! Form::label('Building Name :') !!}
+                                            {!! Form::text('building',null,["class"=>"form-control",'placeholder' => 'Enter your building.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Fm-Code :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your code."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Fm-Code :') !!}
+                                            {!! Form::text('fmCode',null,["class"=>"form-control",'placeholder' => 'Enter your code.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -40,29 +48,20 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Contact Name :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter contact name."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Contact Name :') !!}
+                                            {!! Form::text('contactName',null,["class"=>"form-control",'placeholder' => 'Enter contact name.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Phone :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="xxx-xxx-xxxx."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Phone :') !!}
+                                            {!! Form::text('phone',null,["class"=>"form-control",'placeholder' => 'xxx-xxx-xxxx.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Area :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your area."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Area :') !!}
+                                            {!! Form::text('area',null,["class"=>"form-control",'placeholder' => 'Enter your area.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -71,29 +70,20 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Number Layer :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your number layer."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Number Layer :') !!}
+                                            {!! Form::number('numberLayer',null,["class"=>"form-control",'placeholder' => 'Enter your number layer.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Floor :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your floor."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Floor :') !!}
+                                            {!! Form::number('floor',null,["class"=>"form-control",'placeholder' => 'Enter your floor.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Room Number :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your room."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Room Number :') !!}
+                                            {!! Form::number('roomNumber',null,["class"=>"form-control",'placeholder' => 'Enter your room.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -101,11 +91,8 @@
                                 <div class="row">
                                     <div class="col-sm">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Detail Adress :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Unit number, house number, building, street name."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Detail Adress :') !!}
+                                            {!! Form::text('detailAdress',null,["class"=>"form-control",'placeholder' => 'Unit number, house number, building, street name.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -113,29 +100,20 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Province :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your province."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Province :') !!}
+                                            {!! Form::text('province',null,["class"=>"form-control",'placeholder' => 'Enter your province..'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">City :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your city."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('City :') !!}
+                                            {!! Form::text('city',null,["class"=>"form-control",'placeholder' => 'Enter your city.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Postal Code :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your postal code."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Postal Code :') !!}
+                                            {!! Form::number('postalCode',null,["class"=>"form-control",'placeholder' => 'Enter your postal code.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -143,29 +121,20 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Zone :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your zone."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Zone :') !!}
+                                            {!! Form::text('zone',null,["class"=>"form-control",'placeholder' => 'Enter your zone.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Latitude :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your latitude."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Latitude :') !!}
+                                            {!! Form::number('latitude',null,["class"=>"form-control",'placeholder' => 'Enter your latitude.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Longtude :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your longtude."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Longtude :') !!}
+                                            {!! Form::number('longtude',null,["class"=>"form-control",'placeholder' => 'Enter your longtude.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -173,29 +142,20 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Price Square :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your price."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Price Square :') !!}
+                                            {!! Form::text('priceSquare',null,["class"=>"form-control",'placeholder' => 'Enter your price.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Working Time :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your latitude."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Working Time :') !!}
+                                            {!! Form::text('workingTime',null,["class"=>"form-control",'placeholder' => 'Enter your latitude.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Balance :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your balance."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Balance :') !!}
+                                            {!! Form::text('blance',null,["class"=>"form-control",'placeholder' => 'Enter your balance.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -203,30 +163,25 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Developer :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your developer."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Developer :') !!}
+                                            {!! Form::text('developer',null,["class"=>"form-control",'placeholder' => 'Enter your developer.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label class="w3-text-blue">Grade :</label>
-                                            <input type="text" class="form-control" id="document_no" name="document_no"
-                                                placeholder="Enter your grade."
-                                                value="" required
-                                                autocomplete="true" autofocus>
+                                            {!! Form::label('Grade :') !!}
+                                            {!! Form::text('grade',null,["class"=>"form-control",'placeholder' => 'Enter your grade.'])!!}
                                         </div>
                                     </div>
                                 </div>
                            <input type="submit" value="Add Building " class="btn btn-primary">
-                           <a href="/building" class="btn btn-success my-2">Back</a>
+                           <a href="/home" class="btn btn-success my-2">Back</a>
                     </div>
                 </div>
              </div>
         </div>
     </div>
+    {!! Form::close() !!}  
 </div>               
    
 @endsection

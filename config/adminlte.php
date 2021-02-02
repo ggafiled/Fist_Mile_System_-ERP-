@@ -252,8 +252,13 @@ return [
                     'can'  => ['building-create']
                 ],
                 [
-                    'text' => 'Table Building List',
+                    'text' => 'Edit Table Building List',
                     'url'  => '/table_building',
+                    'can'  => ['building-read']
+                ],
+                [
+                    'text' => 'Table Building List',
+                    'url'  => '/table_building_list',
                     'can'  => ['building-read']
                 ],
             ]
