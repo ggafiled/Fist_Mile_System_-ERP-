@@ -31,16 +31,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/table_building_list', [App\Http\Controllers\tablebuildinglistController::class, 'index']);
     Route::get('/table_building', [App\Http\Controllers\BuildingController::class, 'tableBuilding']);
     Route::get('/logout',[App\Http\Controllers\UserController::class, 'logOut']);
-<<<<<<< HEAD
 
     Route::post('/setUserNameAndEmail',[App\Http\Controllers\UserController::class, 'setUserNameAndEmail'])->name('users.update');
     Route::post('/setUserImage',[App\Http\Controllers\UserController::class, 'setUserImage']);
     Route::get('/form/editprofile',[App\Http\Controllers\UserController::class, 'showChangePasswordForm'])->name('users.edit');
     Route::post('/changePassword',[App\Http\Controllers\UserController::class, 'changePassword'])->name('users.password.update');
-=======
     Route::post('/add_building', [App\Http\Controllers\BuildingController::class, 'store']);
-    Route::post('setUserImage',[App\Http\Controllers\UserController::class, 'setUserImage']);
-    Route::get('form/editprofile',[App\Http\Controllers\UserController::class, 'showChangePasswordForm'])->middleware('password.confirm');
-    Route::post('changePassword',[App\Http\Controllers\UserController::class, 'changePassword'])->name('changePassword');
->>>>>>> 131d8626bc2bea6198b828039f523771b480fc2f
 });
