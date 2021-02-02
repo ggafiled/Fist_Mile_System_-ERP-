@@ -25,16 +25,10 @@ class BuildingController extends Controller
         return view('building.addBuilding');
     }
 
-    public function tableBuilding(){
-        return view('building.tableBuilding');
-    }
-
     public function index()
     {
         $data = Building::all();
-        return view('building.tableBuilding',compact(['data']));
-        // $data['acara'] = building::all();
-        // return view('building.tableBuilding', ['acara' => $data['acara'] ]);
+        return view('building.tableBuilding',['data' => $data]);
     }
 
     /**
