@@ -290,12 +290,6 @@ return [
             'icon' => 'fas fa-fw fa-user',
             'can'  => ['profile-update','profile-read','password-update'],
         ],
-        // [
-        //     'text' => 'change_password',
-        //     'url'  => 'form/editprofile',
-        //     'icon' => 'fas fa-fw fa-lock',
-        //     'can'  => ['password-update'],
-        // ],
         [
             'text' => 'Logout',
             'url'  => 'logout',
@@ -463,6 +457,21 @@ return [
                 ],
             ],
         ],
+        'Toast' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '//cdn.bootcss.com/toastr.js/latest/js/toastr.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '//cdn.bootcss.com/toastr.js/latest/css/toastr.min.css',
+                ],
+            ],
+        ]
     ],
 
     /*
