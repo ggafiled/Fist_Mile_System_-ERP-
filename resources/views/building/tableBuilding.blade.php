@@ -29,7 +29,7 @@
                         </thead>
                     </div>
                     <tbody>
-                        {{-- @foreach ($data as $row)
+                        @foreach ($data as $row)
                             <tr>
                              <th scope="row">{{$row->id}}</th>
                              <td>{{$row->building}}</td>
@@ -37,7 +37,7 @@
                              <td>{{$row->contactName}}</td>
                              <td>{{$row->phone}}</td>
                             </tr>
-                        @endforeach --}}
+                        @endforeach
                      </tbody>
                     </table>
                   </div>
