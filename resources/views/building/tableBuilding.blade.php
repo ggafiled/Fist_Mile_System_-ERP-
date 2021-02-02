@@ -5,9 +5,9 @@
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">
-            <div class="card-header text-white bg-secondary"><h3><center>{{ __('BUILDING  LIST  TABLE') }}</h3></center></div>
+            <div class="card-header text-white bg-secondary"><h3><center>{{ __('Edit BUILDING TABLE') }}</h3></center></div>
                 <div class="card-body">
-                    <a  href=""  class="btn btn-primary my-2 "> + CREATE</a>
+                    <a  href="/add_building"  class="btn btn-primary my-2 "> + CREATE</a>
                     <div class="table-responsive">
                     <table class="table table-striped " id="example">
                         <thead>

@@ -28,6 +28,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/user', [App\Http\Controllers\UserInforController::class, 'index']);
     Route::get('/add_building', [App\Http\Controllers\BuildingController::class, 'addBuilding']);
+    Route::get('/table_building_list', [App\Http\Controllers\tablebuildinglistController::class, 'index']);
     Route::get('/table_building', [App\Http\Controllers\BuildingController::class, 'tableBuilding']);
     Route::get('/logout',[App\Http\Controllers\UserController::class, 'logOut']);
     Route::post('/add_building', [App\Http\Controllers\BuildingController::class, 'store']);

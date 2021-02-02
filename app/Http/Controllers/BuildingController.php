@@ -31,7 +31,7 @@ class BuildingController extends Controller
 
     public function index()
     {
-        $data=Building::all();
+        $data = Building::all();
         return view('building.tableBuilding',compact($data));
         // $data['acara'] = building::all();
         // return view('building.tableBuilding', ['acara' => $data['acara'] ]);
