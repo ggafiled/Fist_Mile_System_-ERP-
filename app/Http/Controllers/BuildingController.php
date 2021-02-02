@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Building;
+
 
 class BuildingController extends Controller
 {
@@ -27,8 +29,12 @@ class BuildingController extends Controller
         return view('building.tableBuilding');
     }
 
-    public function index(){
-        //
+    public function index()
+    {
+        $data=Building::all();
+        return view('building.tableBuilding',compact($data));
+        // $data['acara'] = building::all();
+        // return view('building.tableBuilding', ['acara' => $data['acara'] ]);
     }
 
     /**
@@ -49,7 +55,30 @@ class BuildingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'building'=>'required',
+            'fmCode'=>'required',
+            'contactName'=>'required',
+            'phone'=>'required',
+            'area'=>'required',
+            'numberLayer'=>'required',
+            'floor'=>'required',
+            'roomNumber'=>'required',
+            'detailAdress'=>'required',
+            'province'=>'required',
+            'city'=>'required',
+            'postalCode'=>'required',
+            'zone'=>'required',
+            'latitude'=>'required',
+            'longtude'=>'required',
+            'priceSquare'=>'required',
+            'workingTime'=>'required',
+            'blance'=>'required',
+            'developer'=>'required',
+            'grade'=>'required'
+        ]);
+        Building::create($request->all());
+        return redirect()->back();
     }
 
     /**

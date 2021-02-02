@@ -7,10 +7,23 @@
         font-weight: bold;
       }
 </style>
-{!! Form::open(['Action' => 'addBuildingController@store','method'=>'POST']) !!}
-    <div class="row justify-content-center">
+<ul>
+    @if ($errors->all())
+    <ul class="alert alert-danger">
+      @foreach ($errors->all() as $error)
+        <li>
+           {{$error}}
+        </li>
+      @endforeach
+    </ul>
+    @endif
+</ul>
+{!! Form::open(['Action' => 'BuildingController@store','method'=>'POST']) !!}
+    
+<div class="row justify-content-center">
     <div class="col-md">
         <div class="card ">
+           
             <div class="card-header text-white bg-secondary"><h3 >{{ __('ADD BUILDING') }}</h3></div>
                 <div class="card-body">
                     <div class="form-group">
@@ -58,19 +71,19 @@
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             {!! Form::label('Number Layer :') !!}
-                                            {!! Form::text('numberLayer',null,["class"=>"form-control",'placeholder' => 'Enter your number layer.'])!!}
+                                            {!! Form::number('numberLayer',null,["class"=>"form-control",'placeholder' => 'Enter your number layer.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             {!! Form::label('Floor :') !!}
-                                            {!! Form::text('floor',null,["class"=>"form-control",'placeholder' => 'Enter your floor.'])!!}
+                                            {!! Form::number('floor',null,["class"=>"form-control",'placeholder' => 'Enter your floor.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             {!! Form::label('Room Number :') !!}
-                                            {!! Form::text('roomNumber',null,["class"=>"form-control",'placeholder' => 'Enter your room.'])!!}
+                                            {!! Form::number('roomNumber',null,["class"=>"form-control",'placeholder' => 'Enter your room.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -100,7 +113,7 @@
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             {!! Form::label('Postal Code :') !!}
-                                            {!! Form::text('postalCode',null,["class"=>"form-control",'placeholder' => 'Enter your postal code.'])!!}
+                                            {!! Form::number('postalCode',null,["class"=>"form-control",'placeholder' => 'Enter your postal code.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -115,13 +128,13 @@
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             {!! Form::label('Latitude :') !!}
-                                            {!! Form::text('latitude',null,["class"=>"form-control",'placeholder' => 'Enter your latitude.'])!!}
+                                            {!! Form::number('latitude',null,["class"=>"form-control",'placeholder' => 'Enter your latitude.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             {!! Form::label('Longtude :') !!}
-                                            {!! Form::text('longtude',null,["class"=>"form-control",'placeholder' => 'Enter your longtude.'])!!}
+                                            {!! Form::number('longtude',null,["class"=>"form-control",'placeholder' => 'Enter your longtude.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -162,7 +175,7 @@
                                     </div>
                                 </div>
                            <input type="submit" value="Add Building " class="btn btn-primary">
-                           <a href="/building" class="btn btn-success my-2">Back</a>
+                           <a href="/home" class="btn btn-success my-2">Back</a>
                     </div>
                 </div>
              </div>
