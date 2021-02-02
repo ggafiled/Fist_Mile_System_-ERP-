@@ -254,7 +254,7 @@ return [
                 [
                     'text' => 'Edit Table Building List',
                     'url'  => '/table_building',
-                    'can'  => ['building-read']
+                    'can'  => ['building-update','building-read']
                 ],
                 [
                     'text' => 'Table Building List',
