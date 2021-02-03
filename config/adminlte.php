@@ -45,7 +45,7 @@ return [
     */
 
     'logo' => '<b>FIRST MILE</b>',
-    // 'logo_img' => 'https://github.com/ggafiled/googlesheet_appscript_project_list/blob/master/img/terra-e1531841401859.png?raw=true',
+    'logo_img' => 'https://sv1.picz.in.th/images/2021/02/02/odJMYP.png',
     'logo_img_class' => 'brand-image elevation-0',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
