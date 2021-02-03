@@ -1,5 +1,7 @@
 @extends('adminlte::page')
 
+@include('partials.notification')
+
 @section('content')
 <div class="container">   
     <div id="custom-target"></div> 
