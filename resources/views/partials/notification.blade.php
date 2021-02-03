@@ -1,4 +1,3 @@
-@section('js')
 <script>
     @if(Session::has('notification'))
 
@@ -41,4 +40,3 @@
     }
     @endif
 </script>
-@endsection
