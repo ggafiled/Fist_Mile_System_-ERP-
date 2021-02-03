@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 $(document).ready(function () {
 
     let url = location.href.replace(/\/$/, "");
