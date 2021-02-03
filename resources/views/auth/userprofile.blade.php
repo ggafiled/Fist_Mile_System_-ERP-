@@ -1,19 +1,15 @@
 @extends('adminlte::page')
 
-@include('partials.notification')
-
 @section('content')
-<div class="container">   
-    <div id="custom-target"></div> 
+<div class="container">
+    <div id="custom-target"></div>
     <div class="row">
         <div class="col-sm-4 col-lg-3">
             <div class="widget">
                 <div class="user-photo">
-                    <a href="#">
                         <img src="{{ $user->image ? $user->image : asset('/image/noimage.jpg') }}"
                             alt="User Photo">
                         <span id="user-photo-action" class="user-photo-action">กดที่นี่เพื่อเปลี่ยนรูปภาพ</span>
-                    </a>
                 </div>
                 <div>
                     <div class="nav flex-column nav-tabs h-100 pt-2" id="vert-tabs-tab" role="tablist"
@@ -55,7 +51,8 @@
                                                 <div class="form-group col-sm-6">
                                                     <label>ชื่อ-นามสกุล</label>
                                                     <input type="text" class="form-control" id="name" name="name"
-                                                        value="{{ old('name') ? old('name'): $user->name }}" required>
+                                                        value="{{ old('name') ? old('name'): $user->name }}"
+                                                        required>
                                                     @error('name')
                                                         <div class="invalid-feedback">
                                                             ชื่อบัญชีไม่ถูกต้อง
@@ -66,7 +63,8 @@
                                                 <div class="form-group col-sm-6">
                                                     <label>อีเมล์</label>
                                                     <input type="email" class="form-control" id="email" name="email"
-                                                        value="{{ old('email') ? old('email'): $user->email }}" required>
+                                                        value="{{ old('email') ? old('email'): $user->email }}"
+                                                        required>
                                                     @error('email')
                                                         <div class="invalid-feedback">
                                                             กรอกอีเมล์ใหม่
@@ -105,11 +103,12 @@
                                                         <input type="password" class="form-control pwd"
                                                             id="currentPassword" name="currentPassword"
                                                             aria-describedby="validationTooltipPasswordPrepend"
-                                                            value="{{old('currentPassword')}}"
+                                                            value="{{ old('currentPassword') }}"
                                                             required>
                                                         <span class="input-group-append">
                                                             <button class="btn btn-default input-group-text reveal"
-                                                                type="button"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+                                                                type="button"><i class="fa fa-eye-slash"
+                                                                    aria-hidden="true"></i></button>
                                                         </span>
                                                         @error('currentPassword')
                                                             <div class="invalid-feedback">
@@ -124,11 +123,11 @@
                                                         <input type="password" class="form-control pwd" id="newPassword"
                                                             name="newPassword"
                                                             aria-describedby="validationTooltipPasswordPrepend"
-                                                            value="{{old('newPassword')}}"
-                                                            required>
+                                                            value="{{ old('newPassword') }}" required>
                                                         <span class="input-group-append">
                                                             <button class="btn btn-default input-group-text reveal"
-                                                                type="button"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+                                                                type="button"><i class="fa fa-eye-slash"
+                                                                    aria-hidden="true"></i></button>
                                                         </span>
                                                         @error('newPassword')
                                                             <div class="invalid-feedback">
@@ -143,11 +142,12 @@
                                                         <input type="password" class="form-control pwd"
                                                             id="confirmPassword" name="confirmPassword"
                                                             aria-describedby="validationTooltipPasswordPrepend"
-                                                            value="{{old('confirmPassword')}}"
+                                                            value="{{ old('confirmPassword') }}"
                                                             required>
                                                         <span class="input-group-append">
                                                             <button class="btn btn-default input-group-text reveal"
-                                                                type="button"><i class="fa fa-eye-slash" aria-hidden="true"></i></button>
+                                                                type="button"><i class="fa fa-eye-slash"
+                                                                    aria-hidden="true"></i></button>
                                                         </span>
                                                         @error('confirmPassword')
                                                             <div class="invalid-feedback">
@@ -219,6 +219,7 @@
         }
 
         .user-photo-action {
+            cursor: pointer;
             background-color: rgba(255, 255, 255, 0.85);
             bottom: 15px;
             color: #363636;
@@ -233,5 +234,92 @@
     @stop
 
         @section('js')
+        @include('partials.notification')
         <script src="{{ asset('js/app.js') }}"></script>
+        <script>
+            $(document).ready(function () {
+
+                let url = location.href.replace(/\/$/, "");
+
+                if (location.hash) {
+                    const hash = url.split("#");
+                    $('#vert-tabs-tab a[href="#' + hash[1] + '"]').tab("show");
+                    url = location.href.replace(/\/#/, "#");
+                    history.replaceState(null, null, url);
+                    setTimeout(() => {
+                        $(window).scrollTop(0);
+                    }, 400);
+                }
+
+                $("div[id^='show_hide_password_'] button").each(function (i) {
+                    $(this).on("click", function () {
+                        if ($('#show_hide_password_' + (i + 1) + ' input').attr("type") ==
+                            "text") {
+                            $('#show_hide_password_' + (i + 1) + ' input').attr('type',
+                                'password');
+                            $('#show_hide_password_' + (i + 1) + ' i').addClass("fa-eye-slash");
+                            $('#show_hide_password_' + (i + 1) + ' i').removeClass("fa-eye");
+                        } else if ($('#show_hide_password_' + (i + 1) + ' input').attr(
+                            "type") == "password") {
+                            $('#show_hide_password_' + (i + 1) + ' input').attr('type', 'text');
+                            $('#show_hide_password_' + (i + 1) + ' i').removeClass(
+                                "fa-eye-slash");
+                            $('#show_hide_password_' + (i + 1) + ' i').addClass("fa-eye");
+                        }
+                    });
+                });
+
+                $('#user-photo-action').on('click', async function () {
+                    Swal.fire({
+                        title: 'เปลี่ยนรูปภาพโปรไฟล์',
+                        html: '<input type="url" id="userimage" class="swal2-input" placeholder="วางลิงค์รูปภาพของคุณ"></input>',
+                        confirmButtonText: 'บันทึก',
+                        showCloseButton: true,
+                        showCancelButton: true,
+                        cancelButtonText: "ยกเลิก",
+                        preConfirm: () => {
+                            var urlRegex = /(https?:\/\/.*\.(?:png|jpg|jpeg))/;
+                            let userimage = Swal.getPopup().querySelector('#userimage')
+                                .value
+                            if (userimage === '' || !urlRegex.test(userimage)) {
+                                Swal.showValidationMessage(
+                                    `ที่อยู่ไฟล์รูปภาพไม่ถูกต้อง`)
+                            }
+                            return {
+                                userimage: userimage
+                            }
+                        }
+                    }).then((result) => {
+                        var formData = new FormData();
+                        formData.append("image", result.value.userimage);
+                        $.ajaxSetup({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr(
+                                    'content')
+                            }
+                        });
+                        $.ajax("{{ URL::to('/') }}/setUserImage", {
+                            type: 'POST',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function (data, status, xhr) {
+                                Swal.fire("รายงานผล", "เปลี่ยนรูปภาพสำเร็จแล้ว",
+                                    "success").then(function () {
+                                    location.reload();
+                                });
+                            },
+                            error: function (jqXhr, textStatus, errorMessage) {
+                                Swal.showValidationMessage(
+                                    `ที่อยู่ไฟล์รูปภาพไม่ถูกต้อง`);
+                            }
+                        });
+                    })
+                });
+                $('#btnLogout').on('click', function () {
+                    $('#logout-form').submit();
+                });
+            });
+
+        </script>
         @stop
