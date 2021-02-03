@@ -1,7 +1,6 @@
 @extends('adminlte::page')
 
 @section('content')
-
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">
@@ -9,14 +8,16 @@
                 <div class="card-body">
                     <a  href="/add_building"  class="btn btn-primary my-2 "> + CREATE</a>
                     <div class="table-responsive">
-                    <table class="table table-striped " id="example">
+                        <table class="table table-bordered" id="example">
                         <thead>
                             <tr class="info">
                                 <th width="3%">#</th>
-                                <th width="30%">ชื่อตึก</th>
+                                <th width="25%">ชื่อตึก</th>
                                 <th width="10%">รหัส-fm</th>
-                                <th width="20%">ชื่อผู้ติดต่อ</th>
-                                <th width="15%">เบอร์โทร</th>
+                                <th width="10%">ชื่อผู้ติดต่อ</th>
+                                <th width="10%">เบอร์โทร</th>
+                                <th width="15%">ที่อยู่</th>
+                                <th width="12%">แก้ไข/ลบ</th>
                                 {{-- <th width="5%">เขต</th>
                                 <th width="10%">จำนวนอาคาร</th>
                                 <th width="6%">ชั้น</th>
@@ -36,6 +37,15 @@
                              <td>{{$row->fmCode}}</td>
                              <td>{{$row->contactName}}</td>
                              <td>{{$row->phone}}</td>
+                             <td>{{$row->detailAdress}}</td>
+                             <td>
+                           
+                                <form action="" method="post">
+                                    <a href="" class="btn btn-success" >edit</a>
+                                    @csrf @method('DELETE')
+                                  <input type="submit" value='Delete'  data-name="" class="btn btn-danger deleteForm">
+                                </form>
+                            </td>
                             </tr>
                         @endforeach
                      </tbody>
