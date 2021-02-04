@@ -5,7 +5,7 @@
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">
-            <div class="card-header text-white bg-primary"><h3><center>{{ __('BUILDING LIST TABLE') }}</h3></center></div>
+            <div class="card-header text-white bg-info"><h3><center>{{ __('BUILDING LIST TABLE') }}</h3></center></div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-striped" id="example">
