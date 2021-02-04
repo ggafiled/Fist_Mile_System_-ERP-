@@ -5,11 +5,6 @@
  
     <title>Data Tables</title>
  
-        <!-- นำเข้า  CSS จาก Bootstrap -->
-        
-        
-        
-         
         <!-- นำเข้า  Javascript จาก  Jquery -->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <!-- นำเข้า  Javascript  จาก   dataTables -->

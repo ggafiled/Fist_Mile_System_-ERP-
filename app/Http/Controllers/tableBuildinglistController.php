@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\building;
 class tableBuildinglistController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class tableBuildinglistController extends Controller
      */
     public function index()
     {
-        return view ('building.tableBuildinglist');
+        $data = Building::all();
+        return view('building.tableBuildinglist',['data' => $data]);
     }
 
     /**
