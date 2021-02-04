@@ -5,15 +5,15 @@
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">
-            <div class="card-header text-white bg-secondary"><h3><center>{{ __('EDIT BUILDING TABLE') }}</h3></center></div>
+            <div class="card-header text-white bg-dark"><h3><center>{{ __('EDIT BUILDING TABLE') }}</h3></center></div>
                 <div class="card-body">
                     <a  href="/add_building"  class="btn btn-primary my-2 "> + CREATE</a>
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="example">
-                        <thead>
+                        <table class="table table-striped" id="example1">
+                        <thead >
                             <tr class="info">
                                 <th width="3%">#</th>
-                                <th width="15%">ชื่อตึก</th>
+                                <th width="12%">ชื่อตึก</th>
                                 <th width="5%">รหัส-fm</th>
                                 <th width="10%">ชื่อผู้ติดต่อ</th>
                                 <th width="8%">เบอร์โทร</th>

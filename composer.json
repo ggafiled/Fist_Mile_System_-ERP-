@@ -22,6 +22,8 @@
         "livewire/livewire": "^2.3",
         "realrashid/sweet-alert": "^3.2",
         "santigarcor/laratrust": "^6.3",
+        "yajra/laravel-datatables-buttons": "^4.10",
+        "yajra/laravel-datatables-oracle": "^9.15",
         "yoeunes/toastr": "^1.2"
     },
     "require-dev": {

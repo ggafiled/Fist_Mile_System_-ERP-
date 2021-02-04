@@ -8,7 +8,7 @@
             <div class="card-header text-white bg-info"><h3><center>{{ __('BUILDING LIST TABLE') }}</h3></center></div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-striped" id="example">
+                        <table class="table table-striped table-hover" id="example">
                         <thead>
                             <tr class="info">
                                 <th width="2%">#</th>
@@ -16,7 +16,7 @@
                                 <th width="7%">รหัส-fm</th>
                                 <th width="8%">ชื่อผู้ติดต่อ</th>
                                 <th width="10%">เบอร์โทร</th>
-                                <th width="15%">ที่อยู่</th>
+                                <th width="13%">ที่อยู่</th>
                                 <th width="5%">เขต</th>
                                 <th width="5%">จังหวัด</th>
                                 <th width="5%">รหัสไปรษณีย์</th>

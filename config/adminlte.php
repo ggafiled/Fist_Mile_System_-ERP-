@@ -2,26 +2,49 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+
     <title>Data Tables</title>
- 
-        <!-- นำเข้า  Javascript จาก  Jquery -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <!-- นำเข้า  Javascript  จาก   dataTables -->
-        <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
- 
-        <script type="text/javascript">
-            //คำสั่ง Jquery เริ่มทำงาน เมื่อ โหลดหน้า Page เสร็จ 
-            $(function(){
-                //กำหนดให้  Plug-in dataTable ทำงาน ใน ตาราง Html ที่มี id เท่ากับ example
-                $('#example').dataTable();
+    <script type="text/javascript" src="https://cdn.datatables.net/r/dt/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,af-2.0.0,b-1.0.3,b-colvis-1.0.3,b-html5-1.0.3,b-print-1.0.3,se-1.0.1/datatables.min.js"></script>
+    <!-- นำเข้า  Javascript จาก  Jquery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- นำเข้า  Javascript  จาก   dataTables -->
+    <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+	<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script type="text/javascript" src="/media/js/site.js?_=f8b58e9283bed2c11047af0c304e0c6b"></script>
+	<script type="text/javascript" src="/media/js/dynamic.php?comments-page=extensions%2Fbuttons%2Fexamples%2Fhtml5%2Fsimple.html" async=""></script>
+	<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../../examples/resources/demo.js"></script>
+
+    <script type="text/javascript" class="init">
+        $(document).ready(function() {
+            $('#example').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    // 'copyHtml5',
+                    'excelHtml5',
+                    'csvHtml5',
+                    'pdfHtml5'
+                ]
             });
-        </script>
-  </head>
+        });
+        $(document).ready(function() {
+            $('#example1').DataTable({});
+        });
+    </script>
+</head>
+
+
 <?php
 
 return [
-    
+
 
     /*
     |--------------------------------------------------------------------------
@@ -276,7 +299,7 @@ return [
                 [
                     'text' => 'Edit Table Building List',
                     'url'  => '/table_building',
-                    'can'  => ['building-update','building-read']
+                    'can'  => ['building-update', 'building-read']
                 ],
                 [
                     'text' => 'Table Building List',
@@ -290,32 +313,32 @@ return [
             'text' => 'Constarution',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-poll',
-            'can'  => ['constarution-create','constarution-read']
+            'can'  => ['constarution-create', 'constarution-read']
         ],
         [
             'text' => 'Building Payment',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-calendar-check',
-            'can'  => ['payments-create','payments-read']
+            'can'  => ['payments-create', 'payments-read']
         ],
         [
             'text' => 'Status Opertor',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-poll-h',
-            'can'  => ['status-operator-create','status-operator-read']
+            'can'  => ['status-operator-create', 'status-operator-read']
         ],
         [
             'text' => 'Technician Opertor',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-poll-h',
-            'can'  => ['technician-operator-create','technician-operator-read']
+            'can'  => ['technician-operator-create', 'technician-operator-read']
         ],
         ['header' => 'USER'],
         [
             'text' => 'User Information',
             'url'  => 'form/editprofile',
             'icon' => 'fas fa-fw fa-user',
-            'can'  => ['profile-update','profile-read','password-update'],
+            'can'  => ['profile-update', 'profile-read', 'password-update'],
         ],
         [
             'text' => 'Logout',
@@ -358,7 +381,7 @@ return [
         //             'text' => 'level_one',
         //             'url'  => '#',
         //         ],
-            // ],
+        // ],
         // ],
         // ['header' => 'labels'],
         // [
