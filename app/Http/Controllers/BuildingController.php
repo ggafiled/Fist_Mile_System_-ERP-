@@ -92,7 +92,7 @@ class BuildingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function buildingEdit($id)
     {
         $data = Building::find($id);
         return view('contact.edit',compact(['data']));
