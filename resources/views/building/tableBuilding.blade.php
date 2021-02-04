@@ -40,12 +40,11 @@
                              <td>{{$row->phone}}</td>
                              {{-- <td>{{$row->detailAdress}}</td> --}}
                              <td>
-                           
-                                <form action="" method="post">
-                                    <a href="" class="btn btn-success" >edit</a>
+                                {{-- <form action="" method="post"> --}}
+                                    <a href="{{route('Building.edit',$row->id)}}" class="btn btn-success" >edit</a>
                                     @csrf @method('DELETE')
                                   <input type="submit" value='Delete'  data-name="" class="btn btn-danger deleteForm">
-                                </form>
+                                {{-- </form> --}}
                             </td>
                             </tr>
                         @endforeach
