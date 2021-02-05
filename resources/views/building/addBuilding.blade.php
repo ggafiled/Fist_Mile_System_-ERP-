@@ -107,7 +107,7 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             {!! Form::label('เขต :') !!}
-                                            {!! Form::number('zone',null,["class"=>"form-control",'placeholder' => 'Enter your postal code.'])!!}
+                                            {!! Form::text('zone',null,["class"=>"form-control",'placeholder' => 'Enter your postal code.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
@@ -128,13 +128,13 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             {!! Form::label('Latitude :') !!}
-                                            {!! Form::number('latitude',null,["class"=>"form-control",'placeholder' => 'กรอกพิกัด latitude.'])!!}
+                                            {!! Form::number('latitude',null,["class"=>"form-control",'placeholder' => 'กรอกพิกัด latitude.','min'=> '0','step'=>'any'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             {!! Form::label('Longtude :') !!}
-                                            {!! Form::number('longtude',null,["class"=>"form-control",'placeholder' => 'กรอกพิกัด longtude.'])!!}
+                                            {!! Form::number ('longtude',null,["class"=>"form-control",'placeholder' => 'กรอกพิกัด longtude.','min'=> '0','step'=>'any'])!!}
                                         </div>
                                     </div>
                                 </div>

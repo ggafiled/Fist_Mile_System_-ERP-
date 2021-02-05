@@ -72,7 +72,8 @@ class BuildingController extends Controller
             'grade'=>'required'
         ]);
         Building::create($request->all());
-        return redirect()->back();
+        // return redirect()->back();
+        return redirect('/table_building_list');
     }
 
     /**
