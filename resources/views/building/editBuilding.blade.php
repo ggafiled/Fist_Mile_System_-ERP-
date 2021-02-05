@@ -18,7 +18,7 @@
     </ul>
     @endif
 </ul>
-{!! Form::open(['Action' => ['BuildingController@update',$data->id],'method'=>'POST']) !!}
+{!! Form::open(['Action' => ['BuildingController@update',$data->id],'method'=>'PUT']) !!}
     
 <div class="row justify-content-center">
     <div class="col-md">
