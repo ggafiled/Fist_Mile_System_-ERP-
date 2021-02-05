@@ -40,9 +40,9 @@
                              <td>{{$row->phone}}</td>
                              {{-- <td>{{$row->detailAdress}}</td> --}}
                              <td>
-                                {{-- <form action="" method="post"> --}}
+                                {{-- <form action="" method="post">{{ Route('Building.Edit',$row->id) }} --}}
                                     <a href="{{ Route('Building.Edit',$row->id) }}" class="btn btn-success" >edit</a>
-                                    @csrf @method('DELETE')
+                                
                                   <input type="submit" value='Delete'  data-name="" class="btn btn-danger deleteForm">
                                 {{-- </form> --}}
                             </td>

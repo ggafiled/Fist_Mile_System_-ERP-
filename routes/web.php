@@ -37,7 +37,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/setUserImage',[App\Http\Controllers\UserController::class, 'setUserImage']);
     Route::get('/form/editprofile',[App\Http\Controllers\UserController::class, 'showChangePasswordForm'])->name('users.edit');
     Route::post('/changePassword',[App\Http\Controllers\UserController::class, 'changePassword'])->name('users.password.update');
-    Route::post('/add_building', [App\Http\Controllers\BuildingController::class, 'store']);
+    Route::post('/add_building', [App\Http\Controllers\BuildingController::class, 'store']);   
+    Route::get('/table_building/:id',[App\Http\Controllers\BuildingController::class, 'edit']);
 
-    // Route::get('/table_building', [App\Http\Controllers\BuildingController::class, 'Edit']);
 });
