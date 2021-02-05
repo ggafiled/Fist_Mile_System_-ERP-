@@ -92,10 +92,9 @@ class BuildingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function buildingEdit($id)
+    public function Edit($id)
     {
-        $data = Building::find($id);
-        return view('contact.edit',compact(['data']));
+      
     }
 
     /**
@@ -107,30 +106,30 @@ class BuildingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'building'=>'required',
-            'fmCode'=>'required',
-            'contactName'=>'required',
-            'phone'=>'required',
-            'area'=>'required',
-            'numberLayer'=>'required',
-            'floor'=>'required',
-            'roomNumber'=>'required',
-            'detailAdress'=>'required',
-            'province'=>'required',
-            'city'=>'required',
-            'postalCode'=>'required',
-            'zone'=>'required',
-            'latitude'=>'required',
-            'longtude'=>'required',
-            'priceSquare'=>'required',
-            'workingTime'=>'required',
-            'blance'=>'required',
-            'developer'=>'required',
-            'grade'=>'required'
-        ]);
-        Building::find($id)->update($request->all());
-        return redirect('/table_building');
+        // $request->validate([
+        //     'building'=>'required',
+        //     'fmCode'=>'required',
+        //     'contactName'=>'required',
+        //     'phone'=>'required',
+        //     'area'=>'required',
+        //     'numberLayer'=>'required',
+        //     'floor'=>'required',
+        //     'roomNumber'=>'required',
+        //     'detailAdress'=>'required',
+        //     'province'=>'required',
+        //     'city'=>'required',
+        //     'postalCode'=>'required',
+        //     'zone'=>'required',
+        //     'latitude'=>'required',
+        //     'longtude'=>'required',
+        //     'priceSquare'=>'required',
+        //     'workingTime'=>'required',
+        //     'blance'=>'required',
+        //     'developer'=>'required',
+        //     'grade'=>'required'
+        // ]);
+        // Building::find($id)->update($request->all());
+        // return redirect('/table_building');
     }
 
     /**

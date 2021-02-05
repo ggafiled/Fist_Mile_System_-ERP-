@@ -1,5 +1,4 @@
 @extends('adminlte::page')
-
 @section('content')
 
 <div class="row justify-content-center">
@@ -15,7 +14,7 @@
                                 <th width="15%">ชื่อตึก</th>
                                 <th width="7%">รหัส-fm</th>
                                 <th width="8%">ชื่อผู้ติดต่อ</th>
-                                <th width="10%">เบอร์โทร</th>
+                                <th width="8%">เบอร์โทร</th>
                                 <th width="13%">ที่อยู่</th>
                                 <th width="5%">เขต</th>
                                 <th width="5%">จังหวัด</th>
@@ -23,6 +22,7 @@
                                 <th width="2%">จำนวนอาคาร</th>
                                 <th width="2%">ชั้น</th>
                                 <th width="2%">ห้อง</th>
+                                <th width="2%">ยอดเงิน</th>
                             </tr>
                         </thead>
                     </div>
@@ -41,7 +41,7 @@
                              <td>{{$row->numberLayer}}</td>
                              <td>{{$row->floor}}</td>
                              <td>{{$row->roomNumber}}</td>
-                             
+                             <td>{{$row->blance}}</td>         
                             </tr>
                         @endforeach
                      </tbody>

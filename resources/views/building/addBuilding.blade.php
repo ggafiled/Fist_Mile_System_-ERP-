@@ -33,14 +33,14 @@
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <div class="form-group">
-                                            {!! Form::label('Building Name :') !!}
-                                            {!! Form::text('building',null,["class"=>"form-control",'placeholder' => 'Enter your building.'])!!}
+                                            {!! Form::label('ชื่ออาคาร(Project) :') !!}
+                                            {!! Form::text('building',null,["class"=>"form-control",'placeholder' => 'กรอกชื่ออาคาร.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
                                             {!! Form::label('Fm-Code :') !!}
-                                            {!! Form::text('fmCode',null,["class"=>"form-control",'placeholder' => 'Enter your code.'])!!}
+                                            {!! Form::text('fmCode',null,["class"=>"form-control",'placeholder' => 'กรอกโค๊ดของคุณ.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -48,20 +48,20 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            {!! Form::label('Contact Name :') !!}
-                                            {!! Form::text('contactName',null,["class"=>"form-control",'placeholder' => 'Enter contact name.'])!!}
+                                            {!! Form::label('ชื่อผู้ติดต่อ(Contact) :') !!}
+                                            {!! Form::text('contactName',null,["class"=>"form-control",'placeholder' => 'ชื่อผู้ติดต่อ.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            {!! Form::label('Phone :') !!}
-                                            {!! Form::text('phone',null,["class"=>"form-control",'placeholder' => 'xxx-xxx-xxxx.'])!!}
+                                            {!! Form::label('เบอร์โทรศัพท์ :') !!}
+                                            {!! Form::text('phone',null,["class"=>"form-control",'placeholder' => '123-123-1234'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            {!! Form::label('Area :') !!}
-                                            {!! Form::text('area',null,["class"=>"form-control",'placeholder' => 'Enter your area.'])!!}
+                                            {!! Form::label('พื้นที่ น. :') !!}
+                                            {!! Form::text('area',null,["class"=>"form-control",'placeholder' => 'กรอกพื้นที่.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -70,20 +70,20 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            {!! Form::label('Number Layer :') !!}
-                                            {!! Form::number('numberLayer',null,["class"=>"form-control",'placeholder' => 'Enter your number layer.'])!!}
+                                            {!! Form::label('จำนวนชั้น :') !!}
+                                            {!! Form::number('numberLayer',null,["class"=>"form-control",'placeholder' => 'กรอกเลขจำนวนชั้น.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            {!! Form::label('Floor :') !!}
-                                            {!! Form::number('floor',null,["class"=>"form-control",'placeholder' => 'Enter your floor.'])!!}
+                                            {!! Form::label('ชั้น/อาคาร :') !!}
+                                            {!! Form::number('floor',null,["class"=>"form-control",'placeholder' => 'กรอกชั้นและอาคาร.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            {!! Form::label('Room Number :') !!}
-                                            {!! Form::number('roomNumber',null,["class"=>"form-control",'placeholder' => 'Enter your room.'])!!}
+                                            {!! Form::label('จำนวนห้อง :') !!}
+                                            {!! Form::number('roomNumber',null,["class"=>"form-control",'placeholder' => 'กรอกจำนวนห้อง.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -91,50 +91,50 @@
                                 <div class="row">
                                     <div class="col-sm">
                                         <div class="form-group">
-                                            {!! Form::label('Detail Adress :') !!}
-                                            {!! Form::text('detailAdress',null,["class"=>"form-control",'placeholder' => 'Unit number, house number, building, street name.'])!!}
+                                            {!! Form::label('รายละเอียดที่อยู่ :') !!}
+                                            {!! Form::text('detailAdress',null,["class"=>"form-control",'placeholder' => 'เลขที่ห้อง, บ้านเลขที่, ชื่ออาคาร, ถนน.'])!!}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-3">
                                         <div class="form-group">
-                                            {!! Form::label('Province :') !!}
-                                            {!! Form::text('province',null,["class"=>"form-control",'placeholder' => 'Enter your province..'])!!}
+                                            {!! Form::label('เมือง/ตำบล :') !!}
+                                            {!! Form::text('city',null,["class"=>"form-control",'placeholder' => 'กรอกตำบลและเมือง.'])!!}
                                         </div>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-3">
                                         <div class="form-group">
-                                            {!! Form::label('City :') !!}
-                                            {!! Form::text('city',null,["class"=>"form-control",'placeholder' => 'Enter your city.'])!!}
+                                            {!! Form::label('เขต :') !!}
+                                            {!! Form::number('zone',null,["class"=>"form-control",'placeholder' => 'Enter your postal code.'])!!}
                                         </div>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-3">
                                         <div class="form-group">
-                                            {!! Form::label('Postal Code :') !!}
+                                            {!! Form::label('จังหวัด :') !!}
+                                            {!! Form::text('province',null,["class"=>"form-control"])!!}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {!! Form::label('รหัสไปรษณีย์ :') !!}
                                             {!! Form::number('postalCode',null,["class"=>"form-control",'placeholder' => 'Enter your postal code.'])!!}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            {!! Form::label('Zone :') !!}
-                                            {!! Form::text('zone',null,["class"=>"form-control",'placeholder' => 'Enter your zone.'])!!}
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6">
                                         <div class="form-group">
                                             {!! Form::label('Latitude :') !!}
-                                            {!! Form::number('latitude',null,["class"=>"form-control",'placeholder' => 'Enter your latitude.'])!!}
+                                            {!! Form::number('latitude',null,["class"=>"form-control",'placeholder' => 'กรอกพิกัด latitude.'])!!}
                                         </div>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6">
                                         <div class="form-group">
                                             {!! Form::label('Longtude :') !!}
-                                            {!! Form::number('longtude',null,["class"=>"form-control",'placeholder' => 'Enter your longtude.'])!!}
+                                            {!! Form::number('longtude',null,["class"=>"form-control",'placeholder' => 'กรอกพิกัด longtude.'])!!}
                                         </div>
                                     </div>
                                 </div>
@@ -142,20 +142,20 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            {!! Form::label('Price Square :') !!}
-                                            {!! Form::text('priceSquare',null,["class"=>"form-control",'placeholder' => 'Enter your price.'])!!}
+                                            {!! Form::label('ราคาต่อ ตรม :') !!}
+                                            {!! Form::text('priceSquare',null,["class"=>"form-control",'placeholder' => 'กรอกเลขราคา'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            {!! Form::label('Working Time :') !!}
-                                            {!! Form::text('workingTime',null,["class"=>"form-control",'placeholder' => 'Enter your latitude.'])!!}
+                                            {!! Form::label('เวลาในการปฏิบัติงาน :') !!}
+                                            {!! Form::text('workingTime',null,["class"=>"form-control",'placeholder' => 'กรอกเวลาในการปฏิบัติงาน'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            {!! Form::label('Balance :') !!}
-                                            {!! Form::text('blance',null,["class"=>"form-control",'placeholder' => 'Enter your balance.'])!!}
+                                            {!! Form::label('ยอดเงิน :') !!}
+                                            {!! Form::text('blance',null,["class"=>"form-control",'placeholder' => 'กรอกยอดเงิน.'])!!}
                                         </div>
                                     </div>
                                 </div>
