@@ -31,9 +31,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/table_building_list',App\Http\Controllers\tablebuildinglistController::class);
     Route::resource('/table_building',App\Http\Controllers\BuildingController::class);
     Route::get('/logout',[App\Http\Controllers\UserController::class, 'logOut']);
-    Route::get('/table_building/:id',[App\Http\Controllers\BuildingController::class, 'Edit']);
-    Route::post('/table_building/:id',[App\Http\Controllers\BuildingController::class, 'Edit']);
-    // Route::get('/table_building/:id', 'BuildingController@Edit');
+ 
+    // Route::resource('building',[App\Http\Controllers\BuildingController::class]);
+    Route::get('/table_building/id', 'BuildingController@Edit'::class, 'edit')->name('Building.edit');
 
     Route::post('/setUserNameAndEmail',[App\Http\Controllers\UserController::class, 'setUserNameAndEmail'])->name('users.update');
     Route::post('/setUserImage',[App\Http\Controllers\UserController::class, 'setUserImage']);

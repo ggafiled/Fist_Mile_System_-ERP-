@@ -22,8 +22,15 @@ class BuildingController extends Controller
 
     public function addBuilding()
     {
-        return view('building.addBuilding');
+        return view('Building.addBuilding');
     }
+
+    // public function editBuilding()
+    // {
+    //     return view('building.editBuilding');
+    // }
+   
+
 
     public function index()
     {
@@ -96,7 +103,8 @@ class BuildingController extends Controller
     public function edit($id)
     {
         $data=building::find($id);
-        return view('building.edit',compact(['data']));
+        // return view('building.tableBuilding',['data' => $data]);
+        return view('building.editBuilding',compact(['data']));
     }
 
     /**
