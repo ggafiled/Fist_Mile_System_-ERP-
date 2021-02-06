@@ -33,7 +33,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/logout',[App\Http\Controllers\UserController::class, 'logOut']);
  
     // Route::resource('building',[App\Http\Controllers\BuildingController::class]);
-    Route::get('/table_building/id', 'BuildingController@Edit'::class, 'edit')->name('Building.edit');
+    Route::get('/table_building/:id', 'BuildingController@Edit'::class, 'edit')->name('Building.edit');
 
     Route::post('/setUserNameAndEmail',[App\Http\Controllers\UserController::class, 'setUserNameAndEmail'])->name('users.update');
     Route::post('/setUserImage',[App\Http\Controllers\UserController::class, 'setUserImage']);

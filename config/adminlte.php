@@ -53,6 +53,7 @@ return [
     'title' => 'Fist Mile ERP System',
     'title_prefix' => '',
     'title_postfix' => '',
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -291,7 +292,7 @@ return [
                 [
                     'text' => 'Edit Table Building List',
                     'url'  => '/table_building',
-                    'can'  => ['building-update', 'building-read']
+                    'can'  => ['building-update']
                 ],
                 [
                     'text' => 'Table Building List',

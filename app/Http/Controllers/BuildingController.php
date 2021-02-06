@@ -17,7 +17,7 @@ class BuildingController extends Controller
 
      public function __construct(){
          $this->middleware('auth');
-         $this->middleware(['permission:building-read|building-create|building-update,require_all,guard:web'])->only(['addBuilding']);
+         $this->middleware(['permission:building-create,require_all,guard:web'])->only(['addBuilding']);
      }
 
     public function addBuilding()
@@ -104,7 +104,7 @@ class BuildingController extends Controller
     {
         $data=building::find($id);
         // return view('building.tableBuilding',['data' => $data]);
-        return view('building.editBuilding',compact(['data']));
+        return view('building.edit',compact(['data']));
     }
 
     /**

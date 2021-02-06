@@ -38,7 +38,7 @@ return [
             'users' => 'r,u',
             'profile' => 'r,u',
             'password' => 'u',
-            'building' => 'c,r,u',
+            'building' => 'c,r',
             'constarution' => 'c,r,u',
             'status-operator' => 'c,r,u',
             'technician-opertor' => 'c,r,u',
