@@ -1,7 +1,7 @@
 var table = $('#mytables').DataTable({
     dom: 'Bfrtip',
     buttons: [
-        'copy', 'csv', 'excel', 'pdf', 'print'
+        'copy', 'csv', 'excel',  'print'
     ]
 });
 
