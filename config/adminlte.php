@@ -421,13 +421,18 @@ return [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js',
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js',
+                ],                                              
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.min.js',
                 ],
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js',
-                ],
+                    'location' => '/js/vfs_fonts.js',
+                ], 
                 [
                     'type' => 'js',
                     'asset' => false,

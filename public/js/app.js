@@ -1,8 +1,52 @@
+pdfMake.fonts = {
+    THSarabun: {
+      normal: 'THSarabun.ttf',
+      bold: 'THSarabun-Bold.ttf',
+      italics: 'THSarabun-Italic.ttf',
+      bolditalics: 'THSarabun-BoldItalic.ttf'
+    }
+ }
+
+$.extend(true, $.fn.dataTable.defaults, {
+    "language": {
+              "sProcessing": "กำลังดำเนินการ...",
+              "sLengthMenu": "แสดง_MENU_ แถว",
+              "sZeroRecords": "ไม่พบข้อมูล",
+              "sInfo": "แสดง _START_ ถึง _END_ จาก _TOTAL_ แถว",
+              "sInfoEmpty": "แสดง 0 ถึง 0 จาก 0 แถว",
+              "sInfoFiltered": "(กรองข้อมูล _MAX_ ทุกแถว)",
+              "sInfoPostFix": "",
+              "sSearch": "ค้นหา:",
+              "sCopy": "คัดลอก",
+              "sUrl": "",
+              "oPaginate": {
+                            "sFirst": "เริ่มต้น",
+                            "sPrevious": "ก่อนหน้า",
+                            "sNext": "ถัดไป",
+                            "sLast": "สุดท้าย"
+              }
+     }
+});
+
 var table = $('#mytables').DataTable({
     dom: 'Bfrtip',
     buttons: [
-        'copy', 'csv', 'excel', 'pdf', 'print'
-    ]
+        'copy', 'csv', 'excel',
+        { // กำหนดพิเศษเฉพาะปุ่ม pdf
+            "extend": 'pdf', // ปุ่มสร้าง pdf ไฟล์
+            "text": 'PDF', // ข้อความที่แสดง
+            "pageSize": 'A4',   // ขนาดหน้ากระดาษเป็น A4   
+            pageOrientation: 'landscape',      
+            "customize":function(doc){ // ส่วนกำหนดเพิ่มเติม ส่วนนี้จะใช้จัดการกับ pdfmake
+                // กำหนด style หลัก
+                doc.defaultStyle = {
+                    font:'THSarabun',
+                    fontSize:16                                 
+                };
+            }
+        }, // สิ้นสุดกำหนดพิเศษปุ่ม pdf
+        'print' , 'pageLength'
+    ],
 });
 
 let url = location.href.replace(/\/$/, "");
