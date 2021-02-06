@@ -1,4 +1,17 @@
 <script>
+
+let url = location.href.replace(/\/$/, "");
+
+if (location.hash) {
+    const hash = url.split("#");
+    $('#vert-tabs-tab a[href="#' + hash[1] + '"]').tab("show");
+    url = location.href.replace(/\/#/, "#");
+    history.replaceState(null, null, url);
+    setTimeout(() => {
+        $(window).scrollTop(0);
+    }, 400);
+}
+
     @if(Session::has('notification'))
 
     toastr.options = {

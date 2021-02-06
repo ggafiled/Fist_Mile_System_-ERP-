@@ -233,23 +233,11 @@
     </style>
     @stop
 
-        @section('js')
+        @section('adminlte_js')
         @include('partials.notification')
         <script src="{{ asset('js/app.js') }}"></script>
         <script>
             $(document).ready(function () {
-
-                let url = location.href.replace(/\/$/, "");
-
-                if (location.hash) {
-                    const hash = url.split("#");
-                    $('#vert-tabs-tab a[href="#' + hash[1] + '"]').tab("show");
-                    url = location.href.replace(/\/#/, "#");
-                    history.replaceState(null, null, url);
-                    setTimeout(() => {
-                        $(window).scrollTop(0);
-                    }, 400);
-                }
 
                 $("div[id^='show_hide_password_'] button").each(function (i) {
                     $(this).on("click", function () {

@@ -7,7 +7,7 @@
             <div class="card-header text-white bg-info"><h3><center>{{ __('BUILDING LIST TABLE') }}</h3></center></div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-striped table-hover" id="example">
+                        <table class="table table-striped table-hover" id="mytables">
                         <thead>
                             <tr class="info">
                                 <th width="2%">#</th>
@@ -52,4 +52,8 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('adminlte_js')
+<script src="{{ asset('js/app.js') }}"></script>
 @endsection
