@@ -25,10 +25,6 @@ class BuildingController extends Controller
         return view('Building.addBuilding');
     }
 
-    public function editBuilding()
-    {
-        return view('Building.editBuilding');
-    }
 
     // public function editBuilding()
     // {
@@ -50,7 +46,7 @@ class BuildingController extends Controller
      */
     public function create()
     {
-        //
+        return view('Building.addBuilding');
     }
 
     /**
@@ -110,7 +106,7 @@ class BuildingController extends Controller
         // $data=building::find($id);
         // dd($data);
         $data=building::find($id);
-        return view('building.editBuilding',compact(['data' => $data]));
+        return view('building.editBuilding',compact(['data']));
     }
 
     /**
