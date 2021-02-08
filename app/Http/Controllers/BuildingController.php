@@ -17,20 +17,8 @@ class BuildingController extends Controller
 
      public function __construct(){
          $this->middleware('auth');
-         $this->middleware(['permission:building-create,require_all,guard:web'])->only(['addBuilding']);
-     }
-
-    public function addBuilding()
-    {
-        return view('Building.addBuilding');
-    }
-
-
-    // public function editBuilding()
-    // {
-    //     return view('building.editBuilding');
-    // }
-   
+         $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
+     }  
 
 
     public function index()
@@ -46,7 +34,7 @@ class BuildingController extends Controller
      */
     public function create()
     {
-        return view('Building.addBuilding');
+        return view('building.addBuilding');
     }
 
     /**
@@ -106,7 +94,7 @@ class BuildingController extends Controller
         // $data=building::find($id);
         // dd($data);
         $data=building::find($id);
-        return view('building.editBuilding',compact(['data']));
+        return view('building.editBuilding',['data' => $data]);
     }
 
     /**

@@ -27,23 +27,15 @@ Auth::routes(['register' => false]);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/user', [App\Http\Controllers\UserInforController::class, 'index']);
-    Route::resource('building',BuildingController::class);
-    Route::post('/add_building', [App\Http\Controllers\BuildingController::class, 'store']);  
-    Route::get('/add_building', [App\Http\Controllers\BuildingController::class, 'addBuilding']);
+
     Route::resource('/table_building_list',App\Http\Controllers\tablebuildinglistController::class);
-    Route::resource('/table_building',App\Http\Controllers\BuildingController::class);
-    Route::get('/logout',[App\Http\Controllers\UserController::class, 'logOut']);
-    Route::get('/table_building/:id', 'BuildingController@edit'::class, 'edit')->name('Building.edit');
- 
-    Route::resource('/add_Constarution',App\Http\Controllers\ConstarutionController::class);
-    Route::resource('/edit_Constarution',App\Http\Controllers\editConstarutionController::class);
+    Route::resource('/building',App\Http\Controllers\BuildingController::class);
+    Route::resource('/constarution',App\Http\Controllers\ConstarutionController::class);
 
     Route::post('/setUserNameAndEmail',[App\Http\Controllers\UserController::class, 'setUserNameAndEmail'])->name('users.update');
     Route::post('/setUserImage',[App\Http\Controllers\UserController::class, 'setUserImage']);
     Route::get('/form/editprofile',[App\Http\Controllers\UserController::class, 'showChangePasswordForm'])->name('users.edit');
     Route::post('/changePassword',[App\Http\Controllers\UserController::class, 'changePassword'])->name('users.password.update');
-     
-   
+    Route::get('/logout',[App\Http\Controllers\UserController::class, 'logOut']); 
 
 });
