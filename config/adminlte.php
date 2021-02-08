@@ -130,7 +130,7 @@ return [
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-white navbar-light ' ,
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -271,7 +271,24 @@ return [
             'text' => 'Constarution',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-poll',
-            'can'  => ['constarution-create', 'constarution-read']
+            'can'  => ['constarution-create', 'constarution-read'],
+            'submenu' => [
+                [
+                    'text' => 'Add Constarution',
+                    'url'  => '/add_Constarution',
+                    'can'  => ['building-create']
+                ],
+                [
+                    'text' => 'Edit Table Constarution',
+                    'url'  => '/edit_Constarution',
+                    'can'  => ['building-update']
+                ],
+                [
+                    'text' => 'Table Constarution',
+                    'url'  => '',
+                    'can'  => ['building-read']
+                ],
+            ]
         ],
         [
             'text' => 'Building Payment',

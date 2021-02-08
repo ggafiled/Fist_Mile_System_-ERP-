@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card-header text-white bg-dark"><h3><center>{{ __('EDIT BUILDING TABLE') }}</h3></center></div>
                 <div class="card-body">
-                    <a  href="/add_building"  class="btn btn-primary my-2 "> + CREATE</a>
+                    <a  href="/add_building"  class="btn btn-primary my-2 "><i class="fas fa-calendar-plus"></i> CREATE</a>
                     <div class="table-responsive">
                         <table class="table table-striped" id="example1">
                         <thead >
@@ -41,9 +41,9 @@
                              {{-- <td>{{$row->detailAdress}}</td> --}}
                              <td>
                                 {{-- <form action="" method="post">{{ Route('Building.Edit',$row->id) }} --}}
-                                    <a href="{{ Route('Building.edit',$row->id) }}" class="btn btn-success" >Edit</a>
+                                    <a href="{{ Route('Building.edit',$row->id) }}" class="btn btn-warning" ><i class="fa fa-edit"></i>Edit</a>&nbsp;
                                     {{-- {{ route('Building.destroy',$row->id) }} --}}
-                                    <a href="" class="btn btn-danger deleteForm">Delete</a>
+                                    <a href="" class="btn btn-danger deleteForm"><i class="fas fa-trash-alt"></i>Delete</a>
                                 {{-- </form> --}}
                             </td>
                             </tr>
@@ -56,4 +56,7 @@
         </div>
     </div>
 </div>
+@endsection
+@section('adminlte_js')
+<script src="{{ asset('js/app.js') }}"></script>
 @endsection

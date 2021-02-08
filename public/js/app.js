@@ -31,8 +31,24 @@ $.extend(true, $.fn.dataTable.defaults, {
 var table = $('#mytables').DataTable({
     dom: 'Bfrtip',
     buttons: [
-        'copy', 'csv', 'excel', 'print' , 'pageLength',
+        'copy', 'csv', 'excel', 
+    
+        {
+            "extend": 'pdf', // ปุ่มสร้าง pdf ไฟล์
+            "text": 'PDF', // ข้อความที่แสดง
+            "pageSize": 'A4',   // ขนาดหน้ากระดาษเป็น A4   
+            pageOrientation: 'landscape',      
+            "customize":function(doc){ // ส่วนกำหนดเพิ่มเติม ส่วนนี้จะใช้จัดการกับ pdfmake
+                // กำหนด style หลัก
+                doc.defaultStyle = {
+                    font:'THSarabun',
+                    fontSize:16                                 
+                };
+            }
+        }, // สิ้นสุดกำหนดพิเศษปุ่ม pdf
+        'print' , 'pageLength'
     ],
+
 });
 
 let url = location.href.replace(/\/$/, "");
@@ -110,4 +126,8 @@ $('#user-photo-action').on('click', async function () {
 });
 $('#btnLogout').on('click', function () {
     $('#logout-form').submit();
+});
+
+$(document).ready(function() {
+    $('#example1').DataTable({});
 });
