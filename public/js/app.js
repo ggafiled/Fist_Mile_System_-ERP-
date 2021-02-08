@@ -127,3 +127,7 @@ $('#user-photo-action').on('click', async function () {
 $('#btnLogout').on('click', function () {
     $('#logout-form').submit();
 });
+
+$(document).ready(function() {
+    $('#example1').DataTable({});
+});

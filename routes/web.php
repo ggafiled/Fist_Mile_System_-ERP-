@@ -31,8 +31,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/table_building_list',App\Http\Controllers\tablebuildinglistController::class);
     Route::resource('/table_building',App\Http\Controllers\BuildingController::class);
     Route::get('/logout',[App\Http\Controllers\UserController::class, 'logOut']);
-    Route::get('/table_building/:id', 'BuildingController@Edit'::class, 'edit')->name('Building.edit');
-    
+    Route::get('/table_building/id', 'BuildingController@edit'::class, 'edit')->name('Building.edit');
+
+ 
     Route::resource('/add_Constarution',App\Http\Controllers\ConstarutionController::class);
     Route::resource('/edit_Constarution',App\Http\Controllers\editConstarutionController::class);
 
