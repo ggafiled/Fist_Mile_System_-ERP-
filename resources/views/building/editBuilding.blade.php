@@ -19,6 +19,7 @@
     @endif
 </ul>
 {!! Form::open(['Action' => "{{route('building.update', ['id'=>$data->id])}}",'method'=>'PUT']) !!}
+{{-- {!! Form::open(['Action' => ['BuildingController@update',$data->id],'method'=>'PUT']) !!} --}}
     
 <div class="row justify-content-center">
     <div class="col-md">
