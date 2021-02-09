@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card-header text-white bg-dark"><h3><center>{{ __('EDIT BUILDING TABLE') }}</h3></center></div>
                 <div class="card-body">
-                    <a  href="/add_building"  class="btn btn-primary my-2 "><i class="fas fa-calendar-plus"></i> CREATE</a>
+                    <a  href="/add_building"  class="btn btn-primary my-2 "><i class="fas fa-calendar-plus"></i> ADD BUILDING</a>
                     <div class="table-responsive">
                         <table class="table table-striped" id="example1">
                         <thead >
