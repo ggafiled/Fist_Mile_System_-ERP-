@@ -7,7 +7,7 @@
         <div class="card">
             <div class="card-header text-white bg-dark"><h3><center>{{ __('EDIT BUILDING TABLE') }}</h3></center></div>
                 <div class="card-body">
-                    <a  href="/add_building"  class="btn btn-primary my-2 "><i class="fas fa-calendar-plus"></i> CREATE</a>
+                    <a  href="/building/create"  class="btn btn-primary my-2 "><i class="fas fa-calendar-plus"></i> ADD BUILDING</a>
                     <div class="table-responsive">
                         <table class="table table-striped" id="example1">
                         <thead >
@@ -18,7 +18,8 @@
                                 <th width="10%">ชื่อผู้ติดต่อ</th>
                                 <th width="8%">เบอร์โทร</th>
                                 {{-- <th width="10%">ที่อยู่</th> --}}
-                                <th width="8%">แก้ไข/ลบ</th>
+                                <th width="1%">แก้ไข</th>
+                                <th width="1%">ลบ</th>
                                 {{-- <th width="5%">เขต</th>
                                 <th width="10%">จำนวนอาคาร</th>
                                 <th width="6%">ชั้น</th>
@@ -39,12 +40,27 @@
                              <td>{{$row->contactName}}</td>
                              <td>{{$row->phone}}</td>
                              {{-- <td>{{$row->detailAdress}}</td> --}}
+                             {{-- <a href="{{ route('building.edit',$row->id) }}" class="btn btn-warning" ><i class="fa fa-edit"></i>Edit</a> --}}
                              <td>
+<<<<<<< HEAD
                                 {{-- <form action="" method="post">{{ Route('Building.Edit',$row->id) }} --}}
                                     <a href="{{ route('building.edit', $row->id) }}" class="btn btn-warning" ><i class="fa fa-edit"></i>Edit</a>&nbsp;
                                     {{-- {{ route('Building.destroy',$row->id) }} --}}
                                     <a href="{{ route('building.destroy', $row->id) }}" class="btn btn-danger deleteForm"><i class="fas fa-trash-alt"></i>Delete</a>
                                 {{-- </form> --}}
+=======
+                                <form action="{{ route('building.edit',$row->id) }}" method="PUT">
+                                    @csrf @method('HEAD')
+                                  <input type="submit" value='Edit'  " class="btn btn-warning ">
+                                </form>
+                            </td>
+                             <td>
+                                <form action="{{route('building.destroy',$row->id)}}" method="post">
+                                    @csrf @method('DELETE')
+                                  <input type="submit" value='Delete'  data-name="{{$row->projecct}}" class="btn btn-danger deleteForm"
+                                  onclick="return confirm('คุณต้องการลบข้อมูล {{$row->name}} ?')">
+                                </form>
+>>>>>>> 5422bfce581922ba05966e80d731d4807e911a11
                             </td>
                             </tr>
                         @endforeach

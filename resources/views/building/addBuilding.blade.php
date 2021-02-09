@@ -22,8 +22,7 @@
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card ">
-           
-            <div class="card-header text-white bg-primary"><h3 >{{ __('ADD BUILDING') }}</h3></div>
+            <div class="card-header text-white bg-dark"><h3 >{{ __('ADD BUILDING') }}</h3></div>
                 <div class="card-body">
                     <div class="form-group">
                         <div class="container-fluid mx-auto mt-2 mb-2">
@@ -173,7 +172,8 @@
                                         </div>
                                     </div>
                                 </div>
-                           <input type="submit" value="Add Building " class="btn btn-primary">
+                           <input type="submit" value="Add Building " class="btn btn-primary" method="POST">
+                           @csrf @method('POST')
                            <a href="/home" class="btn btn-success my-2">Back</a>
                     </div>
                 </div>

@@ -20,6 +20,10 @@ class BuildingController extends Controller
          $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
      }  
 
+     public function building()
+     {
+         return view('building.addBuilding');
+     }
 
     public function index()
     {
@@ -146,11 +150,16 @@ class BuildingController extends Controller
      */
     public function destroy($id)
     {
+<<<<<<< HEAD
         try{
             Building::find($id)->delete();
         }catch(ex){
 
         }
         return redirect()->route('building.list');
+=======
+        building::find($id)->delete();
+        return redirect('/building');
+>>>>>>> 5422bfce581922ba05966e80d731d4807e911a11
     }
 }

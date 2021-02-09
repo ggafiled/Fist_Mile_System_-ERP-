@@ -19,6 +19,7 @@
     @endif
 </ul>
 {!! Form::open(['Action' => "{{route('building.update', ['id'=>$data->id])}}",'method'=>'PUT']) !!}
+{{-- {!! Form::open(['Action' => ['BuildingController@update',$data->id],'method'=>'PUT']) !!} --}}
     
 <div class="row justify-content-center">
     <div class="col-md">
@@ -174,7 +175,7 @@
                                         </div>
                                     </div>
                                 </div>
-                           <input type="submit" value="update Building " class="btn btn-primary">
+                           <input type="submit" value="update Building " class="btn btn-primary" method="PUT">
                            <a href="/home" class="btn btn-success my-2">Back</a>
                     </div>
                 </div>
