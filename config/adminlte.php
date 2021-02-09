@@ -251,17 +251,17 @@ return [
             'submenu' => [
                 [
                     'text' => 'Add Building',
-                    'url'  => '/add_building',
+                    'url'  => '/building/create',
                     'can'  => ['building-create']
                 ],
                 [
                     'text' => 'Edit Table Building List',
-                    'url'  => '/table_building',
+                    'url'  => '/building',
                     'can'  => ['building-update']
                 ],
                 [
                     'text' => 'Table Building List',
-                    'url'  => '/table_building_list',
+                    'url'  => '/building',
                     'can'  => ['building-read']
                 ],
             ]
