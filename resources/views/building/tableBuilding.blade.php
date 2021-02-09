@@ -41,9 +41,9 @@
                              {{-- <td>{{$row->detailAdress}}</td> --}}
                              <td>
                                 {{-- <form action="" method="post">{{ Route('Building.Edit',$row->id) }} --}}
-                                    <a href="{{ route('building.edit',$row->id) }}" class="btn btn-warning" ><i class="fa fa-edit"></i>Edit</a>&nbsp;
+                                    <a href="{{ route('building.edit', $row->id) }}" class="btn btn-warning" ><i class="fa fa-edit"></i>Edit</a>&nbsp;
                                     {{-- {{ route('Building.destroy',$row->id) }} --}}
-                                    <a href="" class="btn btn-danger deleteForm"><i class="fas fa-trash-alt"></i>Delete</a>
+                                    <a href="{{ route('building.destroy', $row->id) }}" class="btn btn-danger deleteForm"><i class="fas fa-trash-alt"></i>Delete</a>
                                 {{-- </form> --}}
                             </td>
                             </tr>

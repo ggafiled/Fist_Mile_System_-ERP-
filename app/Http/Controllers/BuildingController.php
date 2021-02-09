@@ -69,7 +69,13 @@ class BuildingController extends Controller
         ]);
         Building::create($request->all());
         // return redirect()->back();
-        return redirect('/table_building_list');
+        return redirect()->route('building.list');
+    }
+
+    public function showBuildingList()
+    {
+        $data = Building::all();
+        return view('building.tableBuildingList',['data' => $data]);
     }
 
     /**
@@ -80,7 +86,7 @@ class BuildingController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -129,7 +135,7 @@ class BuildingController extends Controller
             'grade'=>'required'
         ]);
         Building::find($id)->update($request->all());
-        return redirect('/table_building');
+        return redirect()->route('building.list');
     }
 
     /**
@@ -140,6 +146,11 @@ class BuildingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            Building::find($id)->delete();
+        }catch(ex){
+
+        }
+        return redirect()->route('building.list');
     }
 }

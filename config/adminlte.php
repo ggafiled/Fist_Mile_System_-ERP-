@@ -261,7 +261,7 @@ return [
                 ],
                 [
                     'text' => 'Table Building List',
-                    'url'  => '/building',
+                    'url'  => '/building/list',
                     'can'  => ['building-read']
                 ],
             ]
