@@ -132,11 +132,11 @@ $(document).ready(function() {
     $('#example1').DataTable({});
 });
 
-$(document).ready(function(){
-    $('.deleteForm').click(function(evt){
-       evt.preventDefault();
-       swal({
-           title:"คุณต้องการลบข้อมูลหรือไม่ ?"
-       })
-    })
-})
+// $(document).ready(function(){
+//     $('.deleteForm').click(function(evt){
+//        evt.preventDefault();
+//        swal({
+//            title:"คุณต้องการลบข้อมูลหรือไม่ ?"
+//        })
+//     })
+// })

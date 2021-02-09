@@ -173,7 +173,7 @@ return [
     'right_sidebar_theme' => 'dark',
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
-    'right_sidebar_scrollbar_theme' => 'os-theme-light',
+    'right_sidebar_scrollbar_theme' => 'os-theme-ligh',
     'right_sidebar_scrollbar_auto_hide' => 'l',
 
     /*
@@ -226,11 +226,11 @@ return [
     */
 
     'menu' => [
-        [
-            'text' => 'search',
-            'search' => true,
-            'topnav' => true,
-        ],
+        // [
+        //     'text' => 'search',
+        //     'search' => true,
+        //     'topnav' => true,
+        // ],
         // [
         //     'text' => 'blog',
         //     'url'  => 'admin/blog',
@@ -476,7 +476,7 @@ return [
                     'location' => '//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css',
                 ],
                 [
-                    'type' => 'css',
+                    'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js',
                 ],

@@ -18,8 +18,8 @@
                                 <th width="10%">ชื่อผู้ติดต่อ</th>
                                 <th width="8%">เบอร์โทร</th>
                                 {{-- <th width="10%">ที่อยู่</th> --}}
-                                <th width="8%">แก้ไข</th>
-                                <th width="8%">ลบ</th>
+                                <th width="1%">แก้ไข</th>
+                                <th width="1%">ลบ</th>
                                 {{-- <th width="5%">เขต</th>
                                 <th width="10%">จำนวนอาคาร</th>
                                 <th width="6%">ชั้น</th>
@@ -50,7 +50,7 @@
                              <td>
                                 <form action="{{route('building.destroy',$row->id)}}" method="post">
                                     @csrf @method('DELETE')
-                                  <input type="submit" value='Delete'  data-name="{{$row->projecct}}" class="btn btn-danger deleteForm "
+                                  <input type="submit" value='Delete'  data-name="{{$row->projecct}}" class="btn btn-danger deleteForm"
                                   onclick="return confirm('คุณต้องการลบข้อมูล {{$row->name}} ?')">
                                 </form>
                             </td>
