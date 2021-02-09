@@ -42,15 +42,16 @@
                              {{-- <td>{{$row->detailAdress}}</td> --}}
                              {{-- <a href="{{ route('building.edit',$row->id) }}" class="btn btn-warning" ><i class="fa fa-edit"></i>Edit</a> --}}
                              <td>
-                                <form action="{{ route('building.edit',$row->id) }}" method="post">
-                                    @csrf @method('GET')
-                                  <input type="submit" value='Edit'  data-name="{{$row->projecct}}" class="btn btn-warning ">
+                                <form action="{{ route('building.edit',$row->id) }}" method="PUT">
+                                    @csrf @method('HEAD')
+                                  <input type="submit" value='Edit'  " class="btn btn-warning ">
                                 </form>
                             </td>
                              <td>
                                 <form action="{{route('building.destroy',$row->id)}}" method="post">
                                     @csrf @method('DELETE')
-                                  <input type="submit" value='Delete'  data-name="{{$row->projecct}}" class="btn btn-danger deleteForm">
+                                  <input type="submit" value='Delete'  data-name="{{$row->projecct}}" class="btn btn-danger deleteForm "
+                                  onclick="return confirm('คุณต้องการลบข้อมูล {{$row->name}} ?')">
                                 </form>
                             </td>
                             </tr>

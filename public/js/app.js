@@ -131,3 +131,12 @@ $('#btnLogout').on('click', function () {
 $(document).ready(function() {
     $('#example1').DataTable({});
 });
+
+$(document).ready(function(){
+    $('.deleteForm').click(function(evt){
+       evt.preventDefault();
+       swal({
+           title:"คุณต้องการลบข้อมูลหรือไม่ ?"
+       })
+    })
+})

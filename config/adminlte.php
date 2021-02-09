@@ -475,6 +475,11 @@ return [
                     'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css',
                 ],
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js',
+                ],
             ],
         ],
         'Select2' => [

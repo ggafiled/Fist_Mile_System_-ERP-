@@ -175,7 +175,7 @@
                                         </div>
                                     </div>
                                 </div>
-                           <input type="submit" value="update Building " class="btn btn-primary">
+                           <input type="submit" value="update Building " class="btn btn-primary" method="PUT">
                            <a href="/home" class="btn btn-success my-2">Back</a>
                     </div>
                 </div>
