@@ -18,8 +18,7 @@
     </ul>
     @endif
 </ul>
-{!! Form::open(['Action' => 'BuildingController@store','method'=>'POST']) !!}
-    
+  
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card ">
@@ -27,7 +26,7 @@
                 <div class="card-body">
                     <div class="form-group">
                         <div class="container-fluid mx-auto mt-2 mb-2">
-                            <form>
+                            <form action="{{ route('building.store') }}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="col-sm-10">
@@ -181,7 +180,6 @@
              </div>
         </div>
     </div>
-    {!! Form::close() !!}  
 </div>               
    
 @endsection
