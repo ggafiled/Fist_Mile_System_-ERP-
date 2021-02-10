@@ -1,3 +1,4 @@
+
 <?php
 
 return [
@@ -48,11 +49,11 @@ return [
     */
 
     'logo' => '<b>FIRST MILE</b>',
-    'logo_img' => 'https://sv1.picz.in.th/images/2021/02/02/odJMYP.png',
-    'logo_img_class' => 'brand-image elevation-0',
-    'logo_img_xl' => null,
+    // 'logo_img' => '',
+    // 'logo_img_class' => '',
+    // 'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'FIRST MILE',
+    // 'logo_img_alt' => 'FIRST MILE',
 
     /*
     |--------------------------------------------------------------------------

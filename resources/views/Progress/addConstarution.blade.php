@@ -94,8 +94,8 @@
                                     </div>
                                     <div class="col-2">
                                         <div class="form-group">
-                                            {!! Form::label('ชื่ออาคาร(Project) :') !!}
-                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ'],null, ['class'=>'form-control']) !!}
+                                            {!! Form::label('Fm Progress :') !!}
+                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ'],null, ['class'=>'form-control']) !!}
                                         </div>
                                     </div>
                                     
