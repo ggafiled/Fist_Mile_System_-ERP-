@@ -42,13 +42,6 @@
                              {{-- <td>{{$row->detailAdress}}</td> --}}
                              {{-- <a href="{{ route('building.edit',$row->id) }}" class="btn btn-warning" ><i class="fa fa-edit"></i>Edit</a> --}}
                              <td>
-<<<<<<< HEAD
-                                {{-- <form action="" method="post">{{ Route('Building.Edit',$row->id) }} --}}
-                                    <a href="{{ route('building.edit', $row->id) }}" class="btn btn-warning" ><i class="fa fa-edit"></i>Edit</a>&nbsp;
-                                    {{-- {{ route('Building.destroy',$row->id) }} --}}
-                                    <a href="{{ route('building.destroy', $row->id) }}" class="btn btn-danger deleteForm"><i class="fas fa-trash-alt"></i>Delete</a>
-                                {{-- </form> --}}
-=======
                                 <form action="{{ route('building.edit',$row->id) }}" method="PUT">
                                     @csrf @method('HEAD')
                                   <input type="submit" value='Edit'  " class="btn btn-warning ">
@@ -60,7 +53,6 @@
                                   <input type="submit" value='Delete'  data-name="{{$row->projecct}}" class="btn btn-danger deleteForm"
                                   onclick="return confirm('คุณต้องการลบข้อมูล {{$row->name}} ?')">
                                 </form>
->>>>>>> 5422bfce581922ba05966e80d731d4807e911a11
                             </td>
                             </tr>
                         @endforeach
