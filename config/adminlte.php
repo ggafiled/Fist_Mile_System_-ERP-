@@ -276,7 +276,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Add Constarution',
-                    'url'  => '/add_Constarution',
+                    'url'  => '/constarution',
                     'can'  => ['building-create']
                 ],
                 [

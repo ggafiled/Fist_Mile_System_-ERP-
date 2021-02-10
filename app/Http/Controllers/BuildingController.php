@@ -150,10 +150,9 @@ class BuildingController extends Controller
      */
     public function destroy($id)
     {
-        try{
-            Building::find($id)->delete();
-        }catch(ex){
-        }
+        
+        Building::find($id)->delete();
+        
         return redirect()->route('building.list');
     }
 }

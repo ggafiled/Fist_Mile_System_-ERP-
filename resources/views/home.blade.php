@@ -18,7 +18,7 @@
                             <div class="icon">
                                 <i class="fas fa-fw fa-table"></i>
                             </div>
-                            <a href="/table_building" class="small-box-footer">Click <i
+                            <a href="/building/list" class="small-box-footer">Click <i
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                             <div class="icon">
                                 <i class="fas fa-fw fa-calendar-alt"></i>
                             </div>
-                            <a href="/add_building" class="small-box-footer">Click <i
+                            <a href="/building/create" class="small-box-footer">Click <i
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
