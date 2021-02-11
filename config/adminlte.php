@@ -547,6 +547,16 @@ return [
                     'location' => '//cdn.bootcss.com/toastr.js/latest/css/toastr.min.css',
                 ],
             ],
+        ],
+        'Turbolinks' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js',
+                ],
+            ],
         ]
     ],
 
@@ -561,5 +571,5 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/9.-Other-Configuration
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];
