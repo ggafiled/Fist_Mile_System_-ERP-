@@ -317,6 +317,12 @@ return [
             'can'  => ['profile-update', 'profile-read', 'password-update'],
         ],
         [
+            'text' => 'User Management',
+            'url'  => '',
+            'icon' => 'fas fa-fw fa-user',
+            'can'  => ['profile-update', 'profile-read', 'password-update'],
+        ],
+        [
             'text' => 'Logout',
             'url'  => 'logout',
             'icon' => 'fas fa-fw fa-share-square',
