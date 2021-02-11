@@ -26,7 +26,7 @@
     <div class="col-md">
         <div class="card ">
 
-           
+       
             <div class="card-body">
                 <div class="form-group">
                     <div class="container-fluid mx-auto mt-2 mb-2">
@@ -200,8 +200,10 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
+    
     {!! Form::close() !!}
 </div>
 

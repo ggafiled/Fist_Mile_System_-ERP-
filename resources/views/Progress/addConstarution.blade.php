@@ -142,9 +142,9 @@
                                 </div>
                             </div>
                         </div> 
-                        <input type="submit" value="Add Progress " class="btn btn-primary" method="POST">
+                        <input type="submit" value="เพิ่มข้อมูล " class="btn btn-primary" method="POST">
                             
-                        <a href="/home" class="btn btn-success my-2">Back</a>
+                        <a href="/home" class="btn btn-success my-2">กลับ</a>
                 </div>
              </div>
         </div>

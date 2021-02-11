@@ -48,7 +48,7 @@ return [
     |
     */
 
-    'logo' => '<b>FIRST MILE</b>',
+    'logo' => '<b>FIRST MILE System </b>',
     'logo_img' => 'https://sv1.picz.in.th/images/2021/02/11/o138qN.png',
     // 'logo_img_class' => '',
     // 'logo_img_xl' => null,
@@ -319,13 +319,13 @@ return [
         [
             'text' => 'User Management',
             'url'  => '',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-users',
             'can'  => ['profile-update', 'profile-read', 'password-update'],
         ],
         [
             'text' => 'Logout',
             'url'  => 'logout',
-            'icon' => 'fas fa-fw fa-share-square',
+            'icon' => 'fas fa-sign-out-alt',
         ],
         // [
         //     'text'    => 'multilevel',
