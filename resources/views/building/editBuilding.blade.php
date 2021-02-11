@@ -34,7 +34,13 @@
                     <div class="container-fluid mx-auto mt-2 mb-2">
                         @csrf
                         <div class="row">
-                            <div class="col-sm-10">
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    {!! Form::label('ID :') !!}
+                                    {!! Form::text('id',$data->id,["class"=>"form-control",'disabled'])!!}
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
                                 <div class="form-group">
                                     {!! Form::label('Building Name :') !!}
                                     {!! Form::text('building',$data->building,["class"=>"form-control",'placeholder' =>
@@ -203,9 +209,9 @@
                                     your grade.'])!!}
                                 </div>
                             </div>
-                        </div>
+                        </div>     
                         <input type="submit" value="update Building " class="btn btn-primary">
-                        <a href="/home" class="btn btn-success my-2">Back</a>
+                        <a href="/building" class="btn btn-success my-2">Back</a>
                     </div>
                 </div>
             </div>

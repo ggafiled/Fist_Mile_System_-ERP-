@@ -49,7 +49,7 @@ return [
     */
 
     'logo' => '<b>FIRST MILE</b>',
-    // 'logo_img' => '',
+    'logo_img' => 'https://sv1.picz.in.th/images/2021/02/11/o138qN.png',
     // 'logo_img_class' => '',
     // 'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -227,11 +227,11 @@ return [
     */
 
     'menu' => [
-        // [
-        //     'text' => 'search',
-        //     'search' => true,
-        //     'topnav' => true,
-        // ],
+        [
+            'text' => 'search',
+            'search' => true,
+            'topnav' => true,
+        ],
         // [
         //     'text' => 'blog',
         //     'url'  => 'admin/blog',

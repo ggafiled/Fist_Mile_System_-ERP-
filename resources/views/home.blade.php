@@ -45,12 +45,12 @@
                             <div class="inner">
                                 <h3></h3>
 
-                                <p>Constarution</p>
+                                <p>Add Constarution</p>
                             </div>
                             <div class="icon">
                                 <i class="fas fa-fw fa-poll"></i>
                             </div>
-                            <a href="#" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="/constarution" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     @endpermission
