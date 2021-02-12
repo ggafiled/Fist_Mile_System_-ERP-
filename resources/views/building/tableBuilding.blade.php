@@ -17,6 +17,7 @@
                                 <th width="5%">รหัส-fm</th>
                                 <th width="5%">ชื่อผู้ติดต่อ</th>
                                 <th width="5%">เบอร์โทร</th>
+                                <th width="5%">เลขห้อง</th>
                                 {{-- <th width="10%">ที่อยู่</th> --}}
                                 <th width="1%">แก้ไข</th>
                                 <th width="1%">ลบ</th>
@@ -30,6 +31,7 @@
                                 <th width="12%">รหัสไปรณี</th> --}}
                             </tr>
                         </thead>
+                      
                     </div>
                     <tbody>
                         @foreach ($data as $row)
@@ -39,6 +41,7 @@
                              <td>{{$row->fmCode}}</td>
                              <td>{{$row->contactName}}</td>
                              <td>{{$row->phone}}</td>
+                             <td>{{$row->roomNumber}}</td>
                              {{-- <td>{{$row->detailAdress}}</td> --}}
                              {{-- <a href="{{ route('building.edit',$row->id) }}" class="btn btn-warning" ><i class="fa fa-edit"></i>Edit</a> --}}
                              <td>

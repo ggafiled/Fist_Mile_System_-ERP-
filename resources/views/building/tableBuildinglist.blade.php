@@ -1,6 +1,11 @@
 @extends('adminlte::page')
 @section('content')
-
+<style>
+    div.dataTables_wrapper {
+        width: 4500px;
+        margin: 0 auto;
+    }
+</style>
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">
@@ -10,19 +15,29 @@
                         <table class="table table-striped table-hover" id="mytables">
                         <thead>
                             <tr class="info">
-                                <th width="2%">#</th>
-                                <th width="15%">ชื่อตึก</th>
-                                <th width="7%">รหัส-fm</th>
-                                <th width="8%">ชื่อผู้ติดต่อ</th>
-                                <th width="8%">เบอร์โทร</th>
-                                <th width="13%">ที่อยู่</th>
-                                <th width="5%">เขต</th>
-                                <th width="5%">จังหวัด</th>
-                                <th width="5%">รหัสไปรษณีย์</th>
-                                <th width="2%">จำนวนอาคาร</th>
-                                <th width="2%">ชั้น</th>
-                                <th width="2%">ห้อง</th>
-                                <th width="2%">ยอดเงิน</th>
+                                <th>#</th>
+                                <th>อาตาร</th>
+                                <th>fm-code</th>
+                                <th>ชื่อผู้ติดต่อ</th>
+                                <th>เบอร์โทร</th>
+                                <th>พื้นที่ น.</th>
+                                <th>จำนวนอาคาร</th>
+                                <th>ชั้น</th>
+                                <th>ห้อง</th>
+                                <th>ที่อยู่</th>
+                                <th>สัญญา</th>
+                                <th>วันลงนามสัญญา</th>
+                                <th>เมือง</th>
+                                <th>เขต</th>
+                                <th>จังหวัด</th>
+                                <th>รหัสไปรษณีย์</th>
+                                <th>Latitude</th>
+                                <th>Longtude </th>
+                                <th>ราคาต่อ ตรม </th>
+                                <th>เวลาในการปฏิบัติงาน </th>
+                                <th>ยอดเงิน </th>
+                                <th>Developer </th>
+                                <th>Grade </th>
                             </tr>
                         </thead>
                     </div>
@@ -34,14 +49,24 @@
                              <td>{{$row->fmCode}}</td>
                              <td>{{$row->contactName}}</td>
                              <td>{{$row->phone}}</td>
-                             <td>{{$row->detailAdress}}</td>
-                             <td>{{$row->zone}}</td>
-                             <td>{{$row->province}}</td>
-                             <td>{{$row->postalCode}}</td>
+                             <td>{{$row->area}}</td>
                              <td>{{$row->numberLayer}}</td>
                              <td>{{$row->floor}}</td>
                              <td>{{$row->roomNumber}}</td>
-                             <td>{{$row->blance}}</td>         
+                             <td>{{$row->detailAdress}}</td>
+                             <td>{{$row->contract}}</td>
+                             <td>{{$row->contracttime}}</td>
+                             <td>{{$row->city}}</td>
+                             <td>{{$row->zone}}</td>
+                             <td>{{$row->province}}</td>
+                             <td>{{$row->postalCode}}</td>
+                             <td>{{$row->latitude}}</td>
+                             <td>{{$row->longtude}}</td>
+                             <td>{{$row->priceSquare}}</td>
+                             <td>{{$row->wordingTime}}</td> 
+                             <td>{{$row->blance}}</td>     
+                             <td>{{$row->developer}}</td>  
+                             <td>{{$row->grade}}</td>      
                             </tr>
                         @endforeach
                      </tbody>
