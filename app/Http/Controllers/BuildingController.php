@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\building;
@@ -15,7 +16,10 @@ class BuildingController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+     protected $notification, $notifications = [];
+
      public function __construct(){
+        $this->notification = array('message' => '','alert_type' => 'success');
          $this->middleware('auth');
          $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
      }  
@@ -73,6 +77,16 @@ class BuildingController extends Controller
             'developer'=>'required',
             'grade'=>'required'
         ]);
+
+        if ($validator->fails()) {
+            foreach($validator->errors()->all() as $error){
+                $this->notification['message'] = $error;
+                $this->notification['alert_type'] = 'error';
+                array_push($this->notifications,$this->notification);
+            }
+            return redirect()->route('building.create')->withInput($request->input())->with('notification',$this->notifications);
+        }
+
         Building::create($request->all());
         // return redirect()->back();
         return redirect()->route('building.list');
@@ -118,7 +132,7 @@ class BuildingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
+        $validator =  Validator::make($request->all(),[
             'building'=>'required',
             'fmCode'=>'required',
             'contactName'=>'required',
@@ -142,6 +156,16 @@ class BuildingController extends Controller
             'developer'=>'required',
             'grade'=>'required'
         ]);
+
+        if ($validator->fails()) {
+            foreach($validator->errors()->all() as $error){
+                $this->notification['message'] = $error;
+                $this->notification['alert_type'] = 'error';
+                array_push($this->notifications,$this->notification);
+            }
+            return redirect()->route('building.edit',$id)->withInput($request->input())->with('notification',$this->notifications);
+        }
+
         Building::find($id)->update($request->all());
         return redirect()->route('building.list');
     }

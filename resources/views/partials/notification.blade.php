@@ -32,24 +32,26 @@ if (location.hash) {
         "hideMethod": "fadeOut"
     }
     
-    var type = "{{ Session::get('notification.alert_type') }}";
-   //but the type var gets assigned with default value(info)
+    @foreach(Session::get('notification') as $noti)
+    var type = "{{ $noti['alert_type'] }}";
     switch(type){
         case 'info':
-            toastr.info("{{ Session::get('notification.message') }}");
+            toastr.info("{{ $noti['message'] }}");
             break;
 
         case 'warning':
-            toastr.warning("{{ Session::get('notification.message') }}");
+            toastr.warning("{{ $noti['message'] }}");
             break;
 
         case 'success':
-            toastr.success("{{ Session::get('notification.message') }}");
+            toastr.success("{{ $noti['message'] }}");
             break;
 
         case 'error':
-            toastr.error("{{ Session::get('notification.message') }}");
+            toastr.error("{{  $noti['message'] }}");
             break;
     }
+    @endforeach
+
     @endif
 </script>
