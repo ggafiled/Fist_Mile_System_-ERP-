@@ -274,11 +274,11 @@ return [
             'icon' => 'fas fa-fw fa-poll',
             'can'  => ['constarution-create', 'constarution-read'],
             'submenu' => [
-                [
-                    'text' => 'Add Constarution',
-                    'url'  => '/constarution',
-                    'can'  => ['building-create']
-                ],
+                // [
+                //     'text' => 'Add Constarution',
+                //     'url'  => '/constarution',
+                //     'can'  => ['building-create']
+                // ],
                 [
                     'text' => 'Edit Table Constarution',
                     'url'  => '/edit_Constarution',

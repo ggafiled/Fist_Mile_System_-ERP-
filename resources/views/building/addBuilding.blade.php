@@ -22,7 +22,7 @@
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card ">
-            <div class="card-header text-white bg-dark"><h3 >{{ __('ADD BUILDING') }}</h3></div>
+            <div class="card-header text-white bg-dark"><h3 >{{ __('เพิ่มข้อมูลในตาราง Building List') }}</h3></div>
                 <div class="card-body">
                     <div class="form-group">
                         <div class="container-fluid mx-auto mt-2 mb-2">
@@ -103,6 +103,19 @@
                                             {!! Form::text('detailAdress',null,["class"=>"form-control",'placeholder' => 'เลขที่ห้อง, บ้านเลขที่, ชื่ออาคาร, ถนน.'])!!}
                                         </div>
                                     </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {!! Form::label('สัญญา :') !!}
+                                            
+                                            {!! Form::date('contract',null,["class"=>"form-control"])!!}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {!! Form::label('วันลงนามสัญญา :') !!}
+                                            {!! Form::date('contracttime',null,["class"=>"form-control"])!!}
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="row">
@@ -117,20 +130,20 @@
                                         <div class="form-group">
                                             {!! Form::label('เขต :') !!}
                                             <i class="fas fa-map"></i>
-                                            {!! Form::text('zone',null,["class"=>"form-control",'placeholder' => 'Enter your postal code.'])!!}
+                                            {!! Form::text('zone',null,["class"=>"form-control",'placeholder' => 'กรอกเขต'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             {!! Form::label('จังหวัด :') !!}
                                             
-                                            {!! Form::text('province',null,["class"=>"form-control"])!!}
+                                            {!! Form::text('province',null,["class"=>"form-control",'placeholder' => 'กรอกจังหวัด'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             {!! Form::label('รหัสไปรษณีย์ :') !!}
-                                            {!! Form::number('postalCode',null,["class"=>"form-control",'placeholder' => 'Enter your postal code.'])!!}
+                                            {!! Form::number('postalCode',null,["class"=>"form-control",'placeholder' => 'กรอกรหัสไปรษณีย์'])!!}
                                         </div>
                                     </div>
                                 </div>

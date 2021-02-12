@@ -112,6 +112,19 @@
                                     Form::text('detailAdress',$data->detailAdress,["class"=>"form-control"])!!}
                                 </div>
                             </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    {!! Form::label('สัญญา :') !!}
+                                    
+                                    {!! Form::date('contract',$data->contract,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    {!! Form::label('วันลงนามสัญญา :') !!}
+                                    {!! Form::date('contracttime',$data->contracttime,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
                         </div>
 
                         <div class="row">
