@@ -131,14 +131,13 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     {!! Form::label('จังหวัด :') !!}
-                                    {!! Form::text('province',$data->province,["class"=>"form-control",'placeholder'])!!}
+                                    {!! Form::text('province',$data->province,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     {!! Form::label('ตำบล/เมือง :') !!}
-                                    {!! Form::text('city',$data->city,["class"=>"form-control",'placeholder' => 'Enter
-                                    your city.'])!!}
+                                    {!! Form::text('city',$data->city,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-4">

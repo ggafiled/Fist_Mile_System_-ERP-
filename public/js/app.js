@@ -28,11 +28,59 @@ $.extend(true, $.fn.dataTable.defaults, {
      }
 });
 
-var table = $('#mytables').DataTable({
-    "lengthMenu": [[15, 25, 50, -1], [15, 25, 50, "All"]],
-    "scrollX": true,
-    dom: 'Bfrtip',
-    buttons: [
+// var table = $('#mytables').DataTable({
+    
+//     initComplete: function () {
+//         // Apply the search
+//         this.api().columns().every( function () {
+//             var that = this;
+
+//             $( 'input', this.footer() ).on( 'keyup change clear', function () {
+//                 if ( that.search() !== this.value ) {
+//                     that
+//                         .search( this.value )
+//                         .draw();
+//                 }
+//             } );
+//         } );
+//     },
+//     "lengthMenu": [[15, 25, 50, -1], [15, 25, 50, "All"]],
+//     "scrollX": true,
+//     dom: 'Bfrtip',
+//     buttons: [
+//         'copy', 'csv', 'excel', 
+    
+//         {
+//             "extend": 'pdf', // ปุ่มสร้าง pdf ไฟล์
+//             "text": 'PDF', // ข้อความที่แสดง
+//             "pageSize": 'A4',   // ขนาดหน้ากระดาษเป็น A4   
+//             pageOrientation: 'landscape',      
+//             "customize":function(doc){ // ส่วนกำหนดเพิ่มเติม ส่วนนี้จะใช้จัดการกับ pdfmake
+//                 // กำหนด style หลัก
+//                 doc.defaultStyle = {
+//                     font:'THSarabun',
+//                     fontSize:16                                 
+//                 };
+//             }
+//         }, // สิ้นสุดกำหนดพิเศษปุ่ม pdf
+//         'print' , 'pageLength'
+//     ],
+
+// });
+
+$(document).ready(function() {
+    // Setup - add a text input to each footer cell
+    $('#example tfoot th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+ 
+    // DataTable
+    var table = $('#example').DataTable({
+      "lengthMenu": [[15, 25, 50, -1], [15, 25, 50, "All"]],
+      "scrollX": true,
+      dom: 'Bfrtip',
+      buttons: [
         'copy', 'csv', 'excel', 
     
         {
@@ -50,8 +98,25 @@ var table = $('#mytables').DataTable({
         }, // สิ้นสุดกำหนดพิเศษปุ่ม pdf
         'print' , 'pageLength'
     ],
+      
+        initComplete: function () {
+            // Apply the search
+            this.api().columns().every( function () {
+                var that = this;
+ 
+                $( 'input', this.footer() ).on( 'keyup change clear', function () {
+                    if ( that.search() !== this.value ) {
+                        that
+                            .search( this.value )
+                            .draw();
+                    }
+                } );
+            } );
+        }
+    });
+ 
+} );
 
-});
 
 let url = location.href.replace(/\/$/, "");
 

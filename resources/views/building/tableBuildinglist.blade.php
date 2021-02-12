@@ -1,22 +1,28 @@
 @extends('adminlte::page')
 @section('content')
 <style>
-    div.dataTables_wrapper {
-        width: 4500px;
-        margin: 0 auto;
-    }
+   	tfoot input {
+		width: 100%;
+		padding: 3px;
+		box-sizing: border-box;
+	}
+
+	div.dataTables_wrapper {
+		width: 4500px;
+		margin: 0 auto;
+	}
 </style>
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">
-            <div class="card-header text-white bg-info"><h3><center>{{ __('BUILDING LIST TABLE') }}</h3></center></div>
+            <div class="card-header text-white bg-dark"><h3><center>{{ __('BUILDING LIST TABLE') }}</h3></center></div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-striped table-hover" id="mytables">
+                        <table class="table table-striped table-hover" id="mytables" style="width:100%">
                         <thead>
                             <tr class="info">
                                 <th>#</th>
-                                <th>อาตาร</th>
+                                <th>อาคาร</th>
                                 <th>fm-code</th>
                                 <th>ชื่อผู้ติดต่อ</th>
                                 <th>เบอร์โทร</th>
@@ -40,6 +46,32 @@
                                 <th>Grade </th>
                             </tr>
                         </thead>
+                        {{-- <tfoot>
+                            <tr>
+                                <th>อาคาร</th>
+                                <th>fm-code</th>
+                                <th>ชื่อผู้ติดต่อ</th>
+                                <th>เบอร์โทร</th>
+                                <th>พื้นที่ น.</th>
+                                <th>จำนวนอาคาร</th>
+                                <th>ชั้น</th>
+                                <th>ห้อง</th>
+                                <th>ที่อยู่</th>
+                                <th>สัญญา</th>
+                                <th>วันลงนามสัญญา</th>
+                                <th>เมือง</th>
+                                <th>เขต</th>
+                                <th>จังหวัด</th>
+                                <th>รหัสไปรษณีย์</th>
+                                <th>Latitude</th>
+                                <th>Longtude </th>
+                                <th>ราคาต่อ ตรม </th>
+                                <th>เวลาในการปฏิบัติงาน </th>
+                                <th>ยอดเงิน </th>
+                                <th>Developer </th>
+                                <th>Grade </th>
+                            </tr>
+                        </tfoot> --}}
                     </div>
                     <tbody>
                         @foreach ($data as $row)
@@ -63,7 +95,7 @@
                              <td>{{$row->latitude}}</td>
                              <td>{{$row->longtude}}</td>
                              <td>{{$row->priceSquare}}</td>
-                             <td>{{$row->wordingTime}}</td> 
+                             <td>{{$row->workingTime}}</td> 
                              <td>{{$row->blance}}</td>     
                              <td>{{$row->developer}}</td>  
                              <td>{{$row->grade}}</td>      
