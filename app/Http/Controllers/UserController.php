@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {    
-    protected $notification;
+    protected $notification, $notifications = [];
 
     public function __construct()
     {
@@ -32,9 +32,12 @@ class UserController extends Controller
         ]);
 
         if ($validator->fails()) {
-            $this->notification['message'] = $validator;
-            $this->notification['alert_type'] = 'error';
-            return redirect()->route('users.edit')->withInput($request->input())->with('notification',$this->notification);
+            foreach($validator->errors()->all() as $error){
+                $this->notification['message'] = $error;
+                $this->notification['alert_type'] = 'error';
+                array_push($this->notifications,$this->notification);
+            }
+            return redirect()->route('users.edit')->withInput($request->input())->with('notification',$this->notifications);
         }
         
         $user = Auth::user();
@@ -42,7 +45,8 @@ class UserController extends Controller
         $user->save();
         $this->notification['message'] = 'โปรไฟล์ของคุณอัพเดตเรียบร้อยแล้วค่ะ.';
         $this->notification['alert_type'] = 'success';
-        return redirect()->route('users.edit')->with('notification', $this->notification);
+        array_push($this->notifications,$this->notification);
+        return redirect()->route('users.edit')->with('notification', $this->notifications);
     }
 
     public function setUserNameAndEmail(Request $request)
@@ -53,9 +57,12 @@ class UserController extends Controller
         ]);
 
         if ($validator->fails()) {
-            $this->notification['message'] = $validator;
-            $this->notification['alert_type'] = 'error';
-            return redirect()->route('users.edit')->withInput($request->input())->with('notification',$this->notification);
+            foreach($validator->errors()->all() as $error){
+                $this->notification['message'] = $error;
+                $this->notification['alert_type'] = 'error';
+                array_push($this->notifications,$this->notification);
+            }
+            return redirect()->route('users.edit')->withInput($request->input())->with('notification',$this->notifications);
         }
         
         $user = Auth::user();
@@ -64,8 +71,9 @@ class UserController extends Controller
         $user->save();
         $this->notification['message'] = 'อัพเดตข้อมูลผู้ใช้งานเรียบร้อยแล้วค่ะ.';
         $this->notification['alert_type'] = 'success';
+        array_push($this->notifications,$this->notification);
         // dd($this->notification);
-        return redirect()->route('users.edit')->with('notification', $this->notification);
+        return redirect()->route('users.edit')->with('notification', $this->notifications);
     }
 
     public function showChangePasswordForm()
@@ -80,14 +88,16 @@ class UserController extends Controller
             // The passwords matches
             $this->notification['message'] = "รหัสผ่านปัจจุบันของคุณไม่ตรงกับรหัสผ่านที่คุณระบุ กรุณาลองอีกครั้ง";
             $this->notification['alert_type'] = 'error';
-            return redirect()->route('users.edit',['','#vert-tabs-password'])->withInput($request->input())->with("notification",$this->notification);
+            array_push($this->notifications,$this->notification);
+            return redirect()->route('users.edit',['','#vert-tabs-password'])->withInput($request->input())->with("notification",$this->notifications);
         }
 
         if(strcmp($request->get('currentPassword'), $request->get('newPassword')) == 0){
             //Current password and new password are same
             $this->notification['message'] = "รหัสผ่านใหม่เหมือนกับรหัสผ่านก่อนหน้านี้ กรุณาเลือกรหัสผ่านอื่น";
             $this->notification['alert_type'] = 'error';
-            return redirect()->route('users.edit',['','#vert-tabs-password'])->withInput($request->input())->with("notification",$this->notification);
+            array_push($this->notifications,$this->notification);
+            return redirect()->route('users.edit',['','#vert-tabs-password'])->withInput($request->input())->with("notification",$this->notifications);
         }
 
         $validator =  Validator::make($request->all(),[
@@ -101,9 +111,12 @@ class UserController extends Controller
         ]); 
 
         if ($validator->fails()) {
-            $this->notification['message'] = $validator->errors()->first();
-            $this->notification['alert_type'] = 'error';
-            return redirect()->route('users.edit',['','#vert-tabs-password'])->withInput($request->input())->with('notification',$this->notification);
+            foreach($validator->errors()->all() as $error){
+                $this->notification['message'] = $error;
+                $this->notification['alert_type'] = 'error';
+                array_push($this->notifications,$this->notification);
+            }
+            return redirect()->route('users.edit')->withInput($request->input())->with('notification',$this->notifications);
         }
 
         //Change Password
@@ -112,6 +125,7 @@ class UserController extends Controller
         $user->save();
         $this->notification['message'] = "เปลี่ยนรหัสผ่านสำเร็จแล้ว";
         $this->notification['alert_type'] = 'success';
-        return redirect()->route('users.edit',['','#vert-tabs-password'])->with("notification",$this->notification);
+        array_push($this->notifications,$this->notification);
+        return redirect()->route('users.edit',['','#vert-tabs-password'])->with("notification",$this->notifications);
     }
 }

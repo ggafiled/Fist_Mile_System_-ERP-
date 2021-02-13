@@ -8,7 +8,7 @@
     }
 
 </style>
-<ul>
+{{-- <ul>
     @if($errors->all())
         <ul class="alert alert-danger">
             @foreach($errors->all() as $error)
@@ -18,7 +18,7 @@
             @endforeach
         </ul>
     @endif
-</ul>
+</ul> --}}
 {!! Form::open(array('route' => array('building.update', $data->id),'method' => 'put'))
 !!}
 {{-- {!! Form::open(['Action' => ['BuildingController@update',$data->id],'method'=>'PUT']) !!} --}}
@@ -219,4 +219,8 @@
     {!! Form::close() !!}
 </div>
 
+@endsection
+
+@section('adminlte_js')
+        @include('partials.notification')
 @endsection
