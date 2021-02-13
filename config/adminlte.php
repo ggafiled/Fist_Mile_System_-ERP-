@@ -129,9 +129,9 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-dark-primary elevation-4 fixed-top',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light ' ,
+    'classes_topnav' => 'navbar-white navbar-light fixed-top ' ,
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -494,6 +494,11 @@ return [
                     'location' => '//cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css',
                 ],
                 [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css',
+                ],
+                [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js',
@@ -554,11 +559,11 @@ return [
                     'asset' => false,
                     'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js',
                 ],
-                // [
-                //     'type' => 'js',
-                //     'asset' => false,
-                //     'location' => 'https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js',
-                // ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js',
+                ],
             ],
         ],
         'Select2' => [

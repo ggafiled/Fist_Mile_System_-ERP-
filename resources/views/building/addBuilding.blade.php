@@ -18,7 +18,7 @@
     </ul>
     @endif
 </ul>
-  
+<br>
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card ">

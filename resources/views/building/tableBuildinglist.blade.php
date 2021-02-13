@@ -11,14 +11,14 @@
 		width: 4500px;
 		margin: 0 auto;
 	}
-</style>
+</style><br><br>
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">
             <div class="card-header text-white bg-dark"><h3><center>{{ __('BUILDING LIST TABLE') }}</h3></center></div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-striped table-hover" id="mytables" style="width:100%">
+                        <table class="table table-hover" id="mytables" style="width:100%">
                         <thead>
                             <tr class="info">
                                 <th>#</th>

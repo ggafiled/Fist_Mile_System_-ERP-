@@ -8,6 +8,7 @@
     }
 
 </style>
+
 {{-- <ul>
     @if($errors->all())
         <ul class="alert alert-danger">
@@ -22,6 +23,7 @@
 {!! Form::open(array('route' => array('building.update', $data->id),'method' => 'put'))
 !!}
 {{-- {!! Form::open(['Action' => ['BuildingController@update',$data->id],'method'=>'PUT']) !!} --}}
+<br><br><br>
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card ">
@@ -212,10 +214,10 @@
                     </div>
                 </div>
             </div>
-            
+            <br><br>
         </div>
     </div>
-    
+
     {!! Form::close() !!}
 </div>
 
