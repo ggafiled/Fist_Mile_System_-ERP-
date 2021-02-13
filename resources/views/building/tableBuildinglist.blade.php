@@ -45,9 +45,9 @@
                                 <th>Developer </th>
                                 <th>Grade </th>
                             </tr>
-                        </thead>
-                        {{-- <tfoot>
-                            <tr>
+                            <tfoot>
+                                <tr>
+                                <th>#</th>
                                 <th>อาคาร</th>
                                 <th>fm-code</th>
                                 <th>ชื่อผู้ติดต่อ</th>
@@ -70,8 +70,9 @@
                                 <th>ยอดเงิน </th>
                                 <th>Developer </th>
                                 <th>Grade </th>
-                            </tr>
-                        </tfoot> --}}
+                                </tr>
+                            </tfoot>
+                        </thead>
                     </div>
                     <tbody>
                         @foreach ($data as $row)
