@@ -422,6 +422,7 @@ return [
         'Datatables' => [
             'active' => true,
             'files' => [
+                //js
                 [
                     'type' => 'js',
                     'asset' => false,
@@ -468,21 +469,56 @@ return [
                     'location' => '//cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js',
                 ],
                 [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://code.jquery.com/jquery-3.5.1.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/buttons.colVis.min.js',
+                ],
+                //css
+                [
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
                 ],
-                [
-                    'type' => 'css',
-                    'asset' => false,
-                    'location' => '//cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css',
-                ],
-                [
-                    'type' => 'css',
-                    'asset' => false,
-                    'location' => '//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css',
-                ],
-                ///โทนเพิ่มเอง
                 [
                     'type' => 'css',
                     'asset' => false,
@@ -498,73 +534,10 @@ return [
                     'asset' => false,
                     'location' => '//cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css',
                 ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => '//cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => '../../../../examples/resources/demo.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js',
-                ],
-                ///โทนเพิ่มเอง
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => '../../../../examples/resources/demo.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js',
-                ],
+
+               
             ],
+    
         ],
         'Select2' => [
             'active' => true,
