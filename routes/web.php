@@ -31,6 +31,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/building/list',[App\Http\Controllers\BuildingController::class,'showBuildingList'])->name('building.list');
     Route::resource('/building',App\Http\Controllers\BuildingController::class);
     Route::resource('/constarution',App\Http\Controllers\ConstarutionController::class);
+    Route::resource('/usermanament',App\Http\Controllers\usermanagementController::class);
+    Route::resource('/progress',App\Http\Controllers\editProgressController::class);
 
     Route::post('/setUserNameAndEmail',[App\Http\Controllers\UserController::class, 'setUserNameAndEmail'])->name('users.update');
     Route::post('/setUserImage',[App\Http\Controllers\UserController::class, 'setUserImage']);

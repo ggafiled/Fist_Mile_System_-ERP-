@@ -11,7 +11,7 @@
 		width: 4500px;
 		margin: 0 auto;
 	}
-</style><br><br>
+</style>
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">

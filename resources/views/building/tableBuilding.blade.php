@@ -1,7 +1,6 @@
 @extends('adminlte::page')
 
 @section('content')
-<br><br>
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">

@@ -129,9 +129,9 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4 fixed-top',
+    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light fixed-top ' ,
+    'classes_topnav' => 'navbar-white navbar-light ' ,
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -281,7 +281,7 @@ return [
                 // ],
                 [
                     'text' => 'Edit Table Constarution',
-                    'url'  => '/edit_Constarution',
+                    'url'  => '/progress',
                     'can'  => ['building-update']
                 ],
                 [
@@ -318,7 +318,7 @@ return [
         ],
         [
             'text' => 'User Management',
-            'url'  => '',
+            'url'  => '/usermanament',
             'icon' => 'fas fa-users',
             'can'  => ['profile-update', 'profile-read', 'password-update'],
         ],

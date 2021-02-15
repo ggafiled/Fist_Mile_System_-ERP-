@@ -19,7 +19,8 @@ class BuildingController extends Controller
      protected $notification, $notifications = [];
 
      public function __construct(){
-        $this->notification = array('message' => '','alert_type' => 'success');
+         
+         $this->notification = array('message' => '','alert_type' => 'success');
          $this->middleware('auth');
          $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
      }  

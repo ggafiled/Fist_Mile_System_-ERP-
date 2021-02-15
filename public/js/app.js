@@ -87,8 +87,10 @@ $(document).ready(function() {
                     fontSize:16                                 
                 };
             }
-        }, // สิ้นสุดกำหนดพิเศษปุ่ม pdf
+        },
+         // สิ้นสุดกำหนดพิเศษปุ่ม pdf
         'print' , 'pageLength'
+        
     ],
         initComplete: function () {
             this.api().columns().every( function () {
