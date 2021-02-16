@@ -175,7 +175,7 @@ $(document).ready(function() {
  
     // DataTable
     var table = $('#example').DataTable({
-    "lengthMenu": [[13, 20, 40, -1], [13, 20, 40, "All"]],
+    "lengthMenu": [[15, 20, 50,100, -1], [15, 20, 50,100, "All"]],
       "scrollX": true,
       dom: 'Bfrtip',
       buttons: [

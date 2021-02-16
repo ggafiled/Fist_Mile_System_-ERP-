@@ -13,18 +13,18 @@ class CreateProgressTable extends Migration
      */
     public function up()
     {
-        Schema::create('progress', function (Blueprint $table) {
-            $table->id();
-            $table->string('surveyDesign');
-            $table->string('ifcc');
-            $table->string('wallBox');
-            $table->string('microDuct');
-            $table->string('icroDuct');
-            $table->string('dateSign');
-            $table->string('fmProgress');
-            $table->string('dateNetwork');
-            $table->timestamps();
-        });
+        // Schema::create('progress', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('surveyDesign');
+        //     $table->string('ifcc');
+        //     $table->string('wallBox');
+        //     $table->string('microDuct');
+        //     $table->string('icroDuct');
+        //     $table->string('dateSign');
+        //     $table->string('fmProgress');
+        //     $table->string('dateNetwork');
+        //     $table->timestamps();
+        // });
     }
 
     /**
@@ -34,6 +34,6 @@ class CreateProgressTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('progress');
+        // Schema::dropIfExists('progress');
     }
 }

@@ -26,14 +26,14 @@
                                    <div class="col-sm-2">
                                         <div class="form-group">
                                             {!! Form::label('FM Progress :') !!}
-                                            {!! Form::text('ดึงอยูู่ลจาก db ชื่อตึกมา',null,["class"=>"form-control"])!!}
+                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'กำลังสร้างพร้อมโครงการ','3'=>'สร้างพร้อมโครงการ','4'=>'รอเข้ากำเนินการ','5'=>''],null, ['class'=>'form-control']) !!}
                                             {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                         </div>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            {!! Form::label('วันที่เข้าวางโครงขาย :') !!}
-                                            {!! Form::date('ดึงอยูู่ลจาก db ชื่อตึกมา',null,["class"=>"form-control"])!!}
+                                            {!! Form::label('วันที่เข้าวางโครงข่าย :') !!}
+                                            {!! Form::date('dateProgress',null,["class"=>"form-control"])!!}
                                             {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                         </div>
                                     </div>
@@ -43,42 +43,42 @@
                                    <div class="col-sm-2">
                                         <div class="form-group">
                                             {!! Form::label('TOT Progress :') !!}
-                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ'],null, ['class'=>'form-control']) !!}
+                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null, ['class'=>'form-control']) !!}
                                             {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                         </div>
                                     </div>
                                    <div class="col-sm-2">
                                        <div class="form-group">
                                            {!! Form::label('AIS Progress :') !!}
-                                           {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ'],null, ['class'=>'form-control']) !!}
+                                           {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null, ['class'=>'form-control']) !!}
                                            {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                        </div>
                                    </div>
                                    <div class="col-sm-2">
                                         <div class="form-group">
                                             {!! Form::label('3BB Progress :') !!}
-                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ'],null, ['class'=>'form-control']) !!}
+                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null, ['class'=>'form-control']) !!}
                                             {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                         </div>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
                                             {!! Form::label('Sinet Progress :') !!}
-                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ'],null, ['class'=>'form-control']) !!}
+                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null, ['class'=>'form-control']) !!}
                                             {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                         </div>
                                     </div>
                                    <div class="col-sm-2">
                                        <div class="form-group">
                                            {!! Form::label('FN Progress :') !!}
-                                           {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ'],null, ['class'=>'form-control']) !!}
+                                           {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null, ['class'=>'form-control']) !!}
                                            {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                        </div>
                                    </div>
                                    <div class="col-sm-2">
                                         <div class="form-group">
                                             {!! Form::label('True Progress :') !!}
-                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ'],null, ['class'=>'form-control']) !!}
+                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null, ['class'=>'form-control']) !!}
                                             {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                         </div>
                                     </div>
