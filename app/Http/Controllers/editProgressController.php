@@ -15,7 +15,6 @@ class editProgressController extends Controller
     {
         return view('Progress.editConstarution');
     }
-
     /**
      * Show the form for creating a new resource.
      *

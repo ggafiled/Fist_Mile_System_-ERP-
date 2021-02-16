@@ -19,11 +19,11 @@ class BuildingController extends Controller
      protected $notification, $notifications = [];
 
      public function __construct(){
-         
+
          $this->notification = array('message' => '','alert_type' => 'success');
          $this->middleware('auth');
-        //  $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
-        $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
+         $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
+         $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
      }  
 
      public function building()
@@ -53,9 +53,10 @@ class BuildingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request )
     {
         $request->validate([
+    //    $validator = Validator::make($request->validate(),[
             'building'=>'required',
             'fmCode'=>'required',
             'contactName'=>'required',
@@ -80,14 +81,14 @@ class BuildingController extends Controller
             'grade'=>'required'
         ]);
 
-        if ($validator->fails()) {
-            foreach($validator->errors()->all() as $error){
-                $this->notification['message'] = $error;
-                $this->notification['alert_type'] = 'error';
-                array_push($this->notifications,$this->notification);
-            }
-            return redirect()->route('building.create')->withInput($request->input())->with('notification',$this->notifications);
-        }
+        // if ($validator->fails()) {
+        //     foreach($validator->errors()->all() as $error){
+        //         $this->notification['message'] = $error;
+        //         $this->notification['alert_type'] = 'error';
+        //         array_push($this->notifications,$this->notification);
+        //     }
+        //     return redirect()->route('building.create')->withInput($request->input())->with('notification',$this->notifications);
+        // }
 
         Building::create($request->all());
         // return redirect()->back();

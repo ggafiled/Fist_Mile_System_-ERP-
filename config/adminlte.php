@@ -286,7 +286,7 @@ return [
                 ],
                 [
                     'text' => 'Table Constarution',
-                    'url'  => '',
+                    'url'  => '/tableprogress',
                     'can'  => ['building-read']
                 ],
             ]
