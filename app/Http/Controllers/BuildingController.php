@@ -22,7 +22,8 @@ class BuildingController extends Controller
          
          $this->notification = array('message' => '','alert_type' => 'success');
          $this->middleware('auth');
-         $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
+        //  $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
+        $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
      }  
 
      public function building()

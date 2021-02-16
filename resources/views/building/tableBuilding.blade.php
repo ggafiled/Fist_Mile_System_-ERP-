@@ -19,7 +19,9 @@
                                 <th width="5%">เลขห้อง</th>
                                 {{-- <th width="10%">ที่อยู่</th> --}}
                                 <th width="1%">แก้ไข</th>
+                                @role('superadministrator')
                                 <th width="1%">ลบ</th>
+                                @endrole
                                 {{-- <th width="5%">เขต</th>
                                 <th width="10%">จำนวนอาคาร</th>
                                 <th width="6%">ชั้น</th>
@@ -49,6 +51,7 @@
                                   <input type="submit" value='แก้ไข'  " class="btn btn-warning ">
                                 </form>
                             </td>
+                            @role('superadministrator')
                             <td>
                                 <form action="{{route('building.destroy',$row->id)}}" method="post">
                                     @csrf @method('DELETE')
@@ -56,6 +59,7 @@
                                   onclick="return confirm('คุณต้องการลบข้อมูล {{$row->name}} ?')">
                                 </form>
                             </td>
+                            @endrole
                             </tr>
                         @endforeach
                      </tbody>
