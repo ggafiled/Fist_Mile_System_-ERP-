@@ -280,15 +280,15 @@ return [
                 //     'can'  => ['building-create']
                 // ],
                 [
-                    'text' => 'Edit Table Constarution',
+                    'text' => 'Table Constarution',
                     'url'  => '/progress',
                     'can'  => ['building-update']
                 ],
-                [
-                    'text' => 'Table Constarution',
-                    'url'  => '/tableprogress',
-                    'can'  => ['building-read']
-                ],
+                // [
+                //     'text' => 'Table Constarution',
+                //     'url'  => '/tableprogress',
+                //     'can'  => ['building-read']
+                // ],
             ]
         ],
         [
