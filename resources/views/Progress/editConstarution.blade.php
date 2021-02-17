@@ -12,14 +12,14 @@
                                    <div class="col">
                                        <div class="form-group">
                                            {!! Form::label('ชื่ออาคาร(Project) :') !!}
-                                           {!! Form::text('ดึงอยูู่ลจาก db ชื่อตึกมา',null,["class"=>"form-control"])!!}
+                                           {!! Form::select('building',$data->id,["class"=>"form-control"]) !!}
                                            {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                        </div>
                                    </div>
                                    <div class="col-sm-2">
                                         <div class="form-group">
                                             {!! Form::label('FM Progress :') !!}
-                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'กำลังสร้างพร้อมโครงการ','3'=>'สร้างพร้อมโครงการ','4'=>'รอเข้าดำเนินการ','5'=>''],null, ['class'=>'form-control']) !!}
+                                            {!! Form::select('country',['1' => '','2'=>'กำลังสร้างพร้อมโครงการ','3'=>'สร้างพร้อมโครงการ','4'=>'รอเข้าดำเนินการ','5'=>'รอดำเนินการ'],null, ['class'=>'form-control']) !!}
                                             {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                         </div>
                                     </div>
@@ -36,42 +36,42 @@
                                    <div class="col-sm-2">
                                         <div class="form-group">
                                             {!! Form::label('TOT Progress :') !!}
-                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null, ['class'=>'form-control']) !!}
+                                            {!! Form::select('country',['1' => '','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>'รอดำเนินการ'],null, ['class'=>'form-control']) !!}
                                             {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                         </div>
                                     </div>
                                    <div class="col-sm-2">
                                        <div class="form-group">
                                            {!! Form::label('AIS Progress :') !!}
-                                           {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null, ['class'=>'form-control']) !!}
+                                           {!! Form::select('country',['1' => '','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>'รอดำเนินการ'],null, ['class'=>'form-control']) !!}
                                            {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                        </div>
                                    </div>
                                    <div class="col-sm-2">
                                         <div class="form-group">
                                             {!! Form::label('3BB Progress :') !!}
-                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null, ['class'=>'form-control']) !!}
+                                            {!! Form::select('country',['1' => '','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>'รอดำเนินการ'],null, ['class'=>'form-control']) !!}
                                             {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                         </div>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
                                             {!! Form::label('Sinet Progress :') !!}
-                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null, ['class'=>'form-control']) !!}
+                                            {!! Form::select('country',['1' => '','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>'รอดำเนินการ'],null, ['class'=>'form-control']) !!}
                                             {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                         </div>
                                     </div>
                                    <div class="col-sm-2">
                                        <div class="form-group">
                                            {!! Form::label('FN Progress :') !!}
-                                           {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null, ['class'=>'form-control']) !!}
+                                           {!! Form::select('country',['1' => '','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>'รอดำเนินการ'],null, ['class'=>'form-control']) !!}
                                            {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                        </div>
                                    </div>
                                    <div class="col-sm-2">
                                         <div class="form-group">
                                             {!! Form::label('True Progress :') !!}
-                                            {!! Form::select('country',['1' => 'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null, ['class'=>'form-control']) !!}
+                                            {!! Form::select('country',['1' => '','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>'รอดำเนินการ'],null, ['class'=>'form-control']) !!}
                                             {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                         </div>
                                     </div>
@@ -116,7 +116,36 @@
                                   
                                 </div>
                                 <tbody>
-                                    
+                                    @foreach ($data as $row)
+                                        <tr>
+                                         <th scope="row">{{$row->id}}</th>
+                                         <td>{{$row->building}}</td>
+                                         <td>{{$row->fmProgess}}</td>
+                                         <td>{{$row->dateProgess}}</td>
+                                         <td>{{$row->totProgess}}</td>
+                                         <td>{{$row->aisProgess}}</td>
+                                         <td>{{$row->sinetProgess}}</td>
+                                         <td>{{$row->sinetProgess}}</td>
+                                         <td>{{$row->trueProgess}}</td>
+                                         {{-- <td>{{$row->detailAdress}}</td> --}}
+                                         {{-- <a href="{{ route('building.edit',$row->id) }}" class="btn btn-warning" ><i class="fa fa-edit"></i>Edit</a> --}}
+                                         <td>
+                                            <form action="{{ route('building.edit',$row->id) }}" method="PUT">
+                                                @csrf @method('HEAD')
+                                              <input type="submit" value='แก้ไข'  " class="btn btn-warning ">
+                                            </form>
+                                        </td>
+                                        @role('superadministrator')
+                                        <td>
+                                            <form action="{{route('building.destroy',$row->id)}}" method="post">
+                                                @csrf @method('DELETE')
+                                              <input type="submit" value='ลบ'  data-name="{{$row->projecct}}" class="btn btn-danger deleteForm"
+                                              onclick="return confirm('คุณต้องการลบข้อมูล {{$row->name}} ?')">
+                                            </form>
+                                        </td>
+                                        @endrole
+                                        </tr>
+                                    @endforeach
                                  </tbody>
                                 </table>
                               </div>
@@ -128,4 +157,7 @@
               </div>
           </div>              
    
+@endsection
+@section('adminlte_js')
+<script src="{{ asset('js/app.js') }}"></script>
 @endsection
