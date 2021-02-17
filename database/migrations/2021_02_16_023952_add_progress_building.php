@@ -15,6 +15,7 @@ class AddProgressBuilding extends Migration
     {
         Schema::create('progress', function (Blueprint $table) {
             $table->id();
+            $table->string('buildingId');
             $table->string('fmProgress');
             $table->date('dateProgress');
             $table->string('totProgress');

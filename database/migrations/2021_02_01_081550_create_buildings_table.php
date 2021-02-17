@@ -15,8 +15,8 @@ class CreateBuildingsTable extends Migration
     {
         Schema::create('buildings', function (Blueprint $table) {
             $table->id();
-            $table->string('building');
-            $table->foreign('building')->references('id')->on('progress');
+            $table->string('buildingId');
+            $table->foreign('buildingId')->references('buildingId')->on('proess');
             $table->string('fmCode');
             $table->string('contactName');
             $table->string('phone');

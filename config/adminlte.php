@@ -513,12 +513,23 @@ return [
                     'asset' => false,
                     'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/buttons.colVis.min.js',
                 ],
+                // [
+                //     'type' => 'js',
+                //     'asset' => false,
+                //     'location' => 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js',
+                // ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js',
+                ],
                 //css
                 [
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
                 ],
+                
                 [
                     'type' => 'css',
                     'asset' => false,
@@ -533,6 +544,11 @@ return [
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css',
                 ],
 
                
