@@ -50,7 +50,7 @@
                             <div class="icon">
                                 <i class="fas fa-fw fa-poll"></i>
                             </div>
-                            <a href="/progress" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     @endpermission
@@ -80,7 +80,7 @@
                             <div class="icon">
                                 <i class="fas fa-fw fa-poll-h"></i>
                             </div>
-                            <a href="#" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="/progress" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     @endpermission

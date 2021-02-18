@@ -273,23 +273,23 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-poll',
             'can'  => ['constarution-create', 'constarution-read'],
-            'submenu' => [
-                // [
-                //     'text' => 'Add Constarution',
-                //     'url'  => '/constarution',
-                //     'can'  => ['building-create']
-                // ],
-                [
-                    'text' => 'Table Constarution',
-                    'url'  => '/progress',
-                    'can'  => ['building-update']
-                ],
-                // [
-                //     'text' => 'Table Constarution',
-                //     'url'  => '/tableprogress',
-                //     'can'  => ['building-read']
-                // ],
-            ]
+            // 'submenu' => [
+            //     [
+            //         'text' => 'Add Constarution',
+            //         'url'  => '/constarution',
+            //         'can'  => ['building-create']
+            //     ],
+            //     [
+            //         'text' => 'Table Constarution',
+            //         'url'  => '',
+            //         'can'  => ['building-update']
+            //     ],
+            //     [
+            //         'text' => 'Table Constarution',
+            //         'url'  => '/tableprogress',
+            //         'can'  => ['building-read']
+            //     ],
+            // ]
         ],
         [
             'text' => 'Building Payment',
@@ -299,9 +299,10 @@ return [
         ],
         [
             'text' => 'Status Opertor',
-            'url'  => 'admin/settings',
+            'url'  => '/progress',
             'icon' => 'fas fa-fw fa-poll-h',
-            'can'  => ['status-operator-create', 'status-operator-read']
+            'can'  => ['building-create|building-read|building-update']
+
         ],
         [
             'text' => 'Technician Opertor',

@@ -20,8 +20,7 @@
         </ul>
     @endif
 </ul> --}}
-{!! Form::open(array('route' => array('building.update', $data->id),'method' => 'put'))
-!!}
+{!! Form::open(array('route' => array('building.update', $data->id),'method' => 'put')) !!}
 {{-- {!! Form::open(['Action' => ['BuildingController@update',$data->id],'method'=>'PUT']) !!} --}}
 <div class="row justify-content-center">
     <div class="col-md">
@@ -42,8 +41,7 @@
                             <div class="col-sm-8">
                                 <div class="form-group">
                                     {!! Form::label('ชื่ออาคาร :') !!}
-                                    {!! Form::text('building',$data->building,["class"=>"form-control",'placeholder' =>
-                                    'Enter your building.'])!!}
+                                    {!! Form::text('building',$data->building,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-2">

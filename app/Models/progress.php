@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class progress extends Model
 {
     protected $fillable = [
-        'building','fmProgess','dateProgess',
-        'totProgess','aisProgess','3bbProgess','sinetProgess','trueProgess'
+        'id','building','fmProgress','dateProgess',
+        'totProgess','aisProgess','3bbProgess','sinetProgess','fnProgess','trueProgess'
     ];
 }

@@ -104,8 +104,7 @@
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            {!! Form::label('สัญญา :') !!}
-                                            
+                                            {!! Form::label('สัญญา :') !!}    
                                             {!! Form::date('contract',null,["class"=>"form-control"])!!}
                                         </div>
                                     </div>
