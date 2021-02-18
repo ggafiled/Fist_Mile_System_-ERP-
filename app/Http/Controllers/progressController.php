@@ -23,18 +23,18 @@ class ProgressController extends Controller
         $this->middleware('auth');
         // $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
        //  $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
-    }  
+    }
 
     public function progress()
     {
-        return view('Progress.indexprogress');
+        return view('progress.index');
     }
-    
+
 
     public function index()
     {
         $data = progress::all();
-        return view('Progress.indexprogress',['data' => $data]);
+        return view('progress.index',['data' => $data]);
     }
 
     /**
@@ -44,7 +44,7 @@ class ProgressController extends Controller
      */
     public function create()
     {
-        return view('Progress.indexprogress');
+        return view('progress.index');
     }
 
     /**
@@ -61,7 +61,7 @@ class ProgressController extends Controller
     public function showProgressList()
     {
         $data = progress::all();
-        return view('Progress.indexprogress',['data' => $data]);
+        return view('progress.index',['data' => $data]);
     }
 
     /**
@@ -84,7 +84,7 @@ class ProgressController extends Controller
     public function edit($id)
     {
         $data=Progress::find($id);
-        return view('progress.indexprogress',['data' => $data]);
+        return view('progress.index',['data' => $data]);
     }
 
     /**
@@ -95,7 +95,7 @@ class ProgressController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id){
-        
+
         $validator =  Validator::make($request->all(),[
             'id'=>'required',
             'building'=>'required',
@@ -119,7 +119,7 @@ class ProgressController extends Controller
 
         Progress::find($id)->update($request->all());
         return redirect()->back();
-        
+
     }
 
     /**

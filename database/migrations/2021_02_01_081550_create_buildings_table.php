@@ -13,29 +13,29 @@ class CreateBuildingsTable extends Migration
      */
     public function up()
     {
+        Schema::enableForeignKeyConstraints();
         Schema::create('buildings', function (Blueprint $table) {
             $table->id();
-            $table->string('buildingId');
-            $table->foreign('buildingId')->references('buildingId')->on('proess');
-            $table->string('fmCode');
-            $table->string('contactName');
-            $table->string('phone');
-            $table->string('area');
-            $table->integer('numberLayer');
-            $table->integer('floor');
-            $table->string('roomNumber');
-            $table->string('detailAdress');
-            $table->string('province');
-            $table->string('city');
-            $table->integer('postalCode');
-            $table->string('zone');
-            $table->double('latitude');
-            $table->double('longtude');
-            $table->string('priceSquare');
-            $table->string('workingTime');
-            $table->string('blance');
-            $table->string('developer');
-            $table->string('grade');
+            $table->unsignedBigInteger('buildingId')->index();
+            $table->string('fmCode')->nullable();
+            $table->string('contactName')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('area')->nullable();
+            $table->integer('numberLayer')->nullable();
+            $table->integer('floor')->nullable();
+            $table->string('roomNumber')->nullable();
+            $table->string('detailAdress')->nullable();
+            $table->string('province')->nullable();
+            $table->string('city')->nullable();
+            $table->integer('postalCode')->nullable();
+            $table->string('zone')->nullable();
+            $table->double('latitude')->nullable();
+            $table->double('longtude')->nullable();
+            $table->string('priceSquare')->nullable();
+            $table->string('workingTime')->nullable();
+            $table->string('blance')->nullable();
+            $table->string('developer')->nullable();
+            $table->string('grade')->nullable();
             $table->timestamps();
         });
     }
@@ -47,6 +47,7 @@ class CreateBuildingsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('buildings');
     }
 }
