@@ -92,6 +92,7 @@
                                <table class="table table-striped" id="example1">
                                    <thead >
                                        <tr class="info">
+                                        <th width="12%">#</th>
                                            <th width="12%">ชื่ออาคาร</th>
                                            <th width="5%">fm-progress</th>
                                            <th width="5%">วันวางโครงข่าย</th>
@@ -116,6 +117,7 @@
                                     <td>{{$row->dateProgress}}</td>
                                     <td>{{$row->totProgress}}</td>
                                     <td>{{$row->aisProgress}}</td>
+                                    <td>{{$row->Progress3bb}}</td>
                                     <td>{{$row->sinetProgress}}</td>
                                     <td>{{$row->fnProgress}}</td>
                                     <td>{{$row->trueProgress}}</td>
