@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\progress;
 
 
-class progessController extends Controller
+class ProgressController extends Controller
 {
     /**
      * Display a listing of the resource.
