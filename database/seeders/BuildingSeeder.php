@@ -10,7 +10,7 @@ class BuildingSeeder extends CsvSeeder
     public function __construct()
     {
         $this->table = 'buildings';
-		$this->filename = base_path().'/database/csvs/buildings.csv';
+		$this->filename = './database/csvs/buildings.csv';
     }
 
     /**

@@ -14,7 +14,7 @@ class AddColumnBuildingProgess extends Migration
     public function up()
     {
         Schema::table('progress', function (Blueprint $table) {
-            $table->string('building')->after('id');
+            $table->string('building')->after('id')->nullable();
         });
     }
 

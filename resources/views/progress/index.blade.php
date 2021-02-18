@@ -123,15 +123,46 @@
 
                                         </tr>
                                     </thead>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </div>
-</div>
+                            </div>
+                            <tbody>
+                                @if($data)
+                                @forelse ($data as $item)
+                                <tr>
+                                    <th scope="row">{{$row->id}}</th>
+                                    <td>{{$row->building}}</td>
+                                    <td>{{$row->fmProgress}}</td>
+                                    <td>{{$row->dateProgress}}</td>
+                                    <td>{{$row->totProgress}}</td>
+                                    <td>{{$row->aisProgress}}</td>
+                                    <td>{{$row->sinetProgress}}</td>
+                                    <td>{{$row->fnProgress}}</td>
+                                    <td>{{$row->trueProgress}}</td>
+                                    <td>
+                                        <form action="{{ route('progress.edit',$row->id) }}" method="PUT">
+                                            @csrf @method('HEAD')
+                                            <input type="submit" value='แก้ไข' " class=" btn btn-warning ">
+                                        </form>
+                                    </td>
+                                </tr>
+                                @empty
+                                <tr>
+                                    <td>{{ __('ไม่มีข้อมูลในระบบ') }}</td>
+                                </tr>
+                                @endforelse
+                               @endif
+                                </tbody>
+                               </table>
+                             </div>
+                           </div>
+                       </div>
+
+                     </div>
+                  </div>
+             </div>
+         </div>
 
 @endsection
+@section('adminlte_js')
+<script src=" {{ asset('js/app.js') }}"></script>
+                                            @endsection

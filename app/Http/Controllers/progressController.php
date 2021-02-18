@@ -83,7 +83,8 @@ class ProgressController extends Controller
      */
     public function edit($id)
     {
-        $data=Progress::find($id);
+        $data= Progress::find($id);
+        dd($data);
         return view('progress.index',['data' => $data]);
     }
 

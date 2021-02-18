@@ -14,8 +14,8 @@ class AddColumnDate extends Migration
     public function up()
     {
         Schema::table('buildings', function (Blueprint $table) {
-            $table->string('contract')->after('roomNumber');
-            $table->string('contracttime')->after('contract');
+            $table->string('contract')->after('roomNumber')->nullable();
+            $table->string('contracttime')->after('contract')->nullable();
         });
     }
 

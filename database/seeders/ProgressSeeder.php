@@ -10,7 +10,7 @@ class ProgressSeeder extends CsvSeeder
     public function __construct()
     {
         $this->table = 'progress';
-		$this->filename = base_path().'/database/csvs/progress.csv';
+		$this->filename = './database/csvs/progress.csv';
     }
 
     /**
