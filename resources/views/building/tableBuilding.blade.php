@@ -17,22 +17,9 @@
                                 <th width="5%">ชื่อผู้ติดต่อ</th>
                                 <th width="5%">เบอร์โทร</th>
                                 <th width="5%">เลขห้อง</th>
-                                {{-- <th width="10%">ที่อยู่</th> --}}
                                 <th width="1%">แก้ไข</th>
-                                @role('superadministrator')
-                                <th width="1%">ลบ</th>
-                                @endrole
-                                {{-- <th width="5%">เขต</th>
-                                <th width="10%">จำนวนอาคาร</th>
-                                <th width="6%">ชั้น</th>
-                                <th width="2%">ห้อง</th>
-                                <th width="2%">รายละเอียดที่อยู่</th>
-                                <th width="2%">จังหวัด</th>
-                                <th width="12%">เมือง/ตำบล</th>
-                                <th width="12%">รหัสไปรณี</th> --}}
                             </tr>
                         </thead>
-                      
                     </div>
                     <tbody>
                         @foreach ($data as $row)
@@ -43,15 +30,13 @@
                              <td>{{$row->contactName}}</td>
                              <td>{{$row->phone}}</td>
                              <td>{{$row->roomNumber}}</td>
-                             {{-- <td>{{$row->detailAdress}}</td> --}}
-                             {{-- <a href="{{ route('building.edit',$row->id) }}" class="btn btn-warning" ><i class="fa fa-edit"></i>Edit</a> --}}
                              <td>
                                 <form action="{{ route('building.edit',$row->id) }}" method="PUT">
                                     @csrf @method('HEAD')
                                   <input type="submit" value='แก้ไข'  " class="btn btn-warning ">
                                 </form>
                             </td>
-                            @role('superadministrator')
+                            {{-- @role('superadministrator')
                             <td>
                                 <form action="{{route('building.destroy',$row->id)}}" method="post">
                                     @csrf @method('DELETE')
@@ -59,7 +44,7 @@
                                   onclick="return confirm('คุณต้องการลบข้อมูล {{$row->name}} ?')">
                                 </form>
                             </td>
-                            @endrole
+                            @endrole --}}
                             </tr>
                         @endforeach
                      </tbody>

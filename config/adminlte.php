@@ -302,6 +302,7 @@ return [
             'url'  => '/progress',
             'icon' => 'fas fa-fw fa-poll-h',
             'can'  => ['building-create|building-read|building-update']
+            
 
         ],
         [
