@@ -101,16 +101,8 @@
                                            <th width="5%">SINET</th>
                                            <th width="5%">FN</th>
                                            <th width="5%">TRUE</th>
-                                           {{-- <th width="10%">ที่อยู่</th> --}}
                                            <th width="5%">แก้ไข</th>
-                                           {{-- <th width="5%">เขต</th>
-                                           <th width="10%">จำนวนอาคาร</th>
-                                           <th width="6%">ชั้น</th>
-                                           <th width="2%">ห้อง</th>
-                                           <th width="2%">รายละเอียดที่อยู่</th>
-                                           <th width="2%">จังหวัด</th>
-                                           <th width="12%">เมือง/ตำบล</th>
-                                           <th width="12%">รหัสไปรณี</th> --}}
+                                        
                                        </tr>
                                    </thead>
                                  

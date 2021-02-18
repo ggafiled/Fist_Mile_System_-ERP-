@@ -35,7 +35,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/usermanament',App\Http\Controllers\usermanagementController::class,);
 
     ///progress
-    Route::resource('/progress',App\Http\Controllers\progessController::class);
+    Route::resource('/progress',App\Http\Controllers\progressController::class);
 
     Route::post('/setUserNameAndEmail',[App\Http\Controllers\UserController::class, 'setUserNameAndEmail'])->name('users.update');
     Route::post('/setUserImage',[App\Http\Controllers\UserController::class, 'setUserImage']);
