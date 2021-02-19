@@ -23,18 +23,18 @@ class ProgressController extends Controller
         $this->middleware('auth');
         // $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
        //  $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
-    }  
+    }
 
     public function progress()
     {
-        return view('Progress.indexprogress');
+        return view('progress.index');
     }
-    
+
 
     public function index()
     {
         $data = progress::all();
-        return view('Progress.indexprogress',['data' => $data]);
+        return view('progress.index',['data' => $data]);
     }
 
     /**
@@ -44,7 +44,7 @@ class ProgressController extends Controller
      */
     public function create()
     {
-        return view('Progress.indexprogress');
+        return view('progress.index');
     }
 
     /**
@@ -61,7 +61,7 @@ class ProgressController extends Controller
     public function showProgressList()
     {
         $data = progress::all();
-        return view('Progress.indexprogress',['data' => $data]);
+        return view('progress.index',['data' => $data]);
     }
 
     /**
@@ -83,8 +83,9 @@ class ProgressController extends Controller
      */
     public function edit($id)
     {
-        $data=Progress::find($id);
-        return view('progress.indexprogress',['data' => $data]);
+        $data= Progress::find($id);
+        // dd($data);
+        return view('progress.editprogress',['data' => $data]);
     }
 
     /**
@@ -94,18 +95,19 @@ class ProgressController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id){
-        
+    public function update(Request $request, $id)
+    {
         $validator =  Validator::make($request->all(),[
-            'id'=>'required',
             'building'=>'required',
-            'fmProgess'=>'required',
-            'dateProgess'=>'required',
-            'totProgess'=>'required',
-            'aisProgess'=>'required',
-            '3bbProgess'=>'required',
-            'sinetProgess'=>'required',
-            'trueProgess'=>'required',
+            'fmProgress'=>'required',
+            'dateProgress'=>'required',
+            'totProgress'=>'required',
+            'aisProgress'=>'required',
+            'Progress3bb'=>'required',
+            'sinetProgress'=>'required',
+            'fnProgress'=>'required',
+            'trueProgress'=>'required',
+            'update_at'=>'required',
         ]);
 
         if ($validator->fails()) {
@@ -114,12 +116,11 @@ class ProgressController extends Controller
                 $this->notification['alert_type'] = 'error';
                 array_push($this->notifications,$this->notification);
             }
-            return redirect()->route('progress.progress',$id)->withInput($request->input())->with('notification',$this->notifications);
+            return redirect()->route('progress.edit',$id)->withInput($request->input())->with('notification',$this->notifications);
         }
 
         Progress::find($id)->update($request->all());
-        return redirect()->back();
-        
+        return redirect()->route('progress.index');
     }
 
     /**

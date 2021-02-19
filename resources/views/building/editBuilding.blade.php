@@ -25,8 +25,6 @@
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card ">
-
-       
             <div class="card-body">
                 <div class="form-group">
                     <div class="container-fluid mx-auto mt-2 mb-2">
@@ -114,7 +112,6 @@
                             <div class="col-sm-3">
                                 <div class="form-group">
                                     {!! Form::label('สัญญา :') !!}
-                                    
                                     {!! Form::date('contract',$data->contract,["class"=>"form-control"])!!}
                                 </div>
                             </div>

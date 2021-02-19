@@ -1,6 +1,7 @@
 @extends('adminlte::page')
 
 @section('content') 
+{{-- {!! Form::open(array('route' => array('building.update', $data->id),'method' => 'put')) !!} --}}
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card ">
@@ -81,6 +82,7 @@
                 </div>
              </div>
         </div>
+        {!! Form::close() !!}
     </div>  
     <div class="row justify-content-center">
          <div class="col-md">
