@@ -98,6 +98,7 @@ class ProgressController extends Controller
     public function update(Request $request, $id)
     {
         $validator =  Validator::make($request->all(),[
+            'id'=>'required',
             'building'=>'required',
             'fmProgress'=>'required',
             'dateProgress'=>'required',
@@ -107,7 +108,6 @@ class ProgressController extends Controller
             'sinetProgress'=>'required',
             'fnProgress'=>'required',
             'trueProgress'=>'required',
-            'update_at'=>'required',
         ]);
 
         if ($validator->fails()) {
@@ -119,9 +119,26 @@ class ProgressController extends Controller
             return redirect()->route('progress.edit',$id)->withInput($request->input())->with('notification',$this->notifications);
         }
 
-        Progress::find($id)->update($request->all());
+        progress::find($id)->update($request->all());
         return redirect()->route('progress.index');
     }
+    // {
+    //     $request->validate([
+    //         'id'=>'required',
+    //         'building'=>'required',
+    //         'fmProgress'=>'required',
+    //         'dateProgress'=>'required',
+    //         'totProgress'=>'required',
+    //         'aisProgress'=>'required',
+    //         'Progress3bb'=>'required',
+    //         'sinetProgress'=>'required',
+    //         'fnProgress'=>'required',
+    //         'trueProgress'=>'required',
+    //         'update_at'=>'required'
+    //     ]);
+    //     Progress::find($id)->update($request->all());
+    //     return redirect()->route('building.list');
+    // }
 
     /**
      * Remove the specified resource from storage.

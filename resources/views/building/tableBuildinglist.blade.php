@@ -22,7 +22,7 @@
                     <div class="table-responsive">
                         <table class="table table-hover" id="example" style="width:100%">
                         <thead>
-                            <tr class="info">
+                            <tr class="info" fixed>
                                 <th>#</th>
                                 <th>อาคาร</th>
                                 <th>fm-code</th>

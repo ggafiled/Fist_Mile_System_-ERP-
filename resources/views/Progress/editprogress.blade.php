@@ -24,30 +24,29 @@
                                 <div class="form-group">
                                     {!! Form::label('ลำดับ:') !!}
                                     {{-- {!! Form::text('id',$data->id,null,["class"=>"form-control"])!!} --}}
-                                    {!! Form::text('id',$data->id,["class"=>"form-control",'disabled'])!!}
+                                    {!! Form::text('id',$data->id,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-group">
                                     {!! Form::label('ชื่ออาคาร(Project) :') !!}
-                                    {!! Form::text('building',$data->building,["class"=>"form-control",'disabled'])!!}
+                                    {!! Form::text('building',$data->building,["class"=>"form-control"])!!}
                                     {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     {!! Form::label('FM Progress :') !!}
-                                    {{-- {!! Form::select('fmProgress',$data->fmProgress,['1' =>
-                                    'รอดำเนินการ','2'=>'กำลังสร้างพร้อมโครงการ','3'=>'สร้างพร้อมโครงการ','4'=>'รอเข้าดำเนินการ','5'=>''],null,
-                                    ['class'=>'form-control']) !!} --}}
-                                    {!! Form::text('fmProgress',$data->fmProgress,["class"=>"form-control"])!!}
+                                    {!! Form::select('fmProgress',['วางโครงข่ายแล้ว' =>
+                                    'วางโครงข่ายแล้ว','รอดำเนินการ'=>'รอดำเนินการ','สร้างพร้อมโครงการ'=>'สร้างพร้อมโครงการ','รอเข้าดำเนินการ'=>'รอเข้าดำเนินการ','-'=>''],$data->fmProgress,['class'=>'form-control']) !!}
+                                    {{-- {!! Form::text('fmProgress',$data->fmProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     {!! Form::label('วันที่เข้าวางโครงข่าย :') !!}
-                                    {{-- {!! Form::date('dateProgress',$data->dateProgress,["class"=>"form-control"])!!} --}}
-                                    {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
+                                    {{-- {!! Form::select('dateProgress',['1' =>
+                                    'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],$data->dateProgress,['class'=>'form-control']) !!} --}}
                                     {!! Form::date('dateProgress',$data->dateProgress,["class"=>"form-control"])!!}
                                 </div>
                             </div>
@@ -57,55 +56,49 @@
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     {!! Form::label('TOT Progress :') !!}
-                                    {{-- {!! Form::select('totProgress',$data->totProgress,['1' =>
-                                    'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null,
-                                    ['class'=>'form-control']) !!} --}}
-                                    {!! Form::text('totProgress',$data->totProgress,["class"=>"form-control"])!!}
+                                    {!! Form::select('totProgress',['เชื่อมโครงข่ายแล้ว' =>
+                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','ทีโอทีว่างโครงข่ายเอง'=>'ทีโอทีว่างโครงข่ายเอง','-'=>''],$data->totProgress,['class'=>'form-control']) !!}
+                                    {{-- {!! Form::text('totProgress',$data->totProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     {!! Form::label('AIS Progress :') !!}
-                                    {{-- {!! Form::select('aisProgress',$data->aisProgress,['1' =>
-                                    'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null,
-                                    ['class'=>'form-control']) !!} --}}
-                                    {!! Form::text('aisProgress',$data->aisProgress,["class"=>"form-control"])!!}
+                                    {!! Form::select('aisProgress',['เชื่อมโครงข่ายแล้ว' =>
+                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','ทีโอทีว่างโครงข่ายเอง'=>'เอไอเอสว่างโครงข่ายเอง','-'=>''],$data->aisProgress,['class'=>'form-control']) !!}
+                                    {{-- {!! Form::text('aisProgress',$data->aisProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     {!! Form::label('3BB Progress :') !!}
-                                    {{-- {!! Form::select('Progress3bb',$data->Progress3bb,['1' =>
-                                    'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null,
-                                    ['class'=>'form-control']) !!} --}}
-                                    {!! Form::text('Progress3bb',$data->Progress3bb,["class"=>"form-control"])!!}
+                                    {!! Form::select('Progress3bb',['เชื่อมโครงข่ายแล้ว' =>
+                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','ทีโอทีว่างโครงข่ายเอง'=>'สามบีบีว่างโครงข่ายเอง','-'=>''],$data->Progress3bb,['class'=>'form-control']) !!}
+                                    {{-- {!! Form::text('Progress3bb',$data->Progress3bb,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     {!! Form::label('Sinet Progress :') !!}
-                                    {{-- {!! Form::select('sinetProgress',$data->sinetProgress,['1' =>
-                                    'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null,
-                                    ['class'=>'form-control']) !!} --}}
-                                    {!! Form::text('sinetProgress',$data->sinetProgress,["class"=>"form-control"])!!}
+                                    {!! Form::select('sinetProgress',['เชื่อมโครงข่ายแล้ว' =>
+                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','ทีโอทีว่างโครงข่ายเอง'=>'ไซเน็ตว่างโครงข่ายเอง','-'=>''],$data->sinetProgress,['class'=>'form-control']) !!}
+                                    {{-- {!! Form::text('sinetProgress',$data->sinetProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     {!! Form::label('FN Progress :') !!}
-                                    {{-- {!! Form::select('fnProgress',$data->fnProgress,['1' =>
-                                    'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null,
-                                    ['class'=>'form-control']) !!} --}}
-                                    {!! Form::text('fnProgress',$data->fnProgress,["class"=>"form-control"])!!}
+                                    {!! Form::select('fnProgress',['เชื่อมโครงข่ายแล้ว' =>
+                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','ทีโอทีว่างโครงข่ายเอง'=>'เอฟเอ็นว่างโครงข่ายเอง','-'=>''],$data->fnProgress,['class'=>'form-control']) !!}
+                                    {{-- {!! Form::text('fnProgress',$data->fnProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     {!! Form::label('True Progress :') !!}
-                                    {{-- {!! Form::select('trueProgress',$data->trueProgress,['1' =>
-                                    'รอดำเนินการ','2'=>'ดำเนินการแล้วเสร็จ','3'=>'วางเครือข่ายบางตึกแล้ว','4'=>'กำลังสร้างพร้อมโครงการ','5'=>''],null,
-                                    ['class'=>'form-control']) !!} --}}
-                                    {!! Form::text('trueProgress',$data->trueProgress,["class"=>"form-control"])!!}
+                                    {!! Form::select('trueProgress',['เชื่อมโครงข่ายแล้ว' =>
+                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','ทีโอทีว่างโครงข่ายเอง'=>'ทรูว่างโครงข่ายเอง','-'=>''],$data->trueProgress,['class'=>'form-control']) !!}
+                                    {{-- {!! Form::text('trueProgress',$data->trueProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
                         </div>
@@ -118,5 +111,6 @@
 
 @endsection
 @section('adminlte_js')
+@include('partials.notification')
 <script src=" {{ asset('js/app.js') }}"></script>
 @endsection

@@ -552,10 +552,12 @@ return [
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css',
                 ],
-
-               
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//fonts.googleapis.com/icon?family=Material+Icons',
+                ],
             ],
-    
         ],
         'Select2' => [
             'active' => true,

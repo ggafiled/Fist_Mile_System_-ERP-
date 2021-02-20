@@ -114,6 +114,7 @@
                                     '" />'
                             );
                         });
+                   
                         $("#example").DataTable({
                             lengthMenu: [
                                 [15, 20, 50, 100, -1],
@@ -10590,3 +10591,17 @@
         })(),
         n.x();
 })();
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+$.extend( true, $.fn.dataTable.defaults, {
+    "searching": false,
+    "ordering": false
+} );
+ 
+ 
+$(document).ready(function() {
+    $('#example2').DataTable();
+} );

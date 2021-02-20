@@ -30,7 +30,6 @@
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <div class="form-group">
-                                            
                                             {!! Form::label('ชื่ออาคาร(Project) :') !!}
                                             <i class="fas fa-building"></i>
                                             {!! Form::text('building',null,["class"=>"form-control",'placeholder' => 'กรอกชื่ออาคาร.'])!!}
