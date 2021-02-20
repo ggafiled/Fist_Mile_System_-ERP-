@@ -114,7 +114,6 @@
                                     '" />'
                             );
                         });
-                   
                         $("#example").DataTable({
                             lengthMenu: [
                                 [15, 20, 50, 100, -1],
@@ -140,7 +139,7 @@
                                     }
                                 },
                                 "print",
-                                "pageLength"
+                                // "pageLength"
                             ],
                             initComplete: function() {
                                 this.api()
@@ -155,7 +154,21 @@
                                             }
                                         );
                                     });
-                            }
+                            },
+                            scrollY: "555px",
+                            paging: false
+                        });
+
+                        $("a.toggle-vis").on("click", function(e) {
+                            e.preventDefault();
+
+                            // Get the column API object
+                            var column = table.column(
+                                $(this).attr("data-column")
+                            );
+
+                            // Toggle the visibility
+                            column.visible(!column.visible());
                         });
                     });
                 var s = location.href.replace(/\/$/, "");
@@ -3984,7 +3997,7 @@
                                     !G &&
                                     void 0 !== n.g &&
                                     n.g.process &&
-                                        "server" === n.g.process.env.VUE_ENV),
+                                    "server" === n.g.process.env.VUE_ENV),
                             z
                         );
                     },
@@ -10592,16 +10605,11 @@
         n.x();
 })();
 
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
+$.extend(true, $.fn.dataTable.defaults, {
+    searching: false,
+    ordering: false
 });
 
-$.extend( true, $.fn.dataTable.defaults, {
-    "searching": false,
-    "ordering": false
-} );
- 
- 
 $(document).ready(function() {
-    $('#example2').DataTable();
-} );
+    $("#usertable").DataTable();
+});

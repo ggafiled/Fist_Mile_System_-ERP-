@@ -11,6 +11,11 @@
 		width: 4500px;
 		margin: 0 auto;
 	}
+    tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
     th { white-space: nowrap; }
 </style>
 
@@ -22,7 +27,8 @@
                     <div class="table-responsive">
                         <table class="table table-hover" id="example" style="width:100%">
                         <thead>
-                            <tr class="info" fixed>
+                            <tr class="info" 
+                            >
                                 <th>#</th>
                                 <th>อาคาร</th>
                                 <th>fm-code</th>

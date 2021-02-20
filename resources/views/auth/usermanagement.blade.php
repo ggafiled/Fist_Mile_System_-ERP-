@@ -173,7 +173,7 @@
                     </div>
                 </div>
             </div>
-            <table class="table table-striped table-hover" id="example2">
+            <table class="table table-striped table-hover" id="usertable">
                 <thead>
                     <tr>
                         <th>#</th>
