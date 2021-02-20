@@ -25,6 +25,10 @@ Route::get('locale/{locale}', function ($locale){
 
 Auth::routes(['register' => false]);
 
+Route::middleware(['auth','role:superadministrator|administrator'])->group(function(){
+    Route::get('/user_raw', [App\Http\Controllers\UserManagementController::class, 'usercontent'])->name('users.list');
+});
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -32,7 +36,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/building/list',[App\Http\Controllers\BuildingController::class,'showBuildingList'])->name('building.list');
     Route::resource('/building',App\Http\Controllers\BuildingController::class);
     Route::resource('/constarution',App\Http\Controllers\ConstarutionController::class);
-    Route::resource('/usermanament',App\Http\Controllers\UserManagementController::class,);
+    Route::get('/usermanament',App\Http\Livewire\UserManagement::class);
 
     ///progress
     Route::resource('/progress',App\Http\Controllers\ProgressController::class);

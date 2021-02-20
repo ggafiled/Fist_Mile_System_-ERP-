@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use DataTables;
 use Illuminate\Http\Request;
 
 class UserManagementController extends Controller
@@ -80,5 +82,20 @@ class UserManagementController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function usercontent(Request $request)
+    {
+        $data = User::all();
+        return Datatables::of($data)->addColumn('status', function($data){
+            if($data->isOnline()){
+                return "<i class='fas fa-circle text-success'> กำลังใช้งาน </i>";
+            }else{
+                return "<i class='fas fa-circle text-secondary'> ไม่ได้ใช้งาน </i>";
+            }
+        })
+        ->addColumn('role', function($data){
+            return $data->roles()->value('display_name');
+        })->rawColumns(['status','role'])->make(true);
     }
 }

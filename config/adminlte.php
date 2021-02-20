@@ -1,4 +1,3 @@
-
 <?php
 
 return [
@@ -19,7 +18,7 @@ return [
     'title' => 'Fist Mile ERP System',
     'title_prefix' => '',
     'title_postfix' => '',
-    
+
 
     /*
     |--------------------------------------------------------------------------
@@ -88,7 +87,7 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
+    'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
 
@@ -302,7 +301,7 @@ return [
             'url'  => '/progress',
             'icon' => 'fas fa-fw fa-poll-h',
             'can'  => ['building-create|building-read|building-update']
-            
+
 
         ],
         [
@@ -322,7 +321,7 @@ return [
             'text' => 'User Management',
             'url'  => '/usermanament',
             'icon' => 'fas fa-users',
-            'can'  => ['profile-update', 'profile-read', 'password-update'],
+            'roles'  => ['superadministrator','administrator'],
         ],
         [
             'text' => 'Logout',
@@ -428,6 +427,16 @@ return [
                 [
                     'type' => 'js',
                     'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//code.jquery.com/jquery-3.4.1.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
                 ],
                 [
@@ -449,7 +458,7 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js',
-                ],                                              
+                ],
                 [
                     'type' => 'js',
                     'asset' => false,
@@ -459,7 +468,7 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '/js/vfs_fonts.js',
-                ], 
+                ],
                 [
                     'type' => 'js',
                     'asset' => false,
@@ -470,11 +479,11 @@ return [
                     'asset' => false,
                     'location' => '//cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js',
                 ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => 'https://code.jquery.com/jquery-3.5.1.js',
-                ],
+                // [
+                //     'type' => 'js',
+                //     'asset' => false,
+                //     'location' => 'https://code.jquery.com/jquery-3.5.1.js',
+                // ],
                 [
                     'type' => 'js',
                     'asset' => false,
@@ -515,23 +524,13 @@ return [
                     'asset' => false,
                     'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/buttons.colVis.min.js',
                 ],
-                // [
-                //     'type' => 'js',
-                //     'asset' => false,
-                //     'location' => 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js',
-                // ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js',
-                ],
                 //css
                 [
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
                 ],
-                
+
                 [
                     'type' => 'css',
                     'asset' => false,
@@ -541,16 +540,6 @@ return [
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css',
-                ],
-                [
-                    'type' => 'css',
-                    'asset' => false,
-                    'location' => '//cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css',
-                ],
-                [
-                    'type' => 'css',
-                    'asset' => false,
-                    'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css',
                 ],
                 [
                     'type' => 'css',
@@ -614,23 +603,13 @@ return [
             'files' => [
                 [
                     'type' => 'js',
-                    'asset' => true,
+                    'asset' => false,
                     'location' => '//cdn.bootcss.com/toastr.js/latest/js/toastr.min.js',
                 ],
                 [
                     'type' => 'css',
-                    'asset' => true,
+                    'asset' => false,
                     'location' => '//cdn.bootcss.com/toastr.js/latest/css/toastr.min.css',
-                ],
-            ],
-        ],
-        'Turbolinks' => [
-            'active' => true,
-            'files' => [
-                [
-                    'type' => 'js',
-                    'asset' => true,
-                    'location' => 'cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js',
                 ],
             ],
         ]
