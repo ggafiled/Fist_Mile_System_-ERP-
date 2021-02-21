@@ -318,6 +318,12 @@ return [
             'can'  => ['profile-update', 'profile-read', 'password-update'],
         ],
         [
+            'text' => 'User Role & Permission',
+            'url'  => '/permission',
+            'icon' => 'fas fa-eye',
+            'roles'  => ['superadministrator','administrator'],
+        ],
+        [
             'text' => 'User Management',
             'url'  => '/usermanament',
             'icon' => 'fas fa-users',

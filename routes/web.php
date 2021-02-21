@@ -26,7 +26,8 @@ Route::get('locale/{locale}', function ($locale){
 Auth::routes(['register' => false]);
 
 Route::middleware(['auth','role:superadministrator|administrator'])->group(function(){
-    Route::get('/user_raw', [App\Http\Controllers\UserManagementController::class, 'usercontent'])->name('users.list');
+    Route::get('/user_raw', [App\Http\Controllers\UserManagementController::class, 'userContent'])->name('users.list');
+    Route::get('/user_role', [App\Http\Controllers\UserManagementController::class, 'userRolePermission'])->name('users.role-permission.list');
 });
 
 Route::middleware(['auth'])->group(function () {
@@ -37,6 +38,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/building',App\Http\Controllers\BuildingController::class);
     Route::resource('/constarution',App\Http\Controllers\ConstarutionController::class);
     Route::get('/usermanament',App\Http\Livewire\UserManagement::class);
+    Route::get('/permission',App\Http\Livewire\UserRolePermission::class);
 
     ///progress
     Route::resource('/progress',App\Http\Controllers\ProgressController::class);

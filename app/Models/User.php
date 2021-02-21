@@ -48,6 +48,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+     protected $appends = [
+        'allPermissions',
+    ];
+
+    public function getAllPermissionsAttribute()
+    {
+        return $this->allPermissions();
+    }
+
     public function adminlte_profile_url(){
         return "form/editprofile";
     }

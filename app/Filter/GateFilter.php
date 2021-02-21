@@ -8,7 +8,10 @@ class GateFilter implements FilterInterface
 {
     public function transform($item)
     {
-        if ((isset($item['can']) && !Laratrust::isAbleTo($item['can'])) || (isset($item['roles']) && !Laratrust::hasRole($item['roles']))) {
+        if ((isset($item['can']) && !Laratrust::isAbleTo($item['can']))) {
+            return false;
+        }
+        if ((isset($item['roles']) && !Laratrust::hasRole($item['roles']))) {
             return false;
         }
 

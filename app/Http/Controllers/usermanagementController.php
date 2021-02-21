@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Role;
 use DataTables;
 use Illuminate\Http\Request;
 
@@ -84,7 +85,7 @@ class UserManagementController extends Controller
         //
     }
 
-    public function usercontent(Request $request)
+    public function userContent(Request $request)
     {
         $data = User::all();
         return Datatables::of($data)->addColumn('status', function($data){
@@ -97,5 +98,11 @@ class UserManagementController extends Controller
         ->addColumn('role', function($data){
             return $data->roles()->value('display_name');
         })->rawColumns(['status','role'])->make(true);
+    }
+
+    public function userRolePermission(Request $request)
+    {
+        $data = Role::with('permissions', 'permissions')->get();
+        return Datatables::of($data)->make(true);
     }
 }
