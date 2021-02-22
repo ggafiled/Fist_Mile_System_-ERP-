@@ -16,8 +16,6 @@
         white-space: nowrap;
     }
 
-<<<<<<< HEAD
-=======
 	div.dataTables_wrapper {
 		width: 4500px;
 		margin: 0 auto;
@@ -28,7 +26,7 @@
         box-sizing: border-box;
     }
     th { white-space: nowrap; }
->>>>>>> aff4abf79643c66ae716eba8d4442d07d94273d8
+
 </style>
 
 <div class="row justify-content-center">
@@ -102,7 +100,7 @@
                             @foreach ($data as $row)
                             <tr>
                                 <th scope="row">{{$row->id}}</th>
-                                <td>{{$row->building}}</td>
+                                <td>{{$row->buildingId}}</td>
                                 <td>{{$row->fmCode}}</td>
                                 <td>{{$row->contactName}}</td>
                                 <td>{{$row->phone}}</td>

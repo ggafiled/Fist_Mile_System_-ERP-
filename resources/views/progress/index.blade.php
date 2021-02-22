@@ -42,7 +42,7 @@
                                 @forelse ($data as $item)
                                 <tr>
                                     <th scope="item">{{$item->id}}</th>
-                                    <td>{{$item->building}}</td>
+                                    <td>{{$item->buildingId}}</td>
                                     <td>{{$item->fmProgress}}</td>
                                     <td>{{$item->dateProgress}}</td>
                                     <td>{{$item->totProgress}}</td>

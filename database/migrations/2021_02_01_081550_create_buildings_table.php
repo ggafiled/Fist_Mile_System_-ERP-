@@ -16,7 +16,7 @@ class CreateBuildingsTable extends Migration
         Schema::enableForeignKeyConstraints();
         Schema::create('buildings', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('buildingId')->index();
+            $table->string('buildingId')->index();
             $table->string('fmCode')->nullable();
             $table->string('contactName')->nullable();
             $table->string('phone')->nullable();

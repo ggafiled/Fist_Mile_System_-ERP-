@@ -25,7 +25,7 @@
                         @foreach ($data as $row)
                             <tr>
                              <th scope="row">{{$row->id}}</th>
-                             <td>{{$row->building}}</td>
+                             <td>{{$row->buildingId}}</td>
                              <td>{{$row->fmCode}}</td>
                              <td>{{$row->contactName}}</td>
                              <td>{{$row->phone}}</td>
