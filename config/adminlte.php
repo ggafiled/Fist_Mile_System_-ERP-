@@ -246,7 +246,7 @@ return [
         ['header' => 'MENU'],
         [
             'text' => 'Building List',
-            'icon' => 'fas fa-fw fa-calendar-alt',
+            'icon' => 'fas fa-fw fas fa-building',
             'can'  => ['building-create|building-read|building-update'],
             'submenu' => [
                 [
@@ -296,6 +296,18 @@ return [
             'icon' => 'fas fa-fw fa-calendar-check',
             'can'  => ['payments-create', 'payments-read']
         ],
+        // [
+        //     'text' => 'Calendar',
+        //     'url'  => '/',
+        //     'icon' => 'far fa-calendar-alt',
+        //     'can'  => ['building-create|building-read|building-update']
+        // ],
+        [
+            'text' => 'Calendar',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-calendar-alt',
+            'can'  => ['payments-create', 'payments-read']
+        ],
         [
             'text' => 'Status Opertor',
             'url'  => '/progress',
@@ -304,12 +316,14 @@ return [
 
 
         ],
+        
         [
             'text' => 'Technician Opertor',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-poll-h',
             'can'  => ['technician-operator-create', 'technician-operator-read']
         ],
+       
         ['header' => 'USER'],
         [
             'text' => 'User Information',
