@@ -28,8 +28,11 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.2",
         "datatables.net": "^1.10.23",
         "datatables.net-dt": "^1.10.23",
+        "icheck-bootstrap": "^3.0.1",
+        "overlayscrollbars": "^1.13.1",
         "turbolinks": "^5.2.0"
     }
 }
