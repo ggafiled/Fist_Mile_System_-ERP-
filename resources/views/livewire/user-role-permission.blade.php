@@ -96,7 +96,13 @@
 
     @section('adminlte_js')
     <script>
+        window.livewire.on('nameupdated', function (){
+                alert('A record was deleted already.');
+            });
         $(document).ready(function () {
+            window.livewire.on('nameupdated', function (){
+                alert('A record was deleted already.');
+            });
             var table = $("#tableRole").DataTable({
                 processing: true,
                 serverSide: false,

@@ -29,6 +29,6 @@ class UserRolePermission extends Component
     public function role_count()
     {
         $this->role_count++;
-        $this->dispatchBrowserEvent('nameupdated');
+        $this->emit('nameupdated');
     }
 }
