@@ -57,8 +57,9 @@
                                                     <span class="notify-badge"><i class='fas fa-circle text-success'> </i></span>
                                                 @else
                                                     <span class="notify-badge"><i class='fas fa-circle text-secondary'> </i></span>
-                                                @endif                                                    <img src="/image/noimage.jpg" class="rounded mw-100" width="48px" height="48px"/>
-                                            @else
+                                                @endif                                                   
+                                                    <img src="/image/noimage.jpg" class="rounded mw-100" width="48px" height="48px"/>
+                                                @else
                                                 @if($user->isOnline())
                                                     <span class="notify-badge"><i class='fas fa-circle text-success'> </i></span>
                                                 @else

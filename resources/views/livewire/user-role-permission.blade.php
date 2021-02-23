@@ -94,7 +94,7 @@
 </div>
 @stop
 
-<<<<<<< HEAD
+
 @section('adminlte_js')
 <script src="{{ asset('js/app.js') }}"></script>
 <script>
@@ -145,7 +145,7 @@
         }
     ]
 });
-=======
+
     @section('adminlte_js')
     <script>
         $(document).ready(function () {
@@ -156,7 +156,6 @@
                 orderCellsTop: true,
                 fixedHeader: true
             });
->>>>>>> 322dea5c602838c0c594e1e81aec1d8c6b2557c5
 
             $("#tableRole tbody").on("click", "td.data-control .btn-delete", function (e) {
                 e.preventDefault();
