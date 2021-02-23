@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 <div>
     @livewire('user-management')
 </div>
-=======
 @extends('adminlte::page')
 @section('content')
     <style>
@@ -205,4 +203,4 @@
 @section('adminlte_js')
 <script src="{{ asset('js/app.js') }}"></script>
 @endsection
->>>>>>> aff4abf79643c66ae716eba8d4442d07d94273d8
+

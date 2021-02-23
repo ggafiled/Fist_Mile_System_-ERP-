@@ -98,8 +98,6 @@ class ProgressController extends Controller
     public function update(Request $request, $id)
     {
         $validator =  Validator::make($request->all(),[
-            'id'=>'required',
-            'building'=>'required',
             'fmProgress'=>'required',
             'dateProgress'=>'required',
             'totProgress'=>'required',

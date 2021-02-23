@@ -24,13 +24,13 @@
                                 <div class="form-group">
                                     {!! Form::label('ลำดับ:') !!}
                                     {{-- {!! Form::text('id',$data->id,null,["class"=>"form-control"])!!} --}}
-                                    {!! Form::text('id',$data->id,["class"=>"form-control"])!!}
+                                    {!! Form::text('id',$data->id,["class"=>"form-control",'disabled'])!!}
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-group">
                                     {!! Form::label('ชื่ออาคาร(Project) :') !!}
-                                    {!! Form::text('building',$data->building,["class"=>"form-control"])!!}
+                                    {!! Form::text('building',$data->buildingId,["class"=>"form-control",'disabled'])!!}
                                     {{-- {!! Form::select(building::all()->pluck)('building')!!} --}}
                                 </div>
                             </div>

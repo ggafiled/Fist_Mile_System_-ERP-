@@ -16,7 +16,6 @@
                                 <th width="5%">รหัส-fm</th>
                                 <th width="5%">ชื่อผู้ติดต่อ</th>
                                 <th width="5%">เบอร์โทร</th>
-                                <th width="5%">เลขห้อง</th>
                                 <th width="1%">แก้ไข</th>
                             </tr>
                         </thead>
@@ -29,7 +28,6 @@
                              <td>{{$row->fmCode}}</td>
                              <td>{{$row->contactName}}</td>
                              <td>{{$row->phone}}</td>
-                             <td>{{$row->roomNumber}}</td>
                              <td>
                                 <form action="{{ route('building.edit',$row->id) }}" method="PUT">
                                     @csrf @method('HEAD')
