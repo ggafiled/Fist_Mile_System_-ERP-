@@ -44,15 +44,15 @@
                         <thead>
                             <tr class="info" 
                             >
-                                <th>#</th>
+                                <th width="3%">#</th>
                                 <th>อาคาร</th>
                                 <th>fm-code</th>
                                 <th>ชื่อผู้ติดต่อ</th>
                                 <th>เบอร์โทร</th>
-                                <th>พื้นที่ น.</th>
-                                <th>จำนวนอาคาร</th>
-                                <th>ชั้น</th>
-                                <th>ห้อง</th>
+                                <th width="1%">พื้นที่ น.</th>
+                                <th width="1%">จำนวนอาคาร</th>
+                                <th width="1%">ชั้น</th>
+                                <th width="1%">ห้อง</th>
                                 <th>ที่อยู่</th>
                                 <th>สัญญา</th>
                                 <th>วันลงนามสัญญา</th>

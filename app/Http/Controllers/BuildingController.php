@@ -57,7 +57,7 @@ class BuildingController extends Controller
     {
         $request->validate([
     //    $validator = Validator::make($request->validate(),[
-            'building'=>'required',
+            'buildingId'=>'required',
             'fmCode'=>'required',
             'contactName'=>'required',
             'phone'=>'required',
