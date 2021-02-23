@@ -82,7 +82,7 @@
                 })
                 return html;
             }
-        },
+    },
         {
             className: "data-control",
             orderable: false,

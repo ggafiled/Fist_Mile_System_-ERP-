@@ -40,7 +40,7 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-hover" id="example" style="width:100%">
+                    <table class="table table-hover" id="test" style="width:100%">
                         <thead>
                             <tr class="info" 
                             >
@@ -70,29 +70,29 @@
                             </tr>
                         <tfoot>
                             <tr>
-                                <th>#</th>
-                                <th>อาคาร</th>
-                                <th>fm-code</th>
-                                <th>ชื่อผู้ติดต่อ</th>
-                                <th>เบอร์โทร</th>
-                                <th>พื้นที่ น.</th>
-                                <th>จำนวนอาคาร</th>
-                                <th>ชั้น</th>
-                                <th>ห้อง</th>
-                                <th>ที่อยู่</th>
-                                <th>สัญญา</th>
-                                <th>วันลงนามสัญญา</th>
-                                <th>เมือง</th>
-                                <th>เขต</th>
-                                <th>จังหวัด</th>
-                                <th>รหัสไปรษณีย์</th>
-                                <th>Latitude</th>
-                                <th>Longtude </th>
-                                <th>ราคาต่อ ตรม </th>
-                                <th>เวลาในการปฏิบัติงาน </th>
-                                <th>ยอดเงิน </th>
-                                <th>Developer </th>
-                                <th>Grade </th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </tfoot>
                         </thead>
