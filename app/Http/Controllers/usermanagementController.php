@@ -100,9 +100,9 @@ class UserManagementController extends Controller
         })->rawColumns(['status','role'])->make(true);
     }
 
-    public function userRolePermission(Request $request)
-    {
-        $data = Role::with('permissions', 'permissions')->get();
-        return Datatables::of($data)->make(true);
-    }
+    // public function userRolePermission(Request $request)
+    // {
+    //     $data = Role::with('permissions', 'permissions')->get();
+    //     return Datatables::of($data)->make(true);
+    // }
 }

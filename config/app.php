@@ -179,6 +179,7 @@ return [
         Laratrust\LaratrustServiceProvider::class,
         Brian2694\Toastr\ToastrServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        OwenIt\Auditing\AuditingServiceProvider::class,
     ],
 
     /*
