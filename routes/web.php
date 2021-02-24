@@ -37,8 +37,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/building/list',[App\Http\Controllers\BuildingController::class,'showBuildingList'])->name('building.list');
     Route::resource('/building',App\Http\Controllers\BuildingController::class);
     Route::resource('/constarution',App\Http\Controllers\ConstarutionController::class);
-    Route::get('/usermanament',App\Http\Livewire\UserManagement::class);
-    Route::get('/permission',App\Http\Livewire\UserRolePermission::class);
+    Route::resource('/usermanament',App\Http\Controllers\UserManagementController::class);
+    Route::resource('/permission',App\Http\Controllers\UserRolePermissionController::class);
+
+    ///calendar
+    Route::resource('/calendar',App\Http\Controllers\CalendarController::class);
 
     ///progress
     Route::resource('/progress',App\Http\Controllers\ProgressController::class);

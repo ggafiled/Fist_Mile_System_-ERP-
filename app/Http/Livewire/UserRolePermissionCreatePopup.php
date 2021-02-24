@@ -6,12 +6,11 @@ use Livewire\Component;
 
 class UserRolePermissionCreatePopup extends Component
 {
-
-    public $role_count;
+    protected $notification, $notifications = [];
 
     public function mount()
     {
-        $this->role_count = 0;
+        $this->notification = array('message' => '','alert_type' => 'success');
     }
 
     public function render()
@@ -21,7 +20,6 @@ class UserRolePermissionCreatePopup extends Component
 
     public function role_count()
     {
-        $this->role_count++;
-        $this->emit('roleUpdated');
+        $this->emit('incrementRoleCount');
     }
 }

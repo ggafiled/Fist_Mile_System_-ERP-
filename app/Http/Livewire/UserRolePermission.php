@@ -9,7 +9,7 @@ class UserRolePermission extends Component
 {
     public $role_count,$roles;
 
-    protected $listeners = ['roleUpdated' => 'incrementPostCount'];
+    protected $listeners = ['incrementRoleCount' => 'incrementRoleCount'];
 
     public function __construct()
     {
@@ -21,6 +21,7 @@ class UserRolePermission extends Component
     {
         $this->role_count = count(\App\Models\Role::get());
         $this->roles = Role::with('permissions', 'permissions')->get();
+        $this->dispatchBrowserEvent('mounted');
     }
 
     public function render()
@@ -28,7 +29,7 @@ class UserRolePermission extends Component
         return view('livewire.user-role-permission');
     }
 
-    public function incrementPostCount()
+    public function incrementRoleCount()
     {
         $this->role_count++;
     }
