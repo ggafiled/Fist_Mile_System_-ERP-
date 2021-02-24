@@ -52,7 +52,7 @@
                                         </td>
                                         <td class="dt-center">
                                             <div class="item">
-                                            @if($user->image == null || $user->image.trim() == "")
+                                            @if($user->image == null || $user->image == "")
                                                 @if($user->isOnline())
                                                     <span class="notify-badge"><i class='fas fa-circle text-success'> </i></span>
                                                 @else
@@ -79,7 +79,7 @@
                                             {{ $user->email }}
                                         </td>
                                         <td>
-                                            @if($user->email_verified_at == null || $user->email_verified_at.trim() == "") 
+                                            @if($user->email_verified_at == null || $user->email_verified_at == "") 
                                                 <div class='badge badge-warning'>ยังไม่ได้ยืนยันบัญชี</div>
                                             @else
                                                 <div class='badge badge-success'>ยืนยันบัญชีแล้ว</div>
