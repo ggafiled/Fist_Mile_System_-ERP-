@@ -34,7 +34,7 @@
                                   <input type="submit" value='แก้ไข'  " class="btn btn-warning ">
                                 </form>
                             </td>
-                            {{-- @role('superadministrator')
+                            @role('superadministrator')
                             <td>
                                 <form action="{{route('building.destroy',$row->id)}}" method="post">
                                     @csrf @method('DELETE')
@@ -42,7 +42,7 @@
                                   onclick="return confirm('คุณต้องการลบข้อมูล {{$row->name}} ?')">
                                 </form>
                             </td>
-                            @endrole --}}
+                            @endrole
                             </tr>
                         @endforeach
                      </tbody>
@@ -57,3 +57,4 @@
 @section('adminlte_js')
 <script src="{{ asset('js/app.js') }}"></script>
 @endsection
+

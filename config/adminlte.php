@@ -303,12 +303,6 @@ return [
         //     'can'  => ['building-create|building-read|building-update']
         // ],
         [
-            'text' => 'Calendar',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-calendar-alt',
-            'can'  => ['payments-create', 'payments-read']
-        ],
-        [
             'text' => 'Status Opertor',
             'url'  => '/progress',
             'icon' => 'fas fa-fw fa-poll-h',
@@ -316,7 +310,12 @@ return [
 
 
         ],
-        
+        [
+            'text' => 'Calendar',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-calendar-alt',
+            'can'  => ['building-create|building-read|building-update']
+        ],
         [
             'text' => 'Technician Opertor',
             'url'  => 'admin/settings',
@@ -499,6 +498,7 @@ return [
                     'asset' => false,
                     'location' => '//cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js',
                 ],
+                
                 // [
                 //     'type' => 'js',
                 //     'asset' => false,
@@ -544,6 +544,11 @@ return [
                     'asset' => false,
                     'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/buttons.colVis.min.js',
                 ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js',
+                ],
                 //css
                 [
                     'type' => 'css',
@@ -565,6 +570,11 @@ return [
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//fonts.googleapis.com/icon?family=Material+Icons',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css',
                 ],
             ],
         ],

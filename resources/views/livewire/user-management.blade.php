@@ -6,11 +6,13 @@
             <h2>{{ __('User Management') }}</h2>
             <span class="ml-3 ml-xs-auto text-black-50">{{ count(\App\Models\User::get())}} {{ __('People') }}</span>
         </div>
+        @role('superadministrator')
         <div>
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-default">
+            <button type="button"  class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <i class="fa fa-plus"></i> <span>{{ __('Add New User') }}</span>
             </button>
         </div>
+        @endrole
     </div>
     <div class="row mt-3">
         <div class="col-md-12">
@@ -113,6 +115,62 @@
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Register new membership</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="card-body register-card-body">
+            <p class="login-box-msg">Register a new membership</p>
+      
+            <form action="../../index.html" method="post">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Full name">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-user"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Email">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="Password">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-lock"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="Retype password">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-lock"></span>
+                  </div>
+                </div>
+              </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Add User</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 @stop
 
 @section('adminlte_js')
@@ -155,3 +213,4 @@ $(document).ready(function () {
 
 </style>
 @stop
+

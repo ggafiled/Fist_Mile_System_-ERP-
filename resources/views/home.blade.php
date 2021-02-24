@@ -88,7 +88,7 @@
                 </div>
             </div>
             
-            @permission('constarution-read|constarution-create|constarution-update')
+            @role('superadministrator','administrator')
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-2">
                   <div class="info-box">
@@ -176,8 +176,8 @@
                   </div>
                   <!-- /.col -->
               </div>
-            @endpermission
-            @permission('constarution-read|constarution-create|constarution-update')
+            @endrole
+            @role('superadministrator','administrator')
             <div class="row">
                 <div class="col-md-12">
                   <div class="card">
@@ -303,7 +303,7 @@
                 </div>
                 <!-- /.col -->
               </div>
-            @endpermission
+              @endrole
         </div>
     </div>
 </div>
