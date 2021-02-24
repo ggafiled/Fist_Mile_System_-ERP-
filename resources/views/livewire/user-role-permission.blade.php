@@ -2,17 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
-    <div class="row justify-content-between mb-auto">
-        <div class="header d-flex align-content-center align-items-center">
-            <h2>{{ __('User Role & Permission') }}</h2>
-            <span class="ml-3 ml-xs-auto text-black-50">{{ $role_count }} {{ __('Roles') }}</span>
-        </div>
-        <div>
-            <button type="button" class="btn btn-secondary" wire:$toggle="role_count">
-                <i class="fa fa-plus"></i> <span>{{ __('Add New Role') }}</span>
-            </button>
-        </div>
-    </div>
+    @livewire('user-role-permission-create-popup')
     <div class="row mt-3">
         <div class="col-12">
             <h5>{{ __('List of role on systems') }}</h5>
@@ -94,6 +84,8 @@
 </div>
 @stop
 
+<<<<<<< HEAD
+=======
 
 @section('adminlte_js')
 <script src="{{ asset('js/app.js') }}"></script>
@@ -146,9 +138,16 @@
     ]
 });
 
+>>>>>>> 16bf1f0b724d0f359f33e00d3689f7914ca2eb17
     @section('adminlte_js')
     <script>
+        window.livewire.on('nameupdated', function (){
+                alert('A record was deleted already.');
+            });
         $(document).ready(function () {
+            window.livewire.on('nameupdated', function (){
+                alert('A record was deleted already.');
+            });
             var table = $("#tableRole").DataTable({
                 processing: true,
                 serverSide: false,

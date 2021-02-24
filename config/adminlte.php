@@ -593,6 +593,16 @@ return [
                 ],
             ],
         ],
+        'Livewire-turbolinks' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js',
+                ],
+            ],
+        ],
         'Chartjs' => [
             'active' => true,
             'files' => [
