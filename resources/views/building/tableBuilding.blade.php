@@ -34,7 +34,7 @@
                                   <input type="submit" value='แก้ไข'  " class="btn btn-warning ">
                                 </form>
                             </td>
-                            @role('superadministrator')
+                            {{-- @role('superadministrator')
                             <td>
                                 <form action="{{route('building.destroy',$row->id)}}" method="post">
                                     @csrf @method('DELETE')
@@ -42,7 +42,7 @@
                                   onclick="return confirm('คุณต้องการลบข้อมูล {{$row->name}} ?')">
                                 </form>
                             </td>
-                            @endrole
+                            @endrole --}}
                             </tr>
                         @endforeach
                      </tbody>
@@ -55,6 +55,18 @@
 </div>
 @endsection
 @section('adminlte_js')
-<script src="{{ asset('js/app.js') }}"></script>
-@endsection
+
+<script>
+   $(document).ready(function() {
+                        $("#example1").DataTable({
+                            lengthMenu: [
+                                [10, 25, 50, -1],
+                                [10, 25, 50, "All"]
+                            ]
+                        });
+                    });
+</script>
+@stop
+
+
 

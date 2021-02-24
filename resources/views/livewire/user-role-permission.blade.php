@@ -83,10 +83,6 @@
     </div>
 </div>
 @stop
-
-<<<<<<< HEAD
-=======
-
 @section('adminlte_js')
 <script src="{{ asset('js/app.js') }}"></script>
 <script>
@@ -137,8 +133,6 @@
         }
     ]
 });
-
->>>>>>> 16bf1f0b724d0f359f33e00d3689f7914ca2eb17
     @section('adminlte_js')
     <script>
         window.livewire.on('nameupdated', function (){

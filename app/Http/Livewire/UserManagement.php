@@ -24,5 +24,6 @@ class UserManagement extends Component
     public function render()
     {
         return view('livewire.user-management')->layout('adminlte::page');
+        // return view('auth.register')->layout('adminlte::page');
     }
 }

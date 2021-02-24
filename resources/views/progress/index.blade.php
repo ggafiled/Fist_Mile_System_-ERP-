@@ -54,13 +54,13 @@
                                     <td>{{$item->updated_at}}</td>
                                     <td>
                                         <form action="{{ route('progress.edit',$item->id) }}" method="PUT">
-                                         
+
                                             <input type="submit" value='edit' " class=" btn btn-warning ">
                                         </form>
                                     </td>
                                     <td>
                                         {{-- <form action="{{ route('progress.edit',$item->id) }}" method="PUT"> --}}
-                                         
+
                                             <input type="submit" value='view' " class=" btn btn-info ">
                                         </form>
                                     </td>
@@ -84,5 +84,15 @@
 
 @endsection
 @section('adminlte_js')
-<script src=" {{ asset('js/app.js') }}"></script>
-@endsection
+
+<script>
+   $(document).ready(function() {
+                        $("#example1").DataTable({
+                            lengthMenu: [
+                                [10, 25, 50, -1],
+                                [10, 25, 50, "All"]
+                            ]
+                        });
+                    });
+</script>
+@stop
