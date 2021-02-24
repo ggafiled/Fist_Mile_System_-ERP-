@@ -9,7 +9,6 @@
 @section('adminlte_js')
 @include('partials.notification')
 <script>
-
     $(document).ready(function () {
         var table = $("#tableRole").DataTable({
             processing: true,
@@ -42,7 +41,6 @@
             }
         });
     });
-
 </script>
 @stop
 

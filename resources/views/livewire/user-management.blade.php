@@ -11,7 +11,7 @@
     <div class="row mt-3">
         <div class="col-md-12">
             <h5>{{ __('List of user on systems') }}</h5>
-            <div class="container-fluid mx-auto mt-2 mb-2">
+            <div class="container-fluid mx-auto mt-2 mb-2" wire:ignore>
                 <div class="row mx-auto">
                     <table id="tableUser" class="table table-bordered table-striped">
                         <thead>
@@ -43,7 +43,7 @@
                             @if($users)
                             @foreach($users as $user)
                             <tr>
-                                <td>
+                                <td wire:key="{{ $user->id }}">
                                     {{ $user->id }}
                                 </td>
                                 <td class="dt-center">

@@ -11,7 +11,7 @@
     <div class="row mt-3">
         <div class="col-12">
             <h5>{{ __('List of role on systems') }}</h5>
-            <div class="container-fluid mx-auto mt-2 mb-2">
+            <div class="container-fluid mx-auto mt-2 mb-2" wire:ignore>
                 <div class="row mx-auto justify-content-center">
                     <table id="tableRole" class="table table-bordered table-striped" width="100%">
                         <thead>
@@ -40,7 +40,7 @@
                             @if($roles)
                             @foreach($roles as $role)
                             <tr>
-                                <td>
+                                <td wire:key="{{ $role->id }}"s>
                                     {{ $role->id }}
                                 </td>
                                 <td>
