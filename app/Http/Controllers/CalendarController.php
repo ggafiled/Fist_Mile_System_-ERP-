@@ -15,8 +15,8 @@ class CalendarController extends Controller
      */
     public function index()
     {
-        $calendar = new Calendar(); 
-        $events[] = \Calendar::event(
+        $calendar = new Calendar();
+        $events[] = Calendar::event(
             'Event One', //event title
             false, //full day event?
             '2015-02-11T0800', //start time (you can also use Carbon instead of DateTime)
@@ -24,30 +24,31 @@ class CalendarController extends Controller
             0 //optionally, you can specify an event ID
         );
 
-        $events[] = \Calendar::event(
+        $events[] = Calendar::event(
             "Valentine's Day", //event title
             true, //full day event?
             new \DateTime('2015-02-14'), //start time (you can also use Carbon instead of DateTime)
             new \DateTime('2015-02-14'), //end time (you can also use Carbon instead of DateTime)
             'stringEventId' //optionally, you can specify an event ID
         );
+        $event_count = count($events);
         $calendar->addEvents($events)
         ->setOptions([
-            'locale' => 'fr',
+            'locale' => session()->get('locale', 'en'),
             'firstDay' => 0,
             'displayEventTime' => true,
             'selectable' => true,
-            'initialView' => 'timeGridWeek',
+            'initialView' => 'dayGridMonth',
             'headerToolbar' => [
                 'end' => 'today prev,next dayGridMonth timeGridWeek timeGridDay'
-            ]
+            ],
         ]);
         $calendar->setId('1');
         $calendar->setCallbacks([
             'select' => 'function(selectionInfo){}',
-            'eventClick' => 'function(event){}'
+            'eventClick' => 'function(event){}',
         ]);
-        return view('calendar.index',compact('calendar'));
+        return view('calendar.index',compact('calendar','event_count'));
     }
 
     /**

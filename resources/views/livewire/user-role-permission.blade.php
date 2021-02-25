@@ -1,12 +1,14 @@
 <div>
     <div>
         <div class="row justify-content-between mb-auto">
-        <div class="header d-flex align-content-center align-items-center">
-            <h2>{{ __('User Role & Permission') }}</h2>
-            <span class="ml-3 ml-xs-auto text-black-50">{{ $role_count }} {{ __('Roles') }}</span>
+            <div class="col-lg-10 col-md-10 col-xl-10 col-sm-8">
+                <div class="header d-flex align-content-center align-items-center">
+                    <h2>{{ __('User Role & Permission') }}</h2>
+                    <span class="ml-3 ml-xs-auto text-black-50">{{ $role_count }} {{ __('Roles') }}</span>
+                </div>
+            </div>
+            @livewire('user-role-permission-create-popup')
         </div>
-        @livewire('user-role-permission-create-popup')
-    </div>
     </div>
     <div class="row mt-3">
         <div class="col-12">
@@ -40,7 +42,7 @@
                             @if($roles)
                             @foreach($roles as $role)
                             <tr>
-                                <td wire:key="{{ $role->id }}"s>
+                                <td wire:key="{{ $role->id }}" s>
                                     {{ $role->id }}
                                 </td>
                                 <td>

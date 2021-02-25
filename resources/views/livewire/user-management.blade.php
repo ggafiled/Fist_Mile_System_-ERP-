@@ -1,11 +1,13 @@
 <div>
     <div class="row justify-content-between mb-auto">
-        <div class="header d-flex align-content-center align-items-center">
-            <h2>{{ __('User Management') }}</h2>
-            <span class="ml-3 ml-xs-auto text-black-50">{{ $user_count }} {{ __('People') }}</span>
+        <div class="col-lg-10 col-md-10 col-xl-10 col-sm-8">
+            <div class="header d-flex align-content-center align-items-center">
+                <h2>{{ __('User Management') }}</h2>
+                <span class="ml-3 ml-xs-auto text-black-50">{{ $user_count }} {{ __('People') }}</span>
+            </div>
         </div>
         @role('superadministrator')
-            @livewire('user-management-create-popup')
+        @livewire('user-management-create-popup')
         @endrole
     </div>
     <div class="row mt-3">
@@ -110,7 +112,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
