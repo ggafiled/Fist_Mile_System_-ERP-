@@ -547,7 +547,27 @@ return [
                 [
                     'type' => 'js',
                     'asset' => false,
+                    'location' => '../plugins/jquery/jquery.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
                     'location' => 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '../plugins/jquery-ui/jquery-ui.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js',
                 ],
                 //css
                 [
