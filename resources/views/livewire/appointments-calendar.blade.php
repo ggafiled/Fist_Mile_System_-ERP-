@@ -1,3 +1,6 @@
 <div>
-    {{-- Do your work, then step back. --}}
+    {{-- <livewire:appointments-calendar /> --}}
+    {!! $calendar->calendar() !!} 
 </div>
+
+
