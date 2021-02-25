@@ -65,7 +65,7 @@
                                 <div class="form-group">
                                     {!! Form::label('AIS Progress :') !!}
                                     {!! Form::select('aisProgress',['เชื่อมโครงข่ายแล้ว' =>
-                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','ทีโอทีว่างโครงข่ายเอง'=>'เอไอเอสว่างโครงข่ายเอง','-'=>''],$data->aisProgress,['class'=>'form-control']) !!}
+                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','เอไอเอสว่างโครงข่ายเอง'=>'เอไอเอสว่างโครงข่ายเอง','-'=>''],$data->aisProgress,['class'=>'form-control']) !!}
                                     {{-- {!! Form::text('aisProgress',$data->aisProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
                                 <div class="form-group">
                                     {!! Form::label('3BB Progress :') !!}
                                     {!! Form::select('Progress3bb',['เชื่อมโครงข่ายแล้ว' =>
-                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','ทีโอทีว่างโครงข่ายเอง'=>'สามบีบีว่างโครงข่ายเอง','-'=>''],$data->Progress3bb,['class'=>'form-control']) !!}
+                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','สามบีบีว่างโครงข่ายเอง'=>'สามบีบีว่างโครงข่ายเอง','-'=>''],$data->Progress3bb,['class'=>'form-control']) !!}
                                     {{-- {!! Form::text('Progress3bb',$data->Progress3bb,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                                 <div class="form-group">
                                     {!! Form::label('Sinet Progress :') !!}
                                     {!! Form::select('sinetProgress',['เชื่อมโครงข่ายแล้ว' =>
-                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','ทีโอทีว่างโครงข่ายเอง'=>'ไซเน็ตว่างโครงข่ายเอง','-'=>''],$data->sinetProgress,['class'=>'form-control']) !!}
+                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','ไซเน็ตว่างโครงข่ายเอง'=>'ไซเน็ตว่างโครงข่ายเอง','-'=>''],$data->sinetProgress,['class'=>'form-control']) !!}
                                     {{-- {!! Form::text('sinetProgress',$data->sinetProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                                 <div class="form-group">
                                     {!! Form::label('FN Progress :') !!}
                                     {!! Form::select('fnProgress',['เชื่อมโครงข่ายแล้ว' =>
-                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','ทีโอทีว่างโครงข่ายเอง'=>'เอฟเอ็นว่างโครงข่ายเอง','-'=>''],$data->fnProgress,['class'=>'form-control']) !!}
+                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','เอฟเอ็นว่างโครงข่ายเอง'=>'เอฟเอ็นว่างโครงข่ายเอง','-'=>''],$data->fnProgress,['class'=>'form-control']) !!}
                                     {{-- {!! Form::text('fnProgress',$data->fnProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
@@ -97,7 +97,7 @@
                                 <div class="form-group">
                                     {!! Form::label('True Progress :') !!}
                                     {!! Form::select('trueProgress',['เชื่อมโครงข่ายแล้ว' =>
-                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','ทีโอทีว่างโครงข่ายเอง'=>'ทรูว่างโครงข่ายเอง','-'=>''],$data->trueProgress,['class'=>'form-control']) !!}
+                                    'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','ทรูว่างโครงข่ายเอง'=>'ทรูว่างโครงข่ายเอง','-'=>''],$data->trueProgress,['class'=>'form-control']) !!}
                                     {{-- {!! Form::text('trueProgress',$data->trueProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>

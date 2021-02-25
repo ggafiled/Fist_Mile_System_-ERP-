@@ -17,6 +17,9 @@
                                 <th width="5%">ชื่อผู้ติดต่อ</th>
                                 <th width="5%">เบอร์โทร</th>
                                 <th width="1%">แก้ไข</th>
+                                @role('superadministrator')
+                                <th width="1%">ลบ</th>
+                                @endrole
                             </tr>
                         </thead>
                     </div>
@@ -34,7 +37,7 @@
                                   <input type="submit" value='แก้ไข'  " class="btn btn-warning ">
                                 </form>
                             </td>
-                            {{-- @role('superadministrator')
+                            @role('superadministrator')
                             <td>
                                 <form action="{{route('building.destroy',$row->id)}}" method="post">
                                     @csrf @method('DELETE')
@@ -42,7 +45,7 @@
                                   onclick="return confirm('คุณต้องการลบข้อมูล {{$row->name}} ?')">
                                 </form>
                             </td>
-                            @endrole --}}
+                            @endrole
                             </tr>
                         @endforeach
                      </tbody>
@@ -53,9 +56,8 @@
         </div>
     </div>
 </div>
-@endsection
-@section('adminlte_js')
 
+@section('adminlte_js')
 <script>
    $(document).ready(function() {
                         $("#example1").DataTable({
@@ -67,6 +69,6 @@
                     });
 </script>
 @stop
-
+@endsection
 
 
