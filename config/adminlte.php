@@ -593,6 +593,26 @@ return [
                 ],
             ],
         ],
+        'Fullcalendar' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.css',
+                ],
+            ],
+        ],
         'Chartjs' => [
             'active' => true,
             'files' => [
