@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\Role;
-use DataTables;
 use Illuminate\Http\Request;
 
 class UserManagementController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware(['role:superadministrator|administrator,guard:web']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +18,7 @@ class UserManagementController extends Controller
      */
     public function index()
     {
-        return view('auth.usermanagement');
+        return view('auth.user-management');
     }
 
     /**
@@ -84,25 +86,4 @@ class UserManagementController extends Controller
     {
         //
     }
-
-    public function userContent(Request $request)
-    {
-        $data = User::all();
-        return Datatables::of($data)->addColumn('status', function($data){
-            if($data->isOnline()){
-                return "<i class='fas fa-circle text-success'> กำลังใช้งาน </i>";
-            }else{
-                return "<i class='fas fa-circle text-secondary'> ไม่ได้ใช้งาน </i>";
-            }
-        })
-        ->addColumn('role', function($data){
-            return $data->roles()->value('display_name');
-        })->rawColumns(['status','role'])->make(true);
-    }
-
-    // public function userRolePermission(Request $request)
-    // {
-    //     $data = Role::with('permissions', 'permissions')->get();
-    //     return Datatables::of($data)->make(true);
-    // }
 }

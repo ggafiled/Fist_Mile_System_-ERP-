@@ -36354,6 +36354,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/css/app.css":
+/*!*******************************!*\
+  !*** ./resources/css/app.css ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./node_modules/overlayscrollbars/js/OverlayScrollbars.js":
 /*!****************************************************************!*\
   !*** ./node_modules/overlayscrollbars/js/OverlayScrollbars.js ***!
@@ -44833,62 +44846,12 @@ function parseOffset(offset, popperOffsets, referenceOffsets, basePlacement) {
     });
   });
 
-<<<<<<< HEAD
-$(document).ready(function() {
-    // $("#example tfoot th").each(function() {
-    //     var t = $(this).text();
-    //     $(this).html('<input type="text" placeholder="ค้นหา ' + t + '" />');
-    // });
-    $("#example").DataTable({
-        lengthMenu: [
-            [15, 20, 50, 100, -1],
-            [15, 20, 50, 100, "All"]
-        ],
-        scrollX: !0,
-        dom: "Bfrtip",
-        buttons: [
-            "colvis",
-            "copy",
-            "csv",
-            "excel",
-            {
-                extend: "pdf",
-                text: "PDF",
-                pageSize: "A4",
-                pageOrientation: "landscape",
-                customize: function(t) {
-                    t.defaultStyle = {
-                        font: "THSarabun",
-                        fontSize: 16
-                    };
-                }
-            },
-            "print"
-        ],
-        initComplete: function() {
-            this.api()
-                .columns()
-                .every(function() {
-                    var t = this;
-                    $("input", this.footer()).on(
-                        "keyup change clear",
-                        function() {
-                            t.search() !== this.value &&
-                                t.search(this.value).draw();
-                        }
-                    );
-                });
-        },
-        scrollY: "605px",
-        paging: false
-=======
   // Loop trough the offsets arrays and execute the operations
   ops.forEach(function (op, index) {
     op.forEach(function (frag, index2) {
       if (isNumeric(frag)) {
         offsets[index] += frag * (op[index2 - 1] === '-' ? -1 : 1);
       }
->>>>>>> 322dea5c602838c0c594e1e81aec1d8c6b2557c5
     });
   });
   return offsets;
@@ -45585,112 +45548,6 @@ var Popper = function () {
     Object.keys(_extends({}, Popper.Defaults.modifiers, options.modifiers)).forEach(function (name) {
       _this.options.modifiers[name] = _extends({}, Popper.Defaults.modifiers[name] || {}, options.modifiers ? options.modifiers[name] : {});
     });
-<<<<<<< HEAD
-});
-
-$(document).ready(function() {
-    $('#test').DataTable( {
-     lengthMenu: [
-            [15, 20, 50, 100, -1],
-            [15, 20, 50, 100, "All"]
-        ],
-        scrollX: !0,
-        dom: "Bfrtip",
-        buttons: [
-            "colvis",
-            "copy",
-            "csv",
-            "excel",
-            {
-                extend: "pdf",
-                text: "PDF",
-                pageSize: "A4",
-                pageOrientation: "landscape",
-                customize: function(t) {
-                    t.defaultStyle = {
-                        font: "THSarabun",
-                        fontSize: 16
-                    };
-                }
-            },
-            "print"
-        ],
-        "footerCallback": function ( row, data, start, end, display ) {
-            var api = this.api(), data;
- 
-            // Remove the formatting to get integer data for summation
-            var intVal = function ( i ) {
-                return typeof i === 'string' ?
-                    i.replace(/[\$,]/g, '')*1 :
-                    typeof i === 'number' ?
-                        i : 0;
-            };
- 
-            // Total over all pages
-            building = api
-                .column( 6 )
-                .data()
-                .reduce( function (a, b) {
-                    return intVal(a) + intVal(b);
-                }, 0 );
-                
-            layer = api
-                .column( 7 )
-                .data()
-                .reduce( function (a, b) {
-                    return intVal(a) + intVal(b);
-                }, 0 );
-
-            room = api
-                .column( 8 )
-                .data()
-                .reduce( function (a, b) {
-                    return intVal(a) + intVal(b);
-                }, 0 );
-            
-            price = api
-                .column( 18 )
-                .data()
-                .reduce( function (a, b) {
-                    return intVal(a) + intVal(b);
-                }, 0 );
-
-            priceSum = api
-                .column( 20 )
-                .data()
-                .reduce( function (a, b) {
-                    return intVal(a) + intVal(b);
-                }, 0 );
- 
-            // Total over this page
-            pageTotal = api
-                .column( 5, { page: 'current'} )
-                .data()
-                .reduce( function (a, b) {
-                    return intVal(a) + intVal(b);
-                }, 0 );
- 
-            // Update footer
-            $( api.column( 6 ).footer() ).html(
-                 building
-            );
-            
-             $( api.column( 7 ).footer() ).html(
-                layer 
-            );
-            $( api.column( 8 ).footer() ).html(
-                 room 
-            );
-            $( api.column( 18 ).footer() ).html(
-                price
-            );
-            $( api.column( 20 ).footer() ).html(
-                priceSum
-            );
-        }
-    } );
-} );
-=======
 
     // Refactoring modifiers' list (Object => Array)
     this.modifiers = Object.keys(this.options.modifiers).map(function (name) {
@@ -46119,7 +45976,8 @@ Copyright © 2018 Basecamp, LLC
 /******/ 		
 /******/ 		var deferredModules = [
 /******/ 			["./resources/js/app.js"],
-/******/ 			["./resources/sass/app.scss"]
+/******/ 			["./resources/sass/app.scss"],
+/******/ 			["./resources/css/app.css"]
 /******/ 		];
 /******/ 		// no chunk on demand loading
 /******/ 		

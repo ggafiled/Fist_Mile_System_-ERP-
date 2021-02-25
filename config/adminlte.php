@@ -312,9 +312,9 @@ return [
         ],
         [
             'text' => 'Calendar',
-            'url'  => 'admin/settings',
+            'url'  => '/calendar',
             'icon' => 'fas fa-fw fa-calendar-alt',
-            'can'  => ['building-create|building-read|building-update']
+            'roles'  => ['superadministrator','administrator'],
         ],
         [
             'text' => 'Technician Opertor',
@@ -322,7 +322,7 @@ return [
             'icon' => 'fas fa-fw fa-poll-h',
             'can'  => ['technician-operator-create', 'technician-operator-read']
         ],
-       
+
         ['header' => 'USER'],
         [
             'text' => 'User Information',
@@ -498,7 +498,7 @@ return [
                     'asset' => false,
                     'location' => '//cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js',
                 ],
-                
+
                 // [
                 //     'type' => 'js',
                 //     'asset' => false,
@@ -593,16 +593,6 @@ return [
                 ],
             ],
         ],
-        'Livewire-turbolinks' => [
-            'active' => true,
-            'files' => [
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => '//cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js',
-                ],
-            ],
-        ],
         'Chartjs' => [
             'active' => true,
             'files' => [
@@ -644,12 +634,12 @@ return [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdn.bootcss.com/toastr.js/latest/js/toastr.min.js',
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js',
                 ],
                 [
                     'type' => 'css',
                     'asset' => false,
-                    'location' => '//cdn.bootcss.com/toastr.js/latest/css/toastr.min.css',
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css',
                 ],
             ],
         ]
