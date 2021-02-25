@@ -71,4 +71,6 @@ class User extends Authenticatable implements Auditable
     {
         return Cache::has('user-is-online-' . $this->id);
     }
+
+
 }

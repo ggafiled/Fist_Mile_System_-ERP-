@@ -42,7 +42,7 @@
                 <div class="table-responsive">
                     <table class="table table-hover" id="tablelist" style="width:100%">
                         <thead>
-                            <tr class="info" 
+                            <tr class="info"
                             >
                                 <th width="3%">#</th>
                                 <th>อาคาร</th>
@@ -68,8 +68,9 @@
                                 <th>Developer </th>
                                 <th>Grade </th>
                             </tr>
+                            <div class="table table-bordered border-primary">
                         <tfoot>
-                            <tr>
+                            <tr class="info">
                                 <th></th>
                                 <th></th>
                                 <th></th>
@@ -95,6 +96,7 @@
                                 <th></th>
                             </tr>
                         </tfoot>
+                    </div>
                         </thead>
                         <tbody>
                             @foreach ($data as $row)
@@ -167,7 +169,7 @@
         ],
         "footerCallback": function ( row, data, start, end, display ) {
             var api = this.api(), data;
- 
+
             // Remove the formatting to get integer data for summation
             var intVal = function ( i ) {
                 return typeof i === 'string' ?
@@ -175,7 +177,7 @@
                     typeof i === 'number' ?
                         i : 0;
             };
- 
+
             // Total over all pages
             building = api
                 .column( 6 )
@@ -183,7 +185,7 @@
                 .reduce( function (a, b) {
                     return intVal(a) + intVal(b);
                 }, 0 );
-                
+
             layer = api
                 .column( 7 )
                 .data()
@@ -197,7 +199,7 @@
                 .reduce( function (a, b) {
                     return intVal(a) + intVal(b);
                 }, 0 );
-            
+
             price = api
                 .column( 18 )
                 .data()
@@ -211,7 +213,7 @@
                 .reduce( function (a, b) {
                     return intVal(a) + intVal(b);
                 }, 0 );
- 
+
             // Total over this page
             pageTotal = api
                 .column( 5, { page: 'current'} )
@@ -219,17 +221,17 @@
                 .reduce( function (a, b) {
                     return intVal(a) + intVal(b);
                 }, 0 );
- 
+
             // Update footer
             $( api.column( 6 ).footer() ).html(
                  building
             );
-            
+
              $( api.column( 7 ).footer() ).html(
-                layer 
+                layer
             );
             $( api.column( 8 ).footer() ).html(
-                 room 
+                 room
             );
             $( api.column( 18 ).footer() ).html(
                 price
