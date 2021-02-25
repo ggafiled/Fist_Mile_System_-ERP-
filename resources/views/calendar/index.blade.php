@@ -2,7 +2,7 @@
 
 @section('content')
 <div>
-    @livewire('appointments-calendar')
+    {!! $calendar->calendar() !!} 
 </div>
 @endsection
 

@@ -607,6 +607,11 @@ return [
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js',
                 ],
                 [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/locale-all.js',
+                ],
+                [
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.css',
