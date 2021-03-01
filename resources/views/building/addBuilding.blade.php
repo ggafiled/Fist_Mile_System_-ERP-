@@ -21,7 +21,7 @@
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card ">
-            <div class="card-header text-white bg-dark"><h3 >{{ __('เพิ่มข้อมูลในตาราง Building List') }}</h3></div>
+            <div class="card-header text-white bg-dark"><h3 >{{ __('Add Building List') }}</h3></div>
                 <div class="card-body">
                     <div class="form-group">
                         <div class="container-fluid mx-auto mt-2 mb-2">
@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
 
-                                
+
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group">
@@ -103,7 +103,7 @@
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            {!! Form::label('สัญญา :') !!}    
+                                            {!! Form::label('สัญญา :') !!}
                                             {!! Form::date('contract',null,["class"=>"form-control"])!!}
                                         </div>
                                     </div>
@@ -133,7 +133,7 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             {!! Form::label('จังหวัด :') !!}
-                                            
+
                                             {!! Form::text('province',null,["class"=>"form-control",'placeholder' => 'กรอกจังหวัด'])!!}
                                         </div>
                                     </div>
@@ -206,6 +206,6 @@
              </div>
         </div>
     </div>
-</div>               
-   
+</div>
+
 @endsection

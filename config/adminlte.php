@@ -224,7 +224,6 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/8.-Menu-Configuration
     |
     */
-
     'menu' => [
         [
             'text' => 'search',
@@ -244,6 +243,12 @@ return [
         //     'label_color' => 'success',
         // ],
         ['header' => 'MENU'],
+        [
+            'text' => 'Main',
+            'url'  => '/home',
+            'icon' => 'fas fa-fw fa-home',
+            'can'  => ['payments-create', 'payments-read']
+        ],
         [
             'text' => 'Building List',
             'icon' => 'fas fa-fw fas fa-building',

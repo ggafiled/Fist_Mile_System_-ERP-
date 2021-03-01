@@ -9,6 +9,7 @@
 
     div.dataTables_wrapper {
         width: 4500px;
+        height: 750px;
         margin: 0 auto;
     }
 
@@ -216,6 +217,10 @@
 
 $(document).ready(function() {
     $('#tablelist').DataTable({
+        lengthMenu: [
+                                [15, 25, 50, -1],
+                                [15, 25, 50, "All"]
+                            ],
         "ordering": false,
     });
 } );
