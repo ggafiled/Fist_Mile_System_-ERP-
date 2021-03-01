@@ -44,7 +44,7 @@
                         <thead>
                             <tr class="info"
                             >
-                                <th width="3%">#</th>
+                                {{-- <th width="3%">#</th> --}}
                                 <th>อาคาร</th>
                                 <th>fm-code</th>
                                 <th>ชื่อผู้ติดต่อ</th>
@@ -68,40 +68,11 @@
                                 <th>Developer </th>
                                 <th>Grade </th>
                             </tr>
-                            <div class="table table-bordered border-primary">
-                        <tfoot>
-                            <tr class="info">
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </tfoot>
-                    </div>
                         </thead>
                         <tbody>
                             @foreach ($data as $row)
                             <tr>
-                                <th scope="row">{{$row->id}}</th>
+                                {{-- <th scope="row">{{$row->id}}</th> --}}
                                 <td>{{$row->buildingId}}</td>
                                 <td>{{$row->fmCode}}</td>
                                 <td>{{$row->contactName}}</td>
@@ -140,107 +111,116 @@
 @section('adminlte_js')
 
 <script>
- $(document).ready(function() {
-    $('#tablelist').DataTable( {
-     lengthMenu: [
-            [15, 20, 50, 100, -1],
-            [15, 20, 50, 100, "All"]
-        ],
-        scrollX: !0,
-        dom: "Bfrtip",
-        buttons: [
-            "colvis",
-            "copy",
-            "csv",
-            "excel",
-            {
-                extend: "pdf",
-                text: "PDF",
-                pageSize: "A4",
-                pageOrientation: "landscape",
-                customize: function(t) {
-                    t.defaultStyle = {
-                        font: "THSarabun",
-                        fontSize: 16
-                    };
-                }
-            },
-            "print"
-        ],
-        "footerCallback": function ( row, data, start, end, display ) {
-            var api = this.api(), data;
+//  $(document).ready(function() {
+//     $('#tablelist').DataTable( {
+//      lengthMenu: [
+//             [15, 20, 50, 100, -1],
+//             [15, 20, 50, 100, "All"]
+//         ],
+//         scrollX: !0,
+//         dom: "Bfrtip",
+//         buttons: [
+//             "colvis",
+//             "copy",
+//             "csv",
+//             "excel",
+//             {
+//                 extend: "pdf",
+//                 text: "PDF",
+//                 pageSize: "A4",
+//                 pageOrientation: "landscape",
+//                 customize: function(t) {
+//                     t.defaultStyle = {
+//                         font: "THSarabun",
+//                         fontSize: 16
+//                     };
+//                 }
+//             },
+//             "print"
+//         ],
+//         "footerCallback": function ( row, data, start, end, display ) {
+//             var api = this.api(), data;
 
-            // Remove the formatting to get integer data for summation
-            var intVal = function ( i ) {
-                return typeof i === 'string' ?
-                    i.replace(/[\$,]/g, '')*1 :
-                    typeof i === 'number' ?
-                        i : 0;
-            };
+//             // Remove the formatting to get integer data for summation
+//             var intVal = function ( i ) {
+//                 return typeof i === 'string' ?
+//                     i.replace(/[\$,]/g, '')*1 :
+//                     typeof i === 'number' ?
+//                         i : 0;
+//             };
 
-            // Total over all pages
-            building = api
-                .column( 6 )
-                .data()
-                .reduce( function (a, b) {
-                    return intVal(a) + intVal(b);
-                }, 0 );
+//             // Total over all pages
+//             building = api
+//                 .column( 6 )
+//                 .data()
+//                 .reduce( function (a, b) {
+//                     return intVal(a) + intVal(b);
+//                 }, 0 );
 
-            layer = api
-                .column( 7 )
-                .data()
-                .reduce( function (a, b) {
-                    return intVal(a) + intVal(b);
-                }, 0 );
+//             layer = api
+//                 .column( 7 )
+//                 .data()
+//                 .reduce( function (a, b) {
+//                     return intVal(a) + intVal(b);
+//                 }, 0 );
 
-            room = api
-                .column( 8 )
-                .data()
-                .reduce( function (a, b) {
-                    return intVal(a) + intVal(b);
-                }, 0 );
+//             room = api
+//                 .column( 8 )
+//                 .data()
+//                 .reduce( function (a, b) {
+//                     return intVal(a) + intVal(b);
+//                 }, 0 );
 
-            price = api
-                .column( 18 )
-                .data()
-                .reduce( function (a, b) {
-                    return intVal(a) + intVal(b);
-                }, 0 );
+//             price = api
+//                 .column( 18 )
+//                 .data()
+//                 .reduce( function (a, b) {
+//                     return intVal(a) + intVal(b);
+//                 }, 0 );
 
-            priceSum = api
-                .column( 20 )
-                .data()
-                .reduce( function (a, b) {
-                    return intVal(a) + intVal(b);
-                }, 0 );
+//             priceSum = api
+//                 .column( 20 )
+//                 .data()
+//                 .reduce( function (a, b) {
+//                     return intVal(a) + intVal(b);
+//                 }, 0 );
 
-            // Total over this page
-            pageTotal = api
-                .column( 5, { page: 'current'} )
-                .data()
-                .reduce( function (a, b) {
-                    return intVal(a) + intVal(b);
-                }, 0 );
+//             // Total over this page
+//             pageTotal = api
+//                 .column( 5, { page: 'current'} )
+//                 .data()
+//                 .reduce( function (a, b) {
+//                     return intVal(a) + intVal(b);
+//                 }, 0 );
 
-            // Update footer
-            $( api.column( 6 ).footer() ).html(
-                 building
-            );
+//             // Update footer
+//             $( api.column( 6 ).footer() ).html(
+//                  building
+//             );
 
-             $( api.column( 7 ).footer() ).html(
-                layer
-            );
-            $( api.column( 8 ).footer() ).html(
-                 room
-            );
-            $( api.column( 18 ).footer() ).html(
-                price
-            );
-            $( api.column( 20 ).footer() ).html(
-                priceSum
-            );
-        }
-    } );
+//              $( api.column( 7 ).footer() ).html(
+//                 layer
+//             );
+//             $( api.column( 8 ).footer() ).html(
+//                  room
+//             );
+//             $( api.column( 18 ).footer() ).html(
+//                 price
+//             );
+//             $( api.column( 20 ).footer() ).html(
+//                 priceSum
+//             );
+//         }
+//     } );
+// } );
+
+$(document).ready(function() {
+    $('#tablelist').DataTable({
+        "ordering": false,
+    });
 } );
+$(function () {
+      $('#tablelist').excelTableFilter();
+});
 </script>
 @stop

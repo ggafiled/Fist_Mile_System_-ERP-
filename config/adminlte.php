@@ -554,11 +554,11 @@ return [
                     'asset' => false,
                     'location' => 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js',
                 ],
-                // [
-                //     'type' => 'js',
-                //     'asset' => false,
-                //     'location' => '../plugins/jquery-ui/jquery-ui.min.js',
-                // ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://www.jqueryscript.net/demo/Excel-like-Bootstrap-Table-Sorting-Filtering-Plugin/excel-bootstrap-table-filter-bundle.js',
+                ],
                 [
                     'type' => 'js',
                     'asset' => false,
@@ -567,15 +567,14 @@ return [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js',
+                    'location' => 'https://www.jqueryscript.net/demo/Excel-like-Bootstrap-Table-Sorting-Filtering-Plugin/excel-bootstrap-table-filter-bundle.js',
                 ],
-                //css
+                // css
                 [
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
                 ],
-
                 [
                     'type' => 'css',
                     'asset' => false,
@@ -595,6 +594,11 @@ return [
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//www.jqueryscript.net/demo/Excel-like-Bootstrap-Table-Sorting-Filtering-Plugin/excel-bootstrap-table-filter-style.css',
                 ],
             ],
         ],
