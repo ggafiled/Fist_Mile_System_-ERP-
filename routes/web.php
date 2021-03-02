@@ -23,7 +23,7 @@ Route::get('locale/{locale}', function ($locale){
     return redirect()->back();
 });
 
-Auth::routes(['register' => true]);
+Auth::routes(['register' => false]);
 
 Route::middleware(['auth','role:superadministrator|administrator'])->group(function(){
     Route::get('/user_raw', [App\Http\Controllers\UserManagementController::class, 'userContent'])->name('users.list');
@@ -45,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
 
     ///progress
     Route::resource('/progress',App\Http\Controllers\ProgressController::class);
+
 
     Route::post('/setUserNameAndEmail',[App\Http\Controllers\UserController::class, 'setUserNameAndEmail'])->name('users.update');
     Route::post('/setUserImage',[App\Http\Controllers\UserController::class, 'setUserImage']);

@@ -21,7 +21,7 @@
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card ">
-            <div class="card-header text-white bg-dark"><h3 >{{ __('Add Building List') }}</h3></div>
+            <div class="card-header text-white bg-dark"><h>{{ __('Add Building List') }}</้></div>
                 <div class="card-body">
                     <div class="form-group">
                         <div class="container-fluid mx-auto mt-2 mb-2">

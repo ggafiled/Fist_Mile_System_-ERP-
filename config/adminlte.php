@@ -549,6 +549,11 @@ return [
                     'asset' => false,
                     'location' => 'https://cdn.datatables.net/buttons/1.6.5/js/buttons.colVis.min.js',
                 ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//code.highcharts.com/highcharts.js',
+                ],
                 // [
                 //     'type' => 'js',
                 //     'asset' => false,

@@ -24,15 +24,14 @@
                                             <th width="10%">Building</th>
                                             <th width="5%">Fm-Progress</th>
                                             <th width="8%">วันวางโครงข่าย</th>
-                                            <th width="5%">TOT</th>
-                                            <th width="5%">AIS</th>
-                                            <th width="5%">3BB</th>
-                                            <th width="5%">SINET</th>
-                                            <th width="5%">FN</th>
-                                            <th width="5%">TRUE</th>
+                                            <th width="8%">TOT</th>
+                                            <th width="8%">AIS</th>
+                                            <th width="8%">3BB</th>
+                                            <th width="8%">SINET</th>
+                                            <th width="8%">FN</th>
+                                            <th width="8%">TRUE</th>
                                             <th width="5%">Update</th>
                                             <th width="2%">Edit</th>
-                                            <th width="2%">History</th>
                                         </tr>
                                     </thead>
 
@@ -56,12 +55,6 @@
                                         <form action="{{ route('progress.edit',$item->id) }}" method="PUT">
 
                                             <input type="submit" value='edit' " class=" btn btn-warning ">
-                                        </form>
-                                    </td>
-                                    <td>
-                                        {{-- <form action="{{ route('progress.edit',$item->id) }}" method="PUT"> --}}
-
-                                            <input type="submit" value='view' " class=" btn btn-info ">
                                         </form>
                                     </td>
                                 </tr>

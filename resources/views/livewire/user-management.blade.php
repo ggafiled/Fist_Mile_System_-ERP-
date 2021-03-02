@@ -121,7 +121,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="card-body">
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="">
                             @csrf
 
                             <div class="form-group row">
@@ -189,8 +189,8 @@
                                 {{ __('Register') }}
                             </button>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
-                </div>
                 </form>
             </div>
         </div>

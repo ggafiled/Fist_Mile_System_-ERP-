@@ -4,7 +4,7 @@
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">
-            <div class="card-header text-white bg-dark"><h3><center>{{ __('EDIT BUILDING TABLE') }}</h3></center></div>
+            <div class="card-header text-white bg-dark"><h4><center>{{ __('EDIT BUILDING TABLE') }}</h4></center></div>
                 <div class="card-body">
                     <a  href="/building/create"  class="btn btn-primary my-2 "><i class="fas fa-calendar-plus"></i>&nbsp;&nbsp; เพิ่มข้อมูล</a>
                     <div class="table-responsive">
