@@ -11,7 +11,7 @@
                         <table class="table table-striped" id="example1">
                         <thead >
                             <tr class="info">
-                                <th width="3%">#</th>
+                                <th width="1%">#</th>
                                 <th width="12%">ชื่อตึก</th>
                                 <th width="5%">รหัส-fm</th>
                                 <th width="5%">ชื่อผู้ติดต่อ</th>

@@ -12,7 +12,7 @@
             </div>
             <div class="modal-body">
                 <div class="card-body">
-                    <form method="POST" action="{{ route('') }}">
+                    <form method="POST" action="">
                         @csrf
 
                         <div class="form-group row">

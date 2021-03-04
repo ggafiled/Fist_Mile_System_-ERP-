@@ -244,7 +244,7 @@ return [
         // ],
         ['header' => 'MENU'],
         [
-            'text' => 'Main',
+            'text' => 'Home Main ',
             'url'  => '/home',
             'icon' => 'fas fa-fw fa-home',
             'can'  => ['payments-create', 'payments-read']
@@ -271,7 +271,12 @@ return [
                 ],
             ]
         ],
-
+        [
+            'text' => 'Status Opertor',
+            'url'  => '/progress',
+            'icon' => 'fas fa-fw fa-poll-h',
+            'can'  => ['building-create|building-read|building-update']
+        ],
         [
             'text' => 'Constarution',
             'url'  => 'admin/settings',
@@ -307,14 +312,6 @@ return [
         //     'icon' => 'far fa-calendar-alt',
         //     'can'  => ['building-create|building-read|building-update']
         // ],
-        [
-            'text' => 'Status Opertor',
-            'url'  => '/progress',
-            'icon' => 'fas fa-fw fa-poll-h',
-            'can'  => ['building-create|building-read|building-update']
-
-
-        ],
         [
             'text' => 'Calendar',
             'url'  => '/calendar',
