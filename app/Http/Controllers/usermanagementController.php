@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
 
 class UserManagementController extends Controller
 {
@@ -39,7 +43,16 @@ class UserManagementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        {
+            $request->validate([
+                'name'=>'required',
+                'email'=>'required',
+                'password' => Hash::make($request)
+                // 'password'=>'required',
+            ]);
+            User::create($request->all());
+            return redirect()->back();
+        }
     }
 
     /**
