@@ -23,7 +23,7 @@ Route::get('locale/{locale}', function ($locale){
     return redirect()->back();
 });
 
-Auth::routes(['register' => true]);
+Auth::routes(['register' => FALSE]);
 
 Route::middleware(['auth','role:superadministrator|administrator'])->group(function(){
     Route::get('/user_raw', [App\Http\Controllers\UserManagementController::class, 'userContent'])->name('users.list');

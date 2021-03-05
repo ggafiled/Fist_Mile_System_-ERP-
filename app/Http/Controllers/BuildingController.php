@@ -19,13 +19,11 @@ class BuildingController extends Controller
      protected $notification, $notifications = [];
 
      public function __construct(){
-
          $this->notification = array('message' => '','alert_type' => 'success');
          $this->middleware('auth');
          $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
         //  $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
-     }  
-
+     }
      public function building()
      {
          return view('building.addBuilding');
@@ -109,7 +107,7 @@ class BuildingController extends Controller
      */
     public function show($id)
     {
-        
+
     }
 
     /**
@@ -181,7 +179,7 @@ class BuildingController extends Controller
      */
     public function destroy($id)
     {
-        
+
         Building::find($id)->delete();
         return redirect()->back();
         // return redirect()->route('building.list');

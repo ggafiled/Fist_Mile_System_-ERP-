@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 
+
+
 class UserManagementController extends Controller
 {
     public function __construct()
@@ -40,6 +42,7 @@ class UserManagementController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
+     *
      */
     public function store(Request $request)
     {
@@ -47,7 +50,7 @@ class UserManagementController extends Controller
             $request->validate([
                 'name'=>'required',
                 'email'=>'required',
-                'password' => Hash::make($request)
+                'password' => Hash::make($request->password)
                 // 'password'=>'required',
             ]);
             User::create($request->all());
