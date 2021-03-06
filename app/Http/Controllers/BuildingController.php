@@ -124,6 +124,7 @@ class BuildingController extends Controller
         return view('building.editBuilding',['data' => $data]);
     }
 
+
     /**
      * Update the specified resource in storage.
      *

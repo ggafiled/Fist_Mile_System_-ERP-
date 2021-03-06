@@ -1,18 +1,15 @@
 <div>
+    <div class="row justify-content-center">
+        <div class="col-md">
+            <div class="card ">
+                <div class="card-header text-white bg-dark"><h5>{{ __('USER MANAGEMENT') }}
+                    <span text-white bg-dark class="ml-3 ml-xs-auto text-black-50 text-white">{{ $user_count }} {{ __('People') }}</span></div>
     <div class="row justify-content-between mb-auto">
-        <div class="col-lg-10 col-md-10 col-xl-10 col-sm-8">
-            <div class="header d-flex align-content-center align-items-center">
-                <h2>{{ __('User Management') }}</h2>
-                <span class="ml-3 ml-xs-auto text-black-50">{{ $user_count }} {{ __('People') }}</span>
-            </div>
-        </div>
-        @role('superadministrator')
-        @livewire('user-management-create-popup')
-        @endrole
-    </div>
     <div class="row mt-3">
         <div class="col-md-12">
-            <h5>{{ __('List of user on systems') }}</h5>
+            @role('superadministrator')
+            @livewire('user-management-create-popup')
+            @endrole
             <div class="container-fluid mx-auto mt-2 mb-2" wire:ignore>
                 <div class="row mx-auto">
                     <table id="tableUser" class="table table-bordered table-striped">

@@ -32,7 +32,6 @@ Route::middleware(['auth','role:superadministrator|administrator'])->group(funct
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
     ///building
     Route::get('/building/list',[App\Http\Controllers\BuildingController::class,'showBuildingList'])->name('building.list');
     Route::resource('/building',App\Http\Controllers\BuildingController::class);

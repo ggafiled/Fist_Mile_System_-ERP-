@@ -99,6 +99,10 @@
                             </tr>
                             @endforeach
                         </tbody>
+                        {{-- <tfoot>
+                                <th colspan="6" style="text-align:right">Total:</th>
+                                <th></th>
+                        </tfoot> --}}
                     </table>
                 </div>
             </div>
@@ -139,79 +143,6 @@
 //             },
 //             "print"
 //         ],
-//         "footerCallback": function ( row, data, start, end, display ) {
-//             var api = this.api(), data;
-
-//             // Remove the formatting to get integer data for summation
-//             var intVal = function ( i ) {
-//                 return typeof i === 'string' ?
-//                     i.replace(/[\$,]/g, '')*1 :
-//                     typeof i === 'number' ?
-//                         i : 0;
-//             };
-
-//             // Total over all pages
-//             building = api
-//                 .column( 6 )
-//                 .data()
-//                 .reduce( function (a, b) {
-//                     return intVal(a) + intVal(b);
-//                 }, 0 );
-
-//             layer = api
-//                 .column( 7 )
-//                 .data()
-//                 .reduce( function (a, b) {
-//                     return intVal(a) + intVal(b);
-//                 }, 0 );
-
-//             room = api
-//                 .column( 8 )
-//                 .data()
-//                 .reduce( function (a, b) {
-//                     return intVal(a) + intVal(b);
-//                 }, 0 );
-
-//             price = api
-//                 .column( 18 )
-//                 .data()
-//                 .reduce( function (a, b) {
-//                     return intVal(a) + intVal(b);
-//                 }, 0 );
-
-//             priceSum = api
-//                 .column( 20 )
-//                 .data()
-//                 .reduce( function (a, b) {
-//                     return intVal(a) + intVal(b);
-//                 }, 0 );
-
-//             // Total over this page
-//             pageTotal = api
-//                 .column( 5, { page: 'current'} )
-//                 .data()
-//                 .reduce( function (a, b) {
-//                     return intVal(a) + intVal(b);
-//                 }, 0 );
-
-//             // Update footer
-//             $( api.column( 6 ).footer() ).html(
-//                  building
-//             );
-
-//              $( api.column( 7 ).footer() ).html(
-//                 layer
-//             );
-//             $( api.column( 8 ).footer() ).html(
-//                  room
-//             );
-//             $( api.column( 18 ).footer() ).html(
-//                 price
-//             );
-//             $( api.column( 20 ).footer() ).html(
-//                 priceSum
-//             );
-//         }
 //     } );
 // } );
 
@@ -223,6 +154,79 @@ $(document).ready(function () {
              [15, 20, 50, 100, -1],
              [15, 20, 50, 100, "All"]
          ],
+        //  "footerCallback": function ( row, data, start, end, display ) {
+        //     var api = this.api(), data;
+
+        //     // Remove the formatting to get integer data for summation
+        //     var intVal = function ( i ) {
+        //         return typeof i === 'string' ?
+        //             i.replace(/[\$,]/g, '')*1 :
+        //             typeof i === 'number' ?
+        //                 i : 0;
+        //     };
+
+        //     // Total over all pages
+        //     building = api
+        //         .column( 6 )
+        //         .data()
+        //         .reduce( function (a, b) {
+        //             return intVal(a) + intVal(b);
+        //         }, 0 );
+
+        //     layer = api
+        //         .column( 7 )
+        //         .data()
+        //         .reduce( function (a, b) {
+        //             return intVal(a) + intVal(b);
+        //         }, 0 );
+
+        //     room = api
+        //         .column( 8 )
+        //         .data()
+        //         .reduce( function (a, b) {
+        //             return intVal(a) + intVal(b);
+        //         }, 0 );
+
+        //     price = api
+        //         .column( 18 )
+        //         .data()
+        //         .reduce( function (a, b) {
+        //             return intVal(a) + intVal(b);
+        //         }, 0 );
+
+        //     priceSum = api
+        //         .column( 20 )
+        //         .data()
+        //         .reduce( function (a, b) {
+        //             return intVal(a) + intVal(b);
+        //         }, 0 );
+
+        //     // Total over this page
+        //     pageTotal = api
+        //         .column( 5, { page: 'current'} )
+        //         .data()
+        //         .reduce( function (a, b) {
+        //             return intVal(a) + intVal(b);
+        //         }, 0 );
+
+        //     // Update footer
+        //     $( api.column( 6 ).footer() ).html(
+        //          building
+        //     );
+
+        //      $( api.column( 7 ).footer() ).html(
+        //         layer
+        //     );
+        //     $( api.column( 8 ).footer() ).html(
+        //          room
+        //     );
+        //     $( api.column( 18 ).footer() ).html(
+        //         price
+        //     );
+        //     $( api.column( 20 ).footer() ).html(
+        //         priceSum
+        //     );
+        // }
 
     });
 
