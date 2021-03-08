@@ -2,7 +2,7 @@
     <div class="row justify-content-center">
         <div class="col-md">
             <div class="card ">
-                <div class="card-header text-white bg-dark"><h5>{{ __('USER MANAGEMENT') }}
+                <div class="card-header text-white bg-dark">{{ __('USER MANAGEMENT') }}
                     <span text-white bg-dark class="ml-3 ml-xs-auto text-black-50 text-white">{{ $user_count }} {{ __('People') }}</span></div>
     <div class="row justify-content-between mb-auto">
     <div class="row mt-3">

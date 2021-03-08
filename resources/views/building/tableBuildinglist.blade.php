@@ -34,9 +34,7 @@
     <div class="col-md">
         <div class="card">
             <div class="card-header text-white bg-dark">
-                <h3>
-                    <center>{{ __('BUILDING LIST TABLE') }}
-                </h3>
+                {{ __('BUILDING LIST TABLE') }}
                 </center>
             </div>
             <div class="card-body">
