@@ -27,6 +27,10 @@ class UserManagement extends Component
     {
         return view('livewire.user-management');
     }
+    public function home()
+    {
+        return view('home');
+    }
 
     public function incrementUserCount()
     {
