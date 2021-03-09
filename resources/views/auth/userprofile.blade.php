@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div id="custom-target"></div>
     <div class="row">
         <div class="col-sm-4 col-lg-3">
@@ -23,25 +23,25 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-8 col-lg-9">
+
+            <div class="col-md">
+                <div class="card ">
+                    <div class="card-header text-white bg-dark">{{ __('USER INFORMATION') }}</div>
+        <div class="row justify-content-between mb-auto">
+        <div class="row mt-2">
+            <div class="col-md-15">
             <div class="card-body">
-                <h4>User Information</h4>
                 <div class="row">
                     <div class="col-md">
                         <div class="tab-content" id="vert-tabs-tabContent">
                             <div class="tab-pane text-left fade show active" id="vert-tabs-profile" role="tabpanel"
                                 aria-labelledby="vert-tabs-profile-tab">
                                 <div class="content">
-                                    <div class="page-title">
-                                        <h2> แก้ไขข้อมูลส่วนตัว </h2>
-                                    </div><!-- /.page-title -->
-
                                     <div class="bg-white rounded pl-5 pt-3 pr-5 pb-5 ml-5 mr-5 mb-5">
-                                        <h3 class="page-title mt-0 pt-0">
-                                            ข้อมูลทั่วไป
-
+                                        <h4 class="page-title mt-0 pt-0">
+                                            แก้ไขข้อมูลทั่วไป
                                             <a href="#" class="btn btn-primary btn-xs pull-right">บันทึก</a>
-                                        </h3>
+                                        </h4>
                                         <form id="profileform" method="POST" action="{{ route('users.update') }}"
                                             enctype="multipart/form-data">
                                             @csrf
@@ -79,16 +79,13 @@
                             <div class="tab-pane fade" id="vert-tabs-password" role="tabpanel"
                                 aria-labelledby="vert-tabs-password-tab">
                                 <div class="content">
-                                    <div class="page-title">
-                                        <h2> เปลี่ยนรหัสผ่าน </h2>
-                                    </div><!-- /.page-title -->
 
                                     <div class="bg-white rounded pl-5 pt-3 pr-5 pb-5 ml-5 mr-5 mb-5">
-                                        <h3 class="page-title mt-0 pt-0">
-                                            รหัสผ่าน
+                                        <h4 class="page-title mt-0 pt-0">
+                                            เปลี่ยนรหัสผ่าน
 
                                             <a href="#" class="btn btn-primary btn-xs pull-right">บันทึก</a>
-                                        </h3>
+                                        </h4>
                                         <form id="passwordform" method="POST"
                                             action="{{ route('users.password.update') }}" enctype="multipart/form-data">
                                             @csrf
