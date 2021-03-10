@@ -8,7 +8,7 @@ use Validator;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
-{    
+{
     protected $notification, $notifications = [];
 
     public function __construct()
@@ -39,7 +39,8 @@ class UserController extends Controller
             }
             return redirect()->route('users.edit')->withInput($request->input())->with('notification',$this->notifications);
         }
-        
+
+
         $user = Auth::user();
         $user->image = $request->get('image');
         $user->save();
@@ -64,7 +65,7 @@ class UserController extends Controller
             }
             return redirect()->route('users.edit')->withInput($request->input())->with('notification',$this->notifications);
         }
-        
+
         $user = Auth::user();
         $user->name = $request->get('name');
         $user->email = $request->get('email');
@@ -81,7 +82,7 @@ class UserController extends Controller
         $user = auth()->user();
         return view('auth.userprofile')->with(['user' => $user]);
     }
-    
+
     public function changePassword(Request $request)
     {
         if (!(Hash::check($request->get('currentPassword'), Auth::user()->password))) {
@@ -108,7 +109,7 @@ class UserController extends Controller
             'currentPassword.required' => 'กรุณากรอกรหัสด้วยค่ะ.',
             'newPassword.required_with' => 'คุณกรอกรหัสไม่เหมือนกัน.',
             'newPassword.same' => 'คุณกรอกรหัสไม่เหมือนกัน.'
-        ]); 
+        ]);
 
         if ($validator->fails()) {
             foreach($validator->errors()->all() as $error){

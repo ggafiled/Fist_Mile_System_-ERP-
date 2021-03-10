@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
+use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-
-
-
 
 class UserManagementController extends Controller
 {
@@ -46,17 +45,23 @@ class UserManagementController extends Controller
      */
     public function store(Request $request)
     {
-        {
-            $request->validate([
-                'name'=>'required',
-                'email'=>'required',
-                'password' => Hash::make($request->password)
-                // 'password'=>'required',
-            ]);
+        $validator = Validator::make($request->all(),[
+            'name' => 'required',
+            'email' => 'required,unique:users,email,'.Auth()->user()->id.',id',
+            'password' => 'required']);
+
+            // $request->input('password') = Hash::make($request->password);
             User::create($request->all());
-            return redirect()->back();
-        }
     }
+
+
+    // $validator = Validator::make($request->all(),[
+    //     'name' => 'required',
+    //     'email' => 'required,unique:users,email,'.Auth()->user()->id.',id',
+    //     'password' => 'required',
+
+    //     $request->input('password') = Hash::make($request->password)]);
+    //     User::create($request->all());
 
     /**
      * Display the specified resource.
