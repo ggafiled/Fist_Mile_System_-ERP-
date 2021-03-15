@@ -41,8 +41,7 @@
                             <td>
                                 <form action="{{route('building.destroy',$row->id)}}" method="post">
                                     @csrf @method('DELETE')
-                                  <input type="submit" value='ลบ'  data-name="{{$row->projecct}}" class="btn btn-danger deleteForm"
-                                  onclick="return confirm('คุณต้องการลบข้อมูล {{$row->name}} ?')">
+                                  <input type="submit" value='ลบ'  data-name="{{$row->projecct}}" class="btn btn-danger deleteForm">
                                 </form>
                             </td>
                             @endrole
@@ -58,17 +57,9 @@
 </div>
 
 @section('adminlte_js')
-<script>
-   $(document).ready(function() {
-                        $("#example1").DataTable({
-                            lengthMenu: [
-                                [10, 25, 50, -1],
-                                [10, 25, 50, "All"]
-                            ]
-                        });
-                    });
-</script>
+<script src=" {{ asset('js/bonus.js') }}"></script>
 @stop
 @endsection
+
 
 

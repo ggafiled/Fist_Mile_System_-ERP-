@@ -453,11 +453,6 @@ return [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//code.jquery.com/jquery-3.4.1.min.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
                 ],
                 [
@@ -500,12 +495,16 @@ return [
                     'asset' => false,
                     'location' => '//cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js',
                 ],
-
-                // [
-                //     'type' => 'js',
-                //     'asset' => false,
-                //     'location' => 'https://code.jquery.com/jquery-3.5.1.js',
-                // ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://code.jquery.com/jquery-3.5.1.min.js',
+                ],
                 [
                     'type' => 'js',
                     'asset' => false,
