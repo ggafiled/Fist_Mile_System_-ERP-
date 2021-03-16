@@ -463,7 +463,7 @@ return [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js',
+                    'location' => '//cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js',
                 ],
                 [
                     'type' => 'js',
@@ -488,12 +488,12 @@ return [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js',
+                    'location' => '//cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js',
                 ],
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js',
+                    'location' => '//cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js',
                 ],
                 [
                     'type' => 'js',
@@ -589,7 +589,7 @@ return [
                 [
                     'type' => 'css',
                     'asset' => false,
-                    'location' => '//cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css',
+                    'location' => '//cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css',
                 ],
                 [
                     'type' => 'css',
