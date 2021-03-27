@@ -34,7 +34,7 @@
         "datatables.net-dt": "^1.10.23",
         "icheck-bootstrap": "^3.0.1",
         "overlayscrollbars": "^1.13.1",
-        "sweetalert2": "^10.15.5",
+        "sweetalert2": "^10.15.6",
         "turbolinks": "^5.2.0"
     }
 }

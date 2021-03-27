@@ -9,6 +9,12 @@ class Progress extends Model
 {
     protected $fillable = [
         'id','buildingId','fmProgress','dateProgress',
-        'totProgress','aisProgress','Progress3bb','sinetProgress','fnProgress','trueProgress','update_at'
+        'totProgress','totDate',
+        'aisProgress','aisDate',
+        'Progress3bb','Date3bb',
+        'sinetProgress','sinetDate',
+        'fnProgress','fnDate',
+        'trueProgress','trueDate',
+        'update_at'
     ];
 }

@@ -278,40 +278,23 @@ return [
             'can'  => ['building-create|building-read|building-update']
         ],
         [
+            'text' => 'Resplice Opertor',
+            'url'  => '/resplice',
+            'icon' => 'fas fa-fw fa-calendar',
+            'can'  => ['building-create|building-read|building-update']
+        ],
+        [
             'text' => 'Constarution',
-            'url'  => 'admin/settings',
+            'url'  => '/constarution',
             'icon' => 'fas fa-fw fa-poll',
             'can'  => ['constarution-create', 'constarution-read'],
-            // 'submenu' => [
-            //     [
-            //         'text' => 'Add Constarution',
-            //         'url'  => '/constarution',
-            //         'can'  => ['building-create']
-            //     ],
-            //     [
-            //         'text' => 'Table Constarution',
-            //         'url'  => '',
-            //         'can'  => ['building-update']
-            //     ],
-            //     [
-            //         'text' => 'Table Constarution',
-            //         'url'  => '/tableprogress',
-            //         'can'  => ['building-read']
-            //     ],
-            // ]
         ],
         [
             'text' => 'Building Payment',
-            'url'  => 'admin/settings',
+            'url'  => '/payment',
             'icon' => 'fas fa-fw fa-calendar-check',
             'can'  => ['payments-create', 'payments-read']
         ],
-        // [
-        //     'text' => 'Calendar',
-        //     'url'  => '/',
-        //     'icon' => 'far fa-calendar-alt',
-        //     'can'  => ['building-create|building-read|building-update']
-        // ],
         [
             'text' => 'Calendar',
             'url'  => '/calendar',

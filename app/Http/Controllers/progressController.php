@@ -25,10 +25,10 @@ class ProgressController extends Controller
        //  $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
     }
 
-    public function progress()
-    {
-        return view('progress.index');
-    }
+    // public function progress()
+    // {
+    //     return view('progress.index');
+    // }
 
 
     public function index()
@@ -42,10 +42,10 @@ class ProgressController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('progress.index');
-    }
+    // public function create()
+    // {
+    //     return view('progress.index');
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -100,12 +100,24 @@ class ProgressController extends Controller
         $validator =  Validator::make($request->all(),[
             'fmProgress'=>'required',
             'dateProgress'=>'required',
+
             'totProgress'=>'required',
+            'totDate'=>'required',
+
             'aisProgress'=>'required',
+            'aisDate'=>'required',
+
             'Progress3bb'=>'required',
+            'Date3bb'=>'required',
+
             'sinetProgress'=>'required',
+            'sinetDate'=>'required',
+
             'fnProgress'=>'required',
+            'fnDate'=>'required',
+
             'trueProgress'=>'required',
+            'trueDate'=>'required',
         ]);
 
         if ($validator->fails()) {

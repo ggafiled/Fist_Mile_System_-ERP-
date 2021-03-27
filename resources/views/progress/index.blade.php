@@ -2,10 +2,26 @@
 
 @section('content')
 <style>
-    h3 {
-        font-family: Tahoma, Verdana, sans-serif;
-        font-weight: bold;
+tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
     }
+
+    th {
+        white-space: nowrap;
+    }
+
+	div.dataTables_wrapper {
+		width: 2900px;
+		margin: 0 auto;
+	}
+    tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+    th { white-space: nowrap; }
 
 </style>
         <div class="row justify-content-center">
@@ -15,23 +31,29 @@
                         <h3>{{ __('TABLE PROGRESS') }}</h3>
                     </div>
                     <div class="card-body">
-                        <div class="form-group">
+                        <div class="table-responsive">
                             <div class="container-fluid mx-auto mt-2 mb-2">
                                 <table class="table table-striped" id="example1">
                                     <thead>
                                         <tr class="info">
-                                            <th width="2%">#</th>
-                                            <th width="10%">Building</th>
-                                            <th width="5%">Fm-Progress</th>
-                                            <th width="8%">วันวางโครงข่าย</th>
-                                            <th width="8%">TOT</th>
-                                            <th width="8%">AIS</th>
-                                            <th width="8%">3BB</th>
-                                            <th width="8%">SINET</th>
-                                            <th width="8%">FN</th>
-                                            <th width="8%">TRUE</th>
-                                            <th width="5%">Update</th>
-                                            <th width="2%">Edit</th>
+                                            <th>#</th>
+                                            <th>Building</th>
+                                            <th>Fm-Progress</th>
+                                            <th>วันวางโครงข่าย</th>
+                                            <th>TOT</th>
+                                            <th>วันวางโครงข่าย TOT</th>
+                                            <th>AIS</th>
+                                            <th>วันวางโครงข่าย AIS</th>
+                                            <th>3BB</th>
+                                            <th>วันวางโครงข่าย 3BB</th>
+                                            <th>SINET</th>
+                                            <th>วันวางโครงข่าย SINET</th>
+                                            <th>FN</th>
+                                            <th>วันวางโครงข่าย FN</th>
+                                            <th>TRUE</th>
+                                            <th>วันวางโครงข่าย TRUE</th>
+                                            <th>Update</th>
+                                            <th>Edit</th>
                                         </tr>
                                     </thead>
 
@@ -43,13 +65,27 @@
                                     <th scope="item">{{$item->id}}</th>
                                     <td>{{$item->buildingId}}</td>
                                     <td>{{$item->fmProgress}}</td>
+
                                     <td>{{$item->dateProgress}}</td>
+
                                     <td>{{$item->totProgress}}</td>
+                                    <td>{{$item->totDate}}</td>
+
                                     <td>{{$item->aisProgress}}</td>
+                                    <td>{{$item->aisDate}}</td>
+
                                     <td>{{$item->Progress3bb}}</td>
+                                    <td>{{$item->Date3bb}}</td>
+
                                     <td>{{$item->sinetProgress}}</td>
+                                    <td>{{$item->sinetDate}}</td>
+
                                     <td>{{$item->fnProgress}}</td>
+                                    <td>{{$item->fnDate}}</td>
+
                                     <td>{{$item->trueProgress}}</td>
+                                    <td>{{$item->trueDate}}</td>
+
                                     <td>{{$item->updated_at}}</td>
                                     <td>
                                         <form action="{{ route('progress.edit',$item->id) }}" method="PUT">
@@ -87,5 +123,6 @@
                             ]
                         });
                     });
+
 </script>
 @stop

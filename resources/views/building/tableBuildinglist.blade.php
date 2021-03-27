@@ -7,12 +7,6 @@
         box-sizing: border-box;
     }
 
-    div.dataTables_wrapper {
-        width: 4500px;
-        height: 750px;
-        margin: 0 auto;
-    }
-
     th {
         white-space: nowrap;
     }
@@ -41,8 +35,7 @@
                 <div class="table-responsive">
                     <table class="table table-hover" id="tablelist" style="width:100%">
                         <thead>
-                            <tr class="info"
-                            >
+                            <tr class="info">
                                 {{-- <th width="3%">#</th> --}}
                                 <th>อาคาร</th>
                                 <th>fm-code</th>

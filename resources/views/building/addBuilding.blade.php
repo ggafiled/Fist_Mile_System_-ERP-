@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                 </div>
-                           <input type="submit" value="เพิ่มข้อมูล " class="btn btn-primary" method="POST">
+                           <input type="submit" value="เพิ่มข้อมูล" class="btn btn-primary" method="POST">
                            @csrf @method('POST')
                            <a href="/home" class="btn btn-success my-2">กลับ</a>
                     </div>

@@ -41,7 +41,7 @@
                             <td>
                                 <form action="{{route('building.destroy',$row->id)}}" method="post">
                                     @csrf @method('DELETE')
-                                  <input type="submit" value='ลบ'  data-name="{{$row->projecct}}" class="btn btn-danger deleteForm">
+                                  <input type="submit" value='ลบ' class="btn btn-danger deleteForm">
                                 </form>
                             </td>
                             @endrole

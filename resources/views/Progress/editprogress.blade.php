@@ -52,8 +52,9 @@
                             </div>
                         </div>
 
+
                         <div class="row">
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <div class="form-group">
                                     {!! Form::label('TOT Progress :') !!}
                                     {!! Form::select('totProgress',['เชื่อมโครงข่ายแล้ว' =>
@@ -61,7 +62,14 @@
                                     {{-- {!! Form::text('totProgress',$data->totProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    {!! Form::label('TOT วันวางโครงข่าย :') !!}
+                                    {!! Form::date('totDate',$data->totDate,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
                                 <div class="form-group">
                                     {!! Form::label('AIS Progress :') !!}
                                     {!! Form::select('aisProgress',['เชื่อมโครงข่ายแล้ว' =>
@@ -69,15 +77,31 @@
                                     {{-- {!! Form::text('aisProgress',$data->aisProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <div class="form-group">
+                                    {!! Form::label('AIS วันวางโครงข่าย :') !!}
+                                    {!! Form::date('aisDate',$data->aisDate,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="form-group">
                                     {!! Form::label('3BB Progress :') !!}
                                     {!! Form::select('Progress3bb',['เชื่อมโครงข่ายแล้ว' =>
                                     'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','สามบีบีว่างโครงข่ายเอง'=>'สามบีบีว่างโครงข่ายเอง','-'=>''],$data->Progress3bb,['class'=>'form-control']) !!}
                                     {{-- {!! Form::text('Progress3bb',$data->Progress3bb,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    {!! Form::label('3BB วันวางโครงข่าย :') !!}
+                                    {!! Form::date('Date3bb',$data->Date3bb,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
                                 <div class="form-group">
                                     {!! Form::label('Sinet Progress :') !!}
                                     {!! Form::select('sinetProgress',['เชื่อมโครงข่ายแล้ว' =>
@@ -85,15 +109,31 @@
                                     {{-- {!! Form::text('sinetProgress',$data->sinetProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <div class="form-group">
+                                    {!! Form::label('Sinet วันวางโครงข่าย :') !!}
+                                    {!! Form::date('sinetDate',$data->sinetDate,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                        <div class="col-sm-3">
+                            <div class="form-group">
                                     {!! Form::label('FN Progress :') !!}
                                     {!! Form::select('fnProgress',['เชื่อมโครงข่ายแล้ว' =>
                                     'เชื่อมโครงข่ายแล้ว','กำลังดำเนินการ'=>'กำลังดำเนินการ','เอฟเอ็นว่างโครงข่ายเอง'=>'เอฟเอ็นว่างโครงข่ายเอง','-'=>''],$data->fnProgress,['class'=>'form-control']) !!}
                                     {{-- {!! Form::text('fnProgress',$data->fnProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    {!! Form::label('Sinet วันวางโครงข่าย :') !!}
+                                    {!! Form::date('fnDate',$data->fnDate,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
                                 <div class="form-group">
                                     {!! Form::label('True Progress :') !!}
                                     {!! Form::select('trueProgress',['เชื่อมโครงข่ายแล้ว' =>
@@ -101,6 +141,13 @@
                                     {{-- {!! Form::text('trueProgress',$data->trueProgress,["class"=>"form-control"])!!} --}}
                                 </div>
                             </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    {!! Form::label('True วันวางโครงข่าย :') !!}
+                                    {!! Form::date('trueDate',$data->trueDate,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+
                         </div>
                         <input type="submit" value="อัพเดท " class="btn btn-warning">
                         <a href="/progress" class="btn btn-success my-2">กลับ</a>

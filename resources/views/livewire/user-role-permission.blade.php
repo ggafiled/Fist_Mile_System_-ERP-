@@ -8,7 +8,7 @@
         <div class="row mt-3">
             <div class="col-12">
                 {{-- <h5>{{ __('List of role on systems') }}</h5> --}}
-                @livewire('user-role-permission-create-popup')
+                {{-- @livewire('user-role-permission-create-popup') --}}
                 <div class="container-fluid mx-auto mt-2 mb-2" wire:ignore>
                     <div class="row mx-auto justify-content-center">
                         <table id="tableRole" class="table table-sm " width="100%">

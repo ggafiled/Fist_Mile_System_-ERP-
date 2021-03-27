@@ -5,16 +5,16 @@
 </div>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Register new membership</h5>
+                <h5 class="modal-title" id="exampleModalLabel">New Membership</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="card-body">
-                    <form action="{{ route('usermanagement.store') }}" method="POST">
-                        {{-- <form action="{{ route('Registe.create') }}" method="POST"> --}}
+                    {{-- <form action="{{ route('usermanagement.store') }}" method="POST"> --}}
+                        <form action="{{ route('Register.create') }}" method="POST">
                         @csrf
 
                         <div class="form-group row">
@@ -34,6 +34,9 @@
                                     </div>
                                 </div>
                             </div>
+
+
+
                             <div class="input-group mb-3">
                                 <input id="email" type="email"
                                     class="form-control @error('email') is-invalid @enderror" name="email"
@@ -65,17 +68,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-group mb-3">
-                                <input id="password-confirm" type="password" class="form-control"
-                                    name="password_confirmation" required autocomplete="new-password"
-                                    placeholder="Retype password">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">
-                                        <span class="fas fa-lock"></span>
-                                    </div>
-                                </div>
-                            </div>
-
+                            {{-- <div class="input-group mb-3">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected></option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                            </div> --}}
                         </div>
 
                         <button type="submit" class="btn btn-primary">
