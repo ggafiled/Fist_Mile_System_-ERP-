@@ -20,18 +20,15 @@ tfoot input {
     th { white-space: nowrap; }
 
 </style>
-        <div class="row justify-content-center">
-            <div class="col-md">
-                <div class="card ">
-                    <div class="card-header text-white bg-dark">
-                        <h3>{{ __('TABLE PROGRESS') }}</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <div class="container-fluid mx-auto mt-2 mb-2">
-                                <table class="table table-striped" id="example1">
-                                    <thead>
-                                        <tr class="info">
+<div class="row justify-content-center">
+    <div class="col-md">
+        <div class="card">
+            <div class="card-header text-white bg-dark">{{ __('RESPLICE TABLE LIST') }}</div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered" id="example1">
+                        <thead >
+                            <tr class="info">
                                             <th>#</th>
                                             <th>Building</th>
                                             <th>Tower</th>
@@ -45,6 +42,7 @@ tfoot input {
                                             <th>PlanStart</th>
                                             <th>PlanComplete</th>
                                             <th>TechnicianTeamEnd</th>
+                                            {{-- <th>Action</th> --}}
                                         </tr>
                                     </thead>
                             </div>
@@ -64,6 +62,12 @@ tfoot input {
                                  <td>{{$row->planStart}}</td>
                                  <td>{{$row->planComplete}}</td>
                                  <td>{{$row->technicianTeamEnd}}</td>
+                                 {{-- <td>
+                                    <form action="{{ route('building.edit',$row->id) }}" method="PUT">
+                                        @csrf @method('HEAD')
+                                      <input type="submit" value='Edit'  " class="btn btn-warning ">
+                                    </form>
+                                </td> --}}
                                 </tr>
                             @endforeach
                                 </tbody>

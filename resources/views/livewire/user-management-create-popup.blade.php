@@ -1,8 +1,9 @@
-<div class="col-xl-2 col-lg-3 col-md-5 col-sm-4 col-xs-4">
-    <button type="button" class="btn btn-success" wire:clck="user_count" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <i class="fa fa-plus"></i> <span>{{ __('Add New User') }}</span>
-    </button>
-</div>
+
+    <a type="button" class="btn btn-success" wire:clck="user_count" data-bs-toggle="modal" data-bs-target="#exampleModal">
+         <i class="fa fa-plus-square"></i>
+                        Add New
+    </a>
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
     <div class="modal-dialog modal-lg">

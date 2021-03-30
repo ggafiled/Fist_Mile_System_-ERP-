@@ -1,27 +1,23 @@
-@extends('adminlte::page')
+<a
+    type="button"
+        href="/building/create"
+        class="btn btn-sm btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#addbuildingModal"
+        @click="newModal"
+    >
+    <i class="fa fa-plus-square"></i>
+    Add New
+</a>
 
-@section('content')
-<style>
-    /* h3 {
-        font-family: Tahoma, Verdana, sans-serif;
-        font-weight: bold;
-      } */
-</style>
-<ul>
-    @if ($errors->all())
-    <ul class="alert alert-danger">
-      @foreach ($errors->all() as $error)
-        <li>
-           {{$error}}
-        </li>
-      @endforeach
-    </ul>
-    @endif
-</ul>
-<div class="row justify-content-center">
-    <div class="col-md">
-        <div class="card ">
-            <div class="card-header text-white bg-dark"><h>{{ __('ADD BUILDING LIST') }}</div>
+<div class="modal fade" id="addbuildingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Membership</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
                 <div class="card-body">
                     <div class="form-group">
                         <div class="container-fluid mx-auto mt-2 mb-2">
@@ -203,9 +199,8 @@
                            <a href="/building" class="btn btn-success my-2">BACK</a>
                     </div>
                 </div>
-             </div>
         </div>
     </div>
 </div>
+</div>
 
-@endsection

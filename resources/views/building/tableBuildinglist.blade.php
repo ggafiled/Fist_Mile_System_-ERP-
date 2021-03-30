@@ -21,9 +21,7 @@
         box-sizing: border-box;
     }
     th { white-space: nowrap; }
-
 </style>
-
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">
@@ -33,30 +31,30 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-hover" id="tablelist" style="width:100%">
+                    <table class="table table-striped table-bordered" id="tablelist" style="width:100%">
                         <thead>
                             <tr class="info">
-                                {{-- <th width="3%">#</th> --}}
-                                <th>อาคาร</th>
-                                <th>fm-code</th>
-                                <th>ชื่อผู้ติดต่อ</th>
-                                <th>เบอร์โทร</th>
-                                <th width="1%">พื้นที่ น.</th>
-                                <th width="1%">จำนวนอาคาร</th>
-                                <th width="1%">ชั้น</th>
-                                <th width="1%">ห้อง</th>
-                                <th>ที่อยู่</th>
-                                <th>สัญญา</th>
-                                <th>วันลงนามสัญญา</th>
-                                <th>เมือง</th>
-                                <th>เขต</th>
-                                <th>จังหวัด</th>
-                                <th>รหัสไปรษณีย์</th>
+                                <th>#</th>
+                                <th>Buildings Name</th>
+                                <th>Fm-Code</th>
+                                <th>Contact Name</th>
+                                <th>Phone Number</th>
+                                <th>Area</th>
+                                <th>Building Number</th>
+                                <th>Floor</th>
+                                <th>Room</th>
+                                <th>Address</th>
+                                <th>Contract</th>
+                                <th>Contract Date</th>
+                                <th>City</th>
+                                <th>County</th>
+                                <th>Province</th>
+                                <th>Postal Code</th>
                                 <th>Latitude</th>
                                 <th>Longtude </th>
-                                <th>ราคาต่อ ตรม </th>
-                                <th>เวลาในการปฏิบัติงาน </th>
-                                <th>ยอดเงิน </th>
+                                <th>Price per sqm</th>
+                                <th>Operating Time</th>
+                                <th>Balance </th>
                                 <th>Developer </th>
                                 <th>Grade </th>
                             </tr>
@@ -64,7 +62,7 @@
                         <tbody>
                             @foreach ($data as $row)
                             <tr>
-                                {{-- <th scope="row">{{$row->id}}</th> --}}
+                                <th scope="row">{{$row->id}}</th>
                                 <td>{{$row->buildingId}}</td>
                                 <td>{{$row->fmCode}}</td>
                                 <td>{{$row->contactName}}</td>
@@ -90,10 +88,31 @@
                             </tr>
                             @endforeach
                         </tbody>
-                        {{-- <tfoot>
-                                <th colspan="6" style="text-align:right">Total:</th>
+                        <tfoot>
+                                <th>Total</th>
                                 <th></th>
-                        </tfoot> --}}
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -141,83 +160,104 @@ $(document).ready(function () {
     // Create DataTable
     var table = $('#tablelist').DataTable({
     "ordering": false,
-     lengthMenu: [
-             [15, 20, 50, 100, -1],
-             [15, 20, 50, 100, "All"]
-         ],
-        //  "footerCallback": function ( row, data, start, end, display ) {
-        //     var api = this.api(), data;
+    lengthMenu: [
+            [15, 20, 50, 100, -1],
+            [15, 20, 50, 100, "All"]
+        ],
+        scrollX: !0,
+        dom: "Bfrtip",
+        buttons: [
+            "colvis",
+            "copy",
+            "csv",
+            "excel",
+            {
+                extend: "pdf",
+                text: "PDF",
+                pageSize: "A4",
+                pageOrientation: "landscape",
+                customize: function(t) {
+                    t.defaultStyle = {
+                        font: "THSarabun",
+                        fontSize: 16
+                    };
+                }
+            },
+            "print"
+        ],
+         "footerCallback": function ( row, data, start, end, display ) {
+            var api = this.api(), data;
 
-        //     // Remove the formatting to get integer data for summation
-        //     var intVal = function ( i ) {
-        //         return typeof i === 'string' ?
-        //             i.replace(/[\$,]/g, '')*1 :
-        //             typeof i === 'number' ?
-        //                 i : 0;
-        //     };
+            // Remove the formatting to get integer data for summation
+            var intVal = function ( i ) {
+                return typeof i === 'string' ?
+                    i.replace(/[\$,]/g, '')*1 :
+                    typeof i === 'number' ?
+                        i : 0;
+            };
 
-        //     // Total over all pages
-        //     building = api
-        //         .column( 6 )
-        //         .data()
-        //         .reduce( function (a, b) {
-        //             return intVal(a) + intVal(b);
-        //         }, 0 );
+            // Total over all pages
+            building = api
+                .column( 6 )
+                .data()
+                .reduce( function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0 );
 
-        //     layer = api
-        //         .column( 7 )
-        //         .data()
-        //         .reduce( function (a, b) {
-        //             return intVal(a) + intVal(b);
-        //         }, 0 );
+            layer = api
+                .column( 7 )
+                .data()
+                .reduce( function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0 );
 
-        //     room = api
-        //         .column( 8 )
-        //         .data()
-        //         .reduce( function (a, b) {
-        //             return intVal(a) + intVal(b);
-        //         }, 0 );
+            room = api
+                .column( 8 )
+                .data()
+                .reduce( function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0 );
 
-        //     price = api
-        //         .column( 18 )
-        //         .data()
-        //         .reduce( function (a, b) {
-        //             return intVal(a) + intVal(b);
-        //         }, 0 );
+            price = api
+                .column( 18 )
+                .data()
+                .reduce( function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0 );
 
-        //     priceSum = api
-        //         .column( 20 )
-        //         .data()
-        //         .reduce( function (a, b) {
-        //             return intVal(a) + intVal(b);
-        //         }, 0 );
+            priceSum = api
+                .column( 20 )
+                .data()
+                .reduce( function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0 );
 
-        //     // Total over this page
-        //     pageTotal = api
-        //         .column( 5, { page: 'current'} )
-        //         .data()
-        //         .reduce( function (a, b) {
-        //             return intVal(a) + intVal(b);
-        //         }, 0 );
+            // Total over this page
+            // pageTotal = api
+            //     .column( 5, { page: 'current'} )
+            //     .data()
+            //     .reduce( function (a, b) {
+            //         return intVal(a) + intVal(b);
+            //     }, 0 );
 
-        //     // Update footer
-        //     $( api.column( 6 ).footer() ).html(
-        //          building
-        //     );
+            // Update footer
+            $( api.column( 6 ).footer() ).html(
+                 building
+            );
 
-        //      $( api.column( 7 ).footer() ).html(
-        //         layer
-        //     );
-        //     $( api.column( 8 ).footer() ).html(
-        //          room
-        //     );
-        //     $( api.column( 18 ).footer() ).html(
-        //         price
-        //     );
-        //     $( api.column( 20 ).footer() ).html(
-        //         priceSum
-        //     );
-        // }
+             $( api.column( 7 ).footer() ).html(
+                layer
+            );
+            $( api.column( 8 ).footer() ).html(
+                 room
+            );
+            $( api.column( 18 ).footer() ).html(
+                price
+            );
+            $( api.column( 20 ).footer() ).html(
+                priceSum
+            );
+        }
 
     });
 
@@ -249,7 +289,7 @@ function chartData(table) {
 
     // Count the number of entries for each position
     table
-        .column(12, { search: 'applied' })
+        .column(13, { search: 'applied' })
         .data()
         .each(function (val) {
             if (counts[val]) {
@@ -269,8 +309,8 @@ function chartData(table) {
     });
 }
 
-$(function () {
-      $('#tablelist').excelTableFilter();
-});
+// $(function () {
+//       $('#tablelist').excelTableFilter();
+// });
 </script>
 @stop

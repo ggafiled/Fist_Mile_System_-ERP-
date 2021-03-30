@@ -13,7 +13,7 @@
                             <div class="inner">
                                 <h3></h3>
 
-                                <p>Table Building List</p>
+                                <p>Building Management</p>
                             </div>
                             <div class="icon">
                                 <i class="fas fa-fw fa-table"></i>
@@ -45,12 +45,12 @@
                             <div class="inner">
                                 <h3></h3>
 
-                                <p>Progess Constarution</p>
+                                <p>Building List Table</p>
                             </div>
                             <div class="icon">
                                 <i class="fas fa-fw fa-poll"></i>
                             </div>
-                            <a href="" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="/building/list" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     @endpermission
@@ -59,13 +59,12 @@
                         <div class="small-box bg-warning">
                             <div class="inner">
                                 <h3></h3>
-
-                                <p>Building Payment</p>
+                                <p>Status Opertor</p>
                             </div>
                             <div class="icon">
                                 <i class="fas fa-fw fa-calendar-check"></i>
                             </div>
-                            <a href="#" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="/progress" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     @endpermission
@@ -74,13 +73,12 @@
                         <div class="small-box bg-danger">
                             <div class="inner">
                                 <h3></h3>
-
-                                <p>Status Opertor</p>
+                                <p>Resplice Opertor</p>
                             </div>
                             <div class="icon">
                                 <i class="fas fa-fw fa-poll-h"></i>
                             </div>
-                            <a href="/progress" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="/resplice" class="small-box-footer">Click <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     @endpermission

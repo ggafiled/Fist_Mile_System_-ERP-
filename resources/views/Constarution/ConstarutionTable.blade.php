@@ -1,39 +1,15 @@
 @extends('adminlte::page')
 
 @section('content')
-<style>
-    tfoot input {
-            width: 100%;
-            padding: 3px;
-            box-sizing: border-box;
-        }
 
-        th {
-            white-space: nowrap;
-        }
-
-        div.dataTables_wrapper {
-            width: 3000px;
-            margin: 0 auto;
-        }
-        tfoot input {
-            width: 100%;
-            padding: 3px;
-            box-sizing: border-box;
-        }
-        th { white-space: nowrap; }
-</style>
 <div class="row justify-content-center">
     <div class="col-md">
-        <div class="card ">
-            <div class="card-header text-white bg-dark">
-                <h3>{{ __('TABLE CONSTARUTION') }}</h3>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <div class="container-fluid mx-auto mt-2 mb-2">
-                        <table class="table table-striped" id="example1">
-                            <thead>
+        <div class="card">
+            <div class="card-header text-white bg-dark">{{ __('CONSTARTION TABLE LIST') }}</div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered" id="example1">
+                        <thead >
                             <tr class="info">
                                 <th>#</th>
                                 <th>Building</th>
@@ -62,6 +38,7 @@
                                 <th>Microduct(diagonal)</th>
                                 <th>InstalledBy</th>
                                 <th>InstallDate</th>
+                                <th>Action</th>
                                 {{-- @role('superadministrator')
 
                                 @endrole --}}
@@ -98,12 +75,12 @@
                              <td>{{$row->microductK}}</td>
                              <td>{{$row->microductTeamK}}</td>
                              <td>{{$row->microductDateK}}</td>
-                             {{-- <td>
-                                <form action="{{ route('building.edit',$row->id) }}" method="PUT">
-                                    @csrf @method('HEAD')
-                                  <input type="submit" value='แก้ไข'  " class="btn btn-warning ">
+                             <td>
+                                <form action="{{ route('constarution.edit',$row->id) }}" method="PUT">
+
+                                    <input type="submit" value='edit' " class=" btn btn-warning ">
                                 </form>
-                            </td> --}}
+                            </td>
                             {{-- @role('superadministrator')
                             <td>
                                 <form action="{{route('building.destroy',$row->id)}}" method="post">
@@ -127,14 +104,11 @@
 @section('adminlte_js')
 
 <script>
-   $(document).ready(function() {
-                        $("#example1").DataTable({
-                            lengthMenu: [
-                                [10, 25, 50, -1],
-                                [10, 25, 50, "All"]
-                            ]
-                        });
-                    });
+  $(document).ready(function() {
+    $('#example1').DataTable( {
+        "scrollX": true
+    } );
+} );
 
 </script>
 @stop

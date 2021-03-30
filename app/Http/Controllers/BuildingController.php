@@ -6,6 +6,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\building;
+use Livewire\Component;
 
 
 class BuildingController extends Controller
@@ -23,11 +24,7 @@ class BuildingController extends Controller
          $this->middleware('auth');
          $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
         //  $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
-     }
-     public function building()
-     {
-         return view('building.addBuilding');
-     }
+    }
 
     public function index()
     {
@@ -91,6 +88,10 @@ class BuildingController extends Controller
         Building::create($request->all());
         // return redirect()->back();
         return redirect()->route('building.list');
+    }
+    public function render()
+    {
+        return view('livewire.tableBuilding');
     }
 
     public function showBuildingList()

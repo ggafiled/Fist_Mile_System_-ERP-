@@ -2,56 +2,40 @@
 
 @section('content')
 <style>
-tfoot input {
-        width: 100%;
-        padding: 3px;
-        box-sizing: border-box;
-    }
+        th {
+            white-space: nowrap;
+        }
 
-    th {
-        white-space: nowrap;
-    }
-
-	div.dataTables_wrapper {
-		width: 2900px;
-		margin: 0 auto;
-	}
-    tfoot input {
-        width: 100%;
-        padding: 3px;
-        box-sizing: border-box;
-    }
-    th { white-space: nowrap; }
-
+        div.dataTables_wrapper {
+            width: 3190px;
+        }
+        th { white-space: nowrap; }
 </style>
-        <div class="row justify-content-center">
-            <div class="col-md">
-                <div class="card ">
-                    <div class="card-header text-white bg-dark">
-                        <h3>{{ __('TABLE PROGRESS') }}</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <div class="container-fluid mx-auto mt-2 mb-2">
-                                <table class="table table-striped" id="example1">
-                                    <thead>
-                                        <tr class="info">
+<div class="row justify-content-center">
+    <div class="col-md">
+        <div class="card">
+            <div class="card-header text-white bg-dark">{{ __('PROGRESS TABLE LIST') }}</div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered" id="example1" style="width:100%">
+                        <thead >
+                            <tr class="info">
                                             <th>#</th>
                                             <th>Building</th>
                                             <th>Fm-Progress</th>
-                                            <th>วันวางโครงข่าย</th>
+                                            <th>Network Laying Date</th>
                                             <th>TOT</th>
-                                            <th>วันวางโครงข่าย TOT</th>
+                                            <th>Network Laying Date TOT</th>
                                             <th>AIS</th>
-                                            <th>วันวางโครงข่าย AIS</th>
+                                            <th>Network Laying Date AIS</th>
                                             <th>3BB</th>
-                                            <th>วันวางโครงข่าย 3BB</th>
+                                            <th>Network Laying Date 3BB</th>
                                             <th>SINET</th>
-                                            <th>วันวางโครงข่าย SINET</th>
+                                            <th>Network Laying Date SINET</th>
                                             <th>FN</th>
-                                            <th>วันวางโครงข่าย FN</th>
+                                            <th>Network Laying Date FN</th>
                                             <th>TRUE</th>
-                                            <th>วันวางโครงข่าย TRUE</th>
+                                            <th>Network Laying Date TRUE</th>
                                             <th>Update</th>
                                             <th>Edit</th>
                                         </tr>
@@ -115,14 +99,10 @@ tfoot input {
 @section('adminlte_js')
 
 <script>
-   $(document).ready(function() {
-                        $("#example1").DataTable({
-                            lengthMenu: [
-                                [10, 25, 50, -1],
-                                [10, 25, 50, "All"]
-                            ]
-                        });
-                    });
-
+$(document).ready(function() {
+    $('#example1').DataTable( {
+        "scrollX": true
+    } );
+} );
 </script>
 @stop

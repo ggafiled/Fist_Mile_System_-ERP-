@@ -244,7 +244,7 @@ return [
         // ],
         ['header' => 'MENU'],
         [
-            'text' => 'Home Main ',
+            'text' => 'Desh Board ',
             'url'  => '/home',
             'icon' => 'fas fa-fw fa-home',
             'can'  => ['payments-create', 'payments-read']
@@ -254,18 +254,18 @@ return [
             'icon' => 'fas fa-fw fas fa-building',
             'can'  => ['building-create|building-read|building-update'],
             'submenu' => [
+                // [
+                //     'text' => 'Add Building',
+                //     'url'  => '/building/create',
+                //     'can'  => ['building-create']
+                // ],
                 [
-                    'text' => 'Add Building',
-                    'url'  => '/building/create',
-                    'can'  => ['building-create']
-                ],
-                [
-                    'text' => 'Edit Table Building List',
+                    'text' => 'Building Management',
                     'url'  => '/building',
                     'can'  => ['building-update']
                 ],
                 [
-                    'text' => 'Table Building List',
+                    'text' => 'Building List Table ',
                     'url'  => '/building/list',
                     'can'  => ['building-read']
                 ],
@@ -442,6 +442,16 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//code.jquery.com/jquery-3.5.1.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js',
                 ],
                 [
                     'type' => 'js',

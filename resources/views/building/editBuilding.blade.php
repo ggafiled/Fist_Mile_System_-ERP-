@@ -8,7 +8,6 @@
     }
 
 </style>
-
 {{-- <ul>
     @if($errors->all())
         <ul class="alert alert-danger">
@@ -202,7 +201,7 @@
                                     {!! Form::text('grade',$data->grade,["class"=>"form-control"])!!}
                                 </div>
                             </div>
-                        </div>     
+                        </div>
                         <input type="submit" value="บันทึกแก้ไข " class="btn btn-primary">
                         <a href="/building" class="btn btn-success my-2">กลับ</a>
                     </div>

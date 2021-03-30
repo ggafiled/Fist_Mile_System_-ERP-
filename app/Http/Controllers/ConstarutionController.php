@@ -58,7 +58,8 @@ class ConstarutionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data=Constarution::find($id);
+        return view('Constarution.editConstarution',['data' => $data]);
     }
 
     /**
@@ -70,7 +71,40 @@ class ConstarutionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator =  Validator::make($request->all(),[
+            'buildingId'=>'required',
+            'numberLayer'=>'required',
+            'roomNumber'=>'required',
+            'floor'=>'required',
+            'exploreDesign'=>'required',
+            'exploreDesignTeam'=>'required',
+            'exploreDesignDate'=>'required',
+            'exploreDesignBy'=>'required',
+            'exploreDesignDateBy'=>'required',
+            'ifcc'=>'required',
+            'ifccTeam'=>'required',
+            'ifccDate'=>'required',
+            'wallBox'=>'required',
+            'wallBoxTeam'=>'required',
+            'microductD'=>'required',
+            'microductTeamD'=>'required',
+            'microductDateD'=>'required',
+            'microductK'=>'required',
+            'microductTeamK'=>'required',
+            'microductDateK'=>'required'
+        ]);
+
+        if ($validator->fails()) {
+            foreach($validator->errors()->all() as $error){
+                $this->notification['message'] = $error;
+                $this->notification['alert_type'] = 'error';
+                array_push($this->notifications,$this->notification);
+            }
+            return redirect()->route('building.edit',$id)->withInput($request->input())->with('notification',$this->notifications);
+        }
+
+        Constarution::find($id)->update($request->all());
+        return redirect()->route('building.list');
     }
 
     /**

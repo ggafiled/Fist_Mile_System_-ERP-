@@ -13,7 +13,7 @@ class Constarution extends Model
         'exploreDesignTeam','exploreDesignDate',
         'exploreDesignBy','exploreDesignDateBy',
         'ifcc','ifccTeam',
-        'ifccDate','wallBox',
+        'ifccDate','wallBox','wallBoxDate',
         'wallBoxTeam','microductD',
         'microductTeamD','microductDateD',
         'microductK','microductTeamK',
