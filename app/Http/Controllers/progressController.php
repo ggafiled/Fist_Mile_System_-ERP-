@@ -25,11 +25,6 @@ class ProgressController extends Controller
        //  $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
     }
 
-    // public function progress()
-    // {
-    //     return view('progress.index');
-    // }
-
 
     public function index()
     {
@@ -56,12 +51,6 @@ class ProgressController extends Controller
     public function store(Request $request)
     {
         //
-    }
-
-    public function showProgressList()
-    {
-        $data = progress::all();
-        return view('progress.index',['data' => $data]);
     }
 
     /**
@@ -132,24 +121,6 @@ class ProgressController extends Controller
         progress::find($id)->update($request->all());
         return redirect()->route('progress.index');
     }
-    // {
-    //     $request->validate([
-    //         'id'=>'required',
-    //         'building'=>'required',
-    //         'fmProgress'=>'required',
-    //         'dateProgress'=>'required',
-    //         'totProgress'=>'required',
-    //         'aisProgress'=>'required',
-    //         'Progress3bb'=>'required',
-    //         'sinetProgress'=>'required',
-    //         'fnProgress'=>'required',
-    //         'trueProgress'=>'required',
-    //         'update_at'=>'required'
-    //     ]);
-    //     Progress::find($id)->update($request->all());
-    //     return redirect()->route('building.list');
-    // }
-
     /**
      * Remove the specified resource from storage.
      *

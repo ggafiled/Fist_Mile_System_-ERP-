@@ -8,15 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Constarution extends Model
 {
     protected $fillable = [
-        'buildingId','numberLayer','roomNumber',
-        'floor','exploreDesign',
-        'exploreDesignTeam','exploreDesignDate',
+        'buildingId','numberLayer','roomNumber','floor',
+
+        'exploreDesign','exploreDesignTeam','exploreDesignDate',
+
         'exploreDesignBy','exploreDesignDateBy',
-        'ifcc','ifccTeam',
-        'ifccDate','wallBox','wallBoxDate',
-        'wallBoxTeam','microductD',
-        'microductTeamD','microductDateD',
-        'microductK','microductTeamK',
-        'microductDateK',
+
+        'ifcc','ifccTeam','ifccDate',
+
+        'wallBox','wallBoxDate','wallBoxTeam',
+
+        'microductD','microductTeamD','microductDateD',
+
+        'microductK','microductTeamK','microductDateK',
     ];
 }

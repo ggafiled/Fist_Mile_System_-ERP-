@@ -4,7 +4,7 @@
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">
-            <div class="card-header text-white bg-dark">{{ __('BUILDINGS MANAGEMENT') }}</h4></center>
+            <div class="card-header text-white bg-dark">{{ __('MAINTEN MANAGEMENT') }}</h4></center>
                 @role('superadministrator')
                 <div class="card-tools">
                     <a
@@ -29,14 +29,15 @@
                         <thead >
                             <tr class="info">
                                 <th width="1%">#</th>
-                                <th width="12%">Buildings Name</th>
-                                <th width="2%">Fm-Code</th>
-                                <th width="5%">Contact Name</th>
-                                <th width="5%">Phone Number</th>
+                                <th width="4%">Name/Company</th>
+                                <th width="4%">lastName</th>
+                                <th width="5%">Tel(main)</th>
+                                <th width="5%">Tel(reserve)</th>
+                                <th width="5%">BuildingName</th>
                                 <th width="1%">EDIT</th>
-                                @role('superadministrator')
+                                {{-- @role('superadministrator')
                                 <th width="1%">DELETE</th>
-                                @endrole
+                                @endrole --}}
                             </tr>
                         </thead>
                     </div>
@@ -54,14 +55,14 @@
                                   <input type="submit" value='Edit'  " class="btn btn-warning ">
                                 </form>
                             </td>
-                            @role('superadministrator')
+                            {{-- @role('superadministrator')
                             <td>
                                 <form action="{{route('building.destroy',$row->id)}}" method="post">
                                     @csrf @method('DELETE')
                                   <input type="submit" value='Delete' class="btn btn-danger deleteForm">
                                 </form>
                             </td>
-                            @endrole
+                            @endrole --}}
                             </tr>
                         @endforeach
                      </tbody>

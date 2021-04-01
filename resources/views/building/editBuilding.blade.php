@@ -31,19 +31,19 @@
                         <div class="row">
                             <div class="col-sm-2">
                                 <div class="form-group">
-                                    {!! Form::label('ID :') !!}
+                                    {!! Form::label('ID') !!}
                                     {!! Form::text('id',$data->id,["class"=>"form-control",'disabled'])!!}
                                 </div>
                             </div>
                             <div class="col-sm-8">
                                 <div class="form-group">
-                                    {!! Form::label('ชื่ออาคาร :') !!}
+                                    {!! Form::label('BUILDING NAME') !!}
                                     {!! Form::text('building',$data->buildingId,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
-                                    {!! Form::label('Fm-Code :') !!}
+                                    {!! Form::label('Fm-Code') !!}
                                     {!! Form::text('fmCode',$data->fmCode,["class"=>"form-control",'placeholder' =>
                                     'Enter your code.'])!!}
                                 </div>
@@ -53,20 +53,20 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    {!! Form::label('ชื่อผู้ติต่อ :') !!}
+                                    {!! Form::label('CONTACT NAME') !!}
                                     {!!
                                     Form::text('contactName',$data->contactName,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    {!! Form::label('เบอร์ติดต่อ :') !!}
+                                    {!! Form::label('PHONE NUMBER') !!}
                                     {!! Form::text('phone',$data->phone,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="form-group">
-                                    {!! Form::label('พื้นที่.น :') !!}
+                                    {!! Form::label('AREA') !!}
                                     {!! Form::text('area',$data->area,["class"=>"form-control",'placeholder' => 'Enter
                                     your area.'])!!}
                                 </div>
@@ -77,7 +77,7 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    {!! Form::label('จำนวนอาคาร :') !!}
+                                    {!! Form::label('BUILDING NUMBER') !!}
                                     {!!
                                     Form::number('numberLayer',$data->numberLayer,["class"=>"form-control",'placeholder'
                                     => 'Enter your number layer.'])!!}
@@ -85,14 +85,14 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    {!! Form::label('ชั้น :') !!}
+                                    {!! Form::label('FLOOR') !!}
                                     {!! Form::number('floor',$data->floor,["class"=>"form-control",'placeholder' =>
                                     'Enter your floor.'])!!}
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    {!! Form::label('เลขห้อง :') !!}
+                                    {!! Form::label('ROOM NUMBER') !!}
                                     {!!
                                     Form::number('roomNumber',$data->roomNumber,["class"=>"form-control",'placeholder'
                                     => 'Enter your room.'])!!}
@@ -103,20 +103,20 @@
                         <div class="row">
                             <div class="col-sm">
                                 <div class="form-group">
-                                    {!! Form::label('รายละเอียดที่อยู่ :') !!}
+                                    {!! Form::label('ADDRESS') !!}
                                     {!!
                                     Form::text('detailAdress',$data->detailAdress,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="form-group">
-                                    {!! Form::label('สัญญา :') !!}
+                                    {!! Form::label('CONTRACT') !!}
                                     {!! Form::date('contract',$data->contract,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="form-group">
-                                    {!! Form::label('วันลงนามสัญญา :') !!}
+                                    {!! Form::label('CONTRACT DATE') !!}
                                     {!! Form::date('contracttime',$data->contracttime,["class"=>"form-control"])!!}
                                 </div>
                             </div>
@@ -125,19 +125,19 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    {!! Form::label('จังหวัด :') !!}
+                                    {!! Form::label('PROVINCE') !!}
                                     {!! Form::text('province',$data->province,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    {!! Form::label('ตำบล/เมือง :') !!}
+                                    {!! Form::label('CITY') !!}
                                     {!! Form::text('city',$data->city,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    {!! Form::label('รหัสไปรษณีย์ :') !!}
+                                    {!! Form::label('POSTAL CODE') !!}
                                     {!!
                                     Form::number('postalCode',$data->postalCode,["class"=>"form-control"])!!}
                                 </div>
@@ -147,7 +147,7 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    {!! Form::label('เขต :') !!}
+                                    {!! Form::label('ZONE') !!}
                                     {!! Form::text('zone',$data->zone,["class"=>"form-control"])!!}
                                 </div>
                             </div>
@@ -168,21 +168,21 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    {!! Form::label('ราคาต่อ ตรม. :') !!}
+                                    {!! Form::label('PRICE SQM') !!}
                                     {!!
                                     Form::text('priceSquare',$data->priceSquare,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    {!! Form::label('เวลาการทำงาน :') !!}
+                                    {!! Form::label('OPERATING TIME') !!}
                                     {!!
                                     Form::text('workingTime',$data->workingTime,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    {!! Form::label('ราคา :') !!}
+                                    {!! Form::label('BALANCE') !!}
                                     {!! Form::text('blance',$data->blance,["class"=>"form-control"])!!}
                                 </div>
                             </div>
@@ -191,13 +191,13 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    {!! Form::label('Developer :') !!}
+                                    {!! Form::label('DEVELOER :') !!}
                                     {!! Form::text('developer',$data->developer,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    {!! Form::label('Grade :') !!}
+                                    {!! Form::label('GRADE') !!}
                                     {!! Form::text('grade',$data->grade,["class"=>"form-control"])!!}
                                 </div>
                             </div>

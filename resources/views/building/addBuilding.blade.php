@@ -47,7 +47,7 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            {!! Form::label('CONTACT') !!}
+                                            {!! Form::label('CONTACT NAME') !!}
                                             <i class="fas fa-id-card-alt"></i>
                                             {!! Form::text('contactName',null,["class"=>"form-control",'placeholder' => 'ชื่อผู้ติดต่อ.'])!!}
                                         </div>

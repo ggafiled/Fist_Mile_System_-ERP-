@@ -26,18 +26,18 @@
                                             <th>Network Laying Date</th>
                                             <th>TOT</th>
                                             <th>Network Laying Date TOT</th>
-                                            <th>AIS</th>
+                                            <th width="5%">AIS</th>
                                             <th>Network Laying Date AIS</th>
-                                            <th>3BB</th>
+                                            <th width="5%">3BB</th>
                                             <th>Network Laying Date 3BB</th>
-                                            <th>SINET</th>
+                                            <th width="5%">SINET</th>
                                             <th>Network Laying Date SINET</th>
-                                            <th>FN</th>
+                                            <th width="5%">FN</th>
                                             <th>Network Laying Date FN</th>
-                                            <th>TRUE</th>
+                                            <th width="5%">TRUE</th>
                                             <th>Network Laying Date TRUE</th>
-                                            <th>Update</th>
-                                            <th>Edit</th>
+                                            <th width="5%">Update</th>
+                                            <th>EDIT</th>
                                         </tr>
                                     </thead>
 

@@ -14,7 +14,15 @@ class ConstarutionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    protected $notification, $notifications = [];
 
+    public function __construct(){
+
+        $this->notification = array('message' => '','alert_type' => 'success');
+        $this->middleware('auth');
+        // $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
+       //  $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
+    }
 
     public function index()
     {
@@ -76,19 +84,25 @@ class ConstarutionController extends Controller
             'numberLayer'=>'required',
             'roomNumber'=>'required',
             'floor'=>'required',
+
             'exploreDesign'=>'required',
             'exploreDesignTeam'=>'required',
             'exploreDesignDate'=>'required',
             'exploreDesignBy'=>'required',
             'exploreDesignDateBy'=>'required',
+
             'ifcc'=>'required',
             'ifccTeam'=>'required',
             'ifccDate'=>'required',
+
             'wallBox'=>'required',
             'wallBoxTeam'=>'required',
+            'wallBoxDate'=>'required',
+
             'microductD'=>'required',
             'microductTeamD'=>'required',
             'microductDateD'=>'required',
+
             'microductK'=>'required',
             'microductTeamK'=>'required',
             'microductDateK'=>'required'
@@ -100,11 +114,11 @@ class ConstarutionController extends Controller
                 $this->notification['alert_type'] = 'error';
                 array_push($this->notifications,$this->notification);
             }
-            return redirect()->route('building.edit',$id)->withInput($request->input())->with('notification',$this->notifications);
+            return redirect()->route('constarution.edit',$id)->withInput($request->input())->with('notification',$this->notifications);
         }
 
-        Constarution::find($id)->update($request->all());
-        return redirect()->route('building.list');
+        constarution::find($id)->update($request->all());
+        return redirect()->route('constarution.index');
     }
 
     /**

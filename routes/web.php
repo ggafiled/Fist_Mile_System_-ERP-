@@ -43,7 +43,6 @@ Route::middleware(['auth'])->group(function () {
     ///calendar
     Route::resource('/calendar', App\Http\Controllers\CalendarController::class);
 
-
     ///progress
     Route::resource('/progress', App\Http\Controllers\ProgressController::class);
 
@@ -55,6 +54,9 @@ Route::middleware(['auth'])->group(function () {
 
     ///payment
     Route::resource('/payment', App\Http\Controllers\PaymentController::class);
+
+    ///planning
+    Route::resource('/planning', App\Http\Controllers\PlaningController::class);
 
 
 

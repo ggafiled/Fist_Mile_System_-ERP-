@@ -1,7 +1,17 @@
 @extends('adminlte::page')
 
 @section('content')
+<style>
+    th {
+        white-space: nowrap;
+    }
 
+    div.dataTables_wrapper {
+        width: 2900px;
+        margin: 0 auto;
+    }
+    th { white-space: nowrap; }
+</style>
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">
@@ -12,7 +22,7 @@
                         <thead >
                             <tr class="info">
                                 <th>#</th>
-                                <th>Building</th>
+                                <th width="20%">Building</th>
                                 <th>Tower</th>
                                 <th>Floor</th>
                                 <th>Room</th>

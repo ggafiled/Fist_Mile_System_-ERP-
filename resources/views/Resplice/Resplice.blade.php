@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-<style>
+{{-- <style>
 tfoot input {
         width: 100%;
         padding: 3px;
@@ -19,7 +19,7 @@ tfoot input {
     }
     th { white-space: nowrap; }
 
-</style>
+</style> --}}
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">
@@ -42,7 +42,7 @@ tfoot input {
                                             <th>PlanStart</th>
                                             <th>PlanComplete</th>
                                             <th>TechnicianTeamEnd</th>
-                                            {{-- <th>Action</th> --}}
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                             </div>
@@ -62,12 +62,12 @@ tfoot input {
                                  <td>{{$row->planStart}}</td>
                                  <td>{{$row->planComplete}}</td>
                                  <td>{{$row->technicianTeamEnd}}</td>
-                                 {{-- <td>
-                                    <form action="{{ route('building.edit',$row->id) }}" method="PUT">
+                                 <td>
+                                    <form action="{{ route('resplice.edit',$row->id) }}" method="PUT">
                                         @csrf @method('HEAD')
                                       <input type="submit" value='Edit'  " class="btn btn-warning ">
                                     </form>
-                                </td> --}}
+                                </td>
                                 </tr>
                             @endforeach
                                 </tbody>

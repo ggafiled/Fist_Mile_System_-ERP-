@@ -3,49 +3,14 @@
 return [
 
 
-    /*
-    |--------------------------------------------------------------------------
-    | Title
-    |--------------------------------------------------------------------------
-    |
-    | Here you can change the default title of your admin panel.
-    |
-    | For detailed instructions you can look the title section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/6.-Basic-Configuration
-    |
-    */
-
     'title' => 'Fist Mile ERP System',
     'title_prefix' => '',
     'title_postfix' => '',
 
 
-    /*
-    |--------------------------------------------------------------------------
-    | Favicon
-    |--------------------------------------------------------------------------
-    |
-    | Here you can activate the favicon.
-    |
-    | For detailed instructions you can look the favicon section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/6.-Basic-Configuration
-    |
-    */
-
     'use_ico_only' => false,
     'use_full_favicon' => false,
 
-    /*
-    |--------------------------------------------------------------------------
-    | Logo
-    |--------------------------------------------------------------------------
-    |
-    | Here you can change the logo of your admin panel.
-    |
-    | For detailed instructions you can look the logo section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/6.-Basic-Configuration
-    |
-    */
 
     'logo' => '<b>FIRST MILE System </b>',
     'logo_img' => 'https://sv1.picz.in.th/images/2021/02/11/o138qN.png',
@@ -54,17 +19,6 @@ return [
     'logo_img_xl_class' => 'brand-image-xs',
     // 'logo_img_alt' => 'FIRST MILE',
 
-    /*
-    |--------------------------------------------------------------------------
-    | User Menu
-    |--------------------------------------------------------------------------
-    |
-    | Here you can activate and change the user menu.
-    |
-    | For detailed instructions you can look the user menu section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/6.-Basic-Configuration
-    |
-    */
 
     'usermenu_enabled' => true,
     'usermenu_header' => true,
@@ -73,17 +27,6 @@ return [
     'usermenu_desc' => false,
     'usermenu_profile_url' => true,
 
-    /*
-    |--------------------------------------------------------------------------
-    | Layout
-    |--------------------------------------------------------------------------
-    |
-    | Here we change the layout of your admin panel.
-    |
-    | For detailed instructions you can look the layout section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/7.-Layout-and-Styling-Configuration
-    |
-    */
 
     'layout_topnav' => null,
     'layout_boxed' => null,
@@ -91,17 +34,6 @@ return [
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
 
-    /*
-    |--------------------------------------------------------------------------
-    | Authentication Views Classes
-    |--------------------------------------------------------------------------
-    |
-    | Here you can change the look and behavior of the authentication views.
-    |
-    | For detailed instructions you can look the auth classes section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/7.-Layout-and-Styling-Configuration
-    |
-    */
 
     'classes_auth_card' => 'card-outline card-primary',
     'classes_auth_header' => '',
@@ -110,17 +42,6 @@ return [
     'classes_auth_icon' => '',
     'classes_auth_btn' => 'btn-flat btn-primary',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Admin Panel Classes
-    |--------------------------------------------------------------------------
-    |
-    | Here you can change the look and behavior of the admin panel.
-    |
-    | For detailed instructions you can look the admin panel classes here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/7.-Layout-and-Styling-Configuration
-    |
-    */
 
     'classes_body' => '',
     'classes_brand' => '',
@@ -134,17 +55,6 @@ return [
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Sidebar
-    |--------------------------------------------------------------------------
-    |
-    | Here we can modify the sidebar of the admin panel.
-    |
-    | For detailed instructions you can look the sidebar section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/7.-Layout-and-Styling-Configuration
-    |
-    */
 
     'sidebar_mini' => false,
     'sidebar_collapse' => false,
@@ -156,18 +66,6 @@ return [
     'sidebar_nav_accordion' => true,
     'sidebar_nav_animation_speed' => 300,
 
-    /*
-    |--------------------------------------------------------------------------
-    | Control Sidebar (Right Sidebar)
-    |--------------------------------------------------------------------------
-    |
-    | Here we can modify the right sidebar aka control sidebar of the admin panel.
-    |
-    | For detailed instructions you can look the right sidebar section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/7.-Layout-and-Styling-Configuration
-    |
-    */
-
     'right_sidebar' => false,
     'right_sidebar_icon' => 'fas fa-cogs',
     'right_sidebar_theme' => 'dark',
@@ -175,18 +73,6 @@ return [
     'right_sidebar_push' => true,
     'right_sidebar_scrollbar_theme' => 'os-theme-ligh',
     'right_sidebar_scrollbar_auto_hide' => 'l',
-
-    /*
-    |--------------------------------------------------------------------------
-    | URLs
-    |--------------------------------------------------------------------------
-    |
-    | Here we can modify the url settings of the admin panel.
-    |
-    | For detailed instructions you can look the urls section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/6.-Basic-Configuration
-    |
-    */
 
     'use_route_url' => false,
     'dashboard_url' => 'home',
@@ -197,51 +83,17 @@ return [
     'password_email_url' => 'password/email',
     'profile_url' => true,
 
-    /*
-    |--------------------------------------------------------------------------
-    | Laravel Mix
-    |--------------------------------------------------------------------------
-    |
-    | Here we can enable the Laravel Mix option for the admin panel.
-    |
-    | For detailed instructions you can look the laravel mix section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/9.-Other-Configuration
-    |
-    */
-
     'enabled_laravel_mix' => false,
     'laravel_mix_css_path' => 'css/app.css',
     'laravel_mix_js_path' => 'js/app.js',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Menu Items
-    |--------------------------------------------------------------------------
-    |
-    | Here we can modify the sidebar/top navigation of the admin panel.
-    |
-    | For detailed instructions you can look here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/8.-Menu-Configuration
-    |
-    */
     'menu' => [
         [
             'text' => 'search',
             'search' => true,
             'topnav' => true,
         ],
-        // [
-        //     'text' => 'blog',
-        //     'url'  => 'admin/blog',
-        //     'can'  => 'manage-blog',
-        // ],
-        // [
-        //     'text'        => 'pages',
-        //     'url'         => 'admin/pages',
-        //     'icon'        => 'far fa-fw fa-file',
-        //     'label'       => 4,
-        //     'label_color' => 'success',
-        // ],
+
         ['header' => 'MENU'],
         [
             'text' => 'Desh Board ',
@@ -254,11 +106,6 @@ return [
             'icon' => 'fas fa-fw fas fa-building',
             'can'  => ['building-create|building-read|building-update'],
             'submenu' => [
-                // [
-                //     'text' => 'Add Building',
-                //     'url'  => '/building/create',
-                //     'can'  => ['building-create']
-                // ],
                 [
                     'text' => 'Building Management',
                     'url'  => '/building',
@@ -269,6 +116,53 @@ return [
                     'url'  => '/building/list',
                     'can'  => ['building-read']
                 ],
+            ]
+        ],
+        [
+            'text' => 'Fm Management',
+            'icon' => 'fas fa-fw fas fa-building',
+            'can'  => ['building-create|building-read|building-update'],
+            'submenu' => [
+                [
+                    'text' => 'Planing Management',
+                    'url'  => '/planning',
+                    'can'  => ['building-create']
+                ],
+                // [
+                //     'text' => 'Mainten Management',
+                //     'url'  => '',
+                //     'can'  => ['building-read']
+                // ],
+                // [
+                //     'text' => 'AIS Management',
+                //     'url'  => '/',
+                //     'can'  => ['building-read']
+                // ],
+                // [
+                //     'text' => '3BB Management',
+                //     'url'  => '/',
+                //     'can'  => ['building-read']
+                // ],
+                // [
+                //     'text' => 'FiberNet Management',
+                //     'url'  => '/',
+                //     'can'  => ['building-read']
+                // ],
+                // [
+                //     'text' => 'TOT Management',
+                //     'url'  => '/',
+                //     'can'  => ['building-read']
+                // ],
+                // [
+                //     'text' => 'TXRX Management',
+                //     'url'  => '/',
+                //     'can'  => ['building-read']
+                // ],
+                // [
+                //     'text' => 'NonIPS Management',
+                //     'url'  => '/',
+                //     'can'  => ['building-read']
+                // ],
             ]
         ],
         [
@@ -332,73 +226,8 @@ return [
             'url'  => 'logout',
             'icon' => 'fas fa-sign-out-alt',
         ],
-        // [
-        //     'text'    => 'multilevel',
-        //     'icon'    => 'fas fa-fw fa-share',
-        //     'submenu' => [
-        //         [
-        //             'text' => 'Building List',
-        //             'url'  => '#',
-        //         ],
-        //         [
-        //             'text'    => 'level_one',
-        //             'url'     => '#',
-        //             'submenu' => [
-        //                 [
-        //                     'text' => 'level_two',
-        //                     'url'  => '#',
-        //                 ],
-        //                 [
-        //                     'text'    => 'level_two',
-        //                     'url'     => '#',
-        //                     'submenu' => [
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                     ],
-        //                 ],
-        //             ],
-        //         ],
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        // ],
-        // ],
-        // ['header' => 'labels'],
-        // [
-        //     'text'       => 'important',
-        //     'icon_color' => 'red',
-        //     'url'        => '#',
-        // ],
-        // [
-        //     'text'       => 'warning',
-        //     'icon_color' => 'yellow',
-        //     'url'        => '#',
-        // ],
-        // [
-        //     'text'       => 'information',
-        //     'icon_color' => 'cyan',
-        //     'url'        => '#',
-        // ],
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Menu Filters
-    |--------------------------------------------------------------------------
-    |
-    | Here we can modify the menu filters of the admin panel.
-    |
-    | For detailed instructions you can look the menu filters section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/8.-Menu-Configuration
-    |
-    */
 
     'filters' => [
         App\Filter\GateFilter::class,
@@ -411,17 +240,7 @@ return [
         JeroenNoten\LaravelAdminLte\Menu\Filters\DataFilter::class,
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Plugins Initialization
-    |--------------------------------------------------------------------------
-    |
-    | Here we can modify the plugins used inside the admin panel.
-    |
-    | For detailed instructions you can look the plugins section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/9.-Other-Configuration
-    |
-    */
+
 
     'plugins' => [
         'Datatables' => [
@@ -713,16 +532,6 @@ return [
         ]
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Livewire
-    |--------------------------------------------------------------------------
-    |
-    | Here we can enable the Livewire support.
-    |
-    | For detailed instructions you can look the livewire here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/9.-Other-Configuration
-    */
 
     'livewire' => true,
 ];
