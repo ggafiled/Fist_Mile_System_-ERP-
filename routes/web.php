@@ -56,6 +56,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/payment', App\Http\Controllers\PaymentController::class);
 
     ///planning
+    Route::get('/planning/list', [App\Http\Controllers\PlaningController::class, 'showPlaningList'])->name('planning.list');
     Route::resource('/planning', App\Http\Controllers\PlaningController::class);
 
 

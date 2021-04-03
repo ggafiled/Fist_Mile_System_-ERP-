@@ -14,10 +14,20 @@ class PlaningController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    protected $notification, $notifications = [];
+
+    public function __construct(){
+
+        $this->notification = array('message' => '','alert_type' => 'success');
+        $this->middleware('auth');
+        // $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
+       //  $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
+    }
     public function index()
     {
         $data = planing::all();
-        return view('fmManagement.planingTable',['data' => $data]);
+        return view('fmManagement.planingTable', ['data' => $data]);
     }
 
     /**
@@ -27,7 +37,7 @@ class PlaningController extends Controller
      */
     public function create()
     {
-        //
+        return view('fmManagement.addPlaning');
     }
 
     /**
@@ -40,35 +50,36 @@ class PlaningController extends Controller
     {
         $request->validate([
             //    $validator = Validator::make($request->validate(),[
-                    'name'=>'required',
-                    'lastName'=>'required',
-                    'phoneNumber1'=>'required',
-                    'phoneNumber2'=>'required',
-                    'buildingId'=>'required',
-                    'numberLayer'=>'required',
-                    'floor'=>'required',
-                    'roomNumber'=>'required',
-                    'isp'=>'required',
-                    'ispCode'=>'required',
-                    'memberNumber'=>'required',
-                    'Fees'=>'required',
-                    'confirming'=>'required',
-                    'Team'=>'required',
-                    'date'=>'required',
-                    'time'=>'required',
-                    'status'=>'required',
-                    'subStatus'=>'required',
-                    'dateConnect'=>'required',
-                    'dateDisconnect'=>'required',
-                ]);
-                Planing::create($request->all());
-                return redirect()->route('building.list');
+            'name' => 'required',
+            'lastName' => 'required',
+            'phoneNumber1' => 'required',
+            'phoneNumber2' => 'required',
+            'buildingId' => 'required',
+            'numberLayer' => 'required',
+            'floor' => 'required',
+            'roomNumber' => 'required',
+            'isp' => 'required',
+            'ispCode' => 'required',
+            'memberNumber' => 'required',
+            'Fees' => 'required',
+            'confirming' => 'required',
+            'Team' => 'required',
+            'remark' => 'required',
+            'date' => 'required',
+            'time' => 'required',
+            'status' => 'required',
+            'subStatus' => 'required',
+            'dateConnect' => 'required',
+            'dateDisconnect' => 'required',
+        ]);
+        Planing::create($request->all());
+        return redirect()->route('planning.list');
     }
 
     public function showPlaningList()
     {
         $data = Planing::all();
-        return view('fmManagement.planingTable',['data' => $data]);
+        return view('fmManagement.tablePlanninglist', ['data' => $data]);
     }
 
     /**
@@ -90,7 +101,8 @@ class PlaningController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data=Planing::find($id);
+        return view('fmManagement.editPlaning',['data' => $data]);
     }
 
     /**
@@ -102,7 +114,41 @@ class PlaningController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator =  Validator::make($request->all(), [
+            'name' => 'required',
+            'lastName' => 'required',
+            'phoneNumber1' => 'required',
+            'phoneNumber2' => 'required',
+            'buildingId' => 'required',
+            'numberLayer' => 'required',
+            'floor' => 'required',
+            'roomNumber' => 'required',
+            'isp' => 'required',
+            'ispCode' => 'required',
+            'memberNumber' => 'required',
+            'Fees' => 'required',
+            'confirming' => 'required',
+            'Team' => 'required',
+            'remark' => 'required',
+            'date' => 'required',
+            'time' => 'required',
+            'status' => 'required',
+            'subStatus' => 'required',
+            'dateConnect' => 'required',
+            'dateDisconnect' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            foreach ($validator->errors()->all() as $error) {
+                $this->notification['message'] = $error;
+                $this->notification['alert_type'] = 'error';
+                array_push($this->notifications, $this->notification);
+            }
+            return redirect()->route('planning.edit', $id)->withInput($request->input())->with('notification', $this->notifications);
+        }
+
+        planing::find($id)->update($request->all());
+        return redirect()->route('planning.index');
     }
 
     /**
@@ -113,6 +159,7 @@ class PlaningController extends Controller
      */
     public function destroy($id)
     {
-        //
+        planing::find($id)->delete();
+        return redirect()->back();
     }
 }

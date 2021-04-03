@@ -1,6 +1,15 @@
 @extends('adminlte::page')
 
 @section('content')
+<style>
+td.details-control {
+    background: url('../resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../resources/details_close.png') no-repeat center center;
+}
+</style>
 <div class="row justify-content-center">
     <div class="col-md">
         <div class="card">

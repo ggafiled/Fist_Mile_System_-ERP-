@@ -10,7 +10,7 @@ class Planing extends Model
     protected $fillable = [
         'name', 'lastName', 'phoneNumber1', 'phoneNumber2', 'buildingId',
         'numberLayer', 'floor', 'roomNumber',    'isp', 'ispCode', 'memberNumber',
-        'Fees', 'confirming', 'Team',    'date',    'time',    'status', 'subStatus',
+        'Fees', 'confirming', 'Team','remark',    'date',    'time',    'status', 'subStatus',
         'dateConnect', 'dateDisconnect', 'update_at'
     ];
 }

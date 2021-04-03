@@ -119,13 +119,18 @@ return [
             ]
         ],
         [
-            'text' => 'Fm Management',
+            'text' => 'Planning List',
             'icon' => 'fas fa-fw fas fa-building',
             'can'  => ['building-create|building-read|building-update'],
             'submenu' => [
                 [
                     'text' => 'Planing Management',
                     'url'  => '/planning',
+                    'can'  => ['building-create']
+                ],
+                [
+                    'text' => 'Planing List Table',
+                    'url'  => '/planning/list',
                     'can'  => ['building-create']
                 ],
                 // [
@@ -417,6 +422,11 @@ return [
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//www.jqueryscript.net/demo/Excel-like-Bootstrap-Table-Sorting-Filtering-Plugin/excel-bootstrap-table-filter-style.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css',
                 ],
             ],
         ],

@@ -20,40 +20,25 @@ class CreatePlaningsTable extends Migration
             $table->string('lastName')->nullable();
             $table->integer('phoneNumber1')->nullable();
             $table->integer('phoneNumber2')->nullable();
-            $table->string('buildingId')->index();
-            $table->string('numberLayer')->index();
-            $table->integer('floor')->index();
-            $table->string('roomNumber')->index();
+            $table->string('buildingId')->nullable();
+            $table->string('numberLayer')->nullable();
+            $table->integer('floor')->nullable();
+            $table->string('roomNumber')->nullable();
             $table->string('isp')->nullable();
             $table->string('ispCode')->nullable();
             $table->integer('memberNumber')->nullable();
             $table->string('Fees')->nullable();
             $table->string('confirming')->nullable();
             $table->string('Team')->nullable();
+            $table->string('remark')->nullable();
             $table->date('date')->nullable();
-            $table->timestamp('time')->nullable();
+            $table->time('time')->nullable();
             $table->string('status')->nullable();
             $table->string('subStatus')->nullable();
             $table->date('dateConnect')->nullable();
             $table->date('dateDisconnect')->nullable();
             $table->timestamps();
 
-            $table->foreign('buildingId')
-            ->references('buildingId')
-            ->on('buildings')
-            ->onDelete('cascade');
-            $table->foreign('numberLayer')
-            ->references('numberLayer')
-            ->on('buildings')
-            ->onDelete('cascade');
-            $table->foreign('floor')
-            ->references('floor')
-            ->on('buildings')
-            ->onDelete('cascade');
-            $table->foreign('roomNumber')
-            ->references('roomNumber')
-            ->on('buildings')
-            ->onDelete('cascade');
         });
     }
 

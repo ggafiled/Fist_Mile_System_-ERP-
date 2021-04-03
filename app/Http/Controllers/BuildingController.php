@@ -95,7 +95,7 @@ class BuildingController extends Controller
     }
 
     public function showBuildingList()
-    {
+{
         $data = Building::all();
         return view('building.tableBuildingList',['data' => $data]);
     }
