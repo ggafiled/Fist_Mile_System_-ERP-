@@ -117,7 +117,7 @@
                                         {{-- {!! Form::text('fnProgress',$data->fnProgress,["class"=>"form-control"])!!} --}}
                                     </div>
                                 </div>
-                                <div class="col-sm-3">
+                            <div class="col-sm-3">
                                     <div class="form-group">
                                         {!! Form::label('Sinet วันวางโครงข่าย :') !!}
                                         {!! Form::date('fnDate', $data->fnDate, ['class' => 'form-control']) !!}

@@ -61,8 +61,8 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            {!! Form::label('Name/Company') !!}
-                                            {!! Form::text('buildingId', null, ['class' => 'form-control', 'placeholder' => 'BuildingName']) !!}
+                                            {!! Form::label('Building Name') !!}
+                                            <select class="buildingId form-control" id="buildingId" name="buildingId"></select>
                                         </div>
                                     </div>
                                 </div>
@@ -193,3 +193,28 @@
 </div>
 
 @endsection
+
+@section('adminlte_js')
+<script type="text/javascript">
+    $('#buildingId').select2({
+          placeholder: 'Select an building name...',
+          ajax: {
+            url: '/building-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function (data) {
+              return {
+                results:  $.map(data, function (item) {
+                      return {
+                          text: item.buildingId,
+                          id: item.buildingId
+                      }
+                  })
+              };
+            },
+            cache: true
+          }
+        });
+    </script>
+@endsection
+

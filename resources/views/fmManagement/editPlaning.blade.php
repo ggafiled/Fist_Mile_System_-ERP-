@@ -50,8 +50,10 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        {!! Form::label('Name/Company') !!}
-                                        {!! Form::text('buildingId', $data->buildingId, ['class' => 'form-control', 'placeholder' => 'BuildingName']) !!}
+                                        {!! Form::label('Building Name') !!}
+                                        <select class="buildingId form-control" id="buildingId" name="buildingId"></select>
+                                        {{-- {!! Form::select('buildingId', $data->trueProgress, ['class' => 'buildingId form-control']) !!} --}}
+                                        {{-- {!! Form::text('buildingId', $data->buildingId, ['class' => 'form-control', 'placeholder' => 'BuildingName']) !!} --}}
                                     </div>
                                 </div>
                             </div>
@@ -180,6 +182,26 @@
 @endsection
 @section('adminlte_js')
     @include('partials.notification')
-    <script src=" {{ asset('js/app.js') }}"></script>
+    <script type="text/javascript">
+        $('#buildingId').select2({
+              placeholder: 'Select an building name...',
+              ajax: {
+                url: '/building-autocomplete-ajax',
+                dataType: 'json',
+                delay: 250,
+                processResults: function (data) {
+                  return {
+                    results:  $.map(data, function (item) {
+                          return {
+                              text: item.buildingId,
+                              id: item.buildingId
+                          }
+                      })
+                  };
+                },
+                cache: true
+              }
+            });
+        </script>
 @endsection
 

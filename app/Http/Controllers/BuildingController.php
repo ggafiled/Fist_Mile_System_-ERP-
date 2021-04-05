@@ -101,6 +101,26 @@ class BuildingController extends Controller
     }
 
     /**
+     * return a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function dataAjax(Request $request )
+    {
+        $data = [];
+
+        if($request->has('q')){
+            $search = $request->q;
+            $data =Building::select("id","buildingId")
+            		->where('buildingId','LIKE',"%$search%")
+            		->get();
+        }else{
+            $data =Building::select("id","buildingId")->get();
+        }
+        return response()->json($data);
+    }
+
+    /**
      * Display the specified resource.
      *
      * @param  int  $id
@@ -136,7 +156,7 @@ class BuildingController extends Controller
     public function update(Request $request, $id)
     {
         $validator =  Validator::make($request->all(),[
-            'building'=>'required',
+            'buildingId'=>'required',
             'fmCode'=>'required',
             'contactName'=>'required',
             'phone'=>'required',
