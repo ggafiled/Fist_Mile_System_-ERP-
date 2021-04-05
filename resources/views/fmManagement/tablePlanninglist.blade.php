@@ -12,7 +12,7 @@
         }
 
         div.dataTables_wrapper {
-            width: 4500px;
+            width: 3000px;
             margin: 0 auto;
         }
 
@@ -40,27 +40,27 @@
                             <thead>
                                 <tr class="info">
                                     <th width="1%">#</th>
-                                    <th width="4%">Name/Company</th>
-                                    <th width="4%">LastName</th>
-                                    <th width="3%">Tel(main)</th>
-                                    <th width="3%">Tel(reserve)</th>
-                                    <th width="5%">BuildingName</th>
+                                    <th width="2%">Name/Company</th>
+                                    <th width="2%">LastName</th>
+                                    <th width="1%">Tel(main)</th>
+                                    <th width="1%">Tel(reserve)</th>
+                                    <th width="1%">BuildingName</th>
                                     <th width="1%">Building No</th>
-                                    <th width="4%">FLOOR</th>
-                                    <th width="4%">ROOM</th>
-                                    <th width="3%">ISP(main)</th>
-                                    <th width="3%">ISP CODE</th>
-                                    <th width="5%">MEMBER NUMBER</th>
-                                    <th width="5%">FEES</th>
-                                    <th width="5%">CONFIRMING</th>
-                                    <th width="5%">TEAM</th>
-                                    <th width="5%">DATE</th>
-                                    <th width="5%">TIME</th>
-                                    <th width="5%">REMARK</th>
-                                    <th width="5%">STATUS</th>
-                                    <th width="5%">SUB STATUS</th>
-                                    <th width="5%">DATE CONNECT</th>
-                                    <th width="5%">DATE DISCONNECT</th>
+                                    <th width="1%">FLOOR</th>
+                                    <th width="1%">ROOM</th>
+                                    <th width="1%">ISP(main)</th>
+                                    <th width="1%">ISP CODE</th>
+                                    <th width="1%">MEMBER NUMBER</th>
+                                    <th width="1%">FEES</th>
+                                    <th width="1%">CONFIRMING</th>
+                                    <th width="1%">TEAM</th>
+                                    <th width="1%">DATE</th>
+                                    <th width="1%">TIME</th>
+                                    <th width="1%">REMARK</th>
+                                    <th width="1%">STATUS</th>
+                                    <th width="1%">SUB STATUS</th>
+                                    <th width="1%">DATE CONNECT</th>
+                                    <th width="1%">DATE DISCONNECT</th>
                                 </tr>
                             </thead>
                             <tbody>

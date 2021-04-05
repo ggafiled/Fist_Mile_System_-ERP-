@@ -95,14 +95,14 @@
                                         <input type="submit" value='edit' " class=" btn btn-warning ">
                                     </form>
                                 </td>
-                                @role('superadministrator')
+                                {{-- @role('superadministrator')
                             <td>
                                 <form action="{{route('building.destroy',$row->id)}}" method="post">
                                     @csrf @method('DELETE')
                                   <input type="submit" value='ลบ' class="btn btn-danger deleteForm">
                                 </form>
                             </td>
-                            @endrole
+                            @endrole --}}
                                 </tr>
                              @endforeach
                     </tbody>

@@ -120,7 +120,7 @@ return [
         ],
         [
             'text' => 'Planning List',
-            'icon' => 'fas fa-fw fas fa-building',
+            'icon' => 'fas fa-fw far fa-address-book',
             'can'  => ['building-create|building-read|building-update'],
             'submenu' => [
                 [
@@ -133,43 +133,27 @@ return [
                     'url'  => '/planning/list',
                     'can'  => ['building-create']
                 ],
-                // [
-                //     'text' => 'Mainten Management',
-                //     'url'  => '',
-                //     'can'  => ['building-read']
-                // ],
-                // [
-                //     'text' => 'AIS Management',
-                //     'url'  => '/',
-                //     'can'  => ['building-read']
-                // ],
-                // [
-                //     'text' => '3BB Management',
-                //     'url'  => '/',
-                //     'can'  => ['building-read']
-                // ],
-                // [
-                //     'text' => 'FiberNet Management',
-                //     'url'  => '/',
-                //     'can'  => ['building-read']
-                // ],
-                // [
-                //     'text' => 'TOT Management',
-                //     'url'  => '/',
-                //     'can'  => ['building-read']
-                // ],
-                // [
-                //     'text' => 'TXRX Management',
-                //     'url'  => '/',
-                //     'can'  => ['building-read']
-                // ],
-                // [
-                //     'text' => 'NonIPS Management',
-                //     'url'  => '/',
-                //     'can'  => ['building-read']
-                // ],
-            ]
+            ],
+
         ],
+        // [
+        //     'text' => 'Fm List',
+        //     'icon' => 'fas fa-fw far fa-kaaba',
+        //     'can'  => ['building-create|building-read|building-update'],
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Fm Management',
+        //             'url'  => '/',
+        //             'can'  => ['building-create']
+        //         ],
+        //         [
+        //             'text' => 'Planing List Table',
+        //             'url'  => '/',
+        //             'can'  => ['building-create']
+        //         ],
+        //     ],
+
+        // ],
         [
             'text' => 'Status Opertor',
             'url'  => '/progress',
