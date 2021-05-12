@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAddusersTable extends Migration
+class CreateTeamsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateAddusersTable extends Migration
      */
     public function up()
     {
-        Schema::create('addusers', function (Blueprint $table) {
+        Schema::enableForeignKeyConstraints();
+        Schema::create('teams', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('project_id')->unsigned();
+            $table->string('teamName')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +29,7 @@ class CreateAddusersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('addusers');
+        Schema::disableForeignKeyConstraints();
+        Schema::dropIfExists('teams');
     }
 }

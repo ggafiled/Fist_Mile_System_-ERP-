@@ -6,13 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Planing extends Model
+class Team extends Model
 {
     use SoftDeletes;
     protected $fillable = [
         'building_id',
-        'buildingUnit',
-        'floor',
-        'room',
+        'teamName',
     ];
+
+    public function buildings()
+	{
+		return $this->hasMany('App\Models\Building','id','building_id');
+	}
 }

@@ -5,6 +5,7 @@
             font-family: Tahoma, Verdana, sans-serif;
             font-weight: bold;
         }
+
     </style>
     {!! Form::open(['route' => ['planning.update', $data->id], 'method' => 'put']) !!}
     <div class="row justify-content-center">
@@ -18,7 +19,7 @@
                                 <div class="col-sm-2">
                                     <div class="form-group">
                                         {!! Form::label('ID') !!}
-                                        {!! Form::text('id',$data->id,["class"=>"form-control",'disabled'])!!}
+                                        {!! Form::text('id', $data->id, ['class' => 'form-control', 'disabled']) !!}
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
@@ -36,13 +37,13 @@
                                 <div class="col-sm-2">
                                     <div class="form-group">
                                         {!! Form::label('phoneNumber1') !!}
-                                        {!! Form::text('phoneNumber1',$data->phoneNumber1, ['class' => 'form-control', 'placeholder' => 'phoneNumber1']) !!}
+                                        {!! Form::text('phoneNumber1', $data->phoneNumber1, ['class' => 'form-control', 'placeholder' => 'phoneNumber1']) !!}
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="form-group">
                                         {!! Form::label('phoneNumber2') !!}
-                                        {!! Form::text('phoneNumber2',$data->phoneNumber2, ['class' => 'form-control', 'placeholder' => 'phoneNumber2']) !!}
+                                        {!! Form::text('phoneNumber2', $data->phoneNumber2, ['class' => 'form-control', 'placeholder' => 'phoneNumber2']) !!}
                                     </div>
                                 </div>
                             </div>
@@ -170,12 +171,11 @@
                             </div>
                             <input type="submit" value="บันทึกแก้ไข " class="btn btn-primary">
                             <a href="/planning" class="btn btn-success my-2">กลับ</a>
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
     {!! Form::close() !!}
 
@@ -184,24 +184,24 @@
     @include('partials.notification')
     <script type="text/javascript">
         $('#buildingId').select2({
-              placeholder: 'Select an building name...',
-              ajax: {
+            placeholder: 'Select an building name...',
+            ajax: {
                 url: '/building-autocomplete-ajax',
                 dataType: 'json',
                 delay: 250,
-                processResults: function (data) {
-                  return {
-                    results:  $.map(data, function (item) {
-                          return {
-                              text: item.buildingId,
-                              id: item.buildingId
-                          }
-                      })
-                  };
+                processResults: function(data) {
+                    return {
+                        results: $.map(data, function(item) {
+                            return {
+                                text: item.buildingId,
+                                id: item.buildingId
+                            }
+                        })
+                    };
                 },
                 cache: true
-              }
-            });
-        </script>
-@endsection
+            }
+        });
 
+    </script>
+@endsection

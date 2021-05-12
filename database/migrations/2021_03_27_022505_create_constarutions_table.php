@@ -15,34 +15,37 @@ class CreateConstarutionsTable extends Migration
     {
         Schema::enableForeignKeyConstraints();
         Schema::create('constarutions', function (Blueprint $table) {
-            $table->id();
-            $table->string('buildingId')->index();
-            $table->integer('numberLayer')->nullable();
-            $table->integer('floor')->nullable();
-            $table->integer('roomNumber')->nullable();
-
-            $table->string('exploreDesign')->nullable();
-            $table->string('exploreDesignTeam')->nullable();
-            $table->date('exploreDesignDate')->nullable();
-            $table->string('exploreDesignBy')->nullable();
-            $table->date('exploreDesignDateBy')->nullable();
+            $table->bigIncrements('id');
+            $table->bigInteger('building_id')->unsigned(); //ชื่ออาคารในตาราง building
+            $table->string('surveyDesing')->nullable(); //survey โดยใคร
+            $table->timestamp('surveyDesingDate')->nullable(); //วันออกแบบ survey
+            $table->timestamp('surveyDesingDateBy')->nullable(); //เวลาออกแบบ survey
 
             $table->string('ifcc')->nullable();
-            $table->string('ifccTeam')->nullable();
-            $table->date('ifccDate')->nullable();
-
+            $table->timestamp('ifccDate')->nullable();
             $table->string('wallBox')->nullable();
-            $table->string('wallBoxTeam')->nullable();
-            $table->date('wallBoxDate')->nullable();
+            $table->timestamp('wallBoxDate')->nullable();
 
-            $table->string('microductD')->nullable();
-            $table->string('microductTeamD')->nullable();
-            $table->date('microductDateD')->nullable();
+            $table->string('type')->nullable();
 
-            $table->string('microductK')->nullable();
-            $table->string('microductTeamK')->nullable();
-            $table->date('microductDateK')->nullable();
+            $table->string('microductD')->nullable(); //วาง microduct แนวดิ่ง
+            $table->timestamp('microductDateD')->nullable(); //วันวาง microduct แนวดิ่ง
+
+            $table->string('microductK')->nullable(); //วาง microduct แนวขว้าง
+            $table->timestamp('microductDateK')->nullable(); //วันวาง microduct แนวขว้าง
+
+            $table->string('fiberConvertion')->nullable(); //วันวาง microduct แนวขว้าง
+            $table->timestamp('fiberConvertionDateD')->nullable(); //วันวาง microduct แนวขว้าง
+
+            $table->string('blow')->nullable(); //สถานะ Blow
+            $table->string('splice')->nullable(); //สถานะ Splice
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->foreign('building_id')
+            ->references('id')
+            ->on('buildings')
+            ->onDelete('cascade');
         });
     }
 

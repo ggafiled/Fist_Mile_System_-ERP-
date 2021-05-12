@@ -4,22 +4,40 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Constarution extends Model
 {
+    use SoftDeletes;
     protected $fillable = [
-        'buildingId','numberLayer','roomNumber','floor',
+        'building_id',
+        'surveyDesing',
+        'surveyDesingDate',
+        'surveyDesingDateBy',
 
-        'exploreDesign','exploreDesignTeam','exploreDesignDate',
+        'ifcc',
+        'ifccDate',
 
-        'exploreDesignBy','exploreDesignDateBy',
+        'wallBox',
+        'wallBoxDate',
 
-        'ifcc','ifccTeam','ifccDate',
+        'type',
+        'microductD',
+        'microductDateD',
 
-        'wallBox','wallBoxDate','wallBoxTeam',
+        'microductK',
+        'microductDateK',
 
-        'microductD','microductTeamD','microductDateD',
+        'fiberConvertion',
+        'fiberConvertionDateD',
 
-        'microductK','microductTeamK','microductDateK',
+        'blow',
+        'splice',
     ];
+    public function building()
+	{
+		return $this->hasOne('App\Models\Building','id','building_id');
+	}
+
+
 }

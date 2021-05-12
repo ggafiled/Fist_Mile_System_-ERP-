@@ -1,33 +1,45 @@
 @extends('adminlte::page')
 
 @section('content')
-<style>
-    /* h3 {
-        font-family: Tahoma, Verdana, sans-serif;
-        font-weight: bold;
-      } */
-</style>
-<ul>
-    @if ($errors->all())
-    <ul class="alert alert-danger">
-      @foreach ($errors->all() as $error)
-        <li>
-           {{$error}}
-        </li>
-      @endforeach
+    <style>
+        /* h3 {
+            font-family: Tahoma, Verdana, sans-serif;
+            font-weight: bold;
+          } */
+
+    </style>
+    <ul>
+        @if ($errors->all())
+            <ul class="alert alert-danger">
+                @foreach ($errors->all() as $error)
+                    <li>
+                        {{ $error }}
+                    </li>
+                @endforeach
+            </ul>
+        @endif
     </ul>
-    @endif
-</ul>
-<div class="row justify-content-center">
-    <div class="col-md">
-        <div class="card ">
-            <div class="card-header text-white bg-dark"><h>{{ __('ADD PLANNING LIST') }}</div>
+    <div class="row justify-content-center">
+        <div class="col-md">
+            <div class="card ">
+                <div class="card-header text-white bg-dark">
+                    <h>{{ __('Create Fm Buildings') }}
+                </div>
                 <div class="card-body">
                     <div class="form-group">
                         <div class="container-fluid mx-auto mt-2 mb-2">
                             <form action="{{ route('planning.store') }}" method="POST">
                                 {{-- <form action="{{ route('planing.store') }}" method="POST"> --}}
                                 @csrf
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            {!! Form::label('Select Internet Network :') !!}
+                                            {!! Form::select('trueProgress', ['Planing' => 'Planing', 'True' => 'True', '3BB' => '3BB', 'AIS' => 'AIS'], null, ['class' => 'form-control']) !!}
+                                            {{-- {!! Form::text('trueProgress',$data->trueProgress,["class"=>"form-control"])!!} --}}
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
@@ -62,7 +74,8 @@
                                     <div class="col-sm-12">
                                         <div class="form-group">
                                             {!! Form::label('Building Name') !!}
-                                            <select class="buildingId form-control" id="buildingId" name="buildingId"></select>
+                                            <select class="buildingId form-control" id="buildingId"
+                                                name="buildingId"></select>
                                         </div>
                                     </div>
                                 </div>
@@ -185,36 +198,36 @@
                 </div>
             </div>
             </form>
-                    </div>
-                </div>
-             </div>
         </div>
     </div>
-</div>
+    </div>
+    </div>
+    </div>
+    </div>
 
 @endsection
 
 @section('adminlte_js')
-<script type="text/javascript">
-    $('#buildingId').select2({
-          placeholder: 'Select an building name...',
-          ajax: {
-            url: '/building-autocomplete-ajax',
-            dataType: 'json',
-            delay: 250,
-            processResults: function (data) {
-              return {
-                results:  $.map(data, function (item) {
-                      return {
-                          text: item.buildingId,
-                          id: item.buildingId
-                      }
-                  })
-              };
-            },
-            cache: true
-          }
+    <script type="text/javascript">
+        $('#buildingId').select2({
+            placeholder: 'Select an building name...',
+            ajax: {
+                url: '/building-autocomplete-ajax',
+                dataType: 'json',
+                delay: 250,
+                processResults: function(data) {
+                    return {
+                        results: $.map(data, function(item) {
+                            return {
+                                text: item.buildingId,
+                                id: item.buildingId
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
         });
+
     </script>
 @endsection
-

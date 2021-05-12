@@ -101,26 +101,6 @@ class BuildingController extends Controller
     }
 
     /**
-     * return a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function dataAjax(Request $request )
-    {
-        $data = [];
-
-        if($request->has('q')){
-            $search = $request->q;
-            $data =Building::select("id","buildingId")
-            		->where('buildingId','LIKE',"%$search%")
-            		->get();
-        }else{
-            $data =Building::select("id","buildingId")->get();
-        }
-        return response()->json($data);
-    }
-
-    /**
      * Display the specified resource.
      *
      * @param  int  $id

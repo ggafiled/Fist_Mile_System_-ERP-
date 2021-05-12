@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
         <div class="col-md">
             <div class="card">
-                <div class="card-header text-white bg-dark">{{ __('PLANING MANAGEMENT') }}</h4>
+                <div class="card-header text-white bg-dark">{{ __('TOT MANAGEMENT') }}</h4>
                     </center>
                     @role('superadministrator')
                     <div class="card-tools">

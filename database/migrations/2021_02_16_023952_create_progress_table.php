@@ -15,20 +15,27 @@ class CreateProgressTable extends Migration
     {
         Schema::enableForeignKeyConstraints();
         Schema::create('progress', function (Blueprint $table) {
-            $table->id()->nullable();
-            $table->string('buildingId')->index();
+            $table->bigIncrements('id');
+            $table->bigInteger('building_id')->unsigned(); //ชื่ออาคารในตาราง project
             $table->string('fmProgress')->nullable();
-            $table->date('dateProgress')->nullable();
+            $table->timestamp('dateFm')->nullable();
             $table->string('totProgress')->nullable();
+            $table->timestamp('dateTot')->nullable();
             $table->string('aisProgress')->nullable();
-            $table->string('3bbProgress')->nullable();
+            $table->timestamp('dateAis')->nullable();
+            $table->string('progress3bb')->nullable();
+            $table->timestamp('date3BB')->nullable();
             $table->string('sinetProgress')->nullable();
+            $table->timestamp('dateSinet')->nullable();
             $table->string('fnProgress')->nullable();
+            $table->timestamp('dateFn')->nullable();
             $table->string('trueProgress')->nullable();
+            $table->timestamp('dateTrue')->nullable();
             $table->timestamps();
+            $table->softDeletes();
 
-            $table->foreign('buildingId')
-                ->references('buildingId')
+            $table->foreign('building_id')
+                ->references('id')
                 ->on('buildings')
                 ->onDelete('cascade');
         });

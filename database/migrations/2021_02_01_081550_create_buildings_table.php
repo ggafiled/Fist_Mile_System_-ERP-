@@ -15,28 +15,41 @@ class CreateBuildingsTable extends Migration
     {
         Schema::enableForeignKeyConstraints();
         Schema::create('buildings', function (Blueprint $table) {
-            $table->id();
-            $table->string('buildingId')->index();
-            $table->string('fmCode')->nullable();
-            $table->string('contactName')->nullable();
-            $table->string('phone')->nullable();
-            $table->string('area')->nullable();
-            $table->integer('numberLayer')->nullable();
-            $table->integer('floor')->nullable();
-            $table->string('roomNumber')->nullable();
-            $table->string('detailAdress')->nullable();
-            $table->string('province')->nullable();
-            $table->string('city')->nullable();
-            $table->integer('postalCode')->nullable();
-            $table->string('zone')->nullable();
-            $table->double('latitude')->nullable();
-            $table->double('longtude')->nullable();
-            $table->string('priceSquare')->nullable();
-            $table->string('workingTime')->nullable();
-            $table->string('blance')->nullable();
-            $table->string('developer')->nullable();
-            $table->string('grade')->nullable();
+            $table->bigIncrements('id');
+            $table->string('BuildingName')->nullable();//ชื่อโปรเจ็ค
+            $table->string('fmCode')->nullable();//fmCode
+            $table->string('team')->nullable();//ทีมช่าง team
+            $table->string('houseNumber')->nullable(); //บ้านเลขที่
+            $table->integer('squadNumber')->nullable(); //หมู่
+            $table->string('alleyName')->nullable(); //ซอย
+            $table->string('roadName')->nullable(); //ถนน
+            $table->string('districtName')->nullable(); //ตำบล/แขวง
+            $table->string('countyName')->nullable(); //อำเภอ/เขต
+            $table->string('provinceName')->nullable(); //จังหวัด
+            $table->integer('postalCode')->nullable(); //รหัสไปสษณี
+            $table->date('contractDate')->nullable(); //วันลงนามสัญญา
+            $table->time('contractTime')->nullable(); //เวลาลงนามสัญญา
+            $table->string('spendSpace')->nullable(); //รูปแบบสัญญา
+            $table->string('condition')->nullable(); //ผลตอบแทน
+            $table->date('contractPeriod')->nullable(); //ระยะเวลาสัญญา
+            $table->date('contractStartDate')->nullable(); //วันเริ่มต้นสัญญา
+            $table->date('contractExpirationDate')->nullable(); //วันสิ้นสุดสัญญา
+            $table->string('contractSell')->nullable(); //Sallดูแลสัญญา
+            $table->string('nameManager')->nullable(); //ชื่อผู้จัดการ
+            $table->string('phoneManager')->nullable(); //เบอร์โทรผู้จัดการ
+            $table->string('mailManager')->nullable(); //เมล์ผู้จัดการ
+            $table->string('nameNiti')->nullable(); //ชื่อนิติบุลคล
+            $table->string('phoneNiti')->nullable(); //เบอร์โทรนิติบุคคล
+            $table->string('mailNiti')->nullable(); //เมล์ินิติบุคคล
+            $table->string('nameTechnician')->nullable(); //ชื่อช่าง
+            $table->string('phoneTechnician')->nullable(); //เบอร์ช่าง
+            $table->string('mailTechnicianName')->nullable(); //เมลล์ช่าง
+            $table->string('areaN')->nullable(); //พื้นที่.
+            $table->string('bbN')->nullable(); //บ.บ.น.
+            $table->string('area3BB')->nullable(); //พื้นที่.3bb
+            $table->string('areaTrue')->nullable(); //พื้นที่.True
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

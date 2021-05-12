@@ -32,7 +32,7 @@
                                         <div class="form-group">
                                             {!! Form::label('BUILDING NAME') !!}
                                             <i class="fas fa-building"></i>
-                                            {!! Form::text('building',null,["class"=>"form-control",'placeholder' => 'กรอกชื่ออาคาร.'])!!}
+                                            {!! Form::text('buildingId',null,["class"=>"form-control",'placeholder' => 'กรอกชื่ออาคาร.'])!!}
                                         </div>
                                     </div>
                                     <div class="col-sm-2">

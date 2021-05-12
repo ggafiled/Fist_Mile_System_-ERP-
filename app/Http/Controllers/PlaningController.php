@@ -6,7 +6,6 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Planing;
-use App\Models\building;
 
 class PlaningController extends Controller
 {
@@ -162,18 +161,5 @@ class PlaningController extends Controller
     {
         planing::find($id)->delete();
         return redirect()->back();
-    }
-
-    public function dataAjax(Request $request)
-    {
-    	$data = [];
-
-        if($request->has('q')){
-            $search = $request->q;
-            $data =Building::select("id","buildingId")
-            		->where('buildingId','LIKE',"%$search%")
-            		->get();
-        }
-        return response()->json($data);
     }
 }

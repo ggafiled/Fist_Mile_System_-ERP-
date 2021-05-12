@@ -102,7 +102,7 @@ return [
             'can'  => ['payments-create', 'payments-read']
         ],
         [
-            'text' => 'Building List',
+            'text' => 'Project Building',
             'icon' => 'fas fa-fw fas fa-building',
             'can'  => ['building-create|building-read|building-update'],
             'submenu' => [
@@ -119,7 +119,7 @@ return [
             ]
         ],
         [
-            'text' => 'Planning List',
+            'text' => 'FM Manegement',
             'icon' => 'fas fa-fw far fa-address-book',
             'can'  => ['building-create|building-read|building-update'],
             'submenu' => [
