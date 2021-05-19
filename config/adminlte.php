@@ -107,12 +107,12 @@ return [
             'can'  => ['building-create|building-read|building-update'],
             'submenu' => [
                 [
-                    'text' => 'Building Management',
+                    'text' => 'Project Management',
                     'url'  => '/building',
                     'can'  => ['building-update']
                 ],
                 [
-                    'text' => 'Building List Table ',
+                    'text' => 'Project List Table ',
                     'url'  => '/building/list',
                     'can'  => ['building-read']
                 ],

@@ -37,8 +37,8 @@
                             </div>
                             <div class="col-sm-8">
                                 <div class="form-group">
-                                    {!! Form::label('BUILDING NAME') !!}
-                                    {!! Form::text('buildingId',$data->buildingId,["class"=>"form-control"])!!}
+                                    {!! Form::label('PROJECT NAME') !!}
+                                    {!! Form::text('BuildingName',$data->BuildingName,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-2">
@@ -53,21 +53,21 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    {!! Form::label('CONTACT NAME') !!}
+                                    {!! Form::label('JURISTIC PERSON NAME') !!}
                                     {!!
-                                    Form::text('contactName',$data->contactName,["class"=>"form-control"])!!}
+                                    Form::text('nameNiti',$data->nameNiti,["class"=>"form-control"])!!}
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-3">
                                 <div class="form-group">
                                     {!! Form::label('PHONE NUMBER') !!}
-                                    {!! Form::text('phone',$data->phone,["class"=>"form-control"])!!}
+                                    {!! Form::tel('phoneNiti',$data->phoneNiti,["class"=>"form-control"])!!}
                                 </div>
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <div class="form-group">
-                                    {!! Form::label('AREA') !!}
-                                    {!! Form::text('area',$data->area,["class"=>"form-control",'placeholder' => 'Enter
+                                    {!! Form::label('EMAIL') !!}
+                                    {!! Form::text('mailNiti',$data->mailNiti,["class"=>"form-control",'placeholder' => 'Enter
                                     your area.'])!!}
                                 </div>
                             </div>
@@ -75,130 +75,202 @@
 
 
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div class="col-sm-6">
                                 <div class="form-group">
-                                    {!! Form::label('BUILDING NUMBER') !!}
+                                    {!! Form::label('MANAGER NAME') !!}
                                     {!!
-                                    Form::number('numberLayer',$data->numberLayer,["class"=>"form-control",'placeholder'
+                                    Form::text('nameManager',$data->nameManager,["class"=>"form-control",'placeholder'
                                     => 'Enter your number layer.'])!!}
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-3">
                                 <div class="form-group">
-                                    {!! Form::label('FLOOR') !!}
-                                    {!! Form::number('floor',$data->floor,["class"=>"form-control",'placeholder' =>
-                                    'Enter your floor.'])!!}
+                                    {!! Form::label('PHONE NUMBER') !!}
+                                    {!! Form::tel('phoneManager',$data->phoneManager,["class"=>"form-control",'placeholder' =>
+                                    'Enter your phoneManager.'])!!}
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-3">
                                 <div class="form-group">
-                                    {!! Form::label('ROOM NUMBER') !!}
+                                    {!! Form::label('EMAIL') !!}
                                     {!!
-                                    Form::number('roomNumber',$data->roomNumber,["class"=>"form-control",'placeholder'
+                                    Form::text('mailManager',$data->mailManager,["class"=>"form-control",'placeholder'
                                     => 'Enter your room.'])!!}
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-sm">
+                            <div class="col-sm-2">
                                 <div class="form-group">
-                                    {!! Form::label('ADDRESS') !!}
+                                    {!! Form::label('HOUSE NUMBER') !!}
                                     {!!
-                                    Form::text('detailAdress',$data->detailAdress,["class"=>"form-control"])!!}
+                                    Form::number('houseNumber',$data->houseNumber,["class"=>"form-control"])!!}
                                 </div>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-sm-2">
                                 <div class="form-group">
-                                    {!! Form::label('CONTRACT') !!}
-                                    {!! Form::date('contract',$data->contract,["class"=>"form-control"])!!}
+                                    {!! Form::label('VILLAGE') !!}
+                                    {!! Form::number('squadNumber',$data->squadNumber,["class"=>"form-control"])!!}
                                 </div>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-sm-2">
                                 <div class="form-group">
-                                    {!! Form::label('CONTRACT DATE') !!}
-                                    {!! Form::date('contracttime',$data->contracttime,["class"=>"form-control"])!!}
+                                    {!! Form::label('ALLEY') !!}
+                                    {!! Form::text('alleyName',$data->alleyName,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    {!! Form::label('ROAD') !!}
+                                    {!! Form::text('roadName',$data->roadName,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    {!! Form::label('DISTRICT') !!}
+                                    {!! Form::text('districtName',$data->districtName,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div class="col-sm-3">
                                 <div class="form-group">
                                     {!! Form::label('PROVINCE') !!}
-                                    {!! Form::text('province',$data->province,["class"=>"form-control"])!!}
+                                    {!! Form::text('provinceName',$data->provinceName,["class"=>"form-control"])!!}
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-2">
                                 <div class="form-group">
-                                    {!! Form::label('CITY') !!}
-                                    {!! Form::text('city',$data->city,["class"=>"form-control"])!!}
+                                    {!! Form::label('COUNTY') !!}
+                                    {!! Form::text('countyName',$data->countyName,["class"=>"form-control"])!!}
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-2">
                                 <div class="form-group">
                                     {!! Form::label('POSTAL CODE') !!}
                                     {!!
-                                    Form::number('postalCode',$data->postalCode,["class"=>"form-control"])!!}
+                                    Form::text('postalCode',$data->postalCode,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div class="col-sm-2">
                                 <div class="form-group">
-                                    {!! Form::label('ZONE') !!}
-                                    {!! Form::text('zone',$data->zone,["class"=>"form-control"])!!}
+                                    {!! Form::label('SALL CONTACT') !!}
+                                    {!! Form::text('contractSell',$data->contractSell,["class"=>"form-control"])!!}
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-2">
                                 <div class="form-group">
-                                    {!! Form::label('Latitude :') !!}
-                                    {!! Form::number('latitude',$data->latitude,["class"=>"form-control"])!!}
+                                    {!! Form::label('CONTRACT SIGNING DATE') !!}
+                                    {!! Form::date('contractDate',$data->contractDate,["class"=>"form-control"])!!}
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-2">
                                 <div class="form-group">
-                                    {!! Form::label('Longtude :') !!}
-                                    {!! Form::number('longtude',$data->longtude,["class"=>"form-control"])!!}
+                                    {!! Form::label('CONTRACT SIGNING TIME') !!}
+                                    {!! Form::time('contractTime',$data->contractTime,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div class="col-sm-2">
                                 <div class="form-group">
-                                    {!! Form::label('PRICE SQM') !!}
+                                    {!! Form::label('CONTRACT MODEL') !!}
                                     {!!
-                                    Form::text('priceSquare',$data->priceSquare,["class"=>"form-control"])!!}
+                                    Form::text('spendSpace',$data->spendSpace,["class"=>"form-control"])!!}
                                 </div>
                             </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    {!! Form::label('COMPENSATION') !!}
+                                    {!!
+                                    Form::text('condition',$data->condition,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    {!! Form::label('CONTRACT PERIOD') !!}
+                                    {!! Form::date('contractPeriod',$data->contractPeriod,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    {!! Form::label('CONTRACT START DATE') !!}
+                                    {!! Form::date('contractStartDate',$data->contractStartDate,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    {!! Form::label('CONTRACT EXPIRATION DATE') !!}
+                                    {!! Form::date('contractExpirationDate',$data->contractExpirationDate,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
                             <div class="col-sm-4">
+                                <div class="form-group">
+                                    {!! Form::label('TECHINCIAN TEAM') !!}
+                                    {!! Form::text('team',$data->team,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    {!! Form::label('TECHINCIAN NAME') !!}
+                                    {!! Form::text('nameTechnician',$data->nameTechnician,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    {!! Form::label('TECHINCIAN PHONE') !!}
+                                    {!! Form::tel('phoneTechnician',$data->phoneTechnician,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    {!! Form::label('TECHINCIAN MAIL') !!}
+                                    {!! Form::email('mailTechnicianName',$data->mailTechnicianName,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                            <div class="col-sm-1">
+                                <div class="form-group">
+                                    {!! Form::label('AREA') !!}
+                                    {!! Form::text('areaN',$data->areaN,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    {!! Form::label('B.B.N.') !!}
+                                    {!! Form::text('bbN',$data->bbN,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    {!! Form::label('AREA 3BB') !!}
+                                    {!! Form::text('area3BB',$data->area3BB,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-group">
+                                    {!! Form::label('AREA TRUE') !!}
+                                    {!! Form::text('areaTrue',$data->areaTrue,["class"=>"form-control"])!!}
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
                                 <div class="form-group">
                                     {!! Form::label('OPERATING TIME') !!}
-                                    {!!
-                                    Form::text('workingTime',$data->workingTime,["class"=>"form-control"])!!}
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    {!! Form::label('BALANCE') !!}
-                                    {!! Form::text('blance',$data->blance,["class"=>"form-control"])!!}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    {!! Form::label('DEVELOER :') !!}
-                                    {!! Form::text('developer',$data->developer,["class"=>"form-control"])!!}
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    {!! Form::label('GRADE') !!}
-                                    {!! Form::text('grade',$data->grade,["class"=>"form-control"])!!}
+                                    {!! Form::text('operatingTime',$data->operatingTime,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                         </div>

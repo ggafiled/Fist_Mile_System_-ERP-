@@ -12,7 +12,6 @@ class Building extends Model
     protected $fillable = [
         'BuildingName',
         'fmCode',
-        'team',
         'houseNumber',
         'squadNumber',
         'alleyName',
@@ -21,6 +20,7 @@ class Building extends Model
         'countyName',
         'provinceName',
         'postalCode',
+        'contractSell',
         'contractDate',
         'contractTime',
         'spendSpace',
@@ -28,13 +28,13 @@ class Building extends Model
         'contractPeriod',
         'contractStartDate',
         'contractExpirationDate',
-        'contractSell',
         'nameManager',
         'phoneManager',
         'mailManager',
         'nameNiti',
         'phoneNiti',
         'mailNiti',
+        'team',
         'nameTechnician',
         'phoneTechnician',
         'mailTechnicianName',
@@ -42,7 +42,7 @@ class Building extends Model
         'bbN',
         'area3BB',
         'areaTrue',
-
+        'operatingTime',
     ];
     public function progress()
 	{

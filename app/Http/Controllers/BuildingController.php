@@ -6,6 +6,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\building;
+use DB;
 use Livewire\Component;
 
 
@@ -17,19 +18,20 @@ class BuildingController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     protected $notification, $notifications = [];
+    protected $notification, $notifications = [];
 
-     public function __construct(){
-         $this->notification = array('message' => '','alert_type' => 'success');
-         $this->middleware('auth');
-         $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
+    public function __construct()
+    {
+        $this->notification = array('message' => '', 'alert_type' => 'success');
+        $this->middleware('auth');
+        $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
         //  $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
     }
 
     public function index()
     {
         $data = Building::all();
-        return view('building.tableBuilding',['data' => $data]);
+        return view('building.tableBuilding', ['data' => $data]);
     }
 
     /**
@@ -39,55 +41,83 @@ class BuildingController extends Controller
      */
     public function create()
     {
-        return view('building.addBuilding');
+        $list = DB::table('areas')->get();
+        $list2 = DB::table('provinces')
+             ->orderBy('name_th', 'asc')
+             ->get();
+        return view('building.addBuilding')->with(['list'=> $list,'list2' => $list2 ]);
+        // return view('building.addBuilding')->with('list2', $list2);
     }
 
+    // public function create()
+    // {
+    //     $list = DB::table('areas')
+    //         ->get();
+
+    //     return view('building.addBuilding')->with('list', $list);
+    // }
+
+    // public function create2()
+    // {
+    //     $list2 = DB::table('provinces')
+    //         ->orderBy('name_th', 'asc')
+    //         ->get();
+    //     return view('building.addBuilding')->with('list2', $list2);
+    // }
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request )
+    public function store(Request $request)
     {
-        $request->validate([
-    //    $validator = Validator::make($request->validate(),[
-            'buildingId'=>'required',
-            'fmCode'=>'required',
-            'contactName'=>'required',
-            'phone'=>'required',
-            'area'=>'required',
-            'numberLayer'=>'required',
-            'floor'=>'required',
-            'roomNumber'=>'required',
-            'detailAdress'=>'required',
-            'contract'=>'required',
-            'contracttime'=>'required',
-            'province'=>'required',
-            'city'=>'required',
-            'postalCode'=>'required',
-            'zone'=>'required',
-            'latitude'=>'required',
-            'longtude'=>'required',
-            'priceSquare'=>'required',
-            'workingTime'=>'required',
-            'blance'=>'required',
-            'developer'=>'required',
-            'grade'=>'required'
+       $validator =  Validator::make($request->all(), [
+            'BuildingName' => 'required',
+            'fmCode' => 'required',
+            'houseNumber' => 'required',
+            'squadNumber' => 'required',
+            'alleyName' => 'required',
+            'roadName' => 'required',
+            'districtName' => 'required',
+            'countyName' => 'required',
+            'provinceName' => 'required',
+            'postalCode' => 'required',
+            'contractSell' => 'required',
+            'contractDate' => 'required',
+            'contractTime' => 'required',
+            'spendSpace' => 'required',
+            'condition' => 'required',
+            'contractPeriod' => 'required',
+            'contractStartDate' => 'required',
+            'contractExpirationDate' => 'required',
+            'nameManager' => 'required',
+            'phoneManager' => 'required',
+            'mailManager' => 'required',
+            'nameNiti' => 'required',
+            'phoneNiti' => 'required',
+            'mailNiti' => 'required',
+            'team' => 'required',
+            'nameTechnician' => 'required',
+            'phoneTechnician' => 'required',
+            'mailTechnicianName' => 'required',
+            'areaN' => 'required',
+            'bbN' => 'required',
+            'area3BB' => 'required',
+            'areaTrue' => 'required',
+            'operatingTime' => 'required',
         ]);
-
-        // if ($validator->fails()) {
-        //     foreach($validator->errors()->all() as $error){
-        //         $this->notification['message'] = $error;
-        //         $this->notification['alert_type'] = 'error';
-        //         array_push($this->notifications,$this->notification);
-        //     }
-        //     return redirect()->route('building.create')->withInput($request->input())->with('notification',$this->notifications);
-        // }
+        if ($validator->fails()) {
+            foreach($validator->errors()->all() as $error){
+                $this->notification['message'] = $error;
+                $this->notification['alert_type'] = 'error';
+                array_push($this->notifications,$this->notification);
+            }
+            return redirect()->route('building.create')->withInput($request->input())->with('notification',$this->notifications);
+        }
 
         Building::create($request->all());
-        // return redirect()->back();
-        return redirect()->route('building.list');
+        return redirect()->route('building.index');
     }
     public function render()
     {
@@ -95,9 +125,9 @@ class BuildingController extends Controller
     }
 
     public function showBuildingList()
-{
+    {
         $data = Building::all();
-        return view('building.tableBuildingList',['data' => $data]);
+        return view('building.tableBuildingList', ['data' => $data]);
     }
 
     /**
@@ -108,7 +138,6 @@ class BuildingController extends Controller
      */
     public function show($id)
     {
-
     }
 
     /**
@@ -121,8 +150,8 @@ class BuildingController extends Controller
     {
         // $data=building::find($id);
         // dd($data);
-        $data=building::find($id);
-        return view('building.editBuilding',['data' => $data]);
+        $data = building::find($id);
+        return view('building.editBuilding', ['data' => $data]);
     }
 
 
@@ -135,38 +164,49 @@ class BuildingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $validator =  Validator::make($request->all(),[
-            'buildingId'=>'required',
-            'fmCode'=>'required',
-            'contactName'=>'required',
-            'phone'=>'required',
-            'area'=>'required',
-            'numberLayer'=>'required',
-            'floor'=>'required',
-            'roomNumber'=>'required',
-            'contract'=>'required',
-            'contracttime'=>'required',
-            'detailAdress'=>'required',
-            'province'=>'required',
-            'city'=>'required',
-            'postalCode'=>'required',
-            'zone'=>'required',
-            'latitude'=>'required',
-            'longtude'=>'required',
-            'priceSquare'=>'required',
-            'workingTime'=>'required',
-            'blance'=>'required',
-            'developer'=>'required',
-            'grade'=>'required'
+        $validator =  Validator::make($request->all(), [
+            'BuildingName' => 'required',
+            'fmCode' => 'required',
+            'houseNumber' => 'required',
+            'squadNumber' => 'required',
+            'alleyName' => 'required',
+            'roadName' => 'required',
+            'districtName' => 'required',
+            'countyName' => 'required',
+            'provinceName' => 'required',
+            'postalCode' => 'required',
+            'contractSell' => 'required',
+            'contractDate' => 'required',
+            'contractTime' => 'required',
+            'spendSpace' => 'required',
+            'condition' => 'required',
+            'contractPeriod' => 'required',
+            'contractStartDate' => 'required',
+            'contractExpirationDate' => 'required',
+            'nameManager' => 'required',
+            'phoneManager' => 'required',
+            'mailManager' => 'required',
+            'nameNiti' => 'required',
+            'phoneNiti' => 'required',
+            'mailNiti' => 'required',
+            'team' => 'required',
+            'nameTechnician' => 'required',
+            'phoneTechnician' => 'required',
+            'mailTechnicianName' => 'required',
+            'areaN' => 'required',
+            'bbN' => 'required',
+            'area3BB' => 'required',
+            'areaTrue' => 'required',
+            'operatingTime' => 'required',
         ]);
 
         if ($validator->fails()) {
-            foreach($validator->errors()->all() as $error){
+            foreach ($validator->errors()->all() as $error) {
                 $this->notification['message'] = $error;
                 $this->notification['alert_type'] = 'error';
-                array_push($this->notifications,$this->notification);
+                array_push($this->notifications, $this->notification);
             }
-            return redirect()->route('building.edit',$id)->withInput($request->input())->with('notification',$this->notifications);
+            return redirect()->route('building.edit', $id)->withInput($request->input())->with('notification', $this->notifications);
         }
 
         Building::find($id)->update($request->all());
@@ -185,5 +225,41 @@ class BuildingController extends Controller
         Building::find($id)->delete();
         return redirect()->back();
         // return redirect()->route('building.list');
+    }
+
+    function fetch(Request $request)
+    {
+        $id = $request->get('select');
+        $result = array();
+        $query = DB::table('areas')
+            ->join('bbns', 'areas.id', '=', 'bbns.area_id')
+            ->select('bbns.name_bbn')
+            ->where('areas.id', $id)
+            ->groupBy('bbns.name_bbn')
+            ->get();
+
+        $output = '<option value="">เลือกพื้นที่</option>';
+        foreach ($query as $row) {
+            $output .= '<option value="' . $row->name_bbn . '">' . $row->name_bbn . '</option>';
+        }
+        echo $output;
+    }
+
+    function fetch2(Request $request)
+    {
+        $id = $request->get('select');
+        $result = array();
+        $query = DB::table('provinces')
+            ->join('amphures', 'provinces.id', '=', 'amphures.province_id')
+            ->select('amphures.name_th')
+            ->where('provinces.id', $id)
+            ->groupBy('amphures.name_th')
+            ->get();
+
+        $output = '<option value="">เลือกอำเภอของท่าน</option>';
+        foreach ($query as $row) {
+            $output .= '<option value="' . $row->name_th . '">' . $row->name_th . '</option>';
+        }
+        echo $output;
     }
 }

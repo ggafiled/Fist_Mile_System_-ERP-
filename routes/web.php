@@ -61,7 +61,10 @@ Route::middleware(['auth'])->group(function () {
 
     //ajax data
     Route::get('/building-autocomplete-ajax', [App\Http\Controllers\BuildingController::class ,'dataAjax']);
-
+    //get_province
+    Route::post('/building/fetch', [App\Http\Controllers\BuildingController::class ,'fetch'])->name('building.fetch');
+    //get_area
+    Route::post('/building/fetch2', [App\Http\Controllers\BuildingController::class ,'fetch2'])->name('building.fetch2');
 
 
 
