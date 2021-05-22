@@ -102,21 +102,65 @@ return [
             'can'  => ['payments-create', 'payments-read']
         ],
         [
-            'text' => 'Project Building',
+            'text' => 'Project Management',
+            'url'  => '/building',
             'icon' => 'fas fa-fw fas fa-building',
             'can'  => ['building-create|building-read|building-update'],
-            'submenu' => [
-                [
-                    'text' => 'Project Management',
-                    'url'  => '/building',
-                    'can'  => ['building-update']
-                ],
-                [
-                    'text' => 'Project List Table ',
-                    'url'  => '/building/list',
-                    'can'  => ['building-read']
-                ],
-            ]
+            'roles'  => ['superadministrator','administrator'],
+        ],
+        // [
+        //     'text' => 'Project List Table',
+        //     'url'  => '/building/list',
+        //     'icon' => 'fas fa-fw fa-table',
+        //     'can'  => ['building-read'],
+        //     'roles'  => ['superadministrator','administrator'],
+        // ],
+        // [
+        //     'text' => 'Project Management',
+        //     'icon' => 'fas fa-fw fas fa-building',
+        //     'can'  => ['building-create|building-read|building-update'],
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Project Management',
+        //             'url'  => '/building',
+        //             'can'  => ['building-update']
+        //         ],
+        //         [
+        //             'text' => 'Project List Table ',
+        //             'url'  => '/building/list',
+        //             'can'  => ['building-read']
+        //         ],
+        //     ]
+        // ],
+        // [
+        //     'text' => 'Fm List',
+        //     'icon' => 'fas fa-fw far fa-kaaba',
+        //     'can'  => ['building-create|building-read|building-update'],
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Fm Management',
+        //             'url'  => '/',
+        //             'can'  => ['building-create']
+        //         ],
+        //         [
+        //             'text' => 'Planing List Table',
+        //             'url'  => '/',
+        //             'can'  => ['building-create']
+        //         ],
+        //     ],
+
+        // ],
+        [
+            'text' => 'Progress Opertor',
+            'url'  => '/progress',
+            'icon' => 'fas fa-fw fa-poll-h',
+            'can'  => ['building-create|building-read|building-update']
+        ],
+        [
+            'text' => 'Constarution',
+            'url'  => '/constarution',
+            'icon' => 'fas fa-fw fa-poll',
+            'can'  => ['constarution-create', 'constarution-read'],
         ],
         [
             'text' => 'FM Manegement',
@@ -137,59 +181,30 @@ return [
 
         ],
         // [
-        //     'text' => 'Fm List',
-        //     'icon' => 'fas fa-fw far fa-kaaba',
-        //     'can'  => ['building-create|building-read|building-update'],
-        //     'submenu' => [
-        //         [
-        //             'text' => 'Fm Management',
-        //             'url'  => '/',
-        //             'can'  => ['building-create']
-        //         ],
-        //         [
-        //             'text' => 'Planing List Table',
-        //             'url'  => '/',
-        //             'can'  => ['building-create']
-        //         ],
-        //     ],
-
+        //     'text' => 'Resplice Opertor',
+        //     'url'  => '/resplice',
+        //     'icon' => 'fas fa-fw fa-calendar',
+        //     'can'  => ['building-create|building-read|building-update']
         // ],
-        [
-            'text' => 'Status Opertor',
-            'url'  => '/progress',
-            'icon' => 'fas fa-fw fa-poll-h',
-            'can'  => ['building-create|building-read|building-update']
-        ],
-        [
-            'text' => 'Resplice Opertor',
-            'url'  => '/resplice',
-            'icon' => 'fas fa-fw fa-calendar',
-            'can'  => ['building-create|building-read|building-update']
-        ],
-        [
-            'text' => 'Constarution',
-            'url'  => '/constarution',
-            'icon' => 'fas fa-fw fa-poll',
-            'can'  => ['constarution-create', 'constarution-read'],
-        ],
-        [
-            'text' => 'Building Payment',
-            'url'  => '/payment',
-            'icon' => 'fas fa-fw fa-calendar-check',
-            'can'  => ['payments-create', 'payments-read']
-        ],
-        [
-            'text' => 'Calendar',
-            'url'  => '/calendar',
-            'icon' => 'fas fa-fw fa-calendar-alt',
-            'roles'  => ['superadministrator','administrator'],
-        ],
-        [
-            'text' => 'Technician Opertor',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-poll-h',
-            'can'  => ['technician-operator-create', 'technician-operator-read']
-        ],
+
+        // [
+        //     'text' => 'Building Payment',
+        //     'url'  => '/payment',
+        //     'icon' => 'fas fa-fw fa-calendar-check',
+        //     'can'  => ['payments-create', 'payments-read']
+        // ],
+        // [
+        //     'text' => 'Calendar',
+        //     'url'  => '/calendar',
+        //     'icon' => 'fas fa-fw fa-calendar-alt',
+        //     'roles'  => ['superadministrator','administrator'],
+        // ],
+        // [
+        //     'text' => 'Technician Opertor',
+        //     'url'  => 'admin/settings',
+        //     'icon' => 'fas fa-fw fa-poll-h',
+        //     'can'  => ['technician-operator-create', 'technician-operator-read']
+        // ],
 
         ['header' => 'USER'],
         [

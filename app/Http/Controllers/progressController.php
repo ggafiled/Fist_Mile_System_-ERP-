@@ -29,7 +29,7 @@ class ProgressController extends Controller
     public function index()
     {
         $data = progress::all();
-        return view('progress.index',['data' => $data]);
+        return view('progress.tableProgress',['data' => $data]);
     }
 
     /**
@@ -50,7 +50,34 @@ class ProgressController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator =  Validator::make($request->all(), [
+            'building_id'=>'required',
+            'fmProgress'=>'required',
+            'dateFm'=>'required',
+            'totProgress'=>'required',
+            'dateTot'=>'required',
+            'aisProgress'=>'required',
+            'dateAis'=>'required',
+            'progress3bb'=>'required',
+            'date3BB'=>'required',
+            'sinetProgress'=>'required',
+            'dateSinet'=>'required',
+            'fnProgress'=>'required',
+            'dateFn'=>'required',
+            'trueProgress'=>'required',
+            'dateTrue'=>'required',
+        ]);
+        if ($validator->fails()) {
+            foreach($validator->errors()->all() as $error){
+                $this->notification['message'] = $error;
+                $this->notification['alert_type'] = 'error';
+                array_push($this->notifications,$this->notification);
+            }
+            return redirect()->route('progress.create')->withInput($request->input())->with('notification',$this->notifications);
+        }
+
+        Progress::create($request->all());
+        return redirect()->route('progress.index');
     }
 
     /**
@@ -62,6 +89,13 @@ class ProgressController extends Controller
     public function show($id)
     {
         //
+    }
+
+
+    public function create()
+    {
+        $data = Progress::all();
+        return view('progress.addProgress', ['data' => $data]);
     }
 
     /**
@@ -87,26 +121,21 @@ class ProgressController extends Controller
     public function update(Request $request, $id)
     {
         $validator =  Validator::make($request->all(),[
+            'building_id'=>'required',
             'fmProgress'=>'required',
-            'dateProgress'=>'required',
-
+            'dateFm'=>'required',
             'totProgress'=>'required',
-            'totDate'=>'required',
-
+            'dateTot'=>'required',
             'aisProgress'=>'required',
-            'aisDate'=>'required',
-
-            'Progress3bb'=>'required',
-            'Date3bb'=>'required',
-
+            'dateAis'=>'required',
+            'progress3bb'=>'required',
+            'date3BB'=>'required',
             'sinetProgress'=>'required',
-            'sinetDate'=>'required',
-
+            'dateSinet'=>'required',
             'fnProgress'=>'required',
-            'fnDate'=>'required',
-
+            'dateFn'=>'required',
             'trueProgress'=>'required',
-            'trueDate'=>'required',
+            'dateTrue'=>'required',
         ]);
 
         if ($validator->fails()) {

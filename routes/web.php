@@ -33,18 +33,15 @@ Route::middleware(['auth', 'role:superadministrator|administrator'])->group(func
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-    ///building
     Route::get('/building/list', [App\Http\Controllers\BuildingController::class, 'showBuildingList'])->name('building.list');
     Route::resource('/building', App\Http\Controllers\BuildingController::class);
+    Route::resource('/progress', App\Http\Controllers\ProgressController::class);
     Route::resource('/constarution', App\Http\Controllers\ConstarutionController::class);
     Route::resource('/usermanament', App\Http\Controllers\UserManagementController::class);
     Route::resource('/permission', App\Http\Controllers\UserRolePermissionController::class);
 
     ///calendar
     Route::resource('/calendar', App\Http\Controllers\CalendarController::class);
-
-    ///progress
-    Route::resource('/progress', App\Http\Controllers\ProgressController::class);
 
     ///constarution
     Route::resource('/constarution', App\Http\Controllers\ConstarutionController::class);

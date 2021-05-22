@@ -19,12 +19,13 @@
             </ul>
         @endif
     </ul>
+    {{-- <h3>{{ __('CREATE  PROJECT FORM') }}</h3> --}}
     <div class="row justify-content-center">
         <div class="col-md">
             <div class="card ">
-                <div class="card-header text-white bg-dark">
+                {{-- <div class="card-header text-white bg-dark">
                     <h>{{ __('CREATE PROJECT') }}
-                </div>
+                </div> --}}
                 <div class="card-body">
                     <div class="form-group">
                         <div class="container-fluid mx-auto mt-2 mb-2">

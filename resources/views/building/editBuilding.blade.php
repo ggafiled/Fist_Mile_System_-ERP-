@@ -175,9 +175,6 @@
                                     {!! Form::time('contractTime',$data->contractTime,["class"=>"form-control"])!!}
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="row">
                             <div class="col-sm-2">
                                 <div class="form-group">
                                     {!! Form::label('CONTRACT MODEL') !!}
@@ -199,6 +196,7 @@
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="row">
                             <div class="col-sm-2">

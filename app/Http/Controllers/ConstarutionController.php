@@ -30,6 +30,11 @@ class ConstarutionController extends Controller
         return view('Constarution.ConstarutionTable',['data' => $data]);
     }
 
+    public function create()
+    {
+        return view('constarution.addConstarution');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

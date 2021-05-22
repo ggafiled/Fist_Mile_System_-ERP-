@@ -12,11 +12,11 @@
         }
 
     </style>
-<h3>{{ __('CONSTARUTION MANAGEMENT') }}</h3>
+<h3>{{ __('PROGRESS MANAGEMENT') }}</h3>
     <div class="row justify-content-center">
         <div class="col-md">
             <div class="card">
-                <div class="card-header text-white bg-dark">{{ __('CONSTARUTION MANAGEMENT TABLE') }}</h4>
+                <div class="card-header text-white bg-dark">{{ __('PROGRES MANAGEMENT TABLE') }}</h4>
                     </center>
                     @role('superadministrator')
                     <div class="card-tools">
@@ -36,7 +36,15 @@
                         <table class="table table-striped table-bordered" id="example1">
                             <thead>
                                 <tr class="info">
-
+                                    <th width="1%">#</th>
+                                    <th width="5%">Projects Name</th>
+                                    <th width="5%">Manager Name</th>
+                                    <th width="3%">Phone Number</th>
+                                    <th width="3%">Mail Manager</th>
+                                    <th width="1%">Edit</th>
+                                    @role('superadministrator')
+                                    <th width="1%">DELETE</th>
+                                    @endrole
                                 </tr>
                             </thead>
                     </div>
