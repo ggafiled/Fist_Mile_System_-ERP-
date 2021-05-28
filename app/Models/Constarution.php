@@ -10,7 +10,8 @@ class Constarution extends Model
 {
     use SoftDeletes;
     protected $fillable = [
-        'building_id',
+        'buildingName',
+        'desingBy',
         'surveyDesing',
         'surveyDesingDate',
         'surveyDesingDateBy',
@@ -34,10 +35,4 @@ class Constarution extends Model
         'blow',
         'splice',
     ];
-    public function building()
-	{
-		return $this->hasOne('App\Models\Building','id','building_id');
-	}
-
-
 }

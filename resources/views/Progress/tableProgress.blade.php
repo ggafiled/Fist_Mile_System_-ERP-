@@ -38,9 +38,10 @@
                                 <tr class="info">
                                     <th width="1%">#</th>
                                     <th width="5%">Projects Name</th>
-                                    <th width="5%">Manager Name</th>
-                                    <th width="3%">Phone Number</th>
-                                    <th width="3%">Mail Manager</th>
+                                    <th width="5%">FM - PROGRESS</th>
+                                    <th width="3%">FM - DATE</th>
+                                    <th width="3%">TOT - PROGRESS</th>
+                                    <th width="3%">TOT - DATE</th>
                                     <th width="1%">Edit</th>
                                     @role('superadministrator')
                                     <th width="1%">DELETE</th>
@@ -49,7 +50,31 @@
                             </thead>
                     </div>
                     <tbody>
+                        @foreach ($data as $row)
+                            <tr>
+                                <th scope="row">{{ $row->id }}</th>
+                                <td>{{ $row->buildingName }}</td>
+                                <td>{{ $row->fmProgress }}</td>
+                                <td>{{ $row->dateFm }}</td>
+                                <td>{{ $row->totProgress }}</td>
+                                <td>{{ $row->dateTot }}</td>
+                                <td>
+                                    <form action="{{ route('progress.edit', $row->id) }}" method="PUT">
+                                        @csrf @method('HEAD')
+                                        <input type="submit" value='Edit' " class=" btn btn-warning ">
+                                        </form>
+                                    </td>
+                                    @role('superadministrator')
+                                    <td>
+                                        <form action=" {{ route('progress.destroy', $row->id) }}" method="post">
+                                        @csrf @method('DELETE')
+                                        <input type="submit" value='Delete' class="btn btn-danger deleteForm">
+                                    </form>
 
+                                </td>
+                                @endrole
+                            </tr>
+                        @endforeach
                     </tbody>
                     </table>
                 </div>

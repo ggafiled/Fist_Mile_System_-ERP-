@@ -19,8 +19,4 @@ class Member extends Model
         'buildingNumber',
     ];
 
-    public function buildings()
-	{
-		return $this->hasMany('App\Models\Building','id','building_id');
-	}
 }

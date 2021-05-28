@@ -30,7 +30,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                         {!! Form::label('ชื่ออาคาร(Project) :') !!}
-                                        {!! Form::text('building', $data->buildingId, ['class' => 'form-control', 'disabled']) !!}
+                                        {!! Form::text('buildingName', $data->buildingName, ['class' => 'form-control', 'disabled']) !!}
                                     </div>
                                 </div>
                                 <div class="col-sm-2">

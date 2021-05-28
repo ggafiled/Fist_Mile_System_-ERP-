@@ -35,7 +35,7 @@
                                     <div class="col-sm-10">
                                         <div class="form-group">
                                             <label>PROJECT NAME</label>
-                                            <input type="text" class="form-control" name="BuildingName" id="BuildingName"
+                                            <input type="text" class="form-control" name="buildingName" id="buildingName"
                                                 placeholder="ชื่อโปรเจ็ค">
                                             {{-- {!! Form::label('PROJECT NAME') !!} --}}
                                             {{-- <i class="fas fa-building"></i> --}}
@@ -218,8 +218,10 @@
                                     <div class="col-sm-2">
                                         <div class="form-group">
                                             <label>SALL CONTACT</label>
-                                            <input type="text" class="form-control" name="contractSell" id="contractSell"
-                                                placeholder="ชื่อเซลล์ที่ดุแลสัญญา">
+                                            <select class="contractSell form-control" id="contractSell"
+                                            name="contractSell"></select>
+                                            {{-- <input type="text" class="form-control" name="contractSell" id="contractSell"
+                                                placeholder="ชื่อเซลล์ที่ดุแลสัญญา"> --}}
                                             {{-- {!! Form::label('SALL CONTACT') !!}
                                             <i class="fas fa-id-card-alt"></i>
                                             {!! Form::text('contactName', null, ['class' => 'form-control', 'placeholder' => 'ชื่อเซลล์ที่ดุแลสัญญา']) !!} --}}
@@ -469,6 +471,26 @@
                 })
             }
         });
+
+        $('#contractSell').select2({
+        placeholder: 'Select an Contract...',
+        ajax: {
+            url: '/dataselect-contract',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.contract,
+                            id: item.contract
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
 
 
 

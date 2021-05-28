@@ -13,10 +13,9 @@ class CreateBuildingsTable extends Migration
      */
     public function up()
     {
-        Schema::enableForeignKeyConstraints();
         Schema::create('buildings', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('BuildingName')->nullable();//ชื่อโปรเจ็ค
+            $table->string('buildingName')->nullable();//ชื่อโปรเจ็ค
             $table->string('fmCode')->nullable();//fmCode
             $table->string('nameNiti')->nullable(); //ชื่อนิติบุลคล
             $table->string('phoneNiti')->nullable(); //เบอร์โทรนิติบุคคล
@@ -32,6 +31,7 @@ class CreateBuildingsTable extends Migration
             $table->string('provinceName')->nullable(); //จังหวัด
             $table->string('countyName')->nullable(); //อำเภอ/เขต
             $table->integer('postalCode')->nullable(); //รหัสไปสษณี
+
             $table->string('contractSell')->nullable(); //Sallดูแลสัญญา
             $table->date('contractDate')->nullable(); //วันลงนามสัญญา
             $table->time('contractTime')->nullable(); //เวลาลงนามสัญญา
@@ -40,6 +40,7 @@ class CreateBuildingsTable extends Migration
             $table->date('contractPeriod')->nullable(); //ระยะเวลาสัญญา
             $table->date('contractStartDate')->nullable(); //วันเริ่มต้นสัญญา
             $table->date('contractExpirationDate')->nullable(); //วันสิ้นสุดสัญญา
+
             $table->string('team')->nullable();//ทีมช่าง team
             $table->string('nameTechnician')->nullable(); //ชื่อช่าง
             $table->string('phoneTechnician')->nullable(); //เบอร์ช่าง
@@ -61,7 +62,6 @@ class CreateBuildingsTable extends Migration
      */
     public function down()
     {
-        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('buildings');
     }
 }

@@ -13,10 +13,9 @@ class CreateProgressTable extends Migration
      */
     public function up()
     {
-        Schema::enableForeignKeyConstraints();
         Schema::create('progress', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('building_id')->unsigned(); //ชื่ออาคารในตาราง project
+            $table->string('buildingName')->nullable(); //ชื่ออาคารในตาราง project
             $table->string('fmProgress')->nullable();
             $table->timestamp('dateFm')->nullable();
             $table->string('totProgress')->nullable();
@@ -34,10 +33,6 @@ class CreateProgressTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('building_id')
-                ->references('id')
-                ->on('buildings')
-                ->onDelete('cascade');
         });
     }
 
@@ -48,7 +43,6 @@ class CreateProgressTable extends Migration
      */
     public function down()
     {
-        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('progress');
     }
 }

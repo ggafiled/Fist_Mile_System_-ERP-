@@ -13,19 +13,14 @@ class CreatePlaningsTable extends Migration
      */
     public function up()
     {
-        Schema::enableForeignKeyConstraints();
         Schema::create('planings', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('building_id')->unsigned();
+            $table->string('buildingName')->nullable();
             $table->integer('buildingUnit')->nullable();
             $table->integer('floor')->nullable();
             $table->integer('room')->nullable();
             $table->timestamps();
 
-            $table->foreign('building_id')
-            ->references('id')
-            ->on('buildings')
-            ->onDelete('cascade');
         });
     }
 
@@ -36,7 +31,6 @@ class CreatePlaningsTable extends Migration
      */
     public function down()
     {
-        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('planings');
     }
 }

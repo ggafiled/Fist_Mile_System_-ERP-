@@ -13,39 +13,35 @@ class CreateConstarutionsTable extends Migration
      */
     public function up()
     {
-        Schema::enableForeignKeyConstraints();
         Schema::create('constarutions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('building_id')->unsigned(); //ชื่ออาคารในตาราง building
+            $table->string('buildingName')->nullable(); //ชื่ออาคารในตาราง building
+            $table->string('desingBy')->nullable();
             $table->string('surveyDesing')->nullable(); //survey โดยใคร
-            $table->timestamp('surveyDesingDate')->nullable(); //วันออกแบบ survey
-            $table->timestamp('surveyDesingDateBy')->nullable(); //เวลาออกแบบ survey
+            $table->date('surveyDesingDate')->nullable(); //วันออกแบบ survey
+            $table->time('surveyDesingDateBy')->nullable(); //เวลาออกแบบ survey
 
             $table->string('ifcc')->nullable();
-            $table->timestamp('ifccDate')->nullable();
+            $table->date('ifccDate')->nullable();
             $table->string('wallBox')->nullable();
-            $table->timestamp('wallBoxDate')->nullable();
+            $table->date('wallBoxDate')->nullable();
 
             $table->string('type')->nullable();
 
             $table->string('microductD')->nullable(); //วาง microduct แนวดิ่ง
-            $table->timestamp('microductDateD')->nullable(); //วันวาง microduct แนวดิ่ง
+            $table->date('microductDateD')->nullable(); //วันวาง microduct แนวดิ่ง
 
             $table->string('microductK')->nullable(); //วาง microduct แนวขว้าง
-            $table->timestamp('microductDateK')->nullable(); //วันวาง microduct แนวขว้าง
+            $table->date('microductDateK')->nullable(); //วันวาง microduct แนวขว้าง
 
             $table->string('fiberConvertion')->nullable(); //วันวาง microduct แนวขว้าง
-            $table->timestamp('fiberConvertionDateD')->nullable(); //วันวาง microduct แนวขว้าง
+            $table->date('fiberConvertionDateD')->nullable(); //วันวาง microduct แนวขว้าง
 
             $table->string('blow')->nullable(); //สถานะ Blow
             $table->string('splice')->nullable(); //สถานะ Splice
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('building_id')
-            ->references('id')
-            ->on('buildings')
-            ->onDelete('cascade');
         });
     }
 
@@ -56,7 +52,6 @@ class CreateConstarutionsTable extends Migration
      */
     public function down()
     {
-        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('constarutions');
     }
 }

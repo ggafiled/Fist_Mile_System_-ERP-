@@ -180,6 +180,25 @@ return [
             ],
 
         ],
+        [
+            'text' => 'Table List',
+            'icon' => 'fas fa-fw far fa-table',
+            'can'  => ['building-create|building-read|building-update'],
+            'submenu' => [
+                [
+                    'text' => 'Project Table',
+                    'url'  => '/planning',
+                    'can'  => ['building-create']
+                ],
+                [
+                    'text' => 'Progress&Constarution',
+                    'url'  => '/planning/list',
+                    'can'  => ['building-create']
+                ],
+            ],
+
+        ],
+
         // [
         //     'text' => 'Resplice Opertor',
         //     'url'  => '/resplice',
@@ -395,7 +414,7 @@ return [
                 [
                     'type' => 'css',
                     'asset' => false,
-                    'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
+                    'location' => '//cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css',
                 ],
                 [
                     'type' => 'css',
@@ -415,7 +434,7 @@ return [
                 [
                     'type' => 'css',
                     'asset' => false,
-                    'location' => '//cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css',
+                    'location' => '//cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css',
                 ],
                 [
                     'type' => 'css',

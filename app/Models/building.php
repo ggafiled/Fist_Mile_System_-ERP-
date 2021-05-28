@@ -10,7 +10,7 @@ class Building extends Model
 {
     use HasFactory,SoftDeletes;
     protected $fillable = [
-        'BuildingName',
+        'buildingName',
         'fmCode',
         'houseNumber',
         'squadNumber',
@@ -44,23 +44,4 @@ class Building extends Model
         'areaTrue',
         'operatingTime',
     ];
-    public function progress()
-	{
-		return $this->belongsTo('App\Models\Progress','building_id','id');
-	}
-
-    public function constarution()
-	{
-		return $this->belongsTo('App\Models\Constarution','building_id','id');
-	}
-
-    public function team()
-	{
-		return $this->belongsTo('App\Models\Team','building_id','id');
-	}
-
-    public function member()
-	{
-		return $this->belongsTo('App\Models\Member','building_id','id');
-	}
 }

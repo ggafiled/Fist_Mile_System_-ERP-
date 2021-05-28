@@ -10,7 +10,7 @@ class Planing extends Model
 {
     use SoftDeletes;
     protected $fillable = [
-        'building_id',
+        'buildingName',
         'buildingUnit',
         'floor',
         'room',

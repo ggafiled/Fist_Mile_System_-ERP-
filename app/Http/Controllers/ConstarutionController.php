@@ -16,18 +16,19 @@ class ConstarutionController extends Controller
      */
     protected $notification, $notifications = [];
 
-    public function __construct(){
+    public function __construct()
+    {
 
-        $this->notification = array('message' => '','alert_type' => 'success');
+        $this->notification = array('message' => '', 'alert_type' => 'success');
         $this->middleware('auth');
         // $this->middleware(['permission:building-create,require_all,guard:web'])->only(['create']);
-       //  $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
+        //  $this->middleware(['role:superadminstrator,require_all,guard:web'])->only(['destroy']);
     }
 
     public function index()
     {
         $data = Constarution::all();
-        return view('Constarution.ConstarutionTable',['data' => $data]);
+        return view('Constarution.ConstarutionTable', ['data' => $data]);
     }
 
     public function create()
@@ -48,7 +49,37 @@ class ConstarutionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator =  Validator::make($request->all(), [
+            'buildingName' => 'required',
+            'desingBy' => 'required',
+            'surveyDesing' => 'required',
+            'surveyDesingDate' => 'required',
+            'surveyDesingDateBy' => 'required',
+            'ifcc' => 'required',
+            'ifccDate' => 'required',
+            'wallBox' => 'required',
+            'wallBoxDate' => 'required',
+            'type' => 'required',
+            'microductD' => 'required',
+            'microductDateD' => 'required',
+            'microductK' => 'required',
+            'microductDateK' => 'required',
+            'fiberConvertion' => 'required',
+            'fiberConvertionDateD' => 'required',
+            'blow' => 'required',
+            'splice' => 'required'
+        ]);
+        if ($validator->fails()) {
+            foreach ($validator->errors()->all() as $error) {
+                $this->notification['message'] = $error;
+                $this->notification['alert_type'] = 'error';
+                array_push($this->notifications, $this->notification);
+            }
+            return redirect()->route('constarution.create')->withInput($request->input())->with('notification', $this->notifications);
+        }
+
+        Constarution::create($request->all());
+        return redirect()->route('constarution.index');
     }
 
     /**
@@ -70,8 +101,8 @@ class ConstarutionController extends Controller
      */
     public function edit($id)
     {
-        $data=Constarution::find($id);
-        return view('Constarution.editConstarution',['data' => $data]);
+        $data = Constarution::find($id);
+        return view('Constarution.editConstarution', ['data' => $data]);
     }
 
     /**
@@ -83,42 +114,34 @@ class ConstarutionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $validator =  Validator::make($request->all(),[
-            'buildingId'=>'required',
-            'numberLayer'=>'required',
-            'roomNumber'=>'required',
-            'floor'=>'required',
-
-            'exploreDesign'=>'required',
-            'exploreDesignTeam'=>'required',
-            'exploreDesignDate'=>'required',
-            'exploreDesignBy'=>'required',
-            'exploreDesignDateBy'=>'required',
-
-            'ifcc'=>'required',
-            'ifccTeam'=>'required',
-            'ifccDate'=>'required',
-
-            'wallBox'=>'required',
-            'wallBoxTeam'=>'required',
-            'wallBoxDate'=>'required',
-
-            'microductD'=>'required',
-            'microductTeamD'=>'required',
-            'microductDateD'=>'required',
-
-            'microductK'=>'required',
-            'microductTeamK'=>'required',
-            'microductDateK'=>'required'
+        $validator =  Validator::make($request->all(), [
+            'buildingName' => 'required',
+            'desingBy' => 'required',
+            'surveyDesing' => 'required',
+            'surveyDesingDate' => 'required',
+            'surveyDesingDateBy' => 'required',
+            'ifcc' => 'required',
+            'ifccDate' => 'required',
+            'wallBox' => 'required',
+            'wallBoxDate' => 'required',
+            'type' => 'required',
+            'microductD' => 'required',
+            'microductDateD' => 'required',
+            'microductK' => 'required',
+            'microductDateK' => 'required',
+            'fiberConvertion' => 'required',
+            'fiberConvertionDateD' => 'required',
+            'blow' => 'required',
+            'splice' => 'required'
         ]);
 
         if ($validator->fails()) {
-            foreach($validator->errors()->all() as $error){
+            foreach ($validator->errors()->all() as $error) {
                 $this->notification['message'] = $error;
                 $this->notification['alert_type'] = 'error';
-                array_push($this->notifications,$this->notification);
+                array_push($this->notifications, $this->notification);
             }
-            return redirect()->route('constarution.edit',$id)->withInput($request->input())->with('notification',$this->notifications);
+            return redirect()->route('constarution.edit', $id)->withInput($request->input())->with('notification', $this->notifications);
         }
 
         constarution::find($id)->update($request->all());

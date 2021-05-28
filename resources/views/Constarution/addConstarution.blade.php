@@ -29,35 +29,40 @@
                 <div class="card-body">
                     <div class="form-group">
                         <div class="container-fluid mx-auto mt-2 mb-2">
-                            <form action="{{ route('building.store') }}" method="POST">
+                            <form action="{{ route('constarution.store') }}" method="POST">
                                 @csrf
                                 <div class="row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <div class="form-group">
                                             <label>PROJECT NAME</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <select class="buildingName form-control" id="buildingName"
+                                        name="buildingName"></select>
                                         </div>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>surveyDesing</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>DESING-BY</label>
+                                            <select class="desingBy form-control" id="desingBy"
+                                            name="desingBy"></select>
                                         </div>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>surveyDesingDate</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>SURVEY - DESING</label>
+                                            <select class="surveyDesing form-control" id="surveyDesing"
+                                            name="surveyDesing"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label>SURVEY - DESING - DATE</label>
+                                            <input type="date" class="form-control" name="surveyDesingDate" id="surveyDesingDate">
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="form-group">
-                                        <label>surveyDesingDateBy</label>
-                                        <input type="text" class="form-control" name="building_id" id="building_id"
-                                        placeholder="ชื่อโปรเจ็ค">
+                                        <label>SURVEY - DESING - DATE - BY</label>
+                                        <input type="time" class="form-control" name="surveyDesingDateBy" id="surveyDesingDateBy">
                                     </div>
                                 </div>
                                 </div>
@@ -66,30 +71,28 @@
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>ifcc</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>IFCC</label>
+                                            <select class="ifcc form-control" id="ifcc"
+                                            name="ifcc"></select>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>ifccDate</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>IFCC - DATE</label>
+                                            <input type="date" class="form-control" name="ifccDate" id="ifccDate">
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>wallBox</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>WALLBOX</label>
+                                            <select class="wallBox form-control" id="wallBox"
+                                            name="wallBox"></select>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>wallBoxDate</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>WALLBOX - DATE</label>
+                                                <input type="date" class="form-control" name="wallBoxDate" id="wallBoxDate">
                                         </div>
                                     </div>
                                 </div>
@@ -97,9 +100,11 @@
                                 <div class="row">
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>type</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>TYPE</label>
+                                            <select type="text" class="form-control" name="type" id="type">
+                                                <option value="microduct">Microduct</option>
+                                                <option value="fiber">Fiber</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -107,30 +112,28 @@
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>microductD</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>MICRODUCT (แนวดิ่ง)</label>
+                                            <select class="microductD form-control" id="microductD"
+                                            name="microductD"></select>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>microductDateD</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>MICRODUCT - DATE (แนวดิ่ง)</label>
+                                            <input type="date" class="form-control" name="microductDateD" id="microductDateD">
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>microductK</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>MICRODUCT (แนวขว้าง)</label>
+                                            <select class="microductK form-control" id="microductK"
+                                            name="microductK"></select>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>microductDateK</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>MICRODUCT - DATE (แนวขว้าง)</label>
+                                            <input type="date" class="form-control" name="microductDateK" id="microductDateK">
                                         </div>
                                     </div>
                                 </div>
@@ -138,45 +141,244 @@
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>fiberConvertion</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>FIBER - CONVERTION</label>
+                                            <select class="fiberConvertion form-control" id="fiberConvertion"
+                                            name="fiberConvertion"></select>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>fiberConvertionDateD</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>FIBER - CONVERTION - DATA </label>
+                                            <input type="date" class="form-control" name="fiberConvertionDateD" id="fiberConvertionDateD">
+                                    </div>
+                                </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label>SPLICE</label>
+                                            <select class="splice form-control" id="splice"
+                                            name="splice"></select>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>blow</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                            <label>BLOW</label>
+                                            <select class="blow form-control" id="blow"
+                                            name="blow"></select>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <label>splice</label>
-                                            <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
-                                        </div>
-                                    </div>
-                                </div>
+                                <input type="submit" value="CLICK CREATE" class="btn btn-primary" method="POST">
+                                @csrf @method('POST')
+                            <a href="/building" class="btn btn-success my-2">BACK</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-@section('adminlte_js')
-    <script type="text/javascript">
 
-    </script>
+@section('adminlte_js')
+<script type="text/javascript">
+    $('#buildingName').select2({
+        placeholder: 'Select an building name...',
+        ajax: {
+            url: '/building-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.buildingName,
+                            id: item.buildingName
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#surveyDesing').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#ifcc').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#wallBox').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#microductD').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#microductK').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#fiberConvertion').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#splice').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#blow').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#desingBy').select2({
+        placeholder: 'Select an Desing...',
+        ajax: {
+            url: '/dataselect-desingName',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.desings,
+                            id: item.desings
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+</script>
 @stop
 @endsection

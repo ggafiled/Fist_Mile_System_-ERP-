@@ -57,11 +57,16 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/planning', App\Http\Controllers\PlaningController::class);
 
     //ajax data
-    Route::get('/building-autocomplete-ajax', [App\Http\Controllers\BuildingController::class ,'dataAjax']);
+    Route::get('/building-autocomplete-ajax', [App\Http\Controllers\BuildingController::class, 'dataAjax']);
+    //ajax data
+    Route::get('/dataselect-autocomplete-ajax', [App\Http\Controllers\BuildingController::class, 'dataAjax2']);
+    Route::get('/dataselect-desingName', [App\Http\Controllers\BuildingController::class, 'desingName']);
+    Route::get('/dataselect-contract', [App\Http\Controllers\BuildingController::class, 'contractName']);
     //get_province
-    Route::post('/building/fetch', [App\Http\Controllers\BuildingController::class ,'fetch'])->name('building.fetch');
+    Route::post('/building/fetch', [App\Http\Controllers\BuildingController::class, 'fetch'])->name('building.fetch');
     //get_area
-    Route::post('/building/fetch2', [App\Http\Controllers\BuildingController::class ,'fetch2'])->name('building.fetch2');
+    Route::post('/building/fetch2', [App\Http\Controllers\BuildingController::class, 'fetch2'])->name('building.fetch2');
+
 
 
 

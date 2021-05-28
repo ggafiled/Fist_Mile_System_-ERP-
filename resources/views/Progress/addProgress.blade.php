@@ -30,24 +30,15 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>PROJECT NAME</label>
-                                        <input type="text" class="form-control" name="building_id" id="building_id"
-                                            placeholder="ชื่อโปรเจ็ค">
+                                        <select class="buildingName form-control" id="buildingName"
+                                        name="buildingName"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group">
                                         <label>FM - PROGRESS</label>
-                                        <select type="text" class="form-control" name="fmProgress" id="fmProgress">
-                                            <option value="วางโครงข่ายแล้ว">วางโครงข่ายแล้ว</option>
-                                            <option value="รอเข้า Survey">รอเข้า Survey</option>
-                                            <option value="รอเข้าดำเนินการ">รอเข้าดำเนินการ</option>
-                                            <option value="กำลังดำเนินการ">กำลังดำเนินการ</option>
-                                            <option value="ดำเนิการแล้วเสร็จ">ดำเนิการแล้วเสร็จ</option>
-                                            <option value="กำลังสร้างพร้อมโครงการฯ">กำลังสร้างพร้อมโครงการฯ</option>
-                                            <option value="สร้างพร้อมโครงการฯ">สร้างพร้อมโครงการฯ</option>
-                                            <option value="เชื่อมโครงข่ายแล้ว">เชื่อมโครงข่ายแล้ว</option>
-                                            <option value="N/A">N/A</option>
-                                        </select>
+                                        <select class="fmProgress form-control" id="fmProgress"
+                                        name="fmProgress"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
@@ -62,17 +53,8 @@
                                 <div class="col-sm-2">
                                     <div class="form-group">
                                         <label>TOT - PROGRESS</label>
-                                        <select type="text" class="form-control" name="totProgress" id="totProgress">
-                                            <option value="วางโครงข่ายแล้ว">วางโครงข่ายแล้ว</option>
-                                            <option value="รอเข้า Survey">รอเข้า Survey</option>
-                                            <option value="รอเข้าดำเนินการ">รอเข้าดำเนินการ</option>
-                                            <option value="กำลังดำเนินการ">กำลังดำเนินการ</option>
-                                            <option value="ดำเนิการแล้วเสร็จ">ดำเนิการแล้วเสร็จ</option>
-                                            <option value="กำลังสร้างพร้อมโครงการฯ">กำลังสร้างพร้อมโครงการฯ</option>
-                                            <option value="สร้างพร้อมโครงการฯ">สร้างพร้อมโครงการฯ</option>
-                                            <option value="เชื่อมโครงข่ายแล้ว">เชื่อมโครงข่ายแล้ว</option>
-                                            <option value="N/A">N/A</option>
-                                        </select>
+                                        <select class="totProgress form-control" id="totProgress"
+                                        name="totProgress"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
@@ -84,17 +66,8 @@
                                 <div class="col-sm-2">
                                     <div class="form-group">
                                         <label>AIS - PROGRESS</label>
-                                        <select type="text" class="form-control" name="aisProgress" id="aisProgress">
-                                            <option value="วางโครงข่ายแล้ว">วางโครงข่ายแล้ว</option>
-                                            <option value="รอเข้า Survey">รอเข้า Survey</option>
-                                            <option value="รอเข้าดำเนินการ">รอเข้าดำเนินการ</option>
-                                            <option value="กำลังดำเนินการ">กำลังดำเนินการ</option>
-                                            <option value="ดำเนิการแล้วเสร็จ">ดำเนิการแล้วเสร็จ</option>
-                                            <option value="กำลังสร้างพร้อมโครงการฯ">กำลังสร้างพร้อมโครงการฯ</option>
-                                            <option value="สร้างพร้อมโครงการฯ">สร้างพร้อมโครงการฯ</option>
-                                            <option value="เชื่อมโครงข่ายแล้ว">เชื่อมโครงข่ายแล้ว</option>
-                                            <option value="N/A">N/A</option>
-                                        </select>
+                                        <select class="aisProgress form-control" id="aisProgress"
+                                        name="aisProgress"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
@@ -106,17 +79,8 @@
                                 <div class="col-sm-2">
                                     <div class="form-group">
                                         <label>3BB - PROGRESS</label>
-                                        <select type="text" class="form-control" name="progress3bb" id="progress3bb">
-                                            <option value="วางโครงข่ายแล้ว">วางโครงข่ายแล้ว</option>
-                                            <option value="รอเข้า Survey">รอเข้า Survey</option>
-                                            <option value="รอเข้าดำเนินการ">รอเข้าดำเนินการ</option>
-                                            <option value="กำลังดำเนินการ">กำลังดำเนินการ</option>
-                                            <option value="ดำเนิการแล้วเสร็จ">ดำเนิการแล้วเสร็จ</option>
-                                            <option value="กำลังสร้างพร้อมโครงการฯ">กำลังสร้างพร้อมโครงการฯ</option>
-                                            <option value="สร้างพร้อมโครงการฯ">สร้างพร้อมโครงการฯ</option>
-                                            <option value="เชื่อมโครงข่ายแล้ว">เชื่อมโครงข่ายแล้ว</option>
-                                            <option value="N/A">N/A</option>
-                                        </select>
+                                        <select class="progress3bb form-control" id="progress3bb"
+                                        name="progress3bb"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
@@ -131,17 +95,8 @@
                                 <div class="col-sm-2">
                                     <div class="form-group">
                                         <label>SINET - PROGRESS</label>
-                                        <select type="text" class="form-control" name="sinetProgress" id="sinetProgress">
-                                            <option value="วางโครงข่ายแล้ว">วางโครงข่ายแล้ว</option>
-                                            <option value="รอเข้า Survey">รอเข้า Survey</option>
-                                            <option value="รอเข้าดำเนินการ">รอเข้าดำเนินการ</option>
-                                            <option value="กำลังดำเนินการ">กำลังดำเนินการ</option>
-                                            <option value="ดำเนิการแล้วเสร็จ">ดำเนิการแล้วเสร็จ</option>
-                                            <option value="กำลังสร้างพร้อมโครงการฯ">กำลังสร้างพร้อมโครงการฯ</option>
-                                            <option value="สร้างพร้อมโครงการฯ">สร้างพร้อมโครงการฯ</option>
-                                            <option value="เชื่อมโครงข่ายแล้ว">เชื่อมโครงข่ายแล้ว</option>
-                                            <option value="N/A">N/A</option>
-                                        </select>
+                                        <select class="sinetProgress form-control" id="sinetProgress"
+                                        name="sinetProgress"></select>
                                     </div>
                                 </div>
 
@@ -154,17 +109,8 @@
                                 <div class="col-sm-2">
                                     <div class="form-group">
                                         <label>FN - PROGRESS</label>
-                                        <select type="text" class="form-control" name="fnProgress" id="fnProgress">
-                                            <option value="วางโครงข่ายแล้ว">วางโครงข่ายแล้ว</option>
-                                            <option value="รอเข้า Survey">รอเข้า Survey</option>
-                                            <option value="รอเข้าดำเนินการ">รอเข้าดำเนินการ</option>
-                                            <option value="กำลังดำเนินการ">กำลังดำเนินการ</option>
-                                            <option value="ดำเนิการแล้วเสร็จ">ดำเนิการแล้วเสร็จ</option>
-                                            <option value="กำลังสร้างพร้อมโครงการฯ">กำลังสร้างพร้อมโครงการฯ</option>
-                                            <option value="สร้างพร้อมโครงการฯ">สร้างพร้อมโครงการฯ</option>
-                                            <option value="เชื่อมโครงข่ายแล้ว">เชื่อมโครงข่ายแล้ว</option>
-                                            <option value="N/A">N/A</option>
-                                        </select>
+                                        <select class="fnProgress form-control" id="fnProgress"
+                                        name="fnProgress"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
@@ -176,17 +122,8 @@
                                  <div class="col-sm-2">
                                     <div class="form-group">
                                         <label>TURN - PROGRESS</label>
-                                        <select type="text" class="form-control" name="trueProgress" id="trueProgress">
-                                            <option value="วางโครงข่ายแล้ว">วางโครงข่ายแล้ว</option>
-                                            <option value="รอเข้า Survey">รอเข้า Survey</option>
-                                            <option value="รอเข้าดำเนินการ">รอเข้าดำเนินการ</option>
-                                            <option value="กำลังดำเนินการ">กำลังดำเนินการ</option>
-                                            <option value="ดำเนิการแล้วเสร็จ">ดำเนิการแล้วเสร็จ</option>
-                                            <option value="กำลังสร้างพร้อมโครงการฯ">กำลังสร้างพร้อมโครงการฯ</option>
-                                            <option value="สร้างพร้อมโครงการฯ">สร้างพร้อมโครงการฯ</option>
-                                            <option value="เชื่อมโครงข่ายแล้ว">เชื่อมโครงข่ายแล้ว</option>
-                                            <option value="N/A">N/A</option>
-                                        </select>
+                                        <select class="trueProgress form-control" id="trueProgress"
+                                        name="trueProgress"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
@@ -209,6 +146,167 @@
 
 
 @section('adminlte_js')
+<script type="text/javascript">
+    $('#buildingName').select2({
+        placeholder: 'Select an building name...',
+        ajax: {
+            url: '/building-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.buildingName,
+                            id: item.buildingName
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
 
+    $('#fmProgress').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#totProgress').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#aisProgress').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#progress3bb').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#sinetProgress').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#fnProgress').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+    $('#trueProgress').select2({
+        placeholder: 'Select an construction operation...',
+        ajax: {
+            url: '/dataselect-autocomplete-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                return {
+                    results: $.map(data, function(item) {
+                        return {
+                            text: item.constructionOperation,
+                            id: item.constructionOperation
+                        }
+                    })
+                };
+            },
+            cache: true
+        }
+    });
+
+</script>
 @stop
 @endsection

@@ -38,7 +38,7 @@
                             <div class="col-sm-8">
                                 <div class="form-group">
                                     {!! Form::label('PROJECT NAME') !!}
-                                    {!! Form::text('BuildingName',$data->BuildingName,["class"=>"form-control"])!!}
+                                    {!! Form::text('buildingName',$data->buildingName,["class"=>"form-control"])!!}
                                 </div>
                             </div>
                             <div class="col-sm-2">

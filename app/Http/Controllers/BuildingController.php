@@ -6,6 +6,9 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\building;
+use App\Models\Dataselect;
+use App\Models\Desing;
+use App\Models\Contract;
 use DB;
 use Livewire\Component;
 
@@ -33,6 +36,7 @@ class BuildingController extends Controller
         $data = Building::all();
         return view('building.tableBuilding', ['data' => $data]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -73,7 +77,7 @@ class BuildingController extends Controller
     public function store(Request $request)
     {
        $validator =  Validator::make($request->all(), [
-            'BuildingName' => 'required',
+            'buildingName' => 'required',
             'fmCode' => 'required',
             'houseNumber' => 'required',
             'squadNumber' => 'required',
@@ -124,6 +128,66 @@ class BuildingController extends Controller
         return view('livewire.tableBuilding');
     }
 
+    public function dataAjax(Request $request )
+    {
+        $data = [];
+
+        if($request->has('q')){
+            $search = $request->q;
+            $data =Building::select("id","buildingName")
+            		->where('buildingName','LIKE',"%$search%")
+            		->get();
+        }else{
+            $data =Building::select("id","buildingName")->get();
+        }
+        return response()->json($data);
+    }
+
+    public function dataAjax2(Request $request )
+    {
+        $data = [];
+
+        if($request->has('q')){
+            $search = $request->q;
+            $data =Dataselect::select("id","constructionOperation")
+            		->where('constructionOperation','LIKE',"%$search%")
+            		->get();
+        }else{
+            $data =Dataselect::select("id","constructionOperation")->get();
+        }
+        return response()->json($data);
+    }
+
+    public function desingName(Request $request )
+    {
+        $data = [];
+
+        if($request->has('q')){
+            $search = $request->q;
+            $data =Desing::select("id","desings")
+            		->where('desings','LIKE',"%$search%")
+            		->get();
+        }else{
+            $data =Desing::select("id","desings")->get();
+        }
+        return response()->json($data);
+    }
+
+    public function contractName(Request $request )
+    {
+        $data = [];
+
+        if($request->has('q')){
+            $search = $request->q;
+            $data =Contract::select("id","contract")
+            		->where('contract','LIKE',"%$search%")
+            		->get();
+        }else{
+            $data =Contract::select("id","contract")->get();
+        }
+        return response()->json($data);
+    }
+
     public function showBuildingList()
     {
         $data = Building::all();
@@ -162,7 +226,7 @@ class BuildingController extends Controller
     public function update(Request $request, $id)
     {
         $validator =  Validator::make($request->all(), [
-            'BuildingName' => 'required',
+            'buildingName' => 'required',
             'fmCode' => 'required',
             'houseNumber' => 'required',
             'squadNumber' => 'required',

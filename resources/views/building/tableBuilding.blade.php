@@ -65,7 +65,7 @@
                         @foreach ($data as $row)
                             <tr>
                                 <th scope="row">{{ $row->id }}</th>
-                                <td>{{ $row->BuildingName }}</td>
+                                <td>{{ $row->buildingName }}</td>
                                 <td>{{ $row->nameManager }}</td>
                                 <td>{{ $row->phoneManager }}</td>
                                 <td>{{ $row->mailManager }}</td>
