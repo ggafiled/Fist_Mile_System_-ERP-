@@ -33,7 +33,9 @@ Route::middleware(['auth', 'role:superadministrator|administrator'])->group(func
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-    Route::get('/building/list', [App\Http\Controllers\BuildingController::class, 'showBuildingList'])->name('building.list');
+    Route::get('/project/list', [App\Http\Controllers\BuildingController::class, 'showBuildingList'])->name('building.list');
+    Route::get('/progressconstarution/list', [App\Http\Controllers\ProgressController::class, 'showProgressList'])->name('Progress.list');
+    Route::get('/progressconstarution/list', [App\Http\Controllers\ConstarutionController::class, 'showConstarutionList'])->name('Constarution.list');
     Route::resource('/building', App\Http\Controllers\BuildingController::class);
     Route::resource('/progress', App\Http\Controllers\ProgressController::class);
     Route::resource('/constarution', App\Http\Controllers\ConstarutionController::class);

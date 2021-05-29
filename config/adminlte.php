@@ -187,12 +187,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Project Table',
-                    'url'  => '/planning',
+                    'url'  => '/project/list',
                     'can'  => ['building-create']
                 ],
                 [
-                    'text' => 'Progress&Constarution',
-                    'url'  => '/planning/list',
+                    'text' => 'Progress&Constarution ',
+                    'url'  => '/progressconstarution/list',
                     'can'  => ['building-create']
                 ],
             ],
@@ -269,11 +269,16 @@ return [
         'Datatables' => [
             'active' => true,
             'files' => [
-                //js
+                //js https:
                 [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',
                 ],
                 [
                     'type' => 'js',

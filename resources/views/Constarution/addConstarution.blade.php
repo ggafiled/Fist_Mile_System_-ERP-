@@ -2,10 +2,6 @@
 
 @section('content')
     <style>
-        /* h3 {
-                                                font-family: Tahoma, Verdana, sans-serif;
-                                                font-weight: bold;
-                                              } */
 
     </style>
     <ul>
@@ -36,35 +32,36 @@
                                         <div class="form-group">
                                             <label>PROJECT NAME</label>
                                             <select class="buildingName form-control" id="buildingName"
-                                        name="buildingName"></select>
+                                                name="buildingName"></select>
                                         </div>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
                                             <label>DESING-BY</label>
-                                            <select class="desingBy form-control" id="desingBy"
-                                            name="desingBy"></select>
+                                            <select class="desingBy form-control" id="desingBy" name="desingBy"></select>
                                         </div>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
                                             <label>SURVEY - DESING</label>
                                             <select class="surveyDesing form-control" id="surveyDesing"
-                                            name="surveyDesing"></select>
+                                                name="surveyDesing"></select>
                                         </div>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
                                             <label>SURVEY - DESING - DATE</label>
-                                            <input type="date" class="form-control" name="surveyDesingDate" id="surveyDesingDate">
+                                            <input type="date" class="form-control" name="surveyDesingDate"
+                                                id="surveyDesingDate">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <label>SURVEY - DESING - DATE - BY</label>
-                                        <input type="time" class="form-control" name="surveyDesingDateBy" id="surveyDesingDateBy">
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label>SURVEY - DESING - DATE - BY</label>
+                                            <input type="time" class="form-control" name="surveyDesingDateBy"
+                                                id="surveyDesingDateBy">
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
 
 
@@ -72,8 +69,7 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label>IFCC</label>
-                                            <select class="ifcc form-control" id="ifcc"
-                                            name="ifcc"></select>
+                                            <select class="ifcc form-control" id="ifcc" name="ifcc"></select>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
@@ -85,300 +81,346 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label>WALLBOX</label>
-                                            <select class="wallBox form-control" id="wallBox"
-                                            name="wallBox"></select>
+                                            <select class="wallBox form-control" id="wallBox" name="wallBox"></select>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label>WALLBOX - DATE</label>
-                                                <input type="date" class="form-control" name="wallBoxDate" id="wallBoxDate">
+                                            <input type="date" class="form-control" name="wallBoxDate" id="wallBoxDate">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-sm-2">
-                                        <div class="form-group">
+                                        <div class="form-group ">
                                             <label>TYPE</label>
                                             <select type="text" class="form-control" name="type" id="type">
-                                                <option value="microduct">Microduct</option>
-                                                <option value="fiber">Fiber</option>
+                                                <option>Choose Type</option>
+                                                <option value="microduct">MICRODUCT</option>
+                                                <option value="fiber">FIBER</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <label>MICRODUCT (แนวดิ่ง)</label>
-                                            <select class="microductD form-control" id="microductD"
-                                            name="microductD"></select>
+                                <div class="microduct type">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>MICRODUCT (แนวดิ่ง)</label>
+                                                <select class="microductD form-control" id="microductD"
+                                                    name="microductD"></select>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <label>MICRODUCT - DATE (แนวดิ่ง)</label>
-                                            <input type="date" class="form-control" name="microductDateD" id="microductDateD">
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>MICRODUCT - DATE (แนวดิ่ง)</label>
+                                                <input type="date" class="form-control" name="microductDateD"
+                                                    id="microductDateD">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <label>MICRODUCT (แนวขว้าง)</label>
-                                            <select class="microductK form-control" id="microductK"
-                                            name="microductK"></select>
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>MICRODUCT (แนวขว้าง)</label>
+                                                <select class="microductK form-control" id="microductK"
+                                                    name="microductK"></select>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <label>MICRODUCT - DATE (แนวขว้าง)</label>
-                                            <input type="date" class="form-control" name="microductDateK" id="microductDateK">
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>MICRODUCT - DATE (แนวขว้าง)</label>
+                                                <input type="date" class="form-control" name="microductDateK"
+                                                    id="microductDateK">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>BLOW</label>
+                                                <select class="blow form-control" id="blow" name="blow"></select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>SPLICE</label>
+                                                <select class="splice form-control" id="splice" name="splice"></select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <label>FIBER - CONVERTION</label>
-                                            <select class="fiberConvertion form-control" id="fiberConvertion"
-                                            name="fiberConvertion"></select>
+                                <div class="fiber type">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>FIBER - CONVERTION</label>
+                                                <select class="fiberConvertion form-control" id="fiberConvertion"
+                                                    name="fiberConvertion"></select>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <label>FIBER - CONVERTION - DATA </label>
-                                            <input type="date" class="form-control" name="fiberConvertionDateD" id="fiberConvertionDateD">
-                                    </div>
-                                </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <label>SPLICE</label>
-                                            <select class="splice form-control" id="splice"
-                                            name="splice"></select>
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>FIBER - CONVERTION - DATA </label>
+                                                <input type="date" class="form-control" name="fiberConvertionDateD"
+                                                    id="fiberConvertionDateD">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <label>BLOW</label>
-                                            <select class="blow form-control" id="blow"
-                                            name="blow"></select>
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label>SPLICE</label>
+                                                <select class="splice form-control" id="splice" name="splice"></select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <input type="submit" value="CLICK CREATE" class="btn btn-primary" method="POST">
                                 @csrf @method('POST')
-                            <a href="/building" class="btn btn-success my-2">BACK</a>
+                                <a href="/building" class="btn btn-success my-2">BACK</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
 
 @section('adminlte_js')
-<script type="text/javascript">
-    $('#buildingName').select2({
-        placeholder: 'Select an building name...',
-        ajax: {
-            url: '/building-autocomplete-ajax',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            text: item.buildingName,
-                            id: item.buildingName
-                        }
-                    })
-                };
-            },
-            cache: true
-        }
-    });
+    <script type="text/javascript">
 
-    $('#surveyDesing').select2({
-        placeholder: 'Select an construction operation...',
-        ajax: {
-            url: '/dataselect-autocomplete-ajax',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            text: item.constructionOperation,
-                            id: item.constructionOperation
-                        }
-                    })
-                };
-            },
-            cache: true
-        }
-    });
+        $(document).ready(function() {
+            $("select").change(function() {
+                $(this).find("option:selected").each(function() {
+                    var optionValue = $(this).attr("value");
+                    if (optionValue) {
+                        $(".type").not("." + optionValue).hide();
+                        $("." + optionValue).show();
+                    } else {
+                        $(".type").hide();
+                    }
+                });
+            }).change();
+        });
 
-    $('#ifcc').select2({
-        placeholder: 'Select an construction operation...',
-        ajax: {
-            url: '/dataselect-autocomplete-ajax',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            text: item.constructionOperation,
-                            id: item.constructionOperation
-                        }
-                    })
-                };
-            },
-            cache: true
-        }
-    });
 
-    $('#wallBox').select2({
-        placeholder: 'Select an construction operation...',
-        ajax: {
-            url: '/dataselect-autocomplete-ajax',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            text: item.constructionOperation,
-                            id: item.constructionOperation
-                        }
-                    })
-                };
-            },
-            cache: true
-        }
-    });
+        $('#buildingName').select2({
+            placeholder: 'Select an building name...',
+            ajax: {
+                url: '/building-autocomplete-ajax',
+                dataType: 'json',
+                delay: 250,
+                processResults: function(data) {
+                    return {
+                        results: $.map(data, function(item) {
+                            return {
+                                text: item.buildingName,
+                                id: item.buildingName
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
 
-    $('#microductD').select2({
-        placeholder: 'Select an construction operation...',
-        ajax: {
-            url: '/dataselect-autocomplete-ajax',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            text: item.constructionOperation,
-                            id: item.constructionOperation
-                        }
-                    })
-                };
-            },
-            cache: true
-        }
-    });
+        $('#surveyDesing').select2({
+            placeholder: 'Select an construction operation...',
+            ajax: {
+                url: '/dataselect-autocomplete-ajax',
+                dataType: 'json',
+                delay: 250,
+                processResults: function(data) {
+                    return {
+                        results: $.map(data, function(item) {
+                            return {
+                                text: item.constructionOperation,
+                                id: item.constructionOperation
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
 
-    $('#microductK').select2({
-        placeholder: 'Select an construction operation...',
-        ajax: {
-            url: '/dataselect-autocomplete-ajax',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            text: item.constructionOperation,
-                            id: item.constructionOperation
-                        }
-                    })
-                };
-            },
-            cache: true
-        }
-    });
+        $('#ifcc').select2({
+            placeholder: 'Select an construction operation...',
+            ajax: {
+                url: '/dataselect-autocomplete-ajax',
+                dataType: 'json',
+                delay: 250,
+                processResults: function(data) {
+                    return {
+                        results: $.map(data, function(item) {
+                            return {
+                                text: item.constructionOperation,
+                                id: item.constructionOperation
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
 
-    $('#fiberConvertion').select2({
-        placeholder: 'Select an construction operation...',
-        ajax: {
-            url: '/dataselect-autocomplete-ajax',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            text: item.constructionOperation,
-                            id: item.constructionOperation
-                        }
-                    })
-                };
-            },
-            cache: true
-        }
-    });
+        $('#wallBox').select2({
+            placeholder: 'Select an construction operation...',
+            ajax: {
+                url: '/dataselect-autocomplete-ajax',
+                dataType: 'json',
+                delay: 250,
+                processResults: function(data) {
+                    return {
+                        results: $.map(data, function(item) {
+                            return {
+                                text: item.constructionOperation,
+                                id: item.constructionOperation
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
 
-    $('#splice').select2({
-        placeholder: 'Select an construction operation...',
-        ajax: {
-            url: '/dataselect-autocomplete-ajax',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            text: item.constructionOperation,
-                            id: item.constructionOperation
-                        }
-                    })
-                };
-            },
-            cache: true
-        }
-    });
+        $('#splice').select2({
+            placeholder: 'Select an construction operation...',
+            ajax: {
+                url: '/dataselect-autocomplete-ajax',
+                dataType: 'json',
+                delay: 250,
+                processResults: function(data) {
+                    return {
+                        results: $.map(data, function(item) {
+                            return {
+                                text: item.constructionOperation,
+                                id: item.constructionOperation
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
 
-    $('#blow').select2({
-        placeholder: 'Select an construction operation...',
-        ajax: {
-            url: '/dataselect-autocomplete-ajax',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            text: item.constructionOperation,
-                            id: item.constructionOperation
-                        }
-                    })
-                };
-            },
-            cache: true
-        }
-    });
+        $('#microductD').select2({
+            placeholder: 'Select an construction operation...',
+            ajax: {
+                url: '/dataselect-autocomplete-ajax',
+                dataType: 'json',
+                delay: 250,
+                processResults: function(data) {
+                    return {
+                        results: $.map(data, function(item) {
+                            return {
+                                text: item.constructionOperation,
+                                id: item.constructionOperation
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
 
-    $('#desingBy').select2({
-        placeholder: 'Select an Desing...',
-        ajax: {
-            url: '/dataselect-desingName',
-            dataType: 'json',
-            delay: 250,
-            processResults: function(data) {
-                return {
-                    results: $.map(data, function(item) {
-                        return {
-                            text: item.desings,
-                            id: item.desings
-                        }
-                    })
-                };
-            },
-            cache: true
-        }
-    });
+        $('#microductK').select2({
+            placeholder: 'Select an construction operation...',
+            ajax: {
+                url: '/dataselect-autocomplete-ajax',
+                dataType: 'json',
+                delay: 250,
+                processResults: function(data) {
+                    return {
+                        results: $.map(data, function(item) {
+                            return {
+                                text: item.constructionOperation,
+                                id: item.constructionOperation
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
 
-</script>
+        $('#fiberConvertion').select2({
+            placeholder: 'Select an construction operation...',
+            ajax: {
+                url: '/dataselect-autocomplete-ajax',
+                dataType: 'json',
+                delay: 250,
+                processResults: function(data) {
+                    return {
+                        results: $.map(data, function(item) {
+                            return {
+                                text: item.constructionOperation,
+                                id: item.constructionOperation
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
+
+        $('#splice').select2({
+            placeholder: 'Select an construction operation...',
+            ajax: {
+                url: '/dataselect-autocomplete-ajax',
+                dataType: 'json',
+                delay: 250,
+                processResults: function(data) {
+                    return {
+                        results: $.map(data, function(item) {
+                            return {
+                                text: item.constructionOperation,
+                                id: item.constructionOperation
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
+
+        $('#blow').select2({
+            placeholder: 'Select an construction operation...',
+            ajax: {
+                url: '/dataselect-autocomplete-ajax',
+                dataType: 'json',
+                delay: 250,
+                processResults: function(data) {
+                    return {
+                        results: $.map(data, function(item) {
+                            return {
+                                text: item.constructionOperation,
+                                id: item.constructionOperation
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
+
+        $('#desingBy').select2({
+            placeholder: 'Select an Desing...',
+            ajax: {
+                url: '/dataselect-desingName',
+                dataType: 'json',
+                delay: 250,
+                processResults: function(data) {
+                    return {
+                        results: $.map(data, function(item) {
+                            return {
+                                text: item.desings,
+                                id: item.desings
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
+
+    </script>
 @stop
 @endsection

@@ -86,9 +86,10 @@ class ProgressController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showProgressList()
     {
-        //
+        $data = Progress::all();
+        return view('tableList.progressconstarution', ['data' => $data]);
     }
 
 
