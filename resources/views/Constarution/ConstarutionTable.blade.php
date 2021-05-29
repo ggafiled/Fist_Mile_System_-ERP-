@@ -59,14 +59,14 @@
                                 <td>{{ $row->ifcc }}</td>
                                 <td>{{ $row->ifccDate }}</td>
                                 <td>
-                                    <form action="{{ route('progress.edit', $row->id) }}" method="PUT">
+                                    <form action="{{ route('constarution.edit', $row->id) }}" method="PUT">
                                         @csrf @method('HEAD')
                                         <input type="submit" value='Edit' " class=" btn btn-warning ">
                                         </form>
                                     </td>
                                     @role('superadministrator')
                                     <td>
-                                        <form action=" {{ route('progress.destroy', $row->id) }}" method="post">
+                                        <form action=" {{ route('constarution.destroy', $row->id) }}" method="post">
                                         @csrf @method('DELETE')
                                         <input type="submit" value='Delete' class="btn btn-danger deleteForm">
                                     </form>

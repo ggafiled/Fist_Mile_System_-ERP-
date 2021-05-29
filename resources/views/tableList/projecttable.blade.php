@@ -12,7 +12,7 @@
         }
 
     </style>
-<h3>{{ __('PROJECT MANAGEMENT') }}</h3>
+<h3>{{ __('PROJECT TABLE LIST') }}</h3>
     <div class="row justify-content-center">
         <div class="col-md">
             <div class="card">
@@ -27,9 +27,21 @@
                                 <tr class="info">
                                     <th width="1%">#</th>
                                     <th width="5%">Projects Name</th>
+                                    <th width="5%">FM Code</th>
+                                    <th width="5%">Niti Name</th>
+                                    <th width="3%">Phone Number</th>
+                                    <th width="3%">Mail Niti</th>
                                     <th width="5%">Manager Name</th>
                                     <th width="3%">Phone Number</th>
                                     <th width="3%">Mail Manager</th>
+                                    <th width="3%">House Number</th>
+                                    <th width="3%">Squad Number</th>
+                                    <th width="3%">Alley </th>
+                                    <th width="3%">Road </th>
+                                    <th width="3%">District</th>
+                                    <th width="3%">Province</th>
+                                    <th width="3%">County</th>
+                                    <th width="3%">PostalCode</th>
                                 </tr>
                             </thead>
                     </div>
@@ -38,10 +50,21 @@
                             <tr>
                                 <th scope="row">{{ $row->id }}</th>
                                 <td>{{ $row->buildingName }}</td>
+                                <td>{{ $row->fmCode }}</td>
+                                <td>{{ $row->nameNiti }}</td>
+                                <td>{{ $row->phoneNiti }}</td>
+                                <td>{{ $row->mailNiti }}</td>
                                 <td>{{ $row->nameManager }}</td>
                                 <td>{{ $row->phoneManager }}</td>
                                 <td>{{ $row->mailManager }}</td>
-
+                                <td>{{ $row->houseNumber }}</td>
+                                <td>{{ $row->squadNumber }}</td>
+                                <td>{{ $row->alleyName }}</td>
+                                <td>{{ $row->roadName }}</td>
+                                <td>{{ $row->districtName}}</td>
+                                <td>{{ $row->provinceName}}</td>
+                                <td>{{ $row->countyName}}</td>
+                                <td>{{ $row->postalCode}}</td>
                             </tr>
                         @endforeach
                     </tbody>

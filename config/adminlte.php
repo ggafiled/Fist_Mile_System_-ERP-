@@ -245,6 +245,12 @@ return [
             'roles'  => ['superadministrator','administrator'],
         ],
         [
+            'text' => 'Data Validation',
+            'url'  => '',
+            'icon' => 'fas fa-fw fa-database',
+            'roles'  => ['superadministrator','administrator'],
+        ],
+        [
             'text' => 'Logout',
             'url'  => 'logout',
             'icon' => 'fas fa-sign-out-alt',

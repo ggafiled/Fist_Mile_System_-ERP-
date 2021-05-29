@@ -41,6 +41,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/constarution', App\Http\Controllers\ConstarutionController::class);
     Route::resource('/usermanament', App\Http\Controllers\UserManagementController::class);
     Route::resource('/permission', App\Http\Controllers\UserRolePermissionController::class);
+    Route::resource('/datavalidation', App\Http\Controllers\dataValidationController::class);
 
     ///calendar
     Route::resource('/calendar', App\Http\Controllers\CalendarController::class);
