@@ -6,9 +6,6 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\building;
-use App\Models\Dataselect;
-use App\Models\Desing;
-use App\Models\Contract;
 use DB;
 use Livewire\Component;
 
@@ -128,7 +125,7 @@ class BuildingController extends Controller
         return view('livewire.tableBuilding');
     }
 
-    public function dataAjax(Request $request )
+    public function dataAjaxProjectName(Request $request )
     {
         $data = [];
 
@@ -143,50 +140,6 @@ class BuildingController extends Controller
         return response()->json($data);
     }
 
-    public function dataAjax2(Request $request )
-    {
-        $data = [];
-
-        if($request->has('q')){
-            $search = $request->q;
-            $data =Dataselect::select("id","constructionOperation")
-            		->where('constructionOperation','LIKE',"%$search%")
-            		->get();
-        }else{
-            $data =Dataselect::select("id","constructionOperation")->get();
-        }
-        return response()->json($data);
-    }
-
-    public function desingName(Request $request )
-    {
-        $data = [];
-
-        if($request->has('q')){
-            $search = $request->q;
-            $data =Desing::select("id","desings")
-            		->where('desings','LIKE',"%$search%")
-            		->get();
-        }else{
-            $data =Desing::select("id","desings")->get();
-        }
-        return response()->json($data);
-    }
-
-    public function contractName(Request $request )
-    {
-        $data = [];
-
-        if($request->has('q')){
-            $search = $request->q;
-            $data =Contract::select("id","contract")
-            		->where('contract','LIKE',"%$search%")
-            		->get();
-        }else{
-            $data =Contract::select("id","contract")->get();
-        }
-        return response()->json($data);
-    }
 
     public function showBuildingList()
     {

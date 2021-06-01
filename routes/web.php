@@ -37,45 +37,34 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/progressconstarution/list', [App\Http\Controllers\ProgressController::class, 'showProgressList'])->name('Progress.list');
     Route::get('/progressconstarution/list', [App\Http\Controllers\ConstarutionController::class, 'showConstarutionList'])->name('Constarution.list');
     Route::resource('/building', App\Http\Controllers\BuildingController::class);
+    Route::resource('/building_unit', App\Http\Controllers\buildingunitController::class);
     Route::resource('/progress', App\Http\Controllers\ProgressController::class);
     Route::resource('/constarution', App\Http\Controllers\ConstarutionController::class);
     Route::resource('/usermanament', App\Http\Controllers\UserManagementController::class);
     Route::resource('/permission', App\Http\Controllers\UserRolePermissionController::class);
     Route::resource('/datavalidation', App\Http\Controllers\dataValidationController::class);
-
     ///calendar
     Route::resource('/calendar', App\Http\Controllers\CalendarController::class);
-
     ///constarution
     Route::resource('/constarution', App\Http\Controllers\ConstarutionController::class);
-
     ///resplice
     Route::resource('/resplice', App\Http\Controllers\RespliceController::class);
-
     ///payment
     Route::resource('/payment', App\Http\Controllers\PaymentController::class);
-
     ///planning
     Route::get('/planning/list', [App\Http\Controllers\PlaningController::class, 'showPlaningList'])->name('planning.list');
     Route::resource('/planning', App\Http\Controllers\PlaningController::class);
-
-    //ajax data
-    Route::get('/building-autocomplete-ajax', [App\Http\Controllers\BuildingController::class, 'dataAjax']);
-    //ajax data
-    Route::get('/dataselect-autocomplete-ajax', [App\Http\Controllers\BuildingController::class, 'dataAjax2']);
-    Route::get('/dataselect-desingName', [App\Http\Controllers\BuildingController::class, 'desingName']);
-    Route::get('/dataselect-contract', [App\Http\Controllers\BuildingController::class, 'contractName']);
+    Route::get('/building-autocomplete-ajax', [App\Http\Controllers\BuildingController::class, 'dataAjaxProjectName']);
+    Route::get('/dataselect-autocomplete-ajax', [App\Http\Controllers\GetdataController::class, 'dataAjaxDataSelect']);
+    Route::get('/dataselect-desingName', [App\Http\Controllers\GetdataController::class, 'desingName']);
+    Route::get('/dataselect-contract', [App\Http\Controllers\GetdataController::class, 'contractName']);
     //get_province
     Route::post('/building/fetch', [App\Http\Controllers\BuildingController::class, 'fetch'])->name('building.fetch');
     //get_area
     Route::post('/building/fetch2', [App\Http\Controllers\BuildingController::class, 'fetch2'])->name('building.fetch2');
 
-
-
-
-    // Route::post('/usermanament',[App\Http\Controllers\UserManagementController::class, 'store'])->name('usermanagement.store');
+    //ฟิวช่วยทำ
     Route::post('/usermanament', [App\Http\Controllers\Auth\RegisterController::class, 'create'])->name('Register.create');
-
     Route::post('/setUserNameAndEmail', [App\Http\Controllers\UserController::class, 'setUserNameAndEmail'])->name('users.update');
     Route::post('/setUserImage', [App\Http\Controllers\UserController::class, 'setUserImage']);
     Route::get('/form/editprofile', [App\Http\Controllers\UserController::class, 'showChangePasswordForm'])->name('users.edit');

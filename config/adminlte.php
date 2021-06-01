@@ -163,23 +163,29 @@ return [
             'can'  => ['constarution-create', 'constarution-read'],
         ],
         [
-            'text' => 'FM Manegement',
-            'icon' => 'fas fa-fw far fa-address-book',
-            'can'  => ['building-create|building-read|building-update'],
-            'submenu' => [
-                [
-                    'text' => 'Planing Management',
-                    'url'  => '/planning',
-                    'can'  => ['building-create']
-                ],
-                [
-                    'text' => 'Planing List Table',
-                    'url'  => '/planning/list',
-                    'can'  => ['building-create']
-                ],
-            ],
-
+            'text' => 'Builing Unit',
+            'url'  => '/building_unit',
+            'icon' => 'fas fa-fw fa-city',
+            'can'  => ['constarution-create', 'constarution-read'],
         ],
+        // [
+        //     'text' => 'FM Manegement',
+        //     'icon' => 'fas fa-fw far fa-address-book',
+        //     'can'  => ['building-create|building-read|building-update'],
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Planing Management',
+        //             'url'  => '/planning',
+        //             'can'  => ['building-create']
+        //         ],
+        //         [
+        //             'text' => 'Planing List Table',
+        //             'url'  => '/planning/list',
+        //             'can'  => ['building-create']
+        //         ],
+        //     ],
+
+        // ],
         [
             'text' => 'Table List',
             'icon' => 'fas fa-fw far fa-table',
