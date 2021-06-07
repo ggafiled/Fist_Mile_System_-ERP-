@@ -57,9 +57,9 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label>JURISTIC PERSON NAME</label>
+                                            <label>ชื่อนิติบุคคล</label>
                                             <input type="text" class="form-control" name="nameNiti" id="nameNiti"
-                                                placeholder="ชื่อนิติบุคคล">
+                                                placeholder="กรอกชื่อนิติบุคคล">
                                             {{-- {!! Form::label('JURISTIC PERSON NAME') !!}
                                             <i class="fas fa-id-card-alt"></i>
                                             {!! Form::text('contactName',null,["class"=>"form-control",'placeholder' => 'ชื่อนิติบุคคล.'])!!} --}}
@@ -67,9 +67,9 @@
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>PHONE NUMBER</label>
+                                            <label>หมายเลขโทรศัพท์</label>
                                             <input type="tel" class="form-control" name="phoneNiti" id="phoneNiti"
-                                                placeholder="หมายเลขโทรศัพท์">
+                                                placeholder="กรอกหมายเลขโทรศัพท์นิติบุคคล">
                                             {{-- {!! Form::label('PHONE NUMBER') !!}
                                             <i class="fas fa-phone-square-alt"></i>
                                             {!! Form::text('phone',null,["class"=>"form-control",'placeholder' => 'หมายเลขโทรศัพท์'])!!} --}}
@@ -77,9 +77,9 @@
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>EMAIL</label>
+                                            <label>อีเมลล์</label>
                                             <input type="email" class="form-control" name="mailNiti" id="mailNiti"
-                                                placeholder="อีเมลล์">
+                                                placeholder="อีเมลล์นิติบุคคล">
                                             {{-- {!! Form::label('EMAIL') !!}
                                             <i class="fas fa-chart-area"></i>
                                             {!! Form::text('area',null,["class"=>"form-control",'placeholder' => 'อีเมลล์'])!!} --}}
@@ -90,9 +90,9 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label>MANAGER NAME</label>
+                                            <label>ชื่อผู้จัดการ</label>
                                             <input type="text" class="form-control" name="nameManager" id="nameManager"
-                                                placeholder="ชื่อผู้จัดการ">
+                                                placeholder="กรอกชื่อผู้จัดการ">
                                             {{-- {!! Form::label('MANAGER NAME') !!}
                                             <i class="fas fa-id-card-alt"></i>
                                             {!! Form::text('contactName',null,["class"=>"form-control",'placeholder' => 'ชื่อผู้จัดการ'])!!} --}}
@@ -100,9 +100,9 @@
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>PHONE NUMBER</label>
+                                            <label>หมายเลขโทรศัพท์</label>
                                             <input type="tel" class="form-control" name="phoneManager" id="phoneManager"
-                                                placeholder="หมายเลขโทรศัพท์">
+                                                placeholder="หมายเลขโทรศัพท์ผู้จัดการ">
                                             {{-- {!! Form::label('PHONE NUMBER') !!}
                                             <i class="fas fa-phone-square-alt"></i>
                                             {!! Form::text('phone',null,["class"=>"form-control",'placeholder' => 'หมายเลขโทรศัพท์'])!!} --}}
@@ -123,9 +123,9 @@
                                 <div class="row">
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>HOUSE NUMBER</label>
+                                            <label>บ้านเลขที่</label>
                                             <input type="number" class="form-control" name="houseNumber" id="houseNumber"
-                                                placeholder="บ้านเลขที่">
+                                                placeholder="กรอกบ้านเลขที่">
                                             {{-- {!! Form::label('HOUSE NUMBER') !!}
                                             <i class="fas fa-id-card-alt"></i>
                                             {!! Form::text('contactName',null,["class"=>"form-control",'placeholder' => 'บ้านเลขที่'])!!} --}}
@@ -133,9 +133,9 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>VILLAGE</label>
+                                            <label>หมู่</label>
                                             <input type="number" class="form-control" name="squadNumber" id="squadNumber"
-                                                placeholder="หมู่">
+                                                placeholder="กรอกเลขหมู่">
                                             {{-- {!! Form::label('VILLAGE') !!}
                                             <i class="fas fa-phone-square-alt"></i>
                                             {!! Form::text('phone',null,["class"=>"form-control",'placeholder' => 'หมู่'])!!} --}}
@@ -143,9 +143,9 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>ALLEY</label>
+                                            <label>ซอย</label>
                                             <input type="text" class="form-control" name="alleyName" id="alleyName"
-                                                placeholder="ซอย">
+                                                placeholder="กรอกซอย">
                                             {{-- {!! Form::label('ALLEY') !!}
                                             <i class="fas fa-chart-area"></i>
                                             {!! Form::text('area',null,["class"=>"form-control",'placeholder' => 'ซอย'])!!} --}}
@@ -153,9 +153,9 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>ROAD</label>
+                                            <label>ถนน</label>
                                             <input type="text" class="form-control" name="roadName" id="roadName"
-                                                placeholder="ถนน">
+                                                placeholder="กรอกถนน">
                                             {{-- {!! Form::label('ROAD') !!}
                                             <i class="fas fa-chart-area"></i>
                                             {!! Form::text('area',null,["class"=>"form-control",'placeholder' => 'ถนน'])!!} --}}
@@ -163,9 +163,9 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>DISTRICT</label>
+                                            <label>ตำบล/แขวง</label>
                                             <input type="text" class="form-control" name="districtName" id="districtName"
-                                                placeholder="ตำบล/แขวง">
+                                                placeholder="กรอกตำบล/แขวง">
                                             {{-- {!! Form::label('DISTRICT') !!}
                                             <i class="fas fa-chart-area"></i>
                                             {!! Form::text('area',null,["class"=>"form-control",'placeholder' => 'ตำบล/แขวง'])!!} --}}
@@ -176,7 +176,7 @@
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>PROVINCE</label>
+                                            <label>จังหวัด</label>
                                             <select class="form-control province" name="provinceName" id="provinceName">
                                                 <option value="">เลือกจังหวัดของคุณ</option>
                                                 @foreach ($list2 as $row)
@@ -190,7 +190,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>COUNTY</label>
+                                            <label>เขต/อำเภอ</label>
                                             <select type="text" class="form-control amphures" name="countyName"
                                                 id="countyName">
                                                 <option value="">เลือกเขตหรืออำเภอของคุณ</option>
@@ -204,9 +204,9 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>POSTAL CODE</label>
+                                            <label>รหัสไปรษณีย์</label>
                                             <input type="text" pattern="\d*" maxlength="5" class="form-control"
-                                                name="postalCode" id="postalCode" placeholder="รหัสไปรษณีย์">
+                                                name="postalCode" id="postalCode" placeholder="กรอกรหัสไปรษณีย์">
                                             {{-- {!! Form::label('POSTAL CODE') !!}
                                             <i class="fas fa-phone-square-alt"></i>
                                             {!! Form::text('phone', null, ['class' => 'form-control', 'placeholder' => 'รหัสไปรษณีย์']) !!} --}}
@@ -217,7 +217,7 @@
                                 <div class="row">
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>SALL CONTACT</label>
+                                            <label>SALL ที่ทำสัญญา</label>
                                             <select class="contractSell form-control" id="contractSell"
                                             name="contractSell"></select>
                                             {{-- <input type="text" class="form-control" name="contractSell" id="contractSell"
@@ -229,9 +229,8 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>CONTRACT SIGNING DATE</label>
-                                            <input type="date" class="form-control" name="contractDate" id="contractDate"
-                                                placeholder="ชื่อเซลล์ที่ดุแลสัญญา">
+                                            <label>วันเวลาที่ทำสัญญา</label>
+                                            <input type="date" class="form-control" name="contractDate" id="contractDate">
                                             {{-- {!! Form::label('CONTRACT SIGNING DATE') !!}
                                             <i class="fas fa-phone-square-alt"></i>
                                             {!! Form::text('phone', null, ['class' => 'form-control', 'placeholder' => 'วันลงนามสัญญา']) !!} --}}
@@ -239,7 +238,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>CONTRACT SIGNING TIME</label>
+                                            <label>เวลาที่ทำสัญญา</label>
                                             <input type="time" class="form-control" name="contractTime" id="contractTime">
                                             {{-- {!! Form::label('CONTRACT SIGNING TIME') !!}
                                             <i class="fas fa-chart-area"></i>
@@ -248,7 +247,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>CONTRACT MODEL</label>
+                                            <label>รูปแบบสัญญา</label>
                                             <select type="text" class="form-control" name="spendSpace" id="spendSpace">
                                                 <option value="เลือกรูปแบบการชำระ">เลือกรูปแบบการชำระ</option>
                                                 <option value="ไม่แบ่งรายได้">ไม่แบ่งรายได้</option>
@@ -264,7 +263,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>COMPENSATION</label>
+                                            <label>ผลตอบแทน</label>
                                             <input type="text" class="form-control" name="condition" id="condition"
                                                 placeholder="ผลตอบแทน">
                                             {{-- {!! Form::label('COMPENSATION') !!}
@@ -274,7 +273,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>CONTRACT PERIOD</label>
+                                            <label>ระยะเวลาสัญญา</label>
                                             <input type="date" class="form-control" name="contractPeriod"
                                                 id="contractPeriod" placeholder="ระยะเวลาสัญญา">
                                             {{-- {!! Form::label('CONTRACT PERIOD') !!}
@@ -287,7 +286,7 @@
                                 <div class="row">
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>CONTRACT START DATE</label>
+                                            <label>วันเริ่มสัญญา</label>
                                             <input type="date" class="form-control" name="contractStartDate"
                                                 id="contractStartDate">
                                             {{-- {!! Form::label('CONTRACT START DATE') !!}
@@ -297,7 +296,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>CONTRACT EXPIRATION DATE</label>
+                                            <label>วันสิ้นสุดสัญญา</label>
                                             <input type="date" class="form-control" name="contractExpirationDate"
                                                 id="contractExpirationDate">
                                             {{-- {!! Form::label('CONTRACT EXPIRATION DATE') !!}
@@ -310,7 +309,7 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label>TECHINCIAN TEAM</label>
+                                            <label>ทีมช่าง</label>
                                             <input type="text" class="form-control" name="team" id="team"
                                                 placeholder="ทีมช่าง">
                                             {{-- {!! Form::label('TECHINCIAN TEAM') !!}
@@ -320,7 +319,7 @@
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>TECHINCIAN NAME</label>
+                                            <label>ชื่อช่าง</label>
                                             <input type="text" class="form-control" name="nameTechnician"
                                                 id="nameTechnician" placeholder="ชื่อช่าง">
                                             {{-- {!! Form::label('TECHINCIAN NAME') !!}
@@ -330,9 +329,9 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>TECHINCIAN PHONE</label>
+                                            <label>หมายเลขโทรศัพท์</label>
                                             <input type="tel" class="form-control" name="phoneTechnician"
-                                                id="phoneTechnician" placeholder="หมายเลขโทรศัพท์">
+                                                id="phoneTechnician" placeholder="กรอกหมายเลขโทรศัพท์">
                                             {{-- {!! Form::label('TECHINCIAN PHONE') !!}
                                             <i class="fas fa-phone-square-alt"></i>
                                             {!! Form::text('phone', null, ['class' => 'form-control', 'placeholder' => 'เบอร์ช่าง']) !!} --}}
@@ -340,9 +339,9 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>TECHINCIAN MAIL</label>
+                                            <label>อีเมลล์ช่าง</label>
                                             <input type="email" class="form-control" name="mailTechnicianName"
-                                                id="mailTechnicianName" placeholder="อีเมลล์ช่าง">
+                                                id="mailTechnicianName" placeholder="กรอกอีเมลล์ช่าง">
                                             {{-- {!! Form::label('TECHINCIAN MAIL') !!}
                                             <i class="fas fa-phone-square-alt"></i>
                                             {!! Form::text('phone', null, ['class' => 'form-control', 'placeholder' => 'เมลล์ช่าง']) !!} --}}
@@ -350,7 +349,7 @@
                                     </div>
                                     <div class="col-sm-1">
                                         <div class="form-group">
-                                            <label>AREA</label>
+                                            <label>พื้นที่</label>
                                             <select class="form-control area" name="areaN" id="areaN">
                                                 <option value="">เลือกพื้นที่</option>
                                                 @foreach ($list as $sum)
@@ -364,7 +363,7 @@
                                 <div class="row">
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>B.B.N.</label>
+                                            <label>บ.บ.น.</label>
                                             <select type="text" class="form-control bbns" name="bbN"
                                             id="bbN">
                                             <option value="">เลือกพื้นที่ของคุณ</option>
@@ -373,7 +372,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>AREA 3BB</label>
+                                            <label>พื้นที่ 3BB</label>
                                             <select type="text" class="form-control" name="area3BB" id="area3BB">
                                                 <option value="">เลือกพื้นที่</option>
                                                 <option value="RO 1">RO 1</option>
@@ -396,7 +395,7 @@
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
-                                            <label>AREA TRUE</label>
+                                            <label>พื้นที่ TRUE</label>
                                             <select type="text" class="form-control" name="areaTrue" id="areaTrue">
                                                 <option value="">เลือกพื้นที่</option>
                                                 <option value="BMA 1 (North West)">BMA 1 (North West)</option>
@@ -410,7 +409,7 @@
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>OPERATING TIME</label>
+                                            <label>เวลาในการปฏิบัติงาน</label>
                                             <select type="text" class="form-control" name="operatingTime" id="operatingTime">
                                                 <option value="">เลือกเวลาในการปฏิบัติงาน</option>
                                                 <option value="จันทร์ - ศุกร์ (9.00 - 17.00 น)">จันทร์ - ศุกร์ (9.00 - 17.00 น)</option>
@@ -424,9 +423,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            <input type="submit" value="CLICK CREATE" class="btn btn-primary" method="POST">
+                            <input type="submit" value="เพิ่มข้อมูล" class="btn btn-primary" method="POST">
                                 @csrf @method('POST')
-                            <a href="/building" class="btn btn-success my-2">BACK</a>
+                            <a href="/building" class="btn btn-success my-2">กลับ</a>
                         </div>
                     </div>
                 </div>

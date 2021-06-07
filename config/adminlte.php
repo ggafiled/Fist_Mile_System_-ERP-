@@ -197,8 +197,13 @@ return [
                     'can'  => ['building-create']
                 ],
                 [
-                    'text' => 'Progress&Constarution ',
-                    'url'  => '/progressconstarution/list',
+                    'text' => 'Progress Table',
+                    'url'  => '/progress/list',
+                    'can'  => ['building-create']
+                ],
+                [
+                    'text' => 'Constarution Table',
+                    'url'  => '/constarution/list',
                     'can'  => ['building-create']
                 ],
             ],
@@ -252,7 +257,7 @@ return [
         ],
         [
             'text' => 'Data Validation',
-            'url'  => '',
+            'url'  => '/datavalidation',
             'icon' => 'fas fa-fw fa-database',
             'roles'  => ['superadministrator','administrator'],
         ],
@@ -402,6 +407,21 @@ return [
                     'asset' => false,
                     'location' => '//code.highcharts.com/highcharts.js',
                 ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js',
+                ],
+                // [
+                //     'type' => 'js',
+                //     'asset' => false,
+                //     'location' => '//cdn.datatables.net/1.10.24/js/dataTables.bootstrap.min.js',
+                // ],
                 // [
                 //     'type' => 'js',
                 //     'asset' => false,
@@ -428,6 +448,16 @@ return [
                     'location' => 'https://www.jqueryscript.net/demo/Excel-like-Bootstrap-Table-Sorting-Filtering-Plugin/excel-bootstrap-table-filter-bundle.js',
                 ],
                 // css
+                // [
+                //     'type' => 'css',
+                //     'asset' => false,
+                //     'location' => '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
+                // ],
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdn.datatables.net/1.10.24/css/dataTables.bootstrap.min.css',
+                ],
                 [
                     'type' => 'css',
                     'asset' => false,

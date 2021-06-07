@@ -43,7 +43,7 @@
                                 <div class="col-sm-2">
                                     <div class="form-group">
                                         {!! Form::label('วันที่เข้าวางโครงข่าย :') !!}
-                                        {!! Form::date('dateProgress', $data->dateFm, ['class' => 'form-control']) !!}
+                                        {!! Form::date('dateFm', $data->dateFm, ['class' => 'form-control']) !!}
                                     </div>
                                 </div>
                             </div>

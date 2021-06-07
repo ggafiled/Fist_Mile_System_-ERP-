@@ -34,8 +34,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
     Route::get('/project/list', [App\Http\Controllers\BuildingController::class, 'showBuildingList'])->name('building.list');
-    Route::get('/progressconstarution/list', [App\Http\Controllers\ProgressController::class, 'showProgressList'])->name('Progress.list');
-    Route::get('/progressconstarution/list', [App\Http\Controllers\ConstarutionController::class, 'showConstarutionList'])->name('Constarution.list');
+    Route::get('/progress/list', [App\Http\Controllers\ProgressController::class, 'showProgressList'])->name('Progress.list');
+    Route::get('/constarution/list', [App\Http\Controllers\ConstarutionController::class, 'showConstarutionList'])->name('Constarution.list');
     Route::resource('/building', App\Http\Controllers\BuildingController::class);
     Route::resource('/building_unit', App\Http\Controllers\buildingunitController::class);
     Route::resource('/progress', App\Http\Controllers\ProgressController::class);
@@ -62,6 +62,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/building/fetch', [App\Http\Controllers\BuildingController::class, 'fetch'])->name('building.fetch');
     //get_area
     Route::post('/building/fetch2', [App\Http\Controllers\BuildingController::class, 'fetch2'])->name('building.fetch2');
+
 
     //ฟิวช่วยทำ
     Route::post('/usermanament', [App\Http\Controllers\Auth\RegisterController::class, 'create'])->name('Register.create');

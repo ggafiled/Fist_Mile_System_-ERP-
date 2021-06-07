@@ -89,7 +89,7 @@
                                         <div class="card-body">
                                             {{-- <a  href="/building/create"  class="btn btn-primary my-2 "><i class="fas fa-calendar-plus"></i>&nbsp;&nbsp; Add Building</a> --}}
                                             <div class="table-responsive">
-                                                <table class="table table-dark table-striped" id="example0">
+                                                <table class="table table-striped" id="example0">
                                                     <thead>
                                                         <tr class="info">
                                                             <th width="1%">#</th>
@@ -97,7 +97,6 @@
                                                             <th width="5%">Manager Name</th>
                                                             <th width="3%">Phone Number</th>
                                                             <th width="3%">Mail Manager</th>
-
                                                         </tr>
                                                     </thead>
                                             </div>
@@ -123,10 +122,7 @@
                     @section('adminlte_js')
                         <script>
                             $(document).ready(function() {
-                                $('#example0').DataTable();
-                            });
-                            $(document).ready(function() {
-                                $("#example1").DataTable({
+                                $("#example0").DataTable({
                                     lengthMenu: [
                                         [10, 25, 50, -1],
                                         [10, 25, 50, "All"]

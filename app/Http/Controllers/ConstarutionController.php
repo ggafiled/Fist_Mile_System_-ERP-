@@ -91,7 +91,7 @@ class ConstarutionController extends Controller
     public function showConstarutionList()
     {
         $data = Constarution::all();
-        return view('tableList.progressconstarution', ['data' => $data]);
+        return view('tableList.constarution', ['data' => $data]);
     }
 
     /**

@@ -89,7 +89,7 @@ class ProgressController extends Controller
     public function showProgressList()
     {
         $data = Progress::all();
-        return view('tableList.progressconstarution', ['data' => $data]);
+        return view('tableList.progresstable', ['data' => $data]);
     }
 
 
@@ -122,7 +122,7 @@ class ProgressController extends Controller
     public function update(Request $request, $id)
     {
         $validator =  Validator::make($request->all(),[
-            'buildingName'=>'required',
+            // 'buildingName'=>'required',
             'fmProgress'=>'required',
             'dateFm'=>'required',
             'totProgress'=>'required',

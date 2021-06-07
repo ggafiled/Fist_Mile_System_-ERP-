@@ -51,9 +51,9 @@
                                 <tr class="info">
                                     <th width="1%">#</th>
                                     <th width="5%">Projects Name</th>
-                                    <th width="5%">Manager Name</th>
-                                    <th width="3%">Phone Number</th>
-                                    <th width="3%">Mail Manager</th>
+                                    <th width="5%">ชื่อผู้จัดการ</th>
+                                    <th width="3%">เบอร์โทรผู้จัดการ</th>
+                                    <th width="3%">เมลล์ผู้จัดการ</th>
                                     <th width="1%">Edit</th>
                                     @role('superadministrator')
                                     <th width="1%">DELETE</th>
