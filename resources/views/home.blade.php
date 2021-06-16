@@ -24,22 +24,7 @@
                                 </div>
                             </div>
                             @endpermission
-                            {{-- @permission('building-create|building-update')
-                    <div class="col-lg-3 col-6">
-                        <div class="small-box bg-info">
-                            <div class="inner">
-                                <h3></h3>
 
-                                <p>Add Building List</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fas fa-fw fa-calendar-alt"></i>
-                            </div>
-                            <a href="/building/create" class="small-box-footer">Click <i
-                                    class="fas fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    @endpermission --}}
                             @permission('constarution-read|constarution-create|constarution-update')
                                 <div class="col-lg-3 col-6">
                                     <div class="small-box bg-success">
@@ -104,7 +89,7 @@
                                                 @foreach ($data as $row)
                                                     <tr>
                                                         <th scope="row">{{ $row->id }}</th>
-                                                        <td>{{ $row->buildingName }}</td>
+                                                        <td>{{ $row->projectName }}</td>
                                                         <td>{{ $row->nameManager }}</td>
                                                         <td>{{ $row->phoneManager }}</td>
                                                         <td>{{ $row->mailManager }}</td>

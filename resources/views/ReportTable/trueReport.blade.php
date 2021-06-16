@@ -1,4 +1,5 @@
 @extends('adminlte::page')
+
 @section('content')
     <style>
         td.details-control {
@@ -24,9 +25,11 @@
             width: 120px;
             height: 120px;
             margin: -76px 0 0 -76px;
-            border: 16px solid #f3f3f3;
+            border-top: 16px solid rgb(255, 255, 255);
+            border-right: 16px solid rgb(255, 0, 0);
             border-radius: 50%;
-            border-top: 16px solid #3498db;
+            border-bottom: 16px solid rgb(255, 255, 255);
+            border-left: 16px solid rgb(255, 0, 0);
             -webkit-animation: spin 2s linear infinite;
             animation: spin 2s linear infinite;
         }
@@ -92,38 +95,37 @@
 
     <body onload="myFunction()" style="margin:0;">
         <div id="loader"></div>
-        <h3>{{ __('PROGRESS TABLE LIST') }}</h3>
+        <h3>{{ __('REPORT TRUE TABLE') }}</h3>
         <div style="display:none;" id="myDiv" class="row justify-content-center">
             <div class="col-md">
                 <div class="card">
-                    <div class="card-header text-white bg-dark">{{ __('CONSTARUTION TABLE') }}
+                    <div class="card-header text-white bg-dark">{{ __('REPORT TRUE TABLE') }}
                         </center>
                     </div>
                     <div class="card-body">
                         {{-- <a  href="/building/create"  class="btn btn-primary my-2 "><i class="fas fa-calendar-plus"></i>&nbsp;&nbsp; Add Building</a> --}}
                         <div class="table-responsive">
-                            <table class="display nowrap" id="constarutionTable" style="width:100%">
+                            <table class="display nowrap" id="projectTable" style="width:100%">
                                 <thead>
                                     <tr class="info">
-                                        <th width="1%">#</th>
-                                        <th>PROJECTNAME</th>
-                                        <th>ออกแบบโดย</th>
-                                        <th>สำรวจโดย</th>
-                                        <th>วันที่สำรวจออกแบบ</th>
-                                        <th>สำรวจออกแบบโดย</th>
-                                        <th>IFCC</th>
-                                        <th>IFCC-DATE</th>
-                                        <th>WALLBOX</th>
-                                        <th>WALLBOX-DATE</th>
-                                        <th>TYPE</th>
-                                        <th>MICRODUCT(แนวดิ่ง)</th>
-                                        <th>MICRODUCT-DATE(แนวดิ่ง)</th>
-                                        <th>MICRODUCT(แนวขว้าง)</th>
-                                        <th>MICRODUCT-DATE(แนวขว้าง)</th>
-                                        <th>FIBERCONVERTION</th>
-                                        <th>FIBERCONVERTION-DATE(แนวดิ่ง)</th>
-                                        <th>BLOW</th>
-                                        <th>SPLICE</th>
+                                        <th>#</th>
+                                        <th>Projects Name</th>
+                                        <th>พื้นที่.TRUE</th>
+                                        <th>พื้นที่.TRUE ใหม่</th>
+                                        <th>ตึก</th>
+                                        <th>ชั้น</th>
+                                        <th>ห้อง</th>
+                                        <th>ชื่อนิติบุคคล</th>
+                                        <th>เบอร์โทรนิติบุคคล</th>
+                                        <th>เมลล์นิติบุคคล</th>
+                                        <th>บ้านเลขที่</th>
+                                        <th>หมู่</th>
+                                        <th>ซอย</th>
+                                        <th>ถนน</th>
+                                        <th>ตำบล/แขวง</th>
+                                        <th>จังหวัด</th>
+                                        <th>อำเภอ/เขต</th>
+                                        <th>รหัสไปสษณี</th>
                                     </tr>
                                 </thead>
                         </div>
@@ -132,22 +134,22 @@
                                 <tr>
                                     <th scope="row">{{ $row->id }}</th>
                                     <td>{{ $row->projectName }}</td>
-                                    <td>{{ $row->desingBy }}</td>
-                                    <td>{{ $row->surveyDesing }}</td>
-                                    <td>{{ $row->surveyDesingDate }}</td>
-                                    <td>{{ $row->surveyDesingDateBy }}</td>
-                                    <td>{{ $row->ifcc }}</td>
-                                    <td>{{ $row->ifccDate }}</td>
-                                    <td>{{ $row->wallBox }}</td>
-                                    <td>{{ $row->wallBoxDate }}</td>
-                                    <td>{{ $row->type }}</td>
-                                    <td>{{ $row->microductD }}</td>
-                                    <td>{{ $row->microductDateD }}</td>
-                                    <td>{{ $row->microductK }}</td>
-                                    <td>{{ $row->microductDateK }}</td>
-                                    <td>{{ $row->fiberConvertion }}</td>
-                                    <td>{{ $row->blow }}</td>
-                                    <td>{{ $row->splice }}</td>
+                                    <td>{{ $row->areaTrue }}</td>
+                                    <td>{{ $row->areaTrueNew }}</td>
+                                    <td>{{ $row->buildingSum }}</td>
+                                    <td>{{ $row->floorSum }}</td>
+                                    <td>{{ $row->roomSum }}</td>
+                                    <td>{{ $row->nameNiti }}</td>
+                                    <td>{{ $row->phoneNiti }}</td>
+                                    <td>{{ $row->mailNiti }}</td>
+                                    <td>{{ $row->houseNumber }}</td>
+                                    <td>{{ $row->squadNumber }}</td>
+                                    <td>{{ $row->alleyName }}</td>
+                                    <td>{{ $row->roadName }}</td>
+                                    <td>{{ $row->districtName }}</td>
+                                    <td>{{ $row->provinceName }}</td>
+                                    <td>{{ $row->countyName }}</td>
+                                    <td>{{ $row->postalCode }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -159,10 +161,7 @@
         </div>
         </div>
     </body>
-@endsection
-
 @section('adminlte_js')
-
     <script>
         var myVar;
 
@@ -175,7 +174,7 @@
             document.getElementById("myDiv").style.display = "block";
         }
         $(document).ready(function() {
-            $('#constarutionTable').DataTable({
+            $('#projectTable').DataTable({
                 lengthMenu: [
                     [15, 20, 50, 100, -1],
                     [15, 20, 50, 100, "All"]
@@ -206,3 +205,4 @@
 
     </script>
 @stop
+@endsection

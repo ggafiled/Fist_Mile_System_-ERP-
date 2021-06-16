@@ -1,6 +1,21 @@
 @extends('adminlte::page')
+
 @section('content')
     <style>
+        td.details-control {
+            background: url('../resources/details_open.png') no-repeat center center;
+            cursor: pointer;
+        }
+
+        tr.shown td.details-control {
+            background: url('../resources/details_close.png') no-repeat center center;
+        }
+
+        div.dataTables_wrapper {
+            width: 1580px;
+            margin: 0 auto;
+        }
+
         td.details-control {
             background: url('../resources/details_open.png') no-repeat center center;
             cursor: pointer;
@@ -24,9 +39,11 @@
             width: 120px;
             height: 120px;
             margin: -76px 0 0 -76px;
-            border: 16px solid #f3f3f3;
+            border-top: 16px solid rgb(255, 255, 255);
+            border-right: 16px solid rgb(102, 255, 0);
             border-radius: 50%;
-            border-top: 16px solid #3498db;
+            border-bottom: 16px solid rgb(255, 255, 255);
+            border-left: 16px solid rgb(102, 255, 0);
             -webkit-animation: spin 2s linear infinite;
             animation: spin 2s linear infinite;
         }
@@ -92,38 +109,36 @@
 
     <body onload="myFunction()" style="margin:0;">
         <div id="loader"></div>
-        <h3>{{ __('PROGRESS TABLE LIST') }}</h3>
+        <h3>{{ __('REPORT AIS TABLE') }}</h3>
         <div style="display:none;" id="myDiv" class="row justify-content-center">
             <div class="col-md">
                 <div class="card">
-                    <div class="card-header text-white bg-dark">{{ __('CONSTARUTION TABLE') }}
+                    <div class="card-header text-white bg-dark">{{ __('REPORT AIS TABLE') }}
                         </center>
                     </div>
                     <div class="card-body">
                         {{-- <a  href="/building/create"  class="btn btn-primary my-2 "><i class="fas fa-calendar-plus"></i>&nbsp;&nbsp; Add Building</a> --}}
                         <div class="table-responsive">
-                            <table class="display nowrap" id="constarutionTable" style="width:100%">
+                            <table class="display nowrap" id="projectTable" style="width:100%">
                                 <thead>
                                     <tr class="info">
                                         <th width="1%">#</th>
-                                        <th>PROJECTNAME</th>
-                                        <th>ออกแบบโดย</th>
-                                        <th>สำรวจโดย</th>
-                                        <th>วันที่สำรวจออกแบบ</th>
-                                        <th>สำรวจออกแบบโดย</th>
-                                        <th>IFCC</th>
-                                        <th>IFCC-DATE</th>
-                                        <th>WALLBOX</th>
-                                        <th>WALLBOX-DATE</th>
-                                        <th>TYPE</th>
-                                        <th>MICRODUCT(แนวดิ่ง)</th>
-                                        <th>MICRODUCT-DATE(แนวดิ่ง)</th>
-                                        <th>MICRODUCT(แนวขว้าง)</th>
-                                        <th>MICRODUCT-DATE(แนวขว้าง)</th>
-                                        <th>FIBERCONVERTION</th>
-                                        <th>FIBERCONVERTION-DATE(แนวดิ่ง)</th>
-                                        <th>BLOW</th>
-                                        <th>SPLICE</th>
+                                        <th width="10%">Projects Name</th>
+                                        <th width="3%">พื้นที่.AIS</th>
+                                        <th width="3%">ตึก</th>
+                                        <th width="3%">ชั้น</th>
+                                        <th width="3%">ห้อง</th>
+                                        <th width="5%">ชื่อนิติบุคคล</th>
+                                        <th width="3%">เบอร์โทรนิติบุคคล</th>
+                                        <th width="3%">เมลล์นิติบุคคล</th>
+                                        <th width="3%">บ้านเลขที่</th>
+                                        <th width="3%">หมู่</th>
+                                        <th width="3%">ซอย</th>
+                                        <th width="3%">ถนน</th>
+                                        <th width="3%">ตำบล/แขวง</th>
+                                        <th width="3%">จังหวัด</th>
+                                        <th width="3%">อำเภอ/เขต</th>
+                                        <th width="3%">รหัสไปสษณี</th>
                                     </tr>
                                 </thead>
                         </div>
@@ -132,22 +147,21 @@
                                 <tr>
                                     <th scope="row">{{ $row->id }}</th>
                                     <td>{{ $row->projectName }}</td>
-                                    <td>{{ $row->desingBy }}</td>
-                                    <td>{{ $row->surveyDesing }}</td>
-                                    <td>{{ $row->surveyDesingDate }}</td>
-                                    <td>{{ $row->surveyDesingDateBy }}</td>
-                                    <td>{{ $row->ifcc }}</td>
-                                    <td>{{ $row->ifccDate }}</td>
-                                    <td>{{ $row->wallBox }}</td>
-                                    <td>{{ $row->wallBoxDate }}</td>
-                                    <td>{{ $row->type }}</td>
-                                    <td>{{ $row->microductD }}</td>
-                                    <td>{{ $row->microductDateD }}</td>
-                                    <td>{{ $row->microductK }}</td>
-                                    <td>{{ $row->microductDateK }}</td>
-                                    <td>{{ $row->fiberConvertion }}</td>
-                                    <td>{{ $row->blow }}</td>
-                                    <td>{{ $row->splice }}</td>
+                                    <td>{{ $row->areaAis }}</td>
+                                    <td>{{ $row->buildingSum }}</td>
+                                    <td>{{ $row->floorSum }}</td>
+                                    <td>{{ $row->roomSum }}</td>
+                                    <td>{{ $row->nameNiti }}</td>
+                                    <td>{{ $row->phoneNiti }}</td>
+                                    <td>{{ $row->mailNiti }}</td>
+                                    <td>{{ $row->houseNumber }}</td>
+                                    <td>{{ $row->squadNumber }}</td>
+                                    <td>{{ $row->alleyName }}</td>
+                                    <td>{{ $row->roadName }}</td>
+                                    <td>{{ $row->districtName }}</td>
+                                    <td>{{ $row->provinceName }}</td>
+                                    <td>{{ $row->countyName }}</td>
+                                    <td>{{ $row->postalCode }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -159,10 +173,7 @@
         </div>
         </div>
     </body>
-@endsection
-
 @section('adminlte_js')
-
     <script>
         var myVar;
 
@@ -175,7 +186,7 @@
             document.getElementById("myDiv").style.display = "block";
         }
         $(document).ready(function() {
-            $('#constarutionTable').DataTable({
+            $('#projectTable').DataTable({
                 lengthMenu: [
                     [15, 20, 50, 100, -1],
                     [15, 20, 50, 100, "All"]
@@ -206,3 +217,4 @@
 
     </script>
 @stop
+@endsection

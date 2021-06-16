@@ -74,8 +74,19 @@ class BuildingController extends Controller
     public function store(Request $request)
     {
        $validator =  Validator::make($request->all(), [
-            'buildingName' => 'required',
+            'projectName' => 'required',
+            'buildingSum' => 'required',
+            'floorSum' => 'required',
+            'roomSum' => 'required',
             'fmCode' => 'required',
+
+            'nameManager' => 'required',
+            'phoneManager' => 'required',
+            'mailManager' => 'required',
+            'nameNiti' => 'required',
+            'phoneNiti' => 'required',
+            'mailNiti' => 'required',
+
             'houseNumber' => 'required',
             'squadNumber' => 'required',
             'alleyName' => 'required',
@@ -84,28 +95,24 @@ class BuildingController extends Controller
             'countyName' => 'required',
             'provinceName' => 'required',
             'postalCode' => 'required',
+
+            'longitude' => 'required',
+            'latitude' => 'required',
+
             'contractSell' => 'required',
             'contractDate' => 'required',
-            'contractTime' => 'required',
             'spendSpace' => 'required',
             'condition' => 'required',
             'contractPeriod' => 'required',
-            'contractStartDate' => 'required',
-            'contractExpirationDate' => 'required',
-            'nameManager' => 'required',
-            'phoneManager' => 'required',
-            'mailManager' => 'required',
-            'nameNiti' => 'required',
-            'phoneNiti' => 'required',
-            'mailNiti' => 'required',
-            'team' => 'required',
-            'nameTechnician' => 'required',
-            'phoneTechnician' => 'required',
-            'mailTechnicianName' => 'required',
-            'areaN' => 'required',
+
+
+
             'bbN' => 'required',
             'area3BB' => 'required',
             'areaTrue' => 'required',
+            'areaTrueNew' => 'required',
+            'areaAis' => 'required',
+            'areaFiberNet' => 'required',
             'operatingTime' => 'required',
         ]);
         if ($validator->fails()) {
@@ -131,11 +138,11 @@ class BuildingController extends Controller
 
         if($request->has('q')){
             $search = $request->q;
-            $data =Building::select("id","buildingName")
-            		->where('buildingName','LIKE',"%$search%")
+            $data =Building::select("id","projectName")
+            		->where('projectName','LIKE',"%$search%")
             		->get();
         }else{
-            $data =Building::select("id","buildingName")->get();
+            $data =Building::select("id","projectName")->get();
         }
         return response()->json($data);
     }
@@ -145,6 +152,36 @@ class BuildingController extends Controller
     {
         $data = Building::all();
         return view('tableList.projecttable', ['data' => $data]);
+    }
+
+    public function showReportAisList()
+    {
+        $data = Building::all();
+        return view('ReportTable.aisReport', ['data' => $data]);
+    }
+
+    public function showReport3BBList()
+    {
+        $data = Building::all();
+        return view('ReportTable.bb3Report', ['data' => $data]);
+    }
+
+    public function showReportTrueList()
+    {
+        $data = Building::all();
+        return view('ReportTable.trueReport', ['data' => $data]);
+    }
+
+    public function showReportTotList()
+    {
+        $data = Building::all();
+        return view('ReportTable.totReport', ['data' => $data]);
+    }
+
+    public function showReportFinetList()
+    {
+        $data = Building::all();
+        return view('ReportTable.finetReport', ['data' => $data]);
     }
 
     /**
@@ -179,8 +216,19 @@ class BuildingController extends Controller
     public function update(Request $request, $id)
     {
         $validator =  Validator::make($request->all(), [
-            'buildingName' => 'required',
+            'projectName' => 'required',
+            'buildingSum' => 'required',
+            'floorSum' => 'required',
+            'roomSum' => 'required',
             'fmCode' => 'required',
+
+            'nameManager' => 'required',
+            'phoneManager' => 'required',
+            'mailManager' => 'required',
+            'nameNiti' => 'required',
+            'phoneNiti' => 'required',
+            'mailNiti' => 'required',
+
             'houseNumber' => 'required',
             'squadNumber' => 'required',
             'alleyName' => 'required',
@@ -189,28 +237,24 @@ class BuildingController extends Controller
             'countyName' => 'required',
             'provinceName' => 'required',
             'postalCode' => 'required',
+
+            'longitude' => 'required',
+            'latitude' => 'required',
+
             'contractSell' => 'required',
             'contractDate' => 'required',
-            'contractTime' => 'required',
             'spendSpace' => 'required',
             'condition' => 'required',
             'contractPeriod' => 'required',
-            'contractStartDate' => 'required',
-            'contractExpirationDate' => 'required',
-            'nameManager' => 'required',
-            'phoneManager' => 'required',
-            'mailManager' => 'required',
-            'nameNiti' => 'required',
-            'phoneNiti' => 'required',
-            'mailNiti' => 'required',
-            'team' => 'required',
-            'nameTechnician' => 'required',
-            'phoneTechnician' => 'required',
-            'mailTechnicianName' => 'required',
-            'areaN' => 'required',
+
+
+
             'bbN' => 'required',
             'area3BB' => 'required',
             'areaTrue' => 'required',
+            'areaTrueNew' => 'required',
+            'areaAis' => 'required',
+            'areaFiberNet' => 'required',
             'operatingTime' => 'required',
         ]);
 

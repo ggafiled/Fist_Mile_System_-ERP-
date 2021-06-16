@@ -10,7 +10,7 @@ class Progress extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'buildingName',
+        'projectName',
         'fmProgress',
         'dateFm',
         'totProgress',

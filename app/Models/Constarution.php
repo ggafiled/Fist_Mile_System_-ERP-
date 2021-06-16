@@ -10,7 +10,7 @@ class Constarution extends Model
 {
     use SoftDeletes;
     protected $fillable = [
-        'buildingName',
+        'projectName',
         'desingBy',
         'surveyDesing',
         'surveyDesingDate',

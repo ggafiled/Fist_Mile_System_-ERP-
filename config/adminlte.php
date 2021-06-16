@@ -149,18 +149,18 @@ return [
         //         ],
         //     ],
 
-        // ],
-        [
-            'text' => 'Progress Opertor',
-            'url'  => '/progress',
-            'icon' => 'fas fa-fw fa-poll-h',
-            'can'  => ['building-create|building-read|building-update']
-        ],
+        // ],/tor
         [
             'text' => 'Constarution',
             'url'  => '/constarution',
             'icon' => 'fas fa-fw fa-poll',
             'can'  => ['constarution-create', 'constarution-read'],
+        ],
+        [
+            'text' => 'Progress Opertor',
+            'url'  => '/progress',
+            'icon' => 'fas fa-fw fa-poll-h',
+            'can'  => ['building-create|building-read|building-update']
         ],
         [
             'text' => 'Builing Unit',
@@ -204,6 +204,39 @@ return [
                 [
                     'text' => 'Constarution Table',
                     'url'  => '/constarution/list',
+                    'can'  => ['building-create']
+                ],
+            ],
+
+        ],
+        [
+            'text' => 'Table Report',
+            'icon' => 'fas fa-fw far fa-location-arrow',
+            'can'  => ['building-create|building-read|building-update'],
+            'submenu' => [
+                [
+                    'text' => 'True Reprot',
+                    'url'  => '/report/true',
+                    'can'  => ['building-create']
+                ],
+                [
+                    'text' => 'TOT Reprot',
+                    'url'  => '/report/tot',
+                    'can'  => ['building-create']
+                ],
+                [
+                    'text' => 'Ais reprot',
+                    'url'  => '/report/ais',
+                    'can'  => ['building-create']
+                ],
+                [
+                    'text' => '3BB reprot',
+                    'url'  => '/report/3bb',
+                    'can'  => ['building-create']
+                ],
+                [
+                    'text' => 'Finet reprot',
+                    'url'  => '/report/finet',
                     'can'  => ['building-create']
                 ],
             ],
@@ -255,12 +288,12 @@ return [
             'icon' => 'fas fa-users',
             'roles'  => ['superadministrator','administrator'],
         ],
-        [
-            'text' => 'Data Validation',
-            'url'  => '/datavalidation',
-            'icon' => 'fas fa-fw fa-database',
-            'roles'  => ['superadministrator','administrator'],
-        ],
+        // [
+        //     'text' => 'Data Validation',
+        //     'url'  => '/datavalidation',
+        //     'icon' => 'fas fa-fw fa-database',
+        //     'roles'  => ['superadministrator','administrator'],
+        // ],
         [
             'text' => 'Logout',
             'url'  => 'logout',
@@ -286,16 +319,11 @@ return [
         'Datatables' => [
             'active' => true,
             'files' => [
-                //js https:
+                //js
                 [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => '//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',
                 ],
                 [
                     'type' => 'js',
@@ -407,21 +435,6 @@ return [
                     'asset' => false,
                     'location' => '//code.highcharts.com/highcharts.js',
                 ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => false,
-                    'location' => '//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js',
-                ],
-                // [
-                //     'type' => 'js',
-                //     'asset' => false,
-                //     'location' => '//cdn.datatables.net/1.10.24/js/dataTables.bootstrap.min.js',
-                // ],
                 // [
                 //     'type' => 'js',
                 //     'asset' => false,
@@ -448,20 +461,10 @@ return [
                     'location' => 'https://www.jqueryscript.net/demo/Excel-like-Bootstrap-Table-Sorting-Filtering-Plugin/excel-bootstrap-table-filter-bundle.js',
                 ],
                 // css
-                // [
-                //     'type' => 'css',
-                //     'asset' => false,
-                //     'location' => '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
-                // ],
                 [
                     'type' => 'css',
                     'asset' => false,
-                    'location' => '//cdn.datatables.net/1.10.24/css/dataTables.bootstrap.min.css',
-                ],
-                [
-                    'type' => 'css',
-                    'asset' => false,
-                    'location' => '//cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css',
+                    'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
                 ],
                 [
                     'type' => 'css',
@@ -481,7 +484,7 @@ return [
                 [
                     'type' => 'css',
                     'asset' => false,
-                    'location' => '//cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css',
+                    'location' => '//cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css',
                 ],
                 [
                     'type' => 'css',

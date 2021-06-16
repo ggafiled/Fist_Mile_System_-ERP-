@@ -10,8 +10,19 @@ class Building extends Model
 {
     use HasFactory,SoftDeletes;
     protected $fillable = [
-        'buildingName',
+        'projectName',
+        'buildingSum',
+        'floorSum',
+        'roomSum',
         'fmCode',
+
+        'nameManager',
+        'phoneManager',
+        'mailManager',
+        'nameNiti',
+        'phoneNiti',
+        'mailNiti',
+
         'houseNumber',
         'squadNumber',
         'alleyName',
@@ -20,28 +31,23 @@ class Building extends Model
         'countyName',
         'provinceName',
         'postalCode',
+
+        'longitude',
+        'latitude',
+
         'contractSell',
         'contractDate',
-        'contractTime',
         'spendSpace',
         'condition',
         'contractPeriod',
-        'contractStartDate',
-        'contractExpirationDate',
-        'nameManager',
-        'phoneManager',
-        'mailManager',
-        'nameNiti',
-        'phoneNiti',
-        'mailNiti',
-        'team',
-        'nameTechnician',
-        'phoneTechnician',
-        'mailTechnicianName',
+
         'areaN',
         'bbN',
         'area3BB',
         'areaTrue',
+        'areaTrueNew',
+        'areaAis',
+        'areaFiberNet',
         'operatingTime',
     ];
 }

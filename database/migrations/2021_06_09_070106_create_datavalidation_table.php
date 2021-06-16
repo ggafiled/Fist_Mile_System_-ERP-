@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTeamsTable extends Migration
+class CreateDatavalidationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateTeamsTable extends Migration
      */
     public function up()
     {
-        Schema::enableForeignKeyConstraints();
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('datavalidation', function (Blueprint $table) {
             $table->id();
-            $table->string('buildingName')->nullable();
-            $table->string('teamName')->nullable();
-            $table->timestamps();
+            $table->string('contractName')->nullable();
+            $table->string('dataselect')->nullable();
+            $table->string('desingName')->nullable();
         });
     }
 
@@ -29,7 +28,6 @@ class CreateTeamsTable extends Migration
      */
     public function down()
     {
-        Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('datavalidation');
     }
 }

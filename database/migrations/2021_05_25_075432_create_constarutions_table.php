@@ -15,7 +15,7 @@ class CreateConstarutionsTable extends Migration
     {
         Schema::create('constarutions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('buildingName')->nullable(); //ชื่ออาคารในตาราง building
+            $table->string('projectName')->nullable(); //ชื่ออาคารในตาราง building
             $table->string('desingBy')->nullable();
             $table->string('surveyDesing')->nullable(); //survey โดยใคร
             $table->date('surveyDesingDate')->nullable(); //วันออกแบบ survey

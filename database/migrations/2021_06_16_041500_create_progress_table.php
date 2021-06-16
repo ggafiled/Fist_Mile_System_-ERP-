@@ -15,7 +15,7 @@ class CreateProgressTable extends Migration
     {
         Schema::create('progress', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('buildingName')->nullable();
+            $table->string('projectName')->nullable();
             $table->string('fmProgress')->nullable();
             $table->date('dateFm')->nullable();
             $table->string('totProgress')->nullable();

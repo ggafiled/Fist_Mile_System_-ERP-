@@ -35,6 +35,11 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/project/list', [App\Http\Controllers\BuildingController::class, 'showBuildingList'])->name('building.list');
     Route::get('/progress/list', [App\Http\Controllers\ProgressController::class, 'showProgressList'])->name('Progress.list');
+    Route::get('/report/ais', [App\Http\Controllers\BuildingController::class, 'showReportAisList'])->name('Progress.list');
+    Route::get('/report/3bb', [App\Http\Controllers\BuildingController::class, 'showReport3BBList'])->name('Progress.list');
+    Route::get('/report/true', [App\Http\Controllers\BuildingController::class, 'showReportTrueList'])->name('Progress.list');
+    Route::get('/report/tot', [App\Http\Controllers\BuildingController::class, 'showReportTotList'])->name('Progress.list');
+    Route::get('/report/finet', [App\Http\Controllers\BuildingController::class, 'showReportFinetList'])->name('Progress.list');
     Route::get('/constarution/list', [App\Http\Controllers\ConstarutionController::class, 'showConstarutionList'])->name('Constarution.list');
     Route::resource('/building', App\Http\Controllers\BuildingController::class);
     Route::resource('/building_unit', App\Http\Controllers\buildingunitController::class);
@@ -71,4 +76,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/form/editprofile', [App\Http\Controllers\UserController::class, 'showChangePasswordForm'])->name('users.edit');
     Route::post('/changePassword', [App\Http\Controllers\UserController::class, 'changePassword'])->name('users.password.update');
     Route::get('/logout', [App\Http\Controllers\UserController::class, 'logOut']);
+
 });

@@ -36,15 +36,15 @@
                         <table class="table table-striped table-bordered" id="example1">
                             <thead>
                                 <tr class="info">
-                                    <th width="1%">#</th>
-                                    <th width="5%">PROJECT NAME</th>
-                                    <th width="5%">SURVEYDESING</th>
-                                    <th width="3%">SURVEYDESING-DATA</th>
-                                    <th width="3%">SURVEYDESING-DATA-BY</th>
-                                    <th width="3%">IFCC</th>
-                                    <th width="1%">Edit</th>
+                                    <th>#</th>
+                                    <th>PROJECTNAME</th>
+                                    <th>สำรวจโดย</th>
+                                    <th>วันที่สำรวจออกแบบ</th>
+                                    <th>สำรวจออกแบบโดย</th>
+                                    <th>TYPE</th>
+                                    <th>Edit</th>
                                     @role('superadministrator')
-                                    <th width="1%">DELETE</th>
+                                    <th>DELETE</th>
                                     @endrole
                                 </tr>
                             </thead>
@@ -53,11 +53,11 @@
                         @foreach ($data as $row)
                             <tr>
                                 <th scope="row">{{ $row->id }}</th>
-                                <td>{{ $row->buildingName }}</td>
+                                <td>{{ $row->projectName }}</td>
                                 <td>{{ $row->surveyDesing }}</td>
                                 <td>{{ $row->surveyDesingDate }}</td>
-                                <td>{{ $row->ifcc }}</td>
                                 <td>{{ $row->ifccDate }}</td>
+                                <td>{{ $row->type}}</td>
                                 <td>
                                     <form action="{{ route('constarution.edit', $row->id) }}" method="PUT">
                                         @csrf @method('HEAD')
