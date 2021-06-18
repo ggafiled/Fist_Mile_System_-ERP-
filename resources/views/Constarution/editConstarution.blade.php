@@ -26,7 +26,7 @@
                                 <div class="col-sm-3">
                                     <div class="form-group">
                                         {!! Form::label('PROJECT NAME') !!}
-                                        {!! Form::text('buildingName', $data->buildingName, ['class' => 'form-control', 'disabled']) !!}
+                                        {!! Form::text('projectName', $data->projectName, ['class' => 'form-control', 'disabled']) !!}
                                     </div>
                                 </div>
                                 <div class="col-sm-2">

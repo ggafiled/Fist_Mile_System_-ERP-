@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Building extends Model
 {
-    use HasFactory,SoftDeletes;
+    use SoftDeletes;
     protected $fillable = [
         'projectName',
         'buildingSum',

@@ -11,7 +11,6 @@
             background: url('../resources/details_close.png') no-repeat center center;
         }
 
-        /* Center the loader */
         #loader {
             position: absolute;
             left: 50%;
@@ -81,17 +80,21 @@
                 opacity: 1
             }
         }
+
         #myDiv {
             display: none;
         }
+
     </style>
-<body onload="myFunction()" style="margin:0;">
-    <div id="loader"></div>
+
+    <body onload="myFunction()" style="margin:0;">
+        <div id="loader"></div>
         <h3>{{ __('PROJECT MANAGEMENT') }}</h3>
         <div style="display:none;" id="myDiv" class="row justify-content-center">
             <div class="col-md">
                 <div class="card">
                     <div class="card-header text-white bg-dark">{{ __('PROJECT MANAGEMENT TABLE') }}
+                        </center>
                         @role('superadministrator')
                         <div class="card-tools">
                             <a type="button" href="/building/create" class="btn btn-sm btn-primary" @click="newModal">
@@ -147,12 +150,11 @@
                                         <form action="{{ route('building.edit', $row->id) }}" method="PUT">
                                             @csrf @method('HEAD')
                                             <input type="submit" value='Edit' " class=" btn btn-warning ">
-                                                    </form>
-                                                </td>
-                                                @role('superadministrator')
-                                                <td>
-                                                    <form action=" {{ route('building.destroy', $row->id) }}"
-                                                method="post">
+                                                </form>
+                                            </td>
+                                            @role('superadministrator')
+                                            <td>
+                                                <form action=" {{ route('building.destroy', $row->id) }}" method="post">
                                             @csrf @method('DELETE')
                                             <input type="submit" value='Delete' class="btn btn-danger deleteForm">
                                         </form>
@@ -169,28 +171,28 @@
         </div>
         </div>
         </div>
-    </body>
-@section('adminlte_js')
-    <script>
-        var myVar;
 
-        function myFunction() {
-            myVar = setTimeout(showPage, 3000);
-        }
+    @section('adminlte_js')
+        <script>
+            var myVar;
 
-        function showPage() {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("myDiv").style.display = "block";
-        }
-        $(document).ready(function() {
-            $("#example1").DataTable({
-                lengthMenu: [
-                    [10, 25, 50, -1],
-                    [10, 25, 50, "All"]
-                ]
+            function myFunction() {
+                myVar = setTimeout(showPage, 3000);
+            }
+
+            function showPage() {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("myDiv").style.display = "block";
+            }
+            $(document).ready(function() {
+                $("#example1").DataTable({
+                    lengthMenu: [
+                        [10, 25, 50, -1],
+                        [10, 25, 50, "All"]
+                    ]
+                });
             });
-        });
 
-    </script>
-@stop
+        </script>
+    @stop
 @endsection
